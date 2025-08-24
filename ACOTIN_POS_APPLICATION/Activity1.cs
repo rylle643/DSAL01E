@@ -35,14 +35,15 @@ namespace ACOTIN_POS_APPLICATION
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-            itemnameTextbox.Text = "Burger McDo";
-            priceTxtbox.Text = "47.00";
+            itemnameTextbox.Text = "Quarter Pounder";
+            priceTxtbox.Text = "255.00";
         }
 
         private void pictureBox15_Click(object sender, EventArgs e)
         {
-            itemnameTextbox.Text = "Quarter Pounder";
-            priceTxtbox.Text = "255.00";
+            
+            itemnameTextbox.Text = "Burger McDo";
+            priceTxtbox.Text = "47.00";
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
