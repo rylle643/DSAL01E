@@ -16,8 +16,9 @@ namespace ACOTIN_POS_APPLICATION
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            /// Application.Run(new Activity1());
+            Application.Run(new Activity1());
             Application.Run(new Activity2());
+            Application.Run(new Activity3());
         }
     }
 }

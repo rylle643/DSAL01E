@@ -76,6 +76,12 @@
     <Compile Include="Activity2.Designer.cs">
       <DependentUpon>Activity2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Activity3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Activity3.Designer.cs">
+      <DependentUpon>Activity3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Activity1.resx">
@@ -83,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Activity2.resx">
       <DependentUpon>Activity2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Activity3.resx">
+      <DependentUpon>Activity3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -121,6 +130,15 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no-image-available-icon-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled design %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled design %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
