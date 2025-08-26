@@ -853,39 +853,45 @@
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.LightCoral;
             this.button4.Location = new System.Drawing.Point(360, 143);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(169, 29);
             this.button4.TabIndex = 20;
             this.button4.Text = "EXIT";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.LightCoral;
             this.button3.Location = new System.Drawing.Point(360, 109);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(169, 29);
             this.button3.TabIndex = 19;
             this.button3.Text = "CANCEL";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.LightCoral;
             this.button2.Location = new System.Drawing.Point(360, 75);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(169, 29);
             this.button2.TabIndex = 18;
             this.button2.Text = "NEW";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.LightCoral;
             this.button1.Location = new System.Drawing.Point(360, 41);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(169, 29);
             this.button1.TabIndex = 17;
             this.button1.Text = "CALCULATE";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // discountedtxtbox
@@ -1100,7 +1106,7 @@
             this.label46.BackColor = System.Drawing.Color.Transparent;
             this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.ForeColor = System.Drawing.Color.White;
-            this.label46.Location = new System.Drawing.Point(282, 15);
+            this.label46.Location = new System.Drawing.Point(273, 15);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(124, 31);
             this.label46.TabIndex = 28;

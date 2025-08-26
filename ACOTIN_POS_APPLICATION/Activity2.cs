@@ -299,5 +299,19 @@ namespace ACOTIN_POS_APPLICATION
             itemnametxtbox.Text = "Egg McMuffin";
             pricetextbox.Text = "73.00";
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            itemnametxtbox.Clear();
+            pricetextbox.Clear();
+            discounttxtbox.Clear();
+            quantitytextbox.Clear();
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
