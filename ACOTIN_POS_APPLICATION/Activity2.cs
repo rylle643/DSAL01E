@@ -306,7 +306,7 @@ namespace ACOTIN_POS_APPLICATION
             pricetextbox.Clear();
             discounttxtbox.Clear();
             quantitytextbox.Clear();
-
+            textBox2.Clear();
         }
 
         private void button4_Click(object sender, EventArgs e)
