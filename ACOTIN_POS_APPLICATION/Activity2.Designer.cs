@@ -870,6 +870,7 @@
             this.noTaxRdbtn.TabStop = true;
             this.noTaxRdbtn.Text = "No Discount";
             this.noTaxRdbtn.UseVisualStyleBackColor = true;
+            this.noTaxRdbtn.CheckedChanged += new System.EventHandler(this.noTaxRdbtn_CheckedChanged);
             // 
             // EmployeeRdbtn
             // 
@@ -881,6 +882,7 @@
             this.EmployeeRdbtn.TabStop = true;
             this.EmployeeRdbtn.Text = "Employee Disc.";
             this.EmployeeRdbtn.UseVisualStyleBackColor = true;
+            this.EmployeeRdbtn.CheckedChanged += new System.EventHandler(this.EmployeeRdbtn_CheckedChanged);
             // 
             // regularRbtn
             // 

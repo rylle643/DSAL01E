@@ -356,5 +356,45 @@ namespace ACOTIN_POS_APPLICATION
             EmployeeRdbtn.Enabled = false;
             noTaxRdbtn.Enabled = false;
         }
+
+        private void EmployeeRdbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            /// declare variable
+            int qty;
+            double price, discount_amt, discounted_amt;
+            /// string to numeric
+            qty = Convert.ToInt32(quantitytextbox.Text);
+            price = Convert.ToDouble(pricetextbox.Text);
+            /// formula for computation
+            discount_amt = (qty * price) * 0.15;
+            discounted_amt = (qty * price) - discount_amt;
+            /// convert numeric to string
+            discounttxtbox.Text = discount_amt.ToString("n");
+            discountedtxtbox.Text = discounted_amt.ToString("n");
+            /// uncheck other
+            radioButton1.Enabled = false;
+            regularRbtn.Enabled = false;
+            noTaxRdbtn.Enabled = false;
+        }
+
+        private void noTaxRdbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            /// declare variable
+            int qty;
+            double price, discount_amt, discounted_amt;
+            /// string to numeric
+            qty = Convert.ToInt32(quantitytextbox.Text);
+            price = Convert.ToDouble(pricetextbox.Text);
+            /// formula for computation
+            discount_amt = (qty * price) * 0;
+            discounted_amt = (qty * price) - discount_amt;
+            /// convert numeric to string
+            discounttxtbox.Text = discount_amt.ToString("n");
+            discountedtxtbox.Text = discounted_amt.ToString("n");
+            /// uncheck other
+            radioButton1.Enabled = false;
+            regularRbtn.Enabled = false;
+            EmployeeRdbtn.Enabled = false;
+        }
     }
 }
