@@ -12,6 +12,9 @@ namespace ACOTIN_POS_APPLICATION
 {
     public partial class Activity2 : Form
     {
+        private double qty_total = 0;
+        private double discount_totalgiven = 0;
+        private double discounted_total = 0;
         public Activity2()
         {
             InitializeComponent();
@@ -312,6 +315,18 @@ namespace ACOTIN_POS_APPLICATION
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            /// declare variable
+            int qty;
+            double price, discount_amt, discounted_amt;
+            /// string to numeric
+            qty = Convert.ToInt32(quantitytextbox.Text);
+            price = Convert.ToInt32(pricetextbox.Text);
+            /// formula for computation
+            discount_amt = (qty)
         }
     }
 }
