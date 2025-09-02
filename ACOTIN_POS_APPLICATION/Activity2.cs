@@ -324,9 +324,37 @@ namespace ACOTIN_POS_APPLICATION
             double price, discount_amt, discounted_amt;
             /// string to numeric
             qty = Convert.ToInt32(quantitytextbox.Text);
-            price = Convert.ToInt32(pricetextbox.Text);
+            price = Convert.ToDouble(pricetextbox.Text);
             /// formula for computation
-            discount_amt = (qty)
+            discount_amt = (qty * price) * 0.30;
+            discounted_amt = (qty * price) - discount_amt;
+            /// convert numeric to string
+            discounttxtbox.Text = discount_amt.ToString("n");
+            discountedtxtbox.Text = discounted_amt.ToString("n");
+            /// uncheck other
+            regularRbtn.Enabled = false;
+            EmployeeRdbtn.Enabled = false;
+            noTaxRdbtn.Enabled = false;
+        }
+
+        private void regularRbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            /// declare variable
+            int qty;
+            double price, discount_amt, discounted_amt;
+            /// string to numeric
+            qty = Convert.ToInt32(quantitytextbox.Text);
+            price = Convert.ToDouble(pricetextbox.Text);
+            /// formula for computation
+            discount_amt = (qty * price) * 0.10;
+            discounted_amt = (qty * price) - discount_amt;
+            /// convert numeric to string
+            discounttxtbox.Text = discount_amt.ToString("n");
+            discountedtxtbox.Text = discounted_amt.ToString("n");
+            /// uncheck other
+            radioButton1.Enabled = false;
+            EmployeeRdbtn.Enabled = false;
+            noTaxRdbtn.Enabled = false;
         }
     }
 }
