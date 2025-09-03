@@ -86,6 +86,10 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.noTaxRdbtn = new System.Windows.Forms.RadioButton();
+            this.EmployeeRdbtn = new System.Windows.Forms.RadioButton();
+            this.regularRbtn = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -114,7 +118,7 @@
             this.label46 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.changetxtbox = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.cashre_renderedtxtbox = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -131,6 +135,7 @@
             this.button19 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
+            this.radioButton = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
@@ -831,6 +836,10 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.noTaxRdbtn);
+            this.groupBox2.Controls.Add(this.EmployeeRdbtn);
+            this.groupBox2.Controls.Add(this.regularRbtn);
+            this.groupBox2.Controls.Add(this.radioButton1);
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.button2);
@@ -851,12 +860,60 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
+            // noTaxRdbtn
+            // 
+            this.noTaxRdbtn.AutoSize = true;
+            this.noTaxRdbtn.Location = new System.Drawing.Point(279, 149);
+            this.noTaxRdbtn.Name = "noTaxRdbtn";
+            this.noTaxRdbtn.Size = new System.Drawing.Size(84, 17);
+            this.noTaxRdbtn.TabIndex = 24;
+            this.noTaxRdbtn.TabStop = true;
+            this.noTaxRdbtn.Text = "No Discount";
+            this.noTaxRdbtn.UseVisualStyleBackColor = true;
+            this.noTaxRdbtn.CheckedChanged += new System.EventHandler(this.noTaxRdbtn_CheckedChanged);
+            // 
+            // EmployeeRdbtn
+            // 
+            this.EmployeeRdbtn.AutoSize = true;
+            this.EmployeeRdbtn.Location = new System.Drawing.Point(279, 115);
+            this.EmployeeRdbtn.Name = "EmployeeRdbtn";
+            this.EmployeeRdbtn.Size = new System.Drawing.Size(98, 17);
+            this.EmployeeRdbtn.TabIndex = 23;
+            this.EmployeeRdbtn.TabStop = true;
+            this.EmployeeRdbtn.Text = "Employee Disc.";
+            this.EmployeeRdbtn.UseVisualStyleBackColor = true;
+            this.EmployeeRdbtn.CheckedChanged += new System.EventHandler(this.EmployeeRdbtn_CheckedChanged);
+            // 
+            // regularRbtn
+            // 
+            this.regularRbtn.AutoSize = true;
+            this.regularRbtn.Location = new System.Drawing.Point(279, 81);
+            this.regularRbtn.Name = "regularRbtn";
+            this.regularRbtn.Size = new System.Drawing.Size(99, 17);
+            this.regularRbtn.TabIndex = 22;
+            this.regularRbtn.TabStop = true;
+            this.regularRbtn.Text = "With Disc. Card";
+            this.regularRbtn.UseVisualStyleBackColor = true;
+            this.regularRbtn.CheckedChanged += new System.EventHandler(this.regularRbtn_CheckedChanged);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(279, 47);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(89, 17);
+            this.radioButton1.TabIndex = 21;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Senior Citizen";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.LightCoral;
-            this.button4.Location = new System.Drawing.Point(360, 143);
+            this.button4.Location = new System.Drawing.Point(418, 143);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(169, 29);
+            this.button4.Size = new System.Drawing.Size(111, 29);
             this.button4.TabIndex = 20;
             this.button4.Text = "EXIT";
             this.button4.UseVisualStyleBackColor = false;
@@ -865,9 +922,9 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.LightCoral;
-            this.button3.Location = new System.Drawing.Point(360, 109);
+            this.button3.Location = new System.Drawing.Point(418, 109);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(169, 29);
+            this.button3.Size = new System.Drawing.Size(111, 29);
             this.button3.TabIndex = 19;
             this.button3.Text = "CANCEL";
             this.button3.UseVisualStyleBackColor = false;
@@ -875,9 +932,9 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.LightCoral;
-            this.button2.Location = new System.Drawing.Point(360, 75);
+            this.button2.Location = new System.Drawing.Point(418, 75);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(169, 29);
+            this.button2.Size = new System.Drawing.Size(111, 29);
             this.button2.TabIndex = 18;
             this.button2.Text = "NEW";
             this.button2.UseVisualStyleBackColor = false;
@@ -886,9 +943,9 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.LightCoral;
-            this.button1.Location = new System.Drawing.Point(360, 41);
+            this.button1.Location = new System.Drawing.Point(418, 41);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(169, 29);
+            this.button1.Size = new System.Drawing.Size(111, 29);
             this.button1.TabIndex = 17;
             this.button1.Text = "CALCULATE";
             this.button1.UseVisualStyleBackColor = false;
@@ -898,28 +955,28 @@
             // 
             this.discountedtxtbox.Location = new System.Drawing.Point(134, 148);
             this.discountedtxtbox.Name = "discountedtxtbox";
-            this.discountedtxtbox.Size = new System.Drawing.Size(207, 20);
+            this.discountedtxtbox.Size = new System.Drawing.Size(139, 20);
             this.discountedtxtbox.TabIndex = 16;
             // 
             // discounttxtbox
             // 
             this.discounttxtbox.Location = new System.Drawing.Point(134, 114);
             this.discounttxtbox.Name = "discounttxtbox";
-            this.discounttxtbox.Size = new System.Drawing.Size(207, 20);
+            this.discounttxtbox.Size = new System.Drawing.Size(139, 20);
             this.discounttxtbox.TabIndex = 15;
             // 
             // pricetextbox
             // 
             this.pricetextbox.Location = new System.Drawing.Point(134, 80);
             this.pricetextbox.Name = "pricetextbox";
-            this.pricetextbox.Size = new System.Drawing.Size(207, 20);
+            this.pricetextbox.Size = new System.Drawing.Size(139, 20);
             this.pricetextbox.TabIndex = 14;
             // 
             // quantitytextbox
             // 
             this.quantitytextbox.Location = new System.Drawing.Point(134, 47);
             this.quantitytextbox.Name = "quantitytextbox";
-            this.quantitytextbox.Size = new System.Drawing.Size(207, 20);
+            this.quantitytextbox.Size = new System.Drawing.Size(139, 20);
             this.quantitytextbox.TabIndex = 13;
             this.quantitytextbox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -1091,7 +1148,7 @@
             this.groupBox4.Controls.Add(this.label46);
             this.groupBox4.Controls.Add(this.label45);
             this.groupBox4.Controls.Add(this.changetxtbox);
-            this.groupBox4.Controls.Add(this.textBox2);
+            this.groupBox4.Controls.Add(this.cashre_renderedtxtbox);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.ForeColor = System.Drawing.Color.White;
             this.groupBox4.Location = new System.Drawing.Point(42, 406);
@@ -1134,14 +1191,14 @@
             this.changetxtbox.TabIndex = 25;
             this.changetxtbox.TextChanged += new System.EventHandler(this.textBox1_TextChanged_2);
             // 
-            // textBox2
+            // cashre_renderedtxtbox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(21, 49);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(252, 80);
-            this.textBox2.TabIndex = 24;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged_2);
+            this.cashre_renderedtxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cashre_renderedtxtbox.Location = new System.Drawing.Point(21, 49);
+            this.cashre_renderedtxtbox.Name = "cashre_renderedtxtbox";
+            this.cashre_renderedtxtbox.Size = new System.Drawing.Size(252, 80);
+            this.cashre_renderedtxtbox.TabIndex = 24;
+            this.cashre_renderedtxtbox.TextChanged += new System.EventHandler(this.textBox2_TextChanged_2);
             // 
             // button5
             // 
@@ -1304,6 +1361,17 @@
             this.button21.Text = "0";
             this.button21.UseVisualStyleBackColor = true;
             // 
+            // radioButton
+            // 
+            this.radioButton.AutoSize = true;
+            this.radioButton.Location = new System.Drawing.Point(279, 81);
+            this.radioButton.Name = "radioButton";
+            this.radioButton.Size = new System.Drawing.Size(99, 17);
+            this.radioButton.TabIndex = 22;
+            this.radioButton.TabStop = true;
+            this.radioButton.Text = "With Disc. Card";
+            this.radioButton.UseVisualStyleBackColor = true;
+            // 
             // Activity2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1454,7 +1522,7 @@
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox changetxtbox;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox cashre_renderedtxtbox;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Button button5;
@@ -1473,5 +1541,10 @@
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.RadioButton noTaxRdbtn;
+        private System.Windows.Forms.RadioButton EmployeeRdbtn;
+        private System.Windows.Forms.RadioButton radioButton;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton regularRbtn;
     }
 }
