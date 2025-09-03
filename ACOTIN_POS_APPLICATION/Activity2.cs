@@ -321,7 +321,7 @@ namespace ACOTIN_POS_APPLICATION
 
         private void button2_Click(object sender, EventArgs e)
         {
-            /// set the value to 0
+            
             quantitytextbox.Text = "0";
             pricetextbox.Text = "0";
             discounttxtbox.Text = "0";
