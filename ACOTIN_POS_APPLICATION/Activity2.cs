@@ -437,5 +437,10 @@ namespace ACOTIN_POS_APPLICATION
             EmployeeRdbtn.Enabled = false;
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
