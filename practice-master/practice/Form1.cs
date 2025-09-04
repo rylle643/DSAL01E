@@ -119,7 +119,6 @@ namespace practice
             CourseDesclistBox.Items.Add(CourseDesctextBox.Text);
             UnitLeclistBox.Items.Add(UnitLectextBox.Text);
             UnitLablistBox.Items.Add(UnitLabtextBox.Text);
-            CreditUnitslistBox.Items.Add(CreditUnitstextBox.Text);
             TimelistBox.Items.Add(TimetextBox.Text);
             DaylistBox.Items.Add(DaytextBox.Text);
             LabFees.Text = LabFeetextBox.Text;
@@ -134,13 +133,14 @@ namespace practice
 
             CreditUnits = LectureUnit + LabUnit;
 
-            CreditUnitslistBox.Items.Add(CreditUnits.ToString("n"));
-            CreditUnitstextBox.Text = CreditUnits.ToString("n");
+            CreditUnitslistBox.Items.Add(CreditUnits.ToString());
+            CreditUnitstextBox.Text = CreditUnits.ToString();
 
             totalUnits += CreditUnits;
 
-            TotalNoofUnittextBox.Text = totalUnits.ToString("n");
-            
+            TotalNoofUnittextBox.Text = totalUnits.ToString();
+            TotalNoofUnitsTxt.Text = totalUnits.ToString();
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -210,6 +210,7 @@ namespace practice
             TotalNoofUnitsTxt.Text = totalUnits.ToString("n");
             TotalTuitionFeetextBox.Text = totalTuitionFee.ToString("n");
             TotalTuitionFee.Text = totalTuitionFee.ToString("n");
+            TotalOtherSchoolFees.Text = MiscFee.ToString("n");
         }
 
         private void LabFees_TextChanged(object sender, EventArgs e)
