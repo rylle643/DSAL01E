@@ -108,6 +108,9 @@
     <EmbeddedResource Include="Activity4.resx">
       <DependentUpon>Activity4.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Activity4_PrintFrm.resx">
+      <DependentUpon>Activity4_PrintFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -16,5 +16,10 @@ namespace ACOTIN_POS_APPLICATION
         {
             InitializeComponent();
         }
+
+        private void printDisplayListbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            printDisplayListbox.Items.AddRange(printDisplayListbox.Items);
+        }
     }
 }

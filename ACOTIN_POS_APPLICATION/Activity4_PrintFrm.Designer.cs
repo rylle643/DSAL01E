@@ -28,12 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.printDisplayListbox = new System.Windows.Forms.ListBox();
+            this.SuspendLayout();
+            // 
+            // printDisplayListbox
+            // 
+            this.printDisplayListbox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printDisplayListbox.FormattingEnabled = true;
+            this.printDisplayListbox.ItemHeight = 17;
+            this.printDisplayListbox.Location = new System.Drawing.Point(6, 13);
+            this.printDisplayListbox.Name = "printDisplayListbox";
+            this.printDisplayListbox.Size = new System.Drawing.Size(386, 446);
+            this.printDisplayListbox.TabIndex = 10;
+            this.printDisplayListbox.SelectedIndexChanged += new System.EventHandler(this.printDisplayListbox_SelectedIndexChanged);
+            // 
+            // Activity4_PrintFrm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(399, 485);
+            this.Controls.Add(this.printDisplayListbox);
+            this.Name = "Activity4_PrintFrm";
             this.Text = "Activity4_PrintFrm";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ListBox printDisplayListbox;
     }
 }

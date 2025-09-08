@@ -65,7 +65,7 @@
             this.B_ApplePieBox = new System.Windows.Forms.CheckBox();
             this.B_BFFFriesBox = new System.Windows.Forms.CheckBox();
             this.displayListbox = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.CALCULATEbutton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -171,7 +171,7 @@
             this.groupBox1.Controls.Add(this.foodARdbtn);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(74, 70);
+            this.groupBox1.Location = new System.Drawing.Point(61, 70);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(370, 132);
             this.groupBox1.TabIndex = 5;
@@ -213,7 +213,7 @@
             this.groupBox2.Controls.Add(this.A_ChickenMcDoBox);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(469, 70);
+            this.groupBox2.Location = new System.Drawing.Point(456, 70);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(211, 293);
             this.groupBox2.TabIndex = 6;
@@ -289,7 +289,7 @@
             this.groupBox3.Controls.Add(this.qtyTxtbox);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(74, 208);
+            this.groupBox3.Location = new System.Drawing.Point(61, 208);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(370, 451);
             this.groupBox3.TabIndex = 6;
@@ -482,7 +482,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(531, 884);
+            this.label4.Location = new System.Drawing.Point(518, 884);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 17);
             this.label4.TabIndex = 4;
@@ -498,7 +498,7 @@
             this.groupBox4.Controls.Add(this.B_BFFFriesBox);
             this.groupBox4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.ForeColor = System.Drawing.Color.White;
-            this.groupBox4.Location = new System.Drawing.Point(469, 365);
+            this.groupBox4.Location = new System.Drawing.Point(456, 365);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(211, 293);
             this.groupBox4.TabIndex = 7;
@@ -563,56 +563,73 @@
             // 
             // displayListbox
             // 
+            this.displayListbox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.displayListbox.FormattingEnabled = true;
-            this.displayListbox.Location = new System.Drawing.Point(77, 669);
+            this.displayListbox.ItemHeight = 17;
+            this.displayListbox.Location = new System.Drawing.Point(64, 669);
             this.displayListbox.Name = "displayListbox";
             this.displayListbox.Size = new System.Drawing.Size(386, 225);
             this.displayListbox.TabIndex = 9;
             // 
-            // button1
+            // CALCULATEbutton
             // 
-            this.button1.Location = new System.Drawing.Point(700, 816);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 43);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.CALCULATEbutton.BackColor = System.Drawing.Color.LightCoral;
+            this.CALCULATEbutton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CALCULATEbutton.Location = new System.Drawing.Point(687, 816);
+            this.CALCULATEbutton.Name = "CALCULATEbutton";
+            this.CALCULATEbutton.Size = new System.Drawing.Size(130, 43);
+            this.CALCULATEbutton.TabIndex = 10;
+            this.CALCULATEbutton.Text = "CALCULATE BILLS";
+            this.CALCULATEbutton.UseVisualStyleBackColor = false;
+            this.CALCULATEbutton.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(853, 816);
+            this.button2.BackColor = System.Drawing.Color.LightCoral;
+            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(840, 816);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(130, 43);
             this.button2.TabIndex = 11;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Text = "PRINT TRANSACTION";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1008, 816);
+            this.button3.BackColor = System.Drawing.Color.LightCoral;
+            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(995, 816);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(130, 43);
             this.button3.TabIndex = 12;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Text = "REMOVE ORDER";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(1166, 816);
+            this.button4.BackColor = System.Drawing.Color.LightCoral;
+            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(1153, 816);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(130, 43);
             this.button4.TabIndex = 13;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Text = "NEW";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(1327, 816);
+            this.button5.BackColor = System.Drawing.Color.LightCoral;
+            this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(1314, 816);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(130, 43);
             this.button5.TabIndex = 14;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Text = "EXIT";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label6
             // 
@@ -756,6 +773,7 @@
             this.checkBox1.TabIndex = 87;
             this.checkBox1.Text = "Big Mac";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // groupBox5
             // 
@@ -815,7 +833,7 @@
             this.groupBox5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.ForeColor = System.Drawing.Color.White;
-            this.groupBox5.Location = new System.Drawing.Point(709, 70);
+            this.groupBox5.Location = new System.Drawing.Point(696, 70);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(728, 705);
             this.groupBox5.TabIndex = 8;
@@ -832,6 +850,7 @@
             this.checkBox2.TabIndex = 88;
             this.checkBox2.Text = "Chicken McDo";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // checkBox3
             // 
@@ -855,6 +874,7 @@
             this.checkBox4.TabIndex = 90;
             this.checkBox4.Text = "McCafé Americano";
             this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged_1);
             // 
             // checkBox5
             // 
@@ -866,6 +886,7 @@
             this.checkBox5.TabIndex = 91;
             this.checkBox5.Text = "Cheesy Eggdesal";
             this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged_1);
             // 
             // checkBox6
             // 
@@ -877,6 +898,7 @@
             this.checkBox6.TabIndex = 92;
             this.checkBox6.Text = "Quarter Pounder";
             this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
             // 
             // checkBox7
             // 
@@ -889,6 +911,7 @@
             this.checkBox7.TabIndex = 93;
             this.checkBox7.Text = "Chicken McDo";
             this.checkBox7.UseVisualStyleBackColor = false;
+            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
             // 
             // checkBox8
             // 
@@ -901,6 +924,7 @@
             this.checkBox8.TabIndex = 94;
             this.checkBox8.Text = "McFlurry with";
             this.checkBox8.UseVisualStyleBackColor = false;
+            this.checkBox8.CheckedChanged += new System.EventHandler(this.checkBox8_CheckedChanged);
             // 
             // checkBox9
             // 
@@ -926,6 +950,7 @@
             this.checkBox10.TabIndex = 96;
             this.checkBox10.Text = "Sausage McMuffin";
             this.checkBox10.UseVisualStyleBackColor = false;
+            this.checkBox10.CheckedChanged += new System.EventHandler(this.checkBox10_CheckedChanged);
             // 
             // checkBox11
             // 
@@ -937,6 +962,7 @@
             this.checkBox11.TabIndex = 97;
             this.checkBox11.Text = "Burger McDo";
             this.checkBox11.UseVisualStyleBackColor = true;
+            this.checkBox11.CheckedChanged += new System.EventHandler(this.checkBox11_CheckedChanged);
             // 
             // checkBox12
             // 
@@ -948,6 +974,7 @@
             this.checkBox12.TabIndex = 98;
             this.checkBox12.Text = "Crispy Chicken";
             this.checkBox12.UseVisualStyleBackColor = true;
+            this.checkBox12.CheckedChanged += new System.EventHandler(this.checkBox12_CheckedChanged);
             // 
             // checkBox13
             // 
@@ -959,6 +986,7 @@
             this.checkBox13.TabIndex = 99;
             this.checkBox13.Text = "Hot Fudge";
             this.checkBox13.UseVisualStyleBackColor = true;
+            this.checkBox13.CheckedChanged += new System.EventHandler(this.checkBox13_CheckedChanged);
             // 
             // checkBox14
             // 
@@ -970,6 +998,7 @@
             this.checkBox14.TabIndex = 100;
             this.checkBox14.Text = "McCafé Iced";
             this.checkBox14.UseVisualStyleBackColor = true;
+            this.checkBox14.CheckedChanged += new System.EventHandler(this.checkBox14_CheckedChanged);
             // 
             // checkBox15
             // 
@@ -981,6 +1010,7 @@
             this.checkBox15.TabIndex = 101;
             this.checkBox15.Text = "Egg McMuffin";
             this.checkBox15.UseVisualStyleBackColor = true;
+            this.checkBox15.CheckedChanged += new System.EventHandler(this.checkBox15_CheckedChanged);
             // 
             // checkBox16
             // 
@@ -992,6 +1022,7 @@
             this.checkBox16.TabIndex = 102;
             this.checkBox16.Text = "McChicken";
             this.checkBox16.UseVisualStyleBackColor = true;
+            this.checkBox16.CheckedChanged += new System.EventHandler(this.checkBox16_CheckedChanged);
             // 
             // checkBox17
             // 
@@ -1003,6 +1034,7 @@
             this.checkBox17.TabIndex = 103;
             this.checkBox17.Text = "Chicken McNuggets";
             this.checkBox17.UseVisualStyleBackColor = true;
+            this.checkBox17.CheckedChanged += new System.EventHandler(this.checkBox17_CheckedChanged);
             // 
             // checkBox18
             // 
@@ -1014,6 +1046,7 @@
             this.checkBox18.TabIndex = 104;
             this.checkBox18.Text = "Hot Caramel";
             this.checkBox18.UseVisualStyleBackColor = true;
+            this.checkBox18.CheckedChanged += new System.EventHandler(this.checkBox18_CheckedChanged);
             // 
             // checkBox19
             // 
@@ -1025,6 +1058,7 @@
             this.checkBox19.TabIndex = 105;
             this.checkBox19.Text = "McCafé Iced";
             this.checkBox19.UseVisualStyleBackColor = true;
+            this.checkBox19.CheckedChanged += new System.EventHandler(this.checkBox19_CheckedChanged);
             // 
             // checkBox20
             // 
@@ -1036,6 +1070,7 @@
             this.checkBox20.TabIndex = 106;
             this.checkBox20.Text = "Hotcakes";
             this.checkBox20.UseVisualStyleBackColor = true;
+            this.checkBox20.CheckedChanged += new System.EventHandler(this.checkBox20_CheckedChanged);
             // 
             // A_Gravy
             // 
@@ -1293,7 +1328,7 @@
             // 
             this.DisplayPictureBox.BackColor = System.Drawing.Color.White;
             this.DisplayPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.DisplayPictureBox.Location = new System.Drawing.Point(469, 669);
+            this.DisplayPictureBox.Location = new System.Drawing.Point(456, 669);
             this.DisplayPictureBox.Name = "DisplayPictureBox";
             this.DisplayPictureBox.Size = new System.Drawing.Size(212, 212);
             this.DisplayPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1311,7 +1346,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.CALCULATEbutton);
             this.Controls.Add(this.displayListbox);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
@@ -1399,7 +1434,7 @@
         private System.Windows.Forms.TextBox discountedAmountTxtbox;
         private System.Windows.Forms.TextBox discountAmountTxtbox;
         private System.Windows.Forms.ListBox displayListbox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button CALCULATEbutton;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
