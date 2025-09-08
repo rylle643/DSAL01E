@@ -19,7 +19,12 @@ namespace ACOTIN_POS_APPLICATION
 
         private void printDisplayListbox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            printDisplayListbox.Items.AddRange(printDisplayListbox.Items);
+            // Leave empty or add functionality if needed
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

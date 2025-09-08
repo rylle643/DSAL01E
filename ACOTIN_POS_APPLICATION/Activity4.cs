@@ -12,6 +12,7 @@ namespace ACOTIN_POS_APPLICATION
 {
     public partial class Activity4 : Form
     {
+
         private double total_amount = 0;
         private int total_qty = 0;
         public Activity4()
@@ -66,13 +67,16 @@ namespace ACOTIN_POS_APPLICATION
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            this.BackColor = Color.LightGoldenrodYellow;
+            // Clear previous listbox items when switching radio buttons
+            displayListbox.Items.Clear();
+
+            // Set background color
+            this.BackColor = Color.Goldenrod;
 
             double price;
 
-
             foodBRdbtn.Checked = false;
-            DisplayPictureBox.Image = Image.FromFile ("C:\\Users\\Rylle\\Downloads\\ACOTIN-DSAL\\Untitled design (1).png");
+            DisplayPictureBox.Image = Image.FromFile("C:\\Users\\Rylle\\Downloads\\ACOTIN-DSAL\\Untitled design (1).png");
 
             A_ChickenMcDoBox.Checked = true;
             A_BFFFriesBox.Checked = true;
@@ -86,21 +90,27 @@ namespace ACOTIN_POS_APPLICATION
             B_ChickenSandwichBox.Checked = false;
             B_QuarterPounderBox.Checked = false;
 
-            priceTxtBox.Text = "₱720.00";
-            discountAmountTxtbox.Text = "₱144.00";
+            priceTxtBox.Text = "720.00";
+            discountAmountTxtbox.Text = "144.00";
             price = Convert.ToDouble(priceTxtBox.Text);
-            //insert data from textbox
-            displayListbox.Items.Add(foodBRdbtn.Text + priceTxtBox.Text);
-            displayListbox.Items.Add("Discount Amount: " + discountAmountTxtbox.Text);
+            //insert data from textbox - Fixed to use foodARdbtn for consistency
+            displayListbox.Items.Add(foodARdbtn.Text + " - " + priceTxtBox.Text + " ");
+            displayListbox.Items.Add("Discount Amount:       " + discountAmountTxtbox.Text);
+
             qtyTxtbox.Text = "0";
             qtyTxtbox.Focus();
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            this.BackColor = Color.LightGoldenrodYellow;
-            foodARdbtn.Checked = false; 
-            DisplayPictureBox.Image = Image.FromFile ("C:\\Users\\Rylle\\Downloads\\ACOTIN-DSAL\\Untitled design (2).png");
+            // Clear previous listbox items when switching radio buttons
+            displayListbox.Items.Clear();
+
+            // Set background color
+            this.BackColor = Color.Goldenrod;
+
+            foodARdbtn.Checked = false;
+            DisplayPictureBox.Image = Image.FromFile("C:\\Users\\Rylle\\Downloads\\ACOTIN-DSAL\\Untitled design (2).png");
 
             A_ChickenMcDoBox.Checked = false;
             A_BFFFriesBox.Checked = false;
@@ -114,8 +124,14 @@ namespace ACOTIN_POS_APPLICATION
             B_ChickenSandwichBox.Checked = true;
             B_QuarterPounderBox.Checked = true;
 
-            priceTxtBox.Text = "₱450.00";
-            qtyTxtbox.Text = "(15% of the Price) ₱40.50";
+            priceTxtBox.Text = "450.00";
+            discountAmountTxtbox.Text = "67.50";
+
+            displayListbox.Items.Add(foodBRdbtn.Text + " - " + priceTxtBox.Text);
+            displayListbox.Items.Add("Discount Amount:        " + discountAmountTxtbox.Text);
+
+            qtyTxtbox.Text = "0";
+            qtyTxtbox.Focus();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -123,7 +139,7 @@ namespace ACOTIN_POS_APPLICATION
             foodARdbtn.Checked = false;
             foodBRdbtn.Checked = false;
 
-            DisplayPictureBox.Image = Image.FromFile ("C:\\Users\\Rylle\\Downloads\\ACOTIN-DSAL\\no-image-available-icon-vector.jpg");
+            DisplayPictureBox.Image = Image.FromFile("C:\\Users\\Rylle\\Downloads\\ACOTIN-DSAL\\no-image-available-icon-vector.jpg");
 
             A_ChickenMcDoBox.Checked = false;
             A_BFFFriesBox.Checked = false;
@@ -142,12 +158,22 @@ namespace ACOTIN_POS_APPLICATION
 
         private void Activity3_Load(object sender, EventArgs e)
         {
+            // Reset background color to default
+            this.BackColor = SystemColors.Control;
+
+            // Clear display listbox on load
+            displayListbox.Items.Clear();
+
             priceTxtBox.Enabled = false;
             discountedAmountTxtbox.Enabled = false;
             changeTxtbox.Enabled = false;
             totalBillsTxtbox.Enabled = false;
             discountAmountTxtbox.Enabled = false;
             totalQtyTxtbox.Enabled = false;
+
+            // Ensure radio buttons start unchecked
+            foodARdbtn.Checked = false;
+            foodBRdbtn.Checked = false;
 
             A_BFFFriesBox.Checked = false;
             A_ChickenMcDoBox.Checked = false;
@@ -219,7 +245,7 @@ namespace ACOTIN_POS_APPLICATION
             discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "59.00";
             price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox3.Text + " - " + priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox3.Text + " -         " + priceTxtBox.Text);
             qtyTxtbox.Text = "0";
             qtyTxtbox.Focus();
         }
@@ -230,7 +256,7 @@ namespace ACOTIN_POS_APPLICATION
             discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "130.00";
             price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox7.Text + " - " + priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox9.Text + " - " + priceTxtBox.Text);
             qtyTxtbox.Text = "0";
             qtyTxtbox.Focus();
         }
@@ -247,10 +273,11 @@ namespace ACOTIN_POS_APPLICATION
             total_amountPaid = Convert.ToDouble(totalBillsTxtbox.Text);
             change = cash_given - total_amountPaid;
             changeTxtbox.Text = change.ToString("n");
-            displayListbox.Items.Add("Total Bills: " + totalBillsTxtbox.Text);
-            displayListbox.Items.Add("Cash Given: " + cashGivenTxtbox.Text);
-            displayListbox.Items.Add("Change: " + changeTxtbox.Text);
-            displayListbox.Items.Add("Total no. of Items: " + totalQtyTxtbox.Text);
+            displayListbox.Items.Add("Total Bills:           " + totalBillsTxtbox.Text);
+            displayListbox.Items.Add("Cash Given:            " + cashGivenTxtbox.Text);
+            displayListbox.Items.Add("Change:                " + changeTxtbox.Text);
+            displayListbox.Items.Add("Total no. of Items:    " + totalQtyTxtbox.Text);
+
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -267,6 +294,12 @@ namespace ACOTIN_POS_APPLICATION
 
         private void button4_Click(object sender, EventArgs e)
         {
+            // Reset background color
+            this.BackColor = SystemColors.Control;
+
+            // Clear listbox
+            displayListbox.Items.Clear();
+
             foodARdbtn.Checked = false;
             foodBRdbtn.Checked = false;
 
@@ -308,6 +341,14 @@ namespace ACOTIN_POS_APPLICATION
             checkBox19.Checked = false;
             checkBox20.Checked = false;
 
+            // Reset totals
+            total_amount = 0;
+            total_qty = 0;
+            totalBillsTxtbox.Clear();
+            totalQtyTxtbox.Clear();
+            discountedAmountTxtbox.Clear();
+            discountAmountTxtbox.Clear();
+            changeTxtbox.Clear();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -321,7 +362,7 @@ namespace ACOTIN_POS_APPLICATION
             discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "140.00";
             price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox17.Text + " - " + priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox19.Text + " - " + priceTxtBox.Text);
             qtyTxtbox.Text = "0";
             qtyTxtbox.Focus();
         }
@@ -332,7 +373,7 @@ namespace ACOTIN_POS_APPLICATION
             discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "73.00";
             price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox16.Text + " - " + priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox20.Text + " -             " + priceTxtBox.Text);
             qtyTxtbox.Text = "0";
             qtyTxtbox.Focus();
         }
@@ -343,7 +384,7 @@ namespace ACOTIN_POS_APPLICATION
             discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "55.00";
             price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox18.Text + " - " + priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox18.Text + " -   " + priceTxtBox.Text);
             qtyTxtbox.Text = "0";
             qtyTxtbox.Focus();
         }
@@ -354,7 +395,7 @@ namespace ACOTIN_POS_APPLICATION
             discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "150.00";
             price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox19.Text + " - " + priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox17.Text + " - " + priceTxtBox.Text);
             qtyTxtbox.Text = "0";
             qtyTxtbox.Focus();
         }
@@ -365,7 +406,7 @@ namespace ACOTIN_POS_APPLICATION
             discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "50.00";
             price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox20.Text + " - " + priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox16.Text + " -   " + priceTxtBox.Text);
             qtyTxtbox.Text = "0";
             qtyTxtbox.Focus();
         }
@@ -376,7 +417,7 @@ namespace ACOTIN_POS_APPLICATION
             discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "167.00";
             price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox1.Text + " - " + priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox1.Text + " -              " + priceTxtBox.Text);
             qtyTxtbox.Text = "0";
             qtyTxtbox.Focus();
         }
@@ -387,7 +428,7 @@ namespace ACOTIN_POS_APPLICATION
             discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "255.00";
             price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox10.Text + " - " + priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox6.Text + " -      " + priceTxtBox.Text);
             qtyTxtbox.Text = "0";
             qtyTxtbox.Focus();
         }
@@ -398,7 +439,7 @@ namespace ACOTIN_POS_APPLICATION
             discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "47.00";
             price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox15.Text + " - " + priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox11.Text + " -          " + priceTxtBox.Text);
             qtyTxtbox.Text = "0";
             qtyTxtbox.Focus();
         }
@@ -420,7 +461,7 @@ namespace ACOTIN_POS_APPLICATION
             discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "150.00";
             price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox9.Text + " - " + priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox7.Text + " - " + priceTxtBox.Text);
             qtyTxtbox.Text = "0";
             qtyTxtbox.Focus();
         }
@@ -431,7 +472,7 @@ namespace ACOTIN_POS_APPLICATION
             discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "134.00";
             price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox14.Text + " - " + priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox12.Text + " - " + priceTxtBox.Text);
             qtyTxtbox.Text = "0";
             qtyTxtbox.Focus();
         }
@@ -442,7 +483,7 @@ namespace ACOTIN_POS_APPLICATION
             discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "69.00";
             price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox5.Text + " - " + priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox8.Text + " - " + priceTxtBox.Text);
             qtyTxtbox.Text = "0";
             qtyTxtbox.Focus();
         }
@@ -453,7 +494,7 @@ namespace ACOTIN_POS_APPLICATION
             discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "55.00";
             price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox4.Text + " - " + priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox13.Text + " -     " + priceTxtBox.Text);
             qtyTxtbox.Text = "0";
             qtyTxtbox.Focus();
         }
@@ -464,7 +505,7 @@ namespace ACOTIN_POS_APPLICATION
             discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "79.00";
             price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox8.Text + " - " + priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox4.Text + " -     " + priceTxtBox.Text);
             qtyTxtbox.Text = "0";
             qtyTxtbox.Focus();
         }
@@ -475,7 +516,7 @@ namespace ACOTIN_POS_APPLICATION
             discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "140.00";
             price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox6.Text + " - " + priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox14.Text + " -    " + priceTxtBox.Text);
             qtyTxtbox.Text = "0";
             qtyTxtbox.Focus();
         }
@@ -486,7 +527,7 @@ namespace ACOTIN_POS_APPLICATION
             discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "42.00";
             price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox13.Text + " - " + priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox5.Text + " -      " + priceTxtBox.Text);
             qtyTxtbox.Text = "0";
             qtyTxtbox.Focus();
         }
@@ -497,7 +538,7 @@ namespace ACOTIN_POS_APPLICATION
             discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "82.00";
             price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox12.Text + " - " + priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox10.Text + " - " + priceTxtBox.Text);
             qtyTxtbox.Text = "0";
             qtyTxtbox.Focus();
         }
@@ -508,9 +549,14 @@ namespace ACOTIN_POS_APPLICATION
             discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "73.00";
             price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox11.Text + " - " + priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox15.Text + " -         " + priceTxtBox.Text);
             qtyTxtbox.Text = "0";
             qtyTxtbox.Focus();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
