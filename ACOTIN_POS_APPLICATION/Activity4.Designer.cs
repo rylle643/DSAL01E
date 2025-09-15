@@ -113,6 +113,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.DisplayPictureBox = new System.Windows.Forms.PictureBox();
+            this.TransferButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -174,7 +175,6 @@
             this.foodBRdbtn.Name = "foodBRdbtn";
             this.foodBRdbtn.Size = new System.Drawing.Size(162, 21);
             this.foodBRdbtn.TabIndex = 3;
-            this.foodBRdbtn.TabStop = true;
             this.foodBRdbtn.Text = "Snack Burger McShare";
             this.foodBRdbtn.UseVisualStyleBackColor = true;
             this.foodBRdbtn.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
@@ -187,7 +187,6 @@
             this.foodARdbtn.Name = "foodARdbtn";
             this.foodARdbtn.Size = new System.Drawing.Size(158, 21);
             this.foodARdbtn.TabIndex = 2;
-            this.foodARdbtn.TabStop = true;
             this.foodARdbtn.Text = "McShare Bundle for 3";
             this.foodARdbtn.UseVisualStyleBackColor = true;
             this.foodARdbtn.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
@@ -575,9 +574,9 @@
             // 
             this.CALCULATEbutton.BackColor = System.Drawing.Color.LightCoral;
             this.CALCULATEbutton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CALCULATEbutton.Location = new System.Drawing.Point(687, 816);
+            this.CALCULATEbutton.Location = new System.Drawing.Point(728, 805);
             this.CALCULATEbutton.Name = "CALCULATEbutton";
-            this.CALCULATEbutton.Size = new System.Drawing.Size(130, 43);
+            this.CALCULATEbutton.Size = new System.Drawing.Size(113, 43);
             this.CALCULATEbutton.TabIndex = 10;
             this.CALCULATEbutton.Text = "CALCULATE BILLS";
             this.CALCULATEbutton.UseVisualStyleBackColor = false;
@@ -587,9 +586,9 @@
             // 
             this.button2.BackColor = System.Drawing.Color.LightCoral;
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(840, 816);
+            this.button2.Location = new System.Drawing.Point(847, 805);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(130, 43);
+            this.button2.Size = new System.Drawing.Size(109, 43);
             this.button2.TabIndex = 11;
             this.button2.Text = "PRINT TRANSACTION";
             this.button2.UseVisualStyleBackColor = false;
@@ -599,9 +598,9 @@
             // 
             this.button3.BackColor = System.Drawing.Color.LightCoral;
             this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(995, 816);
+            this.button3.Location = new System.Drawing.Point(962, 805);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(130, 43);
+            this.button3.Size = new System.Drawing.Size(107, 43);
             this.button3.TabIndex = 12;
             this.button3.Text = "REMOVE ORDER";
             this.button3.UseVisualStyleBackColor = false;
@@ -611,9 +610,9 @@
             // 
             this.button4.BackColor = System.Drawing.Color.LightCoral;
             this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(1153, 816);
+            this.button4.Location = new System.Drawing.Point(1075, 805);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(130, 43);
+            this.button4.Size = new System.Drawing.Size(107, 43);
             this.button4.TabIndex = 13;
             this.button4.Text = "NEW";
             this.button4.UseVisualStyleBackColor = false;
@@ -623,9 +622,9 @@
             // 
             this.button5.BackColor = System.Drawing.Color.LightCoral;
             this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(1314, 816);
+            this.button5.Location = new System.Drawing.Point(1188, 805);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(130, 43);
+            this.button5.Size = new System.Drawing.Size(107, 43);
             this.button5.TabIndex = 14;
             this.button5.Text = "EXIT";
             this.button5.UseVisualStyleBackColor = false;
@@ -1169,12 +1168,25 @@
             this.DisplayPictureBox.TabStop = false;
             this.DisplayPictureBox.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // TransferButton
+            // 
+            this.TransferButton.BackColor = System.Drawing.Color.LightCoral;
+            this.TransferButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferButton.Location = new System.Drawing.Point(1301, 805);
+            this.TransferButton.Name = "TransferButton";
+            this.TransferButton.Size = new System.Drawing.Size(107, 43);
+            this.TransferButton.TabIndex = 15;
+            this.TransferButton.Text = "TRANSFER";
+            this.TransferButton.UseVisualStyleBackColor = false;
+            this.TransferButton.Click += new System.EventHandler(this.button1_Click_2);
+            // 
             // Activity4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Goldenrod;
             this.ClientSize = new System.Drawing.Size(1478, 928);
+            this.Controls.Add(this.TransferButton);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -1314,5 +1326,6 @@
         private System.Windows.Forms.CheckBox checkBox10;
         private System.Windows.Forms.CheckBox checkBox20;
         private System.Windows.Forms.CheckBox A_Gravy;
+        private System.Windows.Forms.Button TransferButton;
     }
 }

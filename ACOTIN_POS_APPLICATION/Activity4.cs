@@ -29,7 +29,10 @@ namespace ACOTIN_POS_APPLICATION
         {
             double price, discounted_amount, discount_amount;
             int qty;
+
+            // Get the price from the textbox
             price = Convert.ToDouble(priceTxtBox.Text);
+
             qty = Convert.ToInt32(qtyTxtbox.Text);
             discount_amount = Convert.ToDouble(discountAmountTxtbox.Text);
             discounted_amount = (price * qty) - discount_amount;
@@ -557,6 +560,37 @@ namespace ACOTIN_POS_APPLICATION
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            Activity4_Transfer transfer = new Activity4_Transfer();
+
+            transfer.priceTxtBox.Text = this.priceTxtBox.Text;
+            transfer.qtyTxtbox.Text = this.qtyTxtbox.Text;
+            transfer.discountAmountTxtbox.Text = this.discountAmountTxtbox.Text;
+            transfer.discountedAmountTxtbox.Text = this.discountedAmountTxtbox.Text;
+            transfer.totalBillsTxtbox.Text = this.totalBillsTxtbox.Text;
+            transfer.totalQtyTxtbox.Text = this.totalQtyTxtbox.Text;
+            transfer.cashGivenTxtbox.Text = this.cashGivenTxtbox.Text;
+            transfer.changeTxtbox.Text = this.changeTxtbox.Text;
+
+            transfer.foodARdbtn.Checked = this.foodARdbtn.Checked;
+            transfer.foodBRdbtn.Checked = this.foodBRdbtn.Checked;
+
+            transfer.A_ChickenMcDoBox.Checked = this.A_ChickenMcDoBox.Checked;
+            transfer.A_BFFFriesBox.Checked = this.A_BFFFriesBox.Checked;
+            transfer.A_DrinksBox.Checked = this.A_DrinksBox.Checked;
+            transfer.A_RiceBox.Checked = this.A_RiceBox.Checked;
+            transfer.A_Gravy.Checked = this.A_Gravy.Checked;
+
+            transfer.B_ApplePieBox.Checked = this.B_ApplePieBox.Checked;
+            transfer.B_BFFFriesBox.Checked = this.B_BFFFriesBox.Checked;
+            transfer.B_BurgerMcDoBox.Checked = this.B_BurgerMcDoBox.Checked;
+            transfer.B_ChickenSandwichBox.Checked = this.B_ChickenSandwichBox.Checked;
+            transfer.B_QuarterPounderBox.Checked = this.B_QuarterPounderBox.Checked;
+
+            transfer.Show();
         }
     }
 }
