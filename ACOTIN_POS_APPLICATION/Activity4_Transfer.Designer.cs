@@ -436,7 +436,6 @@
             this.foodBRdbtn.Name = "foodBRdbtn";
             this.foodBRdbtn.Size = new System.Drawing.Size(162, 21);
             this.foodBRdbtn.TabIndex = 3;
-            this.foodBRdbtn.TabStop = true;
             this.foodBRdbtn.Text = "Snack Burger McShare";
             this.foodBRdbtn.UseVisualStyleBackColor = true;
             // 
@@ -448,7 +447,6 @@
             this.foodARdbtn.Name = "foodARdbtn";
             this.foodARdbtn.Size = new System.Drawing.Size(158, 21);
             this.foodARdbtn.TabIndex = 2;
-            this.foodARdbtn.TabStop = true;
             this.foodARdbtn.Text = "McShare Bundle for 3";
             this.foodARdbtn.UseVisualStyleBackColor = true;
             // 
@@ -477,6 +475,7 @@
             this.Controls.Add(this.groupBox3);
             this.Name = "Activity4_Transfer";
             this.Text = "Activity4_Transfer";
+            this.Load += new System.EventHandler(this.Activity4_Transfer_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);

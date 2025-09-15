@@ -27,20 +27,21 @@ namespace ACOTIN_POS_APPLICATION
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            double price, discounted_amount, discount_amount;
-            int qty;
+            //double price, discounted_amount, discount_amount;
+            //int qty;
 
-            // Get the price from the textbox
-            price = Convert.ToDouble(priceTxtBox.Text);
+            //// Get the price from the textbox
+            //price = Convert.ToDouble("0" + priceTxtBox.Text);
+            //qty = Convert.ToInt32("0" + qtyTxtbox.Text);
+            //discount_amount = Convert.ToDouble("0" + discountAmountTxtbox.Text);
+            //discounted_amount = (price * qty) - discount_amount;
+            //total_qty += qty;
+            //totalQtyTxtbox.Text = total_qty.ToString();
+            //total_amount += discounted_amount;
+            //totalBillsTxtbox.Text = total_amount.ToString("n");
+            //discountedAmountTxtbox.Text = discounted_amount.ToString("n");
+            //cashGivenTxtbox.Clear();
 
-            qty = Convert.ToInt32(qtyTxtbox.Text);
-            discount_amount = Convert.ToDouble(discountAmountTxtbox.Text);
-            discounted_amount = (price * qty) - discount_amount;
-            total_qty += qty;
-            totalQtyTxtbox.Text = total_qty.ToString();
-            total_amount += discounted_amount;
-            totalBillsTxtbox.Text = total_amount.ToString("n");
-            discountedAmountTxtbox.Text = discounted_amount.ToString("n");
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -70,10 +71,9 @@ namespace ACOTIN_POS_APPLICATION
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            // Clear previous listbox items when switching radio buttons
+
             displayListbox.Items.Clear();
 
-            // Set background color
             this.BackColor = Color.Goldenrod;
 
             double price;
@@ -96,7 +96,6 @@ namespace ACOTIN_POS_APPLICATION
             priceTxtBox.Text = "720.00";
             discountAmountTxtbox.Text = "144.00";
             price = Convert.ToDouble(priceTxtBox.Text);
-            //insert data from textbox - Fixed to use foodARdbtn for consistency
             displayListbox.Items.Add(foodARdbtn.Text + " - " + priceTxtBox.Text + " ");
             displayListbox.Items.Add("Discount Amount:       " + discountAmountTxtbox.Text);
 
@@ -106,10 +105,8 @@ namespace ACOTIN_POS_APPLICATION
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            // Clear previous listbox items when switching radio buttons
             displayListbox.Items.Clear();
 
-            // Set background color
             this.BackColor = Color.Goldenrod;
 
             foodARdbtn.Checked = false;
@@ -161,8 +158,7 @@ namespace ACOTIN_POS_APPLICATION
 
         private void Activity3_Load(object sender, EventArgs e)
         {
-            // Reset background color to default
-            this.BackColor = SystemColors.Control;
+            this.BackColor = Color.Goldenrod;
 
             // Clear display listbox on load
             displayListbox.Items.Clear();
@@ -245,7 +241,6 @@ namespace ACOTIN_POS_APPLICATION
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
             double price;
-            discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "59.00";
             price = Convert.ToDouble(priceTxtBox.Text);
             displayListbox.Items.Add(checkBox3.Text + " -         " + priceTxtBox.Text);
@@ -256,7 +251,6 @@ namespace ACOTIN_POS_APPLICATION
         private void checkBox9_CheckedChanged(object sender, EventArgs e)
         {
             double price;
-            discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "130.00";
             price = Convert.ToDouble(priceTxtBox.Text);
             displayListbox.Items.Add(checkBox9.Text + " - " + priceTxtBox.Text);
@@ -271,11 +265,26 @@ namespace ACOTIN_POS_APPLICATION
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            double price, discounted_amount, discount_amount;
+            int qty;
+
+            price = Convert.ToDouble("0" + priceTxtBox.Text);
+            qty = Convert.ToInt32("0" + qtyTxtbox.Text);
+            discount_amount = Convert.ToDouble("0" + discountAmountTxtbox.Text);
+            discounted_amount = (price * qty) - discount_amount;
+
+            total_qty += qty;
+            totalQtyTxtbox.Text = total_qty.ToString();
+            total_amount += discounted_amount;
+            totalBillsTxtbox.Text = total_amount.ToString("n");
+            discountedAmountTxtbox.Text = discounted_amount.ToString("n");
+
             double cash_given, change, total_amountPaid;
-            cash_given = Convert.ToDouble(cashGivenTxtbox.Text);
-            total_amountPaid = Convert.ToDouble(totalBillsTxtbox.Text);
+            cash_given = Convert.ToDouble("0" + cashGivenTxtbox.Text);
+            total_amountPaid = Convert.ToDouble("0" + totalBillsTxtbox.Text);
             change = cash_given - total_amountPaid;
             changeTxtbox.Text = change.ToString("n");
+
             displayListbox.Items.Add("Total Bills:           " + totalBillsTxtbox.Text);
             displayListbox.Items.Add("Cash Given:            " + cashGivenTxtbox.Text);
             displayListbox.Items.Add("Change:                " + changeTxtbox.Text);
@@ -292,17 +301,11 @@ namespace ACOTIN_POS_APPLICATION
 
         private void button3_Click(object sender, EventArgs e)
         {
-            displayListbox.Items.RemoveAt(displayListbox.SelectedIndex);
+            displayListbox.Items.Clear();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            // Reset background color
-            this.BackColor = SystemColors.Control;
-
-            // Clear listbox
-            displayListbox.Items.Clear();
-
             foodARdbtn.Checked = false;
             foodBRdbtn.Checked = false;
 
@@ -320,9 +323,7 @@ namespace ACOTIN_POS_APPLICATION
             B_ChickenSandwichBox.Checked = false;
             B_QuarterPounderBox.Checked = false;
 
-            priceTxtBox.Clear();
-            qtyTxtbox.Clear();
-
+            // Clear all individual checkboxes
             checkBox1.Checked = false;
             checkBox2.Checked = false;
             checkBox3.Checked = false;
@@ -344,14 +345,20 @@ namespace ACOTIN_POS_APPLICATION
             checkBox19.Checked = false;
             checkBox20.Checked = false;
 
-            // Reset totals
-            total_amount = 0;
-            total_qty = 0;
+            priceTxtBox.Clear();
+            qtyTxtbox.Clear();
+            discountAmountTxtbox.Clear();
+            discountedAmountTxtbox.Clear();
             totalBillsTxtbox.Clear();
             totalQtyTxtbox.Clear();
-            discountedAmountTxtbox.Clear();
-            discountAmountTxtbox.Clear();
+            cashGivenTxtbox.Clear();
             changeTxtbox.Clear();
+
+
+            total_amount = 0;
+            total_qty = 0;
+
+            displayListbox.Items.Clear();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -362,7 +369,6 @@ namespace ACOTIN_POS_APPLICATION
         private void checkBox19_CheckedChanged(object sender, EventArgs e)
         {
             double price;
-            discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "140.00";
             price = Convert.ToDouble(priceTxtBox.Text);
             displayListbox.Items.Add(checkBox19.Text + " - " + priceTxtBox.Text);
@@ -373,7 +379,6 @@ namespace ACOTIN_POS_APPLICATION
         private void checkBox20_CheckedChanged(object sender, EventArgs e)
         {
             double price;
-            discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "73.00";
             price = Convert.ToDouble(priceTxtBox.Text);
             displayListbox.Items.Add(checkBox20.Text + " -             " + priceTxtBox.Text);
@@ -384,7 +389,6 @@ namespace ACOTIN_POS_APPLICATION
         private void checkBox18_CheckedChanged(object sender, EventArgs e)
         {
             double price;
-            discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "55.00";
             price = Convert.ToDouble(priceTxtBox.Text);
             displayListbox.Items.Add(checkBox18.Text + " -   " + priceTxtBox.Text);
@@ -395,7 +399,6 @@ namespace ACOTIN_POS_APPLICATION
         private void checkBox17_CheckedChanged(object sender, EventArgs e)
         {
             double price;
-            discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "150.00";
             price = Convert.ToDouble(priceTxtBox.Text);
             displayListbox.Items.Add(checkBox17.Text + " - " + priceTxtBox.Text);
@@ -406,7 +409,6 @@ namespace ACOTIN_POS_APPLICATION
         private void checkBox16_CheckedChanged(object sender, EventArgs e)
         {
             double price;
-            discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "50.00";
             price = Convert.ToDouble(priceTxtBox.Text);
             displayListbox.Items.Add(checkBox16.Text + " -   " + priceTxtBox.Text);
@@ -417,7 +419,6 @@ namespace ACOTIN_POS_APPLICATION
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             double price;
-            discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "167.00";
             price = Convert.ToDouble(priceTxtBox.Text);
             displayListbox.Items.Add(checkBox1.Text + " -              " + priceTxtBox.Text);
@@ -428,7 +429,6 @@ namespace ACOTIN_POS_APPLICATION
         private void checkBox6_CheckedChanged(object sender, EventArgs e)
         {
             double price;
-            discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "255.00";
             price = Convert.ToDouble(priceTxtBox.Text);
             displayListbox.Items.Add(checkBox6.Text + " -      " + priceTxtBox.Text);
@@ -439,7 +439,6 @@ namespace ACOTIN_POS_APPLICATION
         private void checkBox11_CheckedChanged(object sender, EventArgs e)
         {
             double price;
-            discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "47.00";
             price = Convert.ToDouble(priceTxtBox.Text);
             displayListbox.Items.Add(checkBox11.Text + " -          " + priceTxtBox.Text);
@@ -450,7 +449,6 @@ namespace ACOTIN_POS_APPLICATION
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
             double price;
-            discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "251.00";
             price = Convert.ToDouble(priceTxtBox.Text);
             displayListbox.Items.Add(checkBox2.Text + " - " + priceTxtBox.Text);
@@ -461,7 +459,6 @@ namespace ACOTIN_POS_APPLICATION
         private void checkBox7_CheckedChanged(object sender, EventArgs e)
         {
             double price;
-            discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "150.00";
             price = Convert.ToDouble(priceTxtBox.Text);
             displayListbox.Items.Add(checkBox7.Text + " - " + priceTxtBox.Text);
@@ -472,7 +469,6 @@ namespace ACOTIN_POS_APPLICATION
         private void checkBox12_CheckedChanged(object sender, EventArgs e)
         {
             double price;
-            discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "134.00";
             price = Convert.ToDouble(priceTxtBox.Text);
             displayListbox.Items.Add(checkBox12.Text + " - " + priceTxtBox.Text);
@@ -483,7 +479,6 @@ namespace ACOTIN_POS_APPLICATION
         private void checkBox8_CheckedChanged(object sender, EventArgs e)
         {
             double price;
-            discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "69.00";
             price = Convert.ToDouble(priceTxtBox.Text);
             displayListbox.Items.Add(checkBox8.Text + " - " + priceTxtBox.Text);
@@ -494,7 +489,6 @@ namespace ACOTIN_POS_APPLICATION
         private void checkBox13_CheckedChanged(object sender, EventArgs e)
         {
             double price;
-            discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "55.00";
             price = Convert.ToDouble(priceTxtBox.Text);
             displayListbox.Items.Add(checkBox13.Text + " -     " + priceTxtBox.Text);
@@ -505,7 +499,6 @@ namespace ACOTIN_POS_APPLICATION
         private void checkBox4_CheckedChanged_1(object sender, EventArgs e)
         {
             double price;
-            discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "79.00";
             price = Convert.ToDouble(priceTxtBox.Text);
             displayListbox.Items.Add(checkBox4.Text + " -     " + priceTxtBox.Text);
@@ -516,7 +509,6 @@ namespace ACOTIN_POS_APPLICATION
         private void checkBox14_CheckedChanged(object sender, EventArgs e)
         {
             double price;
-            discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "140.00";
             price = Convert.ToDouble(priceTxtBox.Text);
             displayListbox.Items.Add(checkBox14.Text + " -    " + priceTxtBox.Text);
@@ -527,7 +519,6 @@ namespace ACOTIN_POS_APPLICATION
         private void checkBox5_CheckedChanged_1(object sender, EventArgs e)
         {
             double price;
-            discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "42.00";
             price = Convert.ToDouble(priceTxtBox.Text);
             displayListbox.Items.Add(checkBox5.Text + " -      " + priceTxtBox.Text);
@@ -538,7 +529,6 @@ namespace ACOTIN_POS_APPLICATION
         private void checkBox10_CheckedChanged(object sender, EventArgs e)
         {
             double price;
-            discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "82.00";
             price = Convert.ToDouble(priceTxtBox.Text);
             displayListbox.Items.Add(checkBox10.Text + " - " + priceTxtBox.Text);
@@ -549,7 +539,6 @@ namespace ACOTIN_POS_APPLICATION
         private void checkBox15_CheckedChanged(object sender, EventArgs e)
         {
             double price;
-            discountAmountTxtbox.Text = "0.00";
             priceTxtBox.Text = "73.00";
             price = Convert.ToDouble(priceTxtBox.Text);
             displayListbox.Items.Add(checkBox15.Text + " -         " + priceTxtBox.Text);
@@ -564,33 +553,33 @@ namespace ACOTIN_POS_APPLICATION
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-            Activity4_Transfer transfer = new Activity4_Transfer();
+            Activity4_Transfer print = new Activity4_Transfer();
 
-            transfer.priceTxtBox.Text = this.priceTxtBox.Text;
-            transfer.qtyTxtbox.Text = this.qtyTxtbox.Text;
-            transfer.discountAmountTxtbox.Text = this.discountAmountTxtbox.Text;
-            transfer.discountedAmountTxtbox.Text = this.discountedAmountTxtbox.Text;
-            transfer.totalBillsTxtbox.Text = this.totalBillsTxtbox.Text;
-            transfer.totalQtyTxtbox.Text = this.totalQtyTxtbox.Text;
-            transfer.cashGivenTxtbox.Text = this.cashGivenTxtbox.Text;
-            transfer.changeTxtbox.Text = this.changeTxtbox.Text;
+            print.priceTxtBox.Text = this.priceTxtBox.Text;
+            print.qtyTxtbox.Text = this.qtyTxtbox.Text;
+            print.discountAmountTxtbox.Text = this.discountAmountTxtbox.Text;
+            print.discountedAmountTxtbox.Text = this.discountedAmountTxtbox.Text;
+            print.totalBillsTxtbox.Text = this.totalBillsTxtbox.Text;
+            print.totalQtyTxtbox.Text = this.totalQtyTxtbox.Text;
+            print.cashGivenTxtbox.Text = this.cashGivenTxtbox.Text;
+            print.changeTxtbox.Text = this.changeTxtbox.Text;
 
-            transfer.foodARdbtn.Checked = this.foodARdbtn.Checked;
-            transfer.foodBRdbtn.Checked = this.foodBRdbtn.Checked;
+            print.foodARdbtn.Checked = this.foodARdbtn.Checked;
+            print.foodBRdbtn.Checked = this.foodBRdbtn.Checked;
 
-            transfer.A_ChickenMcDoBox.Checked = this.A_ChickenMcDoBox.Checked;
-            transfer.A_BFFFriesBox.Checked = this.A_BFFFriesBox.Checked;
-            transfer.A_DrinksBox.Checked = this.A_DrinksBox.Checked;
-            transfer.A_RiceBox.Checked = this.A_RiceBox.Checked;
-            transfer.A_Gravy.Checked = this.A_Gravy.Checked;
+            print.A_ChickenMcDoBox.Checked = this.A_ChickenMcDoBox.Checked;
+            print.A_BFFFriesBox.Checked = this.A_BFFFriesBox.Checked;
+            print.A_DrinksBox.Checked = this.A_DrinksBox.Checked;
+            print.A_RiceBox.Checked = this.A_RiceBox.Checked;
+            print.A_Gravy.Checked = this.A_Gravy.Checked;
 
-            transfer.B_ApplePieBox.Checked = this.B_ApplePieBox.Checked;
-            transfer.B_BFFFriesBox.Checked = this.B_BFFFriesBox.Checked;
-            transfer.B_BurgerMcDoBox.Checked = this.B_BurgerMcDoBox.Checked;
-            transfer.B_ChickenSandwichBox.Checked = this.B_ChickenSandwichBox.Checked;
-            transfer.B_QuarterPounderBox.Checked = this.B_QuarterPounderBox.Checked;
+            print.B_ApplePieBox.Checked = this.B_ApplePieBox.Checked;
+            print.B_BFFFriesBox.Checked = this.B_BFFFriesBox.Checked;
+            print.B_BurgerMcDoBox.Checked = this.B_BurgerMcDoBox.Checked;
+            print.B_ChickenSandwichBox.Checked = this.B_ChickenSandwichBox.Checked;
+            print.B_QuarterPounderBox.Checked = this.B_QuarterPounderBox.Checked;
 
-            transfer.Show();
+            print.Show();
         }
     }
 }

@@ -80,5 +80,17 @@ namespace ACOTIN_POS_APPLICATION
         {
             // Leave empty or add functionality if needed
         }
+
+        private void Activity4_Transfer_Load(object sender, EventArgs e)
+        {
+            priceTxtBox.Enabled = false;
+            discountedAmountTxtbox.Enabled = false;
+            changeTxtbox.Enabled = false;
+            totalBillsTxtbox.Enabled = false;
+            discountAmountTxtbox.Enabled = false;
+            totalQtyTxtbox.Enabled = false;
+            cashGivenTxtbox.Enabled = false;
+            qtyTxtbox.Enabled = false;
+        }
     }
 }
