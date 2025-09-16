@@ -100,6 +100,12 @@
     <Compile Include="Activity4_Transfer.Designer.cs">
       <DependentUpon>Activity4_Transfer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lesson5Activity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson5Activity.Designer.cs">
+      <DependentUpon>Lesson5Activity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Activity1.resx">
@@ -119,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Activity4_Transfer.resx">
       <DependentUpon>Activity4_Transfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson5Activity.resx">
+      <DependentUpon>Lesson5Activity.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -172,6 +181,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Untitled design %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7d54f7b9-adx-42a7-a8b2-3eb5d9cb8d78.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
