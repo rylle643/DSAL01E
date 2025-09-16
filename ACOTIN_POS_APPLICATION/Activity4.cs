@@ -79,7 +79,7 @@ namespace ACOTIN_POS_APPLICATION
             double price;
 
             foodBRdbtn.Checked = false;
-            DisplayPictureBox.Image = Image.FromFile("C:\\Users\\Rylle\\Downloads\\ACOTIN-DSAL\\Untitled design (1).png");
+            DisplayPictureBox.Image = Image.FromFile("C:\\Users\\C203-39\\source\\repos\\rylle643\\DSAL01E\\ACOTIN_POS_APPLICATION\\Resources\\Untitled design (1).png");
 
             A_ChickenMcDoBox.Checked = true;
             A_BFFFriesBox.Checked = true;
@@ -110,7 +110,7 @@ namespace ACOTIN_POS_APPLICATION
             this.BackColor = Color.Goldenrod;
 
             foodARdbtn.Checked = false;
-            DisplayPictureBox.Image = Image.FromFile("C:\\Users\\Rylle\\Downloads\\ACOTIN-DSAL\\Untitled design (2).png");
+            DisplayPictureBox.Image = Image.FromFile("C:\\Users\\C203-39\\source\\repos\\rylle643\\DSAL01E\\ACOTIN_POS_APPLICATION\\Resources\\Untitled design (2).png");
 
             A_ChickenMcDoBox.Checked = false;
             A_BFFFriesBox.Checked = false;
