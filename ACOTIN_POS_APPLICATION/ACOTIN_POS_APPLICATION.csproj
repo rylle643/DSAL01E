@@ -106,6 +106,12 @@
     <Compile Include="Lesson5Activity.Designer.cs">
       <DependentUpon>Lesson5Activity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lesson5ActivityPayslipReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson5ActivityPayslipReport.Designer.cs">
+      <DependentUpon>Lesson5ActivityPayslipReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Activity1.resx">
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Lesson5Activity.resx">
       <DependentUpon>Lesson5Activity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson5ActivityPayslipReport.resx">
+      <DependentUpon>Lesson5ActivityPayslipReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
