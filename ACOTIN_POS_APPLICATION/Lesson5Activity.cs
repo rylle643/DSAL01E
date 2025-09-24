@@ -108,9 +108,9 @@ namespace ACOTIN_POS_APPLICATION
             // PhilHealth Contribution
             if ((Convert.ToDecimal(GrossIncomeTxt.Text) * 2) <= 10000)
                 PhilhealthContributionsTxt.Text = "500.00";
-            else if ((Convert.ToDecimal(GrossIncomeTxt.Text) * 2) <= 99999.99m)
+            else if ((Convert.ToDecimal(GrossIncomeTxt.Text) * 2) >= 10000.01m && (Convert.ToDecimal(GrossIncomeTxt.Text) * 2) <= 99999.99m)
                 PhilhealthContributionsTxt.Text = ((Convert.ToDecimal(GrossIncomeTxt.Text) * 2) * 0.05m).ToString("0.00");
-            else
+            else if ((Convert.ToDecimal(GrossIncomeTxt.Text) * 2) >= 100000)
                 PhilhealthContributionsTxt.Text = "5000.00";
 
             // Pag-IBIG Contribution
@@ -119,16 +119,57 @@ namespace ACOTIN_POS_APPLICATION
             // Income Tax
             if (((Convert.ToDecimal(GrossIncomeTxt.Text) - (Convert.ToDecimal(SSSContributionTxt.Text) + Convert.ToDecimal(PhilhealthContributionsTxt.Text) + 200)) * 24) <= 250000)
                 IncomeTaxTxt.Text = "0.00";
-            else if (((Convert.ToDecimal(GrossIncomeTxt.Text) - (Convert.ToDecimal(SSSContributionTxt.Text) + Convert.ToDecimal(PhilhealthContributionsTxt.Text) + 200)) * 24) <= 400000)
+            else if (((Convert.ToDecimal(GrossIncomeTxt.Text) - (Convert.ToDecimal(SSSContributionTxt.Text) + Convert.ToDecimal(PhilhealthContributionsTxt.Text) + 200)) * 24) > 250000 && ((Convert.ToDecimal(GrossIncomeTxt.Text) - (Convert.ToDecimal(SSSContributionTxt.Text) + Convert.ToDecimal(PhilhealthContributionsTxt.Text) + 200)) * 24) <= 400000)
                 IncomeTaxTxt.Text = (((((Convert.ToDecimal(GrossIncomeTxt.Text) - (Convert.ToDecimal(SSSContributionTxt.Text) + Convert.ToDecimal(PhilhealthContributionsTxt.Text) + 200)) * 24) - 250000) * 0.15m) / 24).ToString("0.00");
-            else if (((Convert.ToDecimal(GrossIncomeTxt.Text) - (Convert.ToDecimal(SSSContributionTxt.Text) + Convert.ToDecimal(PhilhealthContributionsTxt.Text) + 200)) * 24) <= 800000)
+            else if (((Convert.ToDecimal(GrossIncomeTxt.Text) - (Convert.ToDecimal(SSSContributionTxt.Text) + Convert.ToDecimal(PhilhealthContributionsTxt.Text) + 200)) * 24) > 400000 && ((Convert.ToDecimal(GrossIncomeTxt.Text) - (Convert.ToDecimal(SSSContributionTxt.Text) + Convert.ToDecimal(PhilhealthContributionsTxt.Text) + 200)) * 24) <= 800000)
                 IncomeTaxTxt.Text = (((22500 + (((Convert.ToDecimal(GrossIncomeTxt.Text) - (Convert.ToDecimal(SSSContributionTxt.Text) + Convert.ToDecimal(PhilhealthContributionsTxt.Text) + 200)) * 24) - 400000) * 0.20m)) / 24).ToString("0.00");
-            else if (((Convert.ToDecimal(GrossIncomeTxt.Text) - (Convert.ToDecimal(SSSContributionTxt.Text) + Convert.ToDecimal(PhilhealthContributionsTxt.Text) + 200)) * 24) <= 2000000)
+            else if (((Convert.ToDecimal(GrossIncomeTxt.Text) - (Convert.ToDecimal(SSSContributionTxt.Text) + Convert.ToDecimal(PhilhealthContributionsTxt.Text) + 200)) * 24) > 800000 && ((Convert.ToDecimal(GrossIncomeTxt.Text) - (Convert.ToDecimal(SSSContributionTxt.Text) + Convert.ToDecimal(PhilhealthContributionsTxt.Text) + 200)) * 24) <= 2000000)
                 IncomeTaxTxt.Text = (((102500 + (((Convert.ToDecimal(GrossIncomeTxt.Text) - (Convert.ToDecimal(SSSContributionTxt.Text) + Convert.ToDecimal(PhilhealthContributionsTxt.Text) + 200)) * 24) - 800000) * 0.25m)) / 24).ToString("0.00");
-            else if (((Convert.ToDecimal(GrossIncomeTxt.Text) - (Convert.ToDecimal(SSSContributionTxt.Text) + Convert.ToDecimal(PhilhealthContributionsTxt.Text) + 200)) * 24) <= 8000000)
+            else if (((Convert.ToDecimal(GrossIncomeTxt.Text) - (Convert.ToDecimal(SSSContributionTxt.Text) + Convert.ToDecimal(PhilhealthContributionsTxt.Text) + 200)) * 24) > 2000000 && ((Convert.ToDecimal(GrossIncomeTxt.Text) - (Convert.ToDecimal(SSSContributionTxt.Text) + Convert.ToDecimal(PhilhealthContributionsTxt.Text) + 200)) * 24) <= 8000000)
                 IncomeTaxTxt.Text = (((402500 + (((Convert.ToDecimal(GrossIncomeTxt.Text) - (Convert.ToDecimal(SSSContributionTxt.Text) + Convert.ToDecimal(PhilhealthContributionsTxt.Text) + 200)) * 24) - 2000000) * 0.30m)) / 24).ToString("0.00");
             else
                 IncomeTaxTxt.Text = (((2202500 + (((Convert.ToDecimal(GrossIncomeTxt.Text) - (Convert.ToDecimal(SSSContributionTxt.Text) + Convert.ToDecimal(PhilhealthContributionsTxt.Text) + 200)) * 24) - 8000000) * 0.35m)) / 24).ToString("0.00");
+        }
+
+        private void label23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            EmployeeNumTxt.Clear();
+            DepartmentTxt.Clear();
+            BasicRateHourTxt.Clear();
+            BasicNoofHoursTxt.Clear();
+            BasicIncomeTxt.Clear();
+            HonorariumRateHourTxt.Clear();
+            HonorariumNoofHoursTxt.Clear();
+            HonorariumIncomeTxt.Clear();
+            OtherRateHourTxt.Clear();
+            OtherNoofHoursTxt.Clear();
+            OtherIncomeTxt.Clear();
+            GrossIncomeTxt.Clear();
+            NetIncomeTxt.Clear();
+            FirstNameTxt.Clear();
+            MiddleNameTxt.Clear();
+            SurnameTxt.Clear();
+            CivilStatusTxt.Clear();
+            QualifiedDependentsStatusTxt.Clear();
+            PaydateTxt.Clear();
+            EmployeeStatusTxt.Clear();
+            DesignationTxt.Clear();
+            SSSContributionTxt.Clear();
+            PhilhealthContributionsTxt.Clear();
+            PagibigContributionsTxt.Clear();
+            IncomeTaxTxt.Clear();
+            SSSLoanTxt.Clear();
+            PagibigLoansTxt.Clear();
+            FacultySavingsDepositTxt.Clear();
+            FacultySavingsLoansTxt.Clear();
+            SalaryLoanTxt.Clear();
+            OtherLoanTxt.Clear();
+            TotalDeductionTxt.Clear();
         }
     }
 }

@@ -352,6 +352,7 @@
             this.label23.Size = new System.Drawing.Size(58, 14);
             this.label23.TabIndex = 25;
             this.label23.Text = "Paydate:";
+            this.label23.Click += new System.EventHandler(this.label23_Click);
             // 
             // label24
             // 
@@ -585,6 +586,7 @@
             this.button5.TabIndex = 46;
             this.button5.Text = "NEW";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // HonorariumNoofHoursTxt
             // 
