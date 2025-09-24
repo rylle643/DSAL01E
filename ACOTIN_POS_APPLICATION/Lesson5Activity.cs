@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ACOTIN_POS_APPLICATION
 {
@@ -170,6 +171,44 @@ namespace ACOTIN_POS_APPLICATION
             SalaryLoanTxt.Clear();
             OtherLoanTxt.Clear();
             TotalDeductionTxt.Clear();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Lesson5ActivityPayslipReport print = new Lesson5ActivityPayslipReport();
+
+            print.EmployeeNumTxt.Text = this.EmployeeNumTxt.Text;
+            print.SurnameTxt.Text = this.SurnameTxt.Text;
+            print.FirstNameTxt.Text = this.FirstNameTxt.Text;
+            print.MiddleNameTxt.Text = this.MiddleNameTxt.Text;
+            print.DepartmentTxt.Text = this.DepartmentTxt.Text;
+            print.textBox1.Text = this.PaydateTxt.Text;
+            print.PaydateTxt.Text = this.PaydateTxt.Text;
+
+            print.BasicNoofHoursTxt.Text = this.BasicNoofHoursTxt.Text;
+            print.BasicRateHourTxt.Text = this.BasicRateHourTxt.Text;  
+            print.BasicIncomeTxt.Text = this.BasicIncomeTxt.Text;
+            print.HonorariumNoofHoursTxt.Text = this.HonorariumNoofHoursTxt.Text;
+            print.HonorariumRateHourTxt.Text = this.HonorariumRateHourTxt.Text;
+            print.HonorariumIncomeTxt.Text = this.HonorariumIncomeTxt.Text;
+            print.OtherNoofHoursTxt.Text = this.OtherNoofHoursTxt.Text;
+            print.OtherRateHourTxt.Text = this.OtherRateHourTxt.Text;
+            print.OtherIncomeTxt.Text = this.OtherIncomeTxt.Text;
+
+            print.IncomeTaxTxt.Text = this.IncomeTaxTxt.Text;
+            print.SSSContributionTxt.Text = this.SSSContributionTxt.Text;
+            print.PhilhealthContributionsTxt.Text = this.PhilhealthContributionsTxt.Text;
+            print.PagibigContributionsTxt.Text = this.PagibigContributionsTxt.Text;
+
+            print.textBox12.Text = this.GrossIncomeTxt.Text;
+            print.TotalDeductionTxt.Text = this.TotalDeductionTxt.Text;
+
+            print.GrossIncomeTxt.Text = this.GrossIncomeTxt.Text;
+            print.textBox5.Text = this.TotalDeductionTxt.Text;
+            print.NetIncomeTxt.Text = this.NetIncomeTxt.Text;
+
+            print.Show();
+
         }
     }
 }
