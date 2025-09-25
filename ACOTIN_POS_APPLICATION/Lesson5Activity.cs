@@ -117,7 +117,7 @@ namespace ACOTIN_POS_APPLICATION
             PhilhealthContributionsTxt.Text = philhealthAmount.ToString();
 
             // Pag-IBIG Contribution (Divided by 2)
-            PagibigContributionsTxt.Text = "100";
+            PagibigContributionsTxt.Text = "200";
 
             // Income Tax (Monthly and Divided by 2)
             decimal netTaxable = grossAmount - (sssAmount + philhealthAmount + 100);
