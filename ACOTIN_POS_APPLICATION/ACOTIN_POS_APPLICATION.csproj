@@ -112,6 +112,18 @@
     <Compile Include="Lesson5ActivityPayslipReport.Designer.cs">
       <DependentUpon>Lesson5ActivityPayslipReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginFrm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginFrm1.Designer.cs">
+      <DependentUpon>LoginFrm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFrm.Designer.cs">
+      <DependentUpon>MainFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Activity1.resx">
@@ -137,6 +149,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Lesson5ActivityPayslipReport.resx">
       <DependentUpon>Lesson5ActivityPayslipReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginFrm1.resx">
+      <DependentUpon>LoginFrm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFrm.resx">
+      <DependentUpon>MainFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
