@@ -35,7 +35,7 @@ namespace ACOTIN_POS_APPLICATION
             else if (UsernameTxt.Text == "Cashier" && PasswordTxt.Text == "12345")
             {
                 MessageBox.Show("Welcome Cashier Point of Sale Page!");
-                MainFrm cashierfrm = new MainFrm();
+                Activity2 cashierfrm = new Activity2();
                 cashierfrm.Show();
                 UsernameTxt.Clear();
                 PasswordTxt.Clear();
@@ -43,7 +43,7 @@ namespace ACOTIN_POS_APPLICATION
             else if (UsernameTxt.Text == "Cashier1" && PasswordTxt.Text == "22222")
             {
                 MessageBox.Show("Welcome Cashier Ordering POS Page!");
-                MainFrm cashier1frm = new MainFrm();
+                Activity4 cashier1frm = new Activity4();
                 cashier1frm.Show();
                 UsernameTxt.Clear();
                 PasswordTxt.Clear();
@@ -51,7 +51,7 @@ namespace ACOTIN_POS_APPLICATION
             else if (UsernameTxt.Text == "Payroll" && PasswordTxt.Text == "11111")
             {
                 MessageBox.Show("Welcome Payroll Page!");
-                MainFrm payrollfrm = new MainFrm();
+                Lesson5Activity payrollfrm = new Lesson5Activity();
                 payrollfrm.Show();
                 UsernameTxt.Clear();
                 PasswordTxt.Clear();
