@@ -850,7 +850,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(1054, 930);
+            this.ClientSize = new System.Drawing.Size(1054, 817);
             this.Controls.Add(this.FirstNameTxt);
             this.Controls.Add(this.MiddleNameTxt);
             this.Controls.Add(this.SurnameTxt);
