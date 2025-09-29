@@ -77,7 +77,7 @@ namespace ACOTIN_POS_APPLICATION
             IncomeTaxTxt.Enabled = false;
         }
 
-        // GROSS INCOME Button Click (button1_Click) - SIMPLE VERSION
+        
         private void button1_Click(object sender, EventArgs e)
         {
             // Basic Income
@@ -90,58 +90,168 @@ namespace ACOTIN_POS_APPLICATION
             OtherIncomeTxt.Text = (Convert.ToDecimal(OtherRateHourTxt.Text) * Convert.ToDecimal(OtherNoofHoursTxt.Text)).ToString();
 
             // Gross Income
-            GrossIncomeTxt.Text = (Convert.ToDecimal(BasicIncomeTxt.Text) + Convert.ToDecimal(HonorariumIncomeTxt.Text) + Convert.ToDecimal(OtherIncomeTxt.Text)).ToString();
+            decimal grossincome = Convert.ToDecimal(BasicIncomeTxt.Text) + Convert.ToDecimal(HonorariumIncomeTxt.Text) + Convert.ToDecimal(OtherIncomeTxt.Text);
+            GrossIncomeTxt.Text = grossincome.ToString();
 
-            // SSS Contribution (Divided by 2)
-            decimal grossAmount = Convert.ToDecimal(GrossIncomeTxt.Text);
-            decimal sssAmount = 0;
+            // COMPUTE SSS CONTRIBUTION
+            decimal sss_contrib = 0;
 
-            if (grossAmount < 10700)
-                sssAmount = ((grossAmount * 0.15m) + 10) / 2;
-            else
-                sssAmount = ((grossAmount * 0.15m) + 30) / 2;
+            if (grossincome < 5250)
+                sss_contrib = 250.00m / 2;
+            else if (grossincome >= 5250 && grossincome < 5750)
+                sss_contrib = 275.00m / 2;
+            else if (grossincome >= 5750 && grossincome < 6250)
+                sss_contrib = 300.00m / 2;
+            else if (grossincome >= 6250 && grossincome < 6750)
+                sss_contrib = 325.00m / 2;
+            else if (grossincome >= 6750 && grossincome < 7250)
+                sss_contrib = 350.00m / 2;
+            else if (grossincome >= 7250 && grossincome < 7750)
+                sss_contrib = 375.00m / 2;
+            else if (grossincome >= 7750 && grossincome < 8250)
+                sss_contrib = 400.00m / 2;
+            else if (grossincome >= 8250 && grossincome < 8750)
+                sss_contrib = 425.00m / 2;
+            else if (grossincome >= 8750 && grossincome < 9250)
+                sss_contrib = 450.00m / 2;
+            else if (grossincome >= 9250 && grossincome < 9750)
+                sss_contrib = 475.00m / 2;
+            else if (grossincome >= 9750 && grossincome < 10250)
+                sss_contrib = 500.00m / 2;
+            else if (grossincome >= 10250 && grossincome < 10750)
+                sss_contrib = 525.00m / 2;
+            else if (grossincome >= 10750 && grossincome < 11250)
+                sss_contrib = 550.00m / 2;
+            else if (grossincome >= 11250 && grossincome < 11750)
+                sss_contrib = 575.00m / 2;
+            else if (grossincome >= 11750 && grossincome < 12250)
+                sss_contrib = 600.00m / 2;
+            else if (grossincome >= 12250 && grossincome < 12750)
+                sss_contrib = 625.00m / 2;
+            else if (grossincome >= 12750 && grossincome < 13250)
+                sss_contrib = 650.00m / 2;
+            else if (grossincome >= 13250 && grossincome < 13750)
+                sss_contrib = 675.00m / 2;
+            else if (grossincome >= 13750 && grossincome < 14250)
+                sss_contrib = 700.00m / 2;
+            else if (grossincome >= 14250 && grossincome < 14750)
+                sss_contrib = 725.00m / 2;
+            else if (grossincome >= 14750 && grossincome < 15250)
+                sss_contrib = 750.00m / 2;
+            else if (grossincome >= 15250 && grossincome < 15750)
+                sss_contrib = 775.00m / 2;
+            else if (grossincome >= 15750 && grossincome < 16250)
+                sss_contrib = 800.00m / 2;
+            else if (grossincome >= 16250 && grossincome < 16750)
+                sss_contrib = 825.00m / 2;
+            else if (grossincome >= 16750 && grossincome < 17250)
+                sss_contrib = 850.00m / 2;
+            else if (grossincome >= 17250 && grossincome < 17750)
+                sss_contrib = 875.00m / 2;
+            else if (grossincome >= 17750 && grossincome < 18250)
+                sss_contrib = 900.00m / 2;
+            else if (grossincome >= 18250 && grossincome < 18750)
+                sss_contrib = 925.00m / 2;
+            else if (grossincome >= 18750 && grossincome < 19250)
+                sss_contrib = 950.00m / 2;
+            else if (grossincome >= 19250 && grossincome < 19750)
+                sss_contrib = 975.00m / 2;
+            else if (grossincome >= 19750 && grossincome < 20250)
+                sss_contrib = 1000.00m / 2;
+            else if (grossincome >= 20250 && grossincome < 20750)
+                sss_contrib = 1025.00m / 2;
+            else if (grossincome >= 20750 && grossincome < 21250)
+                sss_contrib = 1050.00m / 2;
+            else if (grossincome >= 21250 && grossincome < 21750)
+                sss_contrib = 1075.00m / 2;
+            else if (grossincome >= 21750 && grossincome < 22250)
+                sss_contrib = 1100.00m / 2;
+            else if (grossincome >= 22250 && grossincome < 22750)
+                sss_contrib = 1125.00m / 2;
+            else if (grossincome >= 22750 && grossincome < 23250)
+                sss_contrib = 1150.00m / 2;
+            else if (grossincome >= 23250 && grossincome < 23750)
+                sss_contrib = 1175.00m / 2;
+            else if (grossincome >= 23750 && grossincome < 24250)
+                sss_contrib = 1200.00m / 2;
+            else if (grossincome >= 24250 && grossincome < 24750)
+                sss_contrib = 1225.00m / 2;
+            else if (grossincome >= 24750 && grossincome < 25250)
+                sss_contrib = 1250.00m / 2;
+            else if (grossincome >= 25250 && grossincome < 25750)
+                sss_contrib = 1275.00m / 2;
+            else if (grossincome >= 25750 && grossincome < 26250)
+                sss_contrib = 1300.00m / 2;
+            else if (grossincome >= 26250 && grossincome < 26750)
+                sss_contrib = 1325.00m / 2;
+            else if (grossincome >= 26750 && grossincome < 27250)
+                sss_contrib = 1350.00m / 2;
+            else if (grossincome >= 27250 && grossincome < 27750)
+                sss_contrib = 1375.00m / 2;
+            else if (grossincome >= 27750 && grossincome < 28250)
+                sss_contrib = 1400.00m / 2;
+            else if (grossincome >= 28250 && grossincome < 28750)
+                sss_contrib = 1425.00m / 2;
+            else if (grossincome >= 28750 && grossincome < 29250)
+                sss_contrib = 1450.00m / 2;
+            else if (grossincome >= 29250 && grossincome < 29750)
+                sss_contrib = 1475.00m / 2;
+            else if (grossincome >= 29750 && grossincome < 30250)
+                sss_contrib = 1500.00m / 2;
+            else if (grossincome >= 30250 && grossincome < 30750)
+                sss_contrib = 1525.00m / 2;
+            else if (grossincome >= 30750 && grossincome < 31250)
+                sss_contrib = 1550.00m / 2;
+            else if (grossincome >= 31250 && grossincome < 31750)
+                sss_contrib = 1575.00m / 2;
+            else if (grossincome >= 31750 && grossincome < 32250)
+                sss_contrib = 1600.00m / 2;
+            else if (grossincome >= 32250 && grossincome < 32750)
+                sss_contrib = 1625.00m / 2;
+            else if (grossincome >= 32750 && grossincome < 33250)
+                sss_contrib = 1650.00m / 2;
+            else if (grossincome >= 33250 && grossincome < 33750)
+                sss_contrib = 1675.00m / 2;
+            else if (grossincome >= 33750 && grossincome < 34250)
+                sss_contrib = 1700.00m / 2;
+            else if (grossincome >= 34250 && grossincome < 34750)
+                sss_contrib = 1725.00m / 2;
+            else if (grossincome >= 34750)
+                sss_contrib = 1750.00m / 2;
 
-            SSSContributionTxt.Text = sssAmount.ToString();
+            SSSContributionTxt.Text = sss_contrib.ToString();
 
-            // PhilHealth Contribution (Divided by 2)
-            decimal monthlyGross = grossAmount * 2;
-            decimal philhealthAmount = 0;
+            // Pag-IBIG Contribution (200.00)
+            decimal pagibig_contrib = 200.00m;
+            PagibigContributionsTxt.Text = pagibig_contrib.ToString();
 
-            if (monthlyGross <= 10000)
-                philhealthAmount = 500 / 2;
-            else if (monthlyGross <= 99999.99m)
-                philhealthAmount = (monthlyGross * 0.05m) / 2;
-            else
-                philhealthAmount = 5000 / 2;
+            // PhilHealth Contribution (2.5% of gross income)
+            decimal philhealth_contrib = grossincome * 0.025m;
+            PhilhealthContributionsTxt.Text = philhealth_contrib.ToString();
 
-            PhilhealthContributionsTxt.Text = philhealthAmount.ToString();
+            // COMPUTE MONTHLY TAXABLE INCOME FIRST
+            decimal monthly_taxable_income = grossincome - sss_contrib - philhealth_contrib - pagibig_contrib;
+            decimal tax_contrib = 0;
 
-            // Pag-IBIG Contribution (Divided by 2)
-            PagibigContributionsTxt.Text = "200";
+            if (monthly_taxable_income <= 20833)
+                tax_contrib = 0.00m;
+            else if (monthly_taxable_income > 20833 && monthly_taxable_income <= 33333)
+                tax_contrib = (monthly_taxable_income - 20833) * 0.15m;
+            else if (monthly_taxable_income > 33333 && monthly_taxable_income <= 66667)
+                tax_contrib = 1875 + ((monthly_taxable_income - 33333) * 0.20m);
+            else if (monthly_taxable_income > 66667 && monthly_taxable_income <= 166667)
+                tax_contrib = 8541.80m + ((monthly_taxable_income - 66667) * 0.25m);
+            else if (monthly_taxable_income > 166667 && monthly_taxable_income <= 666667)
+                tax_contrib = 33541.80m + ((monthly_taxable_income - 166667) * 0.30m);
+            else if (monthly_taxable_income > 666667)
+                tax_contrib = 183541.80m + ((monthly_taxable_income - 666667) * 0.35m);
 
-            // Income Tax (Monthly and Divided by 2)
-            decimal netTaxable = grossAmount - (sssAmount + philhealthAmount + 100);
-            decimal yearlyAmount = netTaxable * 12;
-            decimal yearlyTax = 0;
+            // DIVIDE TAX CONTRIBUTION BY 2 FOR SEMI-MONTHLY
+            tax_contrib = tax_contrib / 2;
 
-            if (yearlyAmount <= 250000)
-                yearlyTax = 0;
-            else if (yearlyAmount <= 400000)
-                yearlyTax = (yearlyAmount - 250000) * 0.15m;
-            else if (yearlyAmount <= 800000)
-                yearlyTax = 22500 + ((yearlyAmount - 400000) * 0.20m);
-            else if (yearlyAmount <= 2000000)
-                yearlyTax = 102500 + ((yearlyAmount - 800000) * 0.25m);
-            else if (yearlyAmount <= 8000000)
-                yearlyTax = 402500 + ((yearlyAmount - 2000000) * 0.30m);
-            else
-                yearlyTax = 2202500 + ((yearlyAmount - 8000000) * 0.35m);
-
-            decimal monthlyTax = (yearlyTax / 12) / 2;
-            IncomeTaxTxt.Text = monthlyTax.ToString();
+            IncomeTaxTxt.Text = tax_contrib.ToString();
         }
 
-        // NET INCOME Button Click (button2_Click)
         private void button2_Click(object sender, EventArgs e)
         {
             // Calculate Total Deductions
