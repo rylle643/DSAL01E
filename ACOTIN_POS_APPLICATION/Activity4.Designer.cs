@@ -230,6 +230,7 @@
             this.A_RiceBox.TabIndex = 5;
             this.A_RiceBox.Text = "3 pcs. Rice";
             this.A_RiceBox.UseVisualStyleBackColor = true;
+            this.A_RiceBox.CheckedChanged += new System.EventHandler(this.A_RiceBox_CheckedChanged);
             // 
             // A_DrinksBox
             // 

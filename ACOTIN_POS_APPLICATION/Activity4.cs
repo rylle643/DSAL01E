@@ -71,89 +71,109 @@ namespace ACOTIN_POS_APPLICATION
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
+            try
+            {
+                displayListbox.Items.Clear();
 
-            displayListbox.Items.Clear();
+                this.BackColor = Color.Goldenrod;
 
-            this.BackColor = Color.Goldenrod;
+                double price;
 
-            double price;
+                foodBRdbtn.Checked = false;
+                DisplayPictureBox.Image = Image.FromFile("C:\\Users\\C203-34\\source\\repos\\rylle643\\DSAL01E\\ACOTIN_POS_APPLICATION\\Resources\\Untitled design (1).png");
 
-            foodBRdbtn.Checked = false;
-            DisplayPictureBox.Image = Image.FromFile("C:\\Users\\C203-39\\source\\repos\\rylle643\\DSAL01E\\ACOTIN_POS_APPLICATION\\Resources\\Untitled design (1).png");
+                A_ChickenMcDoBox.Checked = true;
+                A_BFFFriesBox.Checked = true;
+                A_DrinksBox.Checked = true;
+                A_RiceBox.Checked = true;
+                A_Gravy.Checked = true;
 
-            A_ChickenMcDoBox.Checked = true;
-            A_BFFFriesBox.Checked = true;
-            A_DrinksBox.Checked = true;
-            A_RiceBox.Checked = true;
-            A_Gravy.Checked = true;
+                B_ApplePieBox.Checked = false;
+                B_BFFFriesBox.Checked = false;
+                B_BurgerMcDoBox.Checked = false;
+                B_ChickenSandwichBox.Checked = false;
+                B_QuarterPounderBox.Checked = false;
 
-            B_ApplePieBox.Checked = false;
-            B_BFFFriesBox.Checked = false;
-            B_BurgerMcDoBox.Checked = false;
-            B_ChickenSandwichBox.Checked = false;
-            B_QuarterPounderBox.Checked = false;
+                priceTxtBox.Text = "720.00";
+                discountAmountTxtbox.Text = "144.00";
+                price = Convert.ToDouble(priceTxtBox.Text);
+                displayListbox.Items.Add(foodARdbtn.Text + " - " + priceTxtBox.Text + " ");
+                displayListbox.Items.Add("Discount Amount:       " + discountAmountTxtbox.Text);
 
-            priceTxtBox.Text = "720.00";
-            discountAmountTxtbox.Text = "144.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(foodARdbtn.Text + " - " + priceTxtBox.Text + " ");
-            displayListbox.Items.Add("Discount Amount:       " + discountAmountTxtbox.Text);
-
-            qtyTxtbox.Text = "0";
-            qtyTxtbox.Focus();
+                qtyTxtbox.Text = "0";
+                qtyTxtbox.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading Food A. Please check the image path.", "Error");
+            }
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            displayListbox.Items.Clear();
+            try
+            {
+                displayListbox.Items.Clear();
 
-            this.BackColor = Color.Goldenrod;
+                this.BackColor = Color.Goldenrod;
 
-            foodARdbtn.Checked = false;
-            DisplayPictureBox.Image = Image.FromFile("C:\\Users\\C203-39\\source\\repos\\rylle643\\DSAL01E\\ACOTIN_POS_APPLICATION\\Resources\\Untitled design (2).png");
+                foodARdbtn.Checked = false;
+                DisplayPictureBox.Image = Image.FromFile("C:\\Users\\C203-34\\source\\repos\\rylle643\\DSAL01E\\ACOTIN_POS_APPLICATION\\Resources\\Untitled design (2).png");
 
-            A_ChickenMcDoBox.Checked = false;
-            A_BFFFriesBox.Checked = false;
-            A_DrinksBox.Checked = false;
-            A_RiceBox.Checked = false;
-            A_Gravy.Checked = false;
+                A_ChickenMcDoBox.Checked = false;
+                A_BFFFriesBox.Checked = false;
+                A_DrinksBox.Checked = false;
+                A_RiceBox.Checked = false;
+                A_Gravy.Checked = false;
 
-            B_ApplePieBox.Checked = true;
-            B_BFFFriesBox.Checked = true;
-            B_BurgerMcDoBox.Checked = true;
-            B_ChickenSandwichBox.Checked = true;
-            B_QuarterPounderBox.Checked = true;
+                B_ApplePieBox.Checked = true;
+                B_BFFFriesBox.Checked = true;
+                B_BurgerMcDoBox.Checked = true;
+                B_ChickenSandwichBox.Checked = true;
+                B_QuarterPounderBox.Checked = true;
 
-            priceTxtBox.Text = "450.00";
-            discountAmountTxtbox.Text = "67.50";
+                priceTxtBox.Text = "450.00";
+                discountAmountTxtbox.Text = "67.50";
 
-            displayListbox.Items.Add(foodBRdbtn.Text + " - " + priceTxtBox.Text);
-            displayListbox.Items.Add("Discount Amount:        " + discountAmountTxtbox.Text);
+                displayListbox.Items.Add(foodBRdbtn.Text + " - " + priceTxtBox.Text);
+                displayListbox.Items.Add("Discount Amount:        " + discountAmountTxtbox.Text);
 
-            qtyTxtbox.Text = "0";
-            qtyTxtbox.Focus();
+                qtyTxtbox.Text = "0";
+                qtyTxtbox.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading Food B. Please check the image path.", "Error");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            foodARdbtn.Checked = false;
-            foodBRdbtn.Checked = false;
+            try
+            {
+                foodARdbtn.Checked = false;
+                foodBRdbtn.Checked = false;
 
-            DisplayPictureBox.Image = Image.FromFile("C:\\Users\\Rylle\\Downloads\\ACOTIN-DSAL\\no-image-available-icon-vector.jpg");
+                DisplayPictureBox.Image = Image.FromFile("C:\\Users\\Rylle\\Downloads\\ACOTIN-DSAL\\no-image-available-icon-vector.jpg");
 
-            A_ChickenMcDoBox.Checked = false;
-            A_BFFFriesBox.Checked = false;
-            A_DrinksBox.Checked = false;
-            A_RiceBox.Checked = false;
+                A_ChickenMcDoBox.Checked = false;
+                A_BFFFriesBox.Checked = false;
+                A_DrinksBox.Checked = false;
+                A_RiceBox.Checked = false;
 
-            B_ApplePieBox.Checked = false;
-            B_BFFFriesBox.Checked = false;
-            B_BurgerMcDoBox.Checked = false;
-            B_ChickenSandwichBox.Checked = false;
-            B_QuarterPounderBox.Checked = false;
+                B_ApplePieBox.Checked = false;
+                B_BFFFriesBox.Checked = false;
+                B_BurgerMcDoBox.Checked = false;
+                B_ChickenSandwichBox.Checked = false;
+                B_QuarterPounderBox.Checked = false;
 
-            priceTxtBox.Clear();
-            qtyTxtbox.Clear();
+                priceTxtBox.Clear();
+                qtyTxtbox.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error clearing form.", "Error");
+            }
         }
 
         private void Activity3_Load(object sender, EventArgs e)
@@ -240,22 +260,36 @@ namespace ACOTIN_POS_APPLICATION
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
-            double price;
-            priceTxtBox.Text = "59.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox3.Text + " -         " + priceTxtBox.Text);
-            qtyTxtbox.Text = "0";
-            qtyTxtbox.Focus();
+            try
+            {
+                double price;
+                priceTxtBox.Text = "59.00";
+                price = Convert.ToDouble(priceTxtBox.Text);
+                displayListbox.Items.Add(checkBox3.Text + " -         " + priceTxtBox.Text);
+                qtyTxtbox.Text = "0";
+                qtyTxtbox.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error selecting item.", "Error");
+            }
         }
 
         private void checkBox9_CheckedChanged(object sender, EventArgs e)
         {
-            double price;
-            priceTxtBox.Text = "130.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox9.Text + " - " + priceTxtBox.Text);
-            qtyTxtbox.Text = "0";
-            qtyTxtbox.Focus();
+            try
+            {
+                double price;
+                priceTxtBox.Text = "130.00";
+                price = Convert.ToDouble(priceTxtBox.Text);
+                displayListbox.Items.Add(checkBox9.Text + " - " + priceTxtBox.Text);
+                qtyTxtbox.Text = "0";
+                qtyTxtbox.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error selecting item.", "Error");
+            }
         }
 
         private void checkBox21_CheckedChanged(object sender, EventArgs e)
@@ -265,38 +299,68 @@ namespace ACOTIN_POS_APPLICATION
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            double price, discounted_amount, discount_amount;
-            int qty;
+            try
+            {
+                // Validate cash given input FIRST
+                if (string.IsNullOrWhiteSpace(cashGivenTxtbox.Text))
+                {
+                    MessageBox.Show("Please enter cash given amount.", "Error");
+                    cashGivenTxtbox.Focus();
+                    return;
+                }
 
-            price = Convert.ToDouble("0" + priceTxtBox.Text);
-            qty = Convert.ToInt32("0" + qtyTxtbox.Text);
-            discount_amount = Convert.ToDouble("0" + discountAmountTxtbox.Text);
-            discounted_amount = (price * qty) - discount_amount;
+                double price, discounted_amount, discount_amount;
+                int qty;
+                double cash_given, change;
 
-            total_qty += qty;
-            totalQtyTxtbox.Text = total_qty.ToString();
-            total_amount += discounted_amount;
-            totalBillsTxtbox.Text = total_amount.ToString("n");
-            discountedAmountTxtbox.Text = discounted_amount.ToString("n");
+                price = Convert.ToDouble("0" + priceTxtBox.Text);
+                qty = Convert.ToInt32("0" + qtyTxtbox.Text);
+                discount_amount = Convert.ToDouble("0" + discountAmountTxtbox.Text);
+                discounted_amount = (price * qty) - discount_amount;
+                cash_given = Convert.ToDouble(cashGivenTxtbox.Text);
 
-            double cash_given, change, total_amountPaid;
-            cash_given = Convert.ToDouble("0" + cashGivenTxtbox.Text);
-            total_amountPaid = Convert.ToDouble("0" + totalBillsTxtbox.Text);
-            change = cash_given - total_amountPaid;
-            changeTxtbox.Text = change.ToString("n");
+                // Calculate what the total would be if we add this transaction
+                double projected_total = total_amount + discounted_amount;
+                change = cash_given - projected_total;
 
-            displayListbox.Items.Add("Total Bills:           " + totalBillsTxtbox.Text);
-            displayListbox.Items.Add("Cash Given:            " + cashGivenTxtbox.Text);
-            displayListbox.Items.Add("Change:                " + changeTxtbox.Text);
-            displayListbox.Items.Add("Total no. of Items:    " + totalQtyTxtbox.Text);
+                if (change < 0)
+                {
+                    MessageBox.Show("Insufficient cash given.", "Error");
+                    cashGivenTxtbox.Focus();
+                    return;
+                }
 
+                // Only add to totals after validation passes
+                total_qty += qty;
+                totalQtyTxtbox.Text = total_qty.ToString();
+                total_amount += discounted_amount;
+                totalBillsTxtbox.Text = total_amount.ToString("n");
+                discountedAmountTxtbox.Text = discounted_amount.ToString("n");
+                changeTxtbox.Text = change.ToString("n");
+
+                displayListbox.Items.Add("Total Bills:           " + totalBillsTxtbox.Text);
+                displayListbox.Items.Add("Cash Given:            " + cashGivenTxtbox.Text);
+                displayListbox.Items.Add("Change:                " + changeTxtbox.Text);
+                displayListbox.Items.Add("Total no. of Items:    " + totalQtyTxtbox.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Invalid input. Please check your entries.", "Error");
+            }
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            ACOTIN_POS_APPLICATION.Activity4_PrintFrm print = new ACOTIN_POS_APPLICATION.Activity4_PrintFrm();
-            print.printDisplayListbox.Items.AddRange(this.displayListbox.Items);
-            print.Show();
+            try
+            {
+                ACOTIN_POS_APPLICATION.Activity4_PrintFrm print = new ACOTIN_POS_APPLICATION.Activity4_PrintFrm();
+                print.printDisplayListbox.Items.AddRange(this.displayListbox.Items);
+                print.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error opening print form.", "Error");
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -309,7 +373,7 @@ namespace ACOTIN_POS_APPLICATION
             foodARdbtn.Checked = false;
             foodBRdbtn.Checked = false;
 
-            DisplayPictureBox.Image = Image.FromFile("C:\\Users\\Rylle\\Downloads\\ACOTIN-DSAL\\no-image-available-icon-vector.jpg");
+            DisplayPictureBox.Image = Image.FromFile("C:\\Users\\C203-34\\source\\repos\\rylle643\\DSAL01E\\ACOTIN_POS_APPLICATION\\Resources\\no-image-available-icon-vector.jpg");
 
             A_ChickenMcDoBox.Checked = false;
             A_BFFFriesBox.Checked = false;
@@ -368,182 +432,308 @@ namespace ACOTIN_POS_APPLICATION
 
         private void checkBox19_CheckedChanged(object sender, EventArgs e)
         {
-            double price;
-            priceTxtBox.Text = "140.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox19.Text + " - " + priceTxtBox.Text);
-            qtyTxtbox.Text = "0";
-            qtyTxtbox.Focus();
+            try
+            {
+                double price;
+                priceTxtBox.Text = "140.00";
+                price = Convert.ToDouble(priceTxtBox.Text);
+                displayListbox.Items.Add(checkBox19.Text + " - " + priceTxtBox.Text);
+                qtyTxtbox.Text = "0";
+                qtyTxtbox.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error selecting item.", "Error");
+            }
         }
 
         private void checkBox20_CheckedChanged(object sender, EventArgs e)
         {
-            double price;
-            priceTxtBox.Text = "73.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox20.Text + " -             " + priceTxtBox.Text);
-            qtyTxtbox.Text = "0";
-            qtyTxtbox.Focus();
+            try
+            {
+                double price;
+                priceTxtBox.Text = "73.00";
+                price = Convert.ToDouble(priceTxtBox.Text);
+                displayListbox.Items.Add(checkBox20.Text + " -             " + priceTxtBox.Text);
+                qtyTxtbox.Text = "0";
+                qtyTxtbox.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error selecting item.", "Error");
+            }
         }
 
         private void checkBox18_CheckedChanged(object sender, EventArgs e)
         {
-            double price;
-            priceTxtBox.Text = "55.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox18.Text + " -   " + priceTxtBox.Text);
-            qtyTxtbox.Text = "0";
-            qtyTxtbox.Focus();
+            try
+            {
+                double price;
+                priceTxtBox.Text = "55.00";
+                price = Convert.ToDouble(priceTxtBox.Text);
+                displayListbox.Items.Add(checkBox18.Text + " -   " + priceTxtBox.Text);
+                qtyTxtbox.Text = "0";
+                qtyTxtbox.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error selecting item.", "Error");
+            }
         }
 
         private void checkBox17_CheckedChanged(object sender, EventArgs e)
         {
-            double price;
-            priceTxtBox.Text = "150.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox17.Text + " - " + priceTxtBox.Text);
-            qtyTxtbox.Text = "0";
-            qtyTxtbox.Focus();
+            try
+            {
+                double price;
+                priceTxtBox.Text = "150.00";
+                price = Convert.ToDouble(priceTxtBox.Text);
+                displayListbox.Items.Add(checkBox17.Text + " - " + priceTxtBox.Text);
+                qtyTxtbox.Text = "0";
+                qtyTxtbox.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error selecting item.", "Error");
+            }
         }
 
         private void checkBox16_CheckedChanged(object sender, EventArgs e)
         {
-            double price;
-            priceTxtBox.Text = "50.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox16.Text + " -   " + priceTxtBox.Text);
-            qtyTxtbox.Text = "0";
-            qtyTxtbox.Focus();
+            try
+            {
+                double price;
+                priceTxtBox.Text = "50.00";
+                price = Convert.ToDouble(priceTxtBox.Text);
+                displayListbox.Items.Add(checkBox16.Text + " -   " + priceTxtBox.Text);
+                qtyTxtbox.Text = "0";
+                qtyTxtbox.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error selecting item.", "Error");
+            }
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            double price;
-            priceTxtBox.Text = "167.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox1.Text + " -              " + priceTxtBox.Text);
-            qtyTxtbox.Text = "0";
-            qtyTxtbox.Focus();
+            try
+            {
+                double price;
+                priceTxtBox.Text = "167.00";
+                price = Convert.ToDouble(priceTxtBox.Text);
+                displayListbox.Items.Add(checkBox1.Text + " -              " + priceTxtBox.Text);
+                qtyTxtbox.Text = "0";
+                qtyTxtbox.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error selecting item.", "Error");
+            }
         }
 
         private void checkBox6_CheckedChanged(object sender, EventArgs e)
         {
-            double price;
-            priceTxtBox.Text = "255.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox6.Text + " -      " + priceTxtBox.Text);
-            qtyTxtbox.Text = "0";
-            qtyTxtbox.Focus();
+            try
+            {
+                double price;
+                priceTxtBox.Text = "255.00";
+                price = Convert.ToDouble(priceTxtBox.Text);
+                displayListbox.Items.Add(checkBox6.Text + " -      " + priceTxtBox.Text);
+                qtyTxtbox.Text = "0";
+                qtyTxtbox.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error selecting item.", "Error");
+            }
         }
 
         private void checkBox11_CheckedChanged(object sender, EventArgs e)
         {
-            double price;
-            priceTxtBox.Text = "47.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox11.Text + " -          " + priceTxtBox.Text);
-            qtyTxtbox.Text = "0";
-            qtyTxtbox.Focus();
+            try
+            {
+                double price;
+                priceTxtBox.Text = "47.00";
+                price = Convert.ToDouble(priceTxtBox.Text);
+                displayListbox.Items.Add(checkBox11.Text + " -          " + priceTxtBox.Text);
+                qtyTxtbox.Text = "0";
+                qtyTxtbox.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error selecting item.", "Error");
+            }
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            double price;
-            priceTxtBox.Text = "251.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox2.Text + " - " + priceTxtBox.Text);
-            qtyTxtbox.Text = "0";
-            qtyTxtbox.Focus();
+            try
+            {
+                double price;
+                priceTxtBox.Text = "251.00";
+                price = Convert.ToDouble(priceTxtBox.Text);
+                displayListbox.Items.Add(checkBox2.Text + " - " + priceTxtBox.Text);
+                qtyTxtbox.Text = "0";
+                qtyTxtbox.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error selecting item.", "Error");
+            }
         }
 
         private void checkBox7_CheckedChanged(object sender, EventArgs e)
         {
-            double price;
-            priceTxtBox.Text = "150.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox7.Text + " - " + priceTxtBox.Text);
-            qtyTxtbox.Text = "0";
-            qtyTxtbox.Focus();
+            try
+            {
+                double price;
+                priceTxtBox.Text = "150.00";
+                price = Convert.ToDouble(priceTxtBox.Text);
+                displayListbox.Items.Add(checkBox7.Text + " - " + priceTxtBox.Text);
+                qtyTxtbox.Text = "0";
+                qtyTxtbox.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error selecting item.", "Error");
+            }
         }
 
         private void checkBox12_CheckedChanged(object sender, EventArgs e)
         {
-            double price;
-            priceTxtBox.Text = "134.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox12.Text + " - " + priceTxtBox.Text);
-            qtyTxtbox.Text = "0";
-            qtyTxtbox.Focus();
+            try
+            {
+                double price;
+                priceTxtBox.Text = "134.00";
+                price = Convert.ToDouble(priceTxtBox.Text);
+                displayListbox.Items.Add(checkBox12.Text + " - " + priceTxtBox.Text);
+                qtyTxtbox.Text = "0";
+                qtyTxtbox.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error selecting item.", "Error");
+            }
         }
 
         private void checkBox8_CheckedChanged(object sender, EventArgs e)
         {
-            double price;
-            priceTxtBox.Text = "69.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox8.Text + " - " + priceTxtBox.Text);
-            qtyTxtbox.Text = "0";
-            qtyTxtbox.Focus();
+            try
+            {
+                double price;
+                priceTxtBox.Text = "69.00";
+                price = Convert.ToDouble(priceTxtBox.Text);
+                displayListbox.Items.Add(checkBox8.Text + " - " + priceTxtBox.Text);
+                qtyTxtbox.Text = "0";
+                qtyTxtbox.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error selecting item.", "Error");
+            }
         }
 
         private void checkBox13_CheckedChanged(object sender, EventArgs e)
         {
-            double price;
-            priceTxtBox.Text = "55.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox13.Text + " -     " + priceTxtBox.Text);
-            qtyTxtbox.Text = "0";
-            qtyTxtbox.Focus();
+            try
+            {
+                double price;
+                priceTxtBox.Text = "55.00";
+                price = Convert.ToDouble(priceTxtBox.Text);
+                displayListbox.Items.Add(checkBox13.Text + " -     " + priceTxtBox.Text);
+                qtyTxtbox.Text = "0";
+                qtyTxtbox.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error selecting item.", "Error");
+            }
         }
 
         private void checkBox4_CheckedChanged_1(object sender, EventArgs e)
         {
-            double price;
-            priceTxtBox.Text = "79.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox4.Text + " -     " + priceTxtBox.Text);
-            qtyTxtbox.Text = "0";
-            qtyTxtbox.Focus();
+            try
+            {
+                double price;
+                priceTxtBox.Text = "79.00";
+                price = Convert.ToDouble(priceTxtBox.Text);
+                displayListbox.Items.Add(checkBox4.Text + " -     " + priceTxtBox.Text);
+                qtyTxtbox.Text = "0";
+                qtyTxtbox.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error selecting item.", "Error");
+            }
         }
 
         private void checkBox14_CheckedChanged(object sender, EventArgs e)
         {
-            double price;
-            priceTxtBox.Text = "140.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox14.Text + " -    " + priceTxtBox.Text);
-            qtyTxtbox.Text = "0";
-            qtyTxtbox.Focus();
+            try
+            {
+                double price;
+                priceTxtBox.Text = "140.00";
+                price = Convert.ToDouble(priceTxtBox.Text);
+                displayListbox.Items.Add(checkBox14.Text + " -    " + priceTxtBox.Text);
+                qtyTxtbox.Text = "0";
+                qtyTxtbox.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error selecting item.", "Error");
+            }
         }
 
         private void checkBox5_CheckedChanged_1(object sender, EventArgs e)
         {
-            double price;
-            priceTxtBox.Text = "42.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox5.Text + " -      " + priceTxtBox.Text);
-            qtyTxtbox.Text = "0";
-            qtyTxtbox.Focus();
+            try
+            {
+                double price;
+                priceTxtBox.Text = "42.00";
+                price = Convert.ToDouble(priceTxtBox.Text);
+                displayListbox.Items.Add(checkBox5.Text + " -      " + priceTxtBox.Text);
+                qtyTxtbox.Text = "0";
+                qtyTxtbox.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error selecting item.", "Error");
+            }
         }
 
         private void checkBox10_CheckedChanged(object sender, EventArgs e)
         {
-            double price;
-            priceTxtBox.Text = "82.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox10.Text + " - " + priceTxtBox.Text);
-            qtyTxtbox.Text = "0";
-            qtyTxtbox.Focus();
+            try
+            {
+                double price;
+                priceTxtBox.Text = "82.00";
+                price = Convert.ToDouble(priceTxtBox.Text);
+                displayListbox.Items.Add(checkBox10.Text + " - " + priceTxtBox.Text);
+                qtyTxtbox.Text = "0";
+                qtyTxtbox.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error selecting item.", "Error");
+            }
         }
 
         private void checkBox15_CheckedChanged(object sender, EventArgs e)
         {
-            double price;
-            priceTxtBox.Text = "73.00";
-            price = Convert.ToDouble(priceTxtBox.Text);
-            displayListbox.Items.Add(checkBox15.Text + " -         " + priceTxtBox.Text);
-            qtyTxtbox.Text = "0";
-            qtyTxtbox.Focus();
+            try
+            {
+                double price;
+                priceTxtBox.Text = "73.00";
+                price = Convert.ToDouble(priceTxtBox.Text);
+                displayListbox.Items.Add(checkBox15.Text + " -         " + priceTxtBox.Text);
+                qtyTxtbox.Text = "0";
+                qtyTxtbox.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error selecting item.", "Error");
+            }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -551,35 +741,87 @@ namespace ACOTIN_POS_APPLICATION
 
         }
 
+        private void A_ChickenMcDoBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void A_BFFFriesBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void A_DrinksBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void A_RiceBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void A_Gravy_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void B_ApplePieBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void B_BFFFriesBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void B_ChickenSandwichBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void B_QuarterPounderBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void button1_Click_2(object sender, EventArgs e)
         {
-            Activity4_Transfer print = new Activity4_Transfer();
+            try
+            {
+                Activity4_Transfer print = new Activity4_Transfer();
 
-            print.priceTxtBox.Text = this.priceTxtBox.Text;
-            print.qtyTxtbox.Text = this.qtyTxtbox.Text;
-            print.discountAmountTxtbox.Text = this.discountAmountTxtbox.Text;
-            print.discountedAmountTxtbox.Text = this.discountedAmountTxtbox.Text;
-            print.totalBillsTxtbox.Text = this.totalBillsTxtbox.Text;
-            print.totalQtyTxtbox.Text = this.totalQtyTxtbox.Text;
-            print.cashGivenTxtbox.Text = this.cashGivenTxtbox.Text;
-            print.changeTxtbox.Text = this.changeTxtbox.Text;
+                print.priceTxtBox.Text = this.priceTxtBox.Text;
+                print.qtyTxtbox.Text = this.qtyTxtbox.Text;
+                print.discountAmountTxtbox.Text = this.discountAmountTxtbox.Text;
+                print.discountedAmountTxtbox.Text = this.discountedAmountTxtbox.Text;
+                print.totalBillsTxtbox.Text = this.totalBillsTxtbox.Text;
+                print.totalQtyTxtbox.Text = this.totalQtyTxtbox.Text;
+                print.cashGivenTxtbox.Text = this.cashGivenTxtbox.Text;
+                print.changeTxtbox.Text = this.changeTxtbox.Text;
 
-            print.foodARdbtn.Checked = this.foodARdbtn.Checked;
-            print.foodBRdbtn.Checked = this.foodBRdbtn.Checked;
+                print.foodARdbtn.Checked = this.foodARdbtn.Checked;
+                print.foodBRdbtn.Checked = this.foodBRdbtn.Checked;
 
-            print.A_ChickenMcDoBox.Checked = this.A_ChickenMcDoBox.Checked;
-            print.A_BFFFriesBox.Checked = this.A_BFFFriesBox.Checked;
-            print.A_DrinksBox.Checked = this.A_DrinksBox.Checked;
-            print.A_RiceBox.Checked = this.A_RiceBox.Checked;
-            print.A_Gravy.Checked = this.A_Gravy.Checked;
+                print.A_ChickenMcDoBox.Checked = this.A_ChickenMcDoBox.Checked;
+                print.A_BFFFriesBox.Checked = this.A_BFFFriesBox.Checked;
+                print.A_DrinksBox.Checked = this.A_DrinksBox.Checked;
+                print.A_RiceBox.Checked = this.A_RiceBox.Checked;
+                print.A_Gravy.Checked = this.A_Gravy.Checked;
 
-            print.B_ApplePieBox.Checked = this.B_ApplePieBox.Checked;
-            print.B_BFFFriesBox.Checked = this.B_BFFFriesBox.Checked;
-            print.B_BurgerMcDoBox.Checked = this.B_BurgerMcDoBox.Checked;
-            print.B_ChickenSandwichBox.Checked = this.B_ChickenSandwichBox.Checked;
-            print.B_QuarterPounderBox.Checked = this.B_QuarterPounderBox.Checked;
+                print.B_ApplePieBox.Checked = this.B_ApplePieBox.Checked;
+                print.B_BFFFriesBox.Checked = this.B_BFFFriesBox.Checked;
+                print.B_BurgerMcDoBox.Checked = this.B_BurgerMcDoBox.Checked;
+                print.B_ChickenSandwichBox.Checked = this.B_ChickenSandwichBox.Checked;
+                print.B_QuarterPounderBox.Checked = this.B_QuarterPounderBox.Checked;
 
-            print.Show();
+                print.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error opening transfer form.", "Error");
+            }
         }
     }
 }

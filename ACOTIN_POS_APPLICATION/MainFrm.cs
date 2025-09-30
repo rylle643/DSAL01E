@@ -63,5 +63,37 @@ namespace ACOTIN_POS_APPLICATION
             payslipreport.MdiParent = this;
             payslipreport.Show();
         }
+
+        private void userAccountPageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void tileVerticalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.TileVertical);
+        }
+
+        private void tileHorizontalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.TileHorizontal);
+        }
+
+        private void cascadeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.Cascade);
+        }
+
+        private void enrollmentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Enrollment enrollment = new Enrollment();
+            enrollment.MdiParent = this;
+            enrollment.Show();
+        }
     }
 }

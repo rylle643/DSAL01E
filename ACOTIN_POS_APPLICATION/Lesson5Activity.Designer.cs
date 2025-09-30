@@ -628,6 +628,7 @@
             this.BasicRateHourTxt.Name = "BasicRateHourTxt";
             this.BasicRateHourTxt.Size = new System.Drawing.Size(297, 22);
             this.BasicRateHourTxt.TabIndex = 51;
+            this.BasicRateHourTxt.TextChanged += new System.EventHandler(this.BasicRateHourTxt_TextChanged);
             // 
             // BasicNoofHoursTxt
             // 
