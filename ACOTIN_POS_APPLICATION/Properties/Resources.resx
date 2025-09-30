@@ -124,19 +124,25 @@
   <data name="2,3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2,3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Untitled design (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Untitled design (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Untitled design (2)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Untitled design (2)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Untitled design (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Untitled design (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="7d54f7b9-adx-42a7-a8b2-3eb5d9cb8d78" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\7d54f7b9-adx-42a7-a8b2-3eb5d9cb8d78.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="8029531c433b7d0e2bf48ca6429ef325" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8029531c433b7d0e2bf48ca6429ef325.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Untitled design (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Untitled design (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="7d54f7b9-adx-42a7-a8b2-3eb5d9cb8d78" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\7d54f7b9-adx-42a7-a8b2-3eb5d9cb8d78.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Untitled design (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Untitled design (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4661334" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4661334.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

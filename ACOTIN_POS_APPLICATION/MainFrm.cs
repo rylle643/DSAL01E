@@ -16,6 +16,10 @@ namespace ACOTIN_POS_APPLICATION
         {
             InitializeComponent();
             this.IsMdiContainer = true;
+
+            // Set the form to full screen
+            this.WindowState = FormWindowState.Maximized;
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void pOSCasierToolStripMenuItem_Click(object sender, EventArgs e)
@@ -25,28 +29,36 @@ namespace ACOTIN_POS_APPLICATION
         private void jeePOSIncToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Activity2 cashier1 = new Activity2();
-            cashier1.MdiParent = this; 
+            cashier1.MdiParent = this;
+            cashier1.StartPosition = FormStartPosition.CenterParent;
+            cashier1.WindowState = FormWindowState.Maximized;
             cashier1.Show();
         }
 
         private void jeePOSOrderingToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Activity4 cashier2 = new Activity4();
-            cashier2.MdiParent = this; 
+            cashier2.MdiParent = this;
+            cashier2.StartPosition = FormStartPosition.CenterParent;
+            cashier2.WindowState = FormWindowState.Maximized;
             cashier2.Show();
         }
 
         private void payrolApplicationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Lesson5Activity payrol = new Lesson5Activity();
-            payrol.MdiParent = this; 
+            payrol.MdiParent = this;
+            payrol.StartPosition = FormStartPosition.CenterParent;
+            payrol.WindowState = FormWindowState.Maximized;
             payrol.Show();
         }
 
         private void jeePOSIncToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Activity1 admin = new Activity1();
-            admin.MdiParent = this; 
+            admin.MdiParent = this;
+            admin.StartPosition = FormStartPosition.CenterParent;
+            admin.WindowState = FormWindowState.Maximized;
             admin.Show();
         }
 
@@ -54,6 +66,8 @@ namespace ACOTIN_POS_APPLICATION
         {
             Activity3 ordering = new Activity3();
             ordering.MdiParent = this;
+            ordering.StartPosition = FormStartPosition.CenterParent;
+            ordering.WindowState = FormWindowState.Maximized;
             ordering.Show();
         }
 
@@ -61,17 +75,21 @@ namespace ACOTIN_POS_APPLICATION
         {
             Lesson5ActivityPayslipReport payslipreport = new Lesson5ActivityPayslipReport();
             payslipreport.MdiParent = this;
+            payslipreport.StartPosition = FormStartPosition.CenterParent;
+            payslipreport.WindowState = FormWindowState.Maximized;
             payslipreport.Show();
         }
 
         private void userAccountPageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+            LoginFrm1 login = new LoginFrm1();
+            login.Show();
         }
 
         private void tileVerticalToolStripMenuItem_Click(object sender, EventArgs e)
@@ -93,6 +111,8 @@ namespace ACOTIN_POS_APPLICATION
         {
             Enrollment enrollment = new Enrollment();
             enrollment.MdiParent = this;
+            enrollment.StartPosition = FormStartPosition.CenterParent;
+            enrollment.WindowState = FormWindowState.Maximized;
             enrollment.Show();
         }
     }

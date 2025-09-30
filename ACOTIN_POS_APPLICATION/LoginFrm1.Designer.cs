@@ -44,60 +44,63 @@
             // 
             this.label1.AutoEllipsis = true;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(145, 84);
+            this.label1.Font = new System.Drawing.Font("SansSerif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label1.Location = new System.Drawing.Point(294, 106);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 15);
+            this.label1.Size = new System.Drawing.Size(80, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Username:";
             // 
             // label2dqf
             // 
             this.label2dqf.AutoSize = true;
-            this.label2dqf.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2dqf.Location = new System.Drawing.Point(145, 141);
+            this.label2dqf.Font = new System.Drawing.Font("SansSerif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label2dqf.Location = new System.Drawing.Point(294, 174);
             this.label2dqf.Name = "label2dqf";
-            this.label2dqf.Size = new System.Drawing.Size(64, 15);
+            this.label2dqf.Size = new System.Drawing.Size(78, 17);
             this.label2dqf.TabIndex = 1;
             this.label2dqf.Text = "Password:";
             // 
             // UsernameTxt
             // 
-            this.UsernameTxt.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameTxt.Location = new System.Drawing.Point(221, 81);
+            this.UsernameTxt.Font = new System.Drawing.Font("SansSerif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.UsernameTxt.Location = new System.Drawing.Point(195, 126);
             this.UsernameTxt.Name = "UsernameTxt";
-            this.UsernameTxt.Size = new System.Drawing.Size(286, 21);
+            this.UsernameTxt.Size = new System.Drawing.Size(286, 30);
             this.UsernameTxt.TabIndex = 2;
             // 
             // PasswordTxt
             // 
-            this.PasswordTxt.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordTxt.Location = new System.Drawing.Point(221, 138);
+            this.PasswordTxt.Font = new System.Drawing.Font("SansSerif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.PasswordTxt.Location = new System.Drawing.Point(195, 194);
             this.PasswordTxt.Name = "PasswordTxt";
             this.PasswordTxt.PasswordChar = '*';
-            this.PasswordTxt.Size = new System.Drawing.Size(286, 21);
+            this.PasswordTxt.Size = new System.Drawing.Size(286, 30);
             this.PasswordTxt.TabIndex = 3;
+            this.PasswordTxt.TextChanged += new System.EventHandler(this.PasswordTxt_TextChanged);
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(236, 192);
+            this.button1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.button1.Font = new System.Drawing.Font("SansSerif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.button1.Location = new System.Drawing.Point(260, 263);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 36);
+            this.button1.Size = new System.Drawing.Size(150, 47);
             this.button1.TabIndex = 4;
             this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(379, 192);
+            this.button2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.Font = new System.Drawing.Font("SansSerif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.button2.Location = new System.Drawing.Point(260, 336);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(102, 36);
+            this.button2.Size = new System.Drawing.Size(150, 47);
             this.button2.TabIndex = 5;
             this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel1
@@ -111,26 +114,27 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(67, 121);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(658, 287);
+            this.panel1.Size = new System.Drawing.Size(658, 446);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Image = global::ACOTIN_POS_APPLICATION.Properties.Resources._7d54f7b9_adx_42a7_a8b2_3eb5d9cb8d78;
-            this.pictureBox1.Location = new System.Drawing.Point(327, 12);
+            this.pictureBox1.Image = global::ACOTIN_POS_APPLICATION.Properties.Resources._4661334;
+            this.pictureBox1.Location = new System.Drawing.Point(307, 24);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(195, 166);
+            this.pictureBox1.Size = new System.Drawing.Size(195, 188);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // LoginFrm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.ClientSize = new System.Drawing.Size(800, 621);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Name = "LoginFrm1";

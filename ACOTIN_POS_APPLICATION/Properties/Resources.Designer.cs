@@ -73,9 +73,29 @@ namespace ACOTIN_POS_APPLICATION.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _4661334 {
+            get {
+                object obj = ResourceManager.GetObject("4661334", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _7d54f7b9_adx_42a7_a8b2_3eb5d9cb8d78 {
             get {
                 object obj = ResourceManager.GetObject("7d54f7b9-adx-42a7-a8b2-3eb5d9cb8d78", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8029531c433b7d0e2bf48ca6429ef325 {
+            get {
+                object obj = ResourceManager.GetObject("8029531c433b7d0e2bf48ca6429ef325", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

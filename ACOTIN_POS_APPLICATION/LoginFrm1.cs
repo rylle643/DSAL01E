@@ -69,5 +69,15 @@ namespace ACOTIN_POS_APPLICATION
         {
             this.Close();
         }
+
+        private void PasswordTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
