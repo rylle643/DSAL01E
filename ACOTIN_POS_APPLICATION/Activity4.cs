@@ -18,6 +18,13 @@ namespace ACOTIN_POS_APPLICATION
         public Activity4()
         {
             InitializeComponent();
+
+           
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+            this.Load += (s, e) =>
+            {
+                this.Scale(new SizeF(1.28f, 1.07f));
+            };
         }
 
         private void label1_Click(object sender, EventArgs e)

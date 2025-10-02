@@ -15,6 +15,13 @@ namespace ACOTIN_POS_APPLICATION
         public Activity3()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+            this.Load += (s, e) =>
+            {
+                this.Scale(new SizeF(1.5f, 1.5f));
+            };
         }
 
         private void label2_Click(object sender, EventArgs e)

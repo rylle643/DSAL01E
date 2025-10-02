@@ -18,6 +18,11 @@ namespace ACOTIN_POS_APPLICATION
         public Activity2()
         {
             InitializeComponent();
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+            this.Load += (s, e) =>
+            {
+                this.Scale(new SizeF(1.3f, 1.25f));
+            };
         }
 
         private void pictureBox17_Click(object sender, EventArgs e)

@@ -15,6 +15,7 @@ namespace ACOTIN_POS_APPLICATION
         public LoginFrm1()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void LoginFrm1_Load(object sender, EventArgs e)

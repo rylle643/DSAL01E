@@ -19,7 +19,7 @@ namespace ACOTIN_POS_APPLICATION
 
             // Set the form to full screen
             this.WindowState = FormWindowState.Maximized;
-            this.StartPosition = FormStartPosition.CenterScreen;
+
         }
 
         private void pOSCasierToolStripMenuItem_Click(object sender, EventArgs e)
