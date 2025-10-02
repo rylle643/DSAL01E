@@ -101,6 +101,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.ProgramcomboBox = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -683,6 +684,7 @@
             this.ProgramcomboBox.Name = "ProgramcomboBox";
             this.ProgramcomboBox.Size = new System.Drawing.Size(267, 21);
             this.ProgramcomboBox.TabIndex = 82;
+            this.ProgramcomboBox.SelectedIndexChanged += new System.EventHandler(this.ProgramcomboBox_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -866,5 +868,6 @@
         private System.Windows.Forms.ComboBox ProgramcomboBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

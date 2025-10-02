@@ -182,5 +182,10 @@ namespace ACOTIN_POS_APPLICATION
         {
 
         }
+
+        private void ProgramcomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
