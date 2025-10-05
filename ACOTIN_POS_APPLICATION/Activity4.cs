@@ -19,7 +19,7 @@ namespace ACOTIN_POS_APPLICATION
         {
             InitializeComponent();
 
-           
+            this.WindowState = FormWindowState.Maximized;
             this.AutoScaleMode = AutoScaleMode.Dpi;
             this.Load += (s, e) =>
             {
@@ -34,21 +34,33 @@ namespace ACOTIN_POS_APPLICATION
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            //double price, discounted_amount, discount_amount;
-            //int qty;
+            try
+            {
+                if (string.IsNullOrWhiteSpace(qtyTxtbox.Text)) return;
 
-            //// Get the price from the textbox
-            //price = Convert.ToDouble("0" + priceTxtBox.Text);
-            //qty = Convert.ToInt32("0" + qtyTxtbox.Text);
-            //discount_amount = Convert.ToDouble("0" + discountAmountTxtbox.Text);
-            //discounted_amount = (price * qty) - discount_amount;
-            //total_qty += qty;
-            //totalQtyTxtbox.Text = total_qty.ToString();
-            //total_amount += discounted_amount;
-            //totalBillsTxtbox.Text = total_amount.ToString("n");
-            //discountedAmountTxtbox.Text = discounted_amount.ToString("n");
-            //cashGivenTxtbox.Clear();
+                double price, discounted_amount, discount_amount;
+                int qty;
 
+                price = Convert.ToDouble("0" + priceTxtBox.Text);
+                qty = Convert.ToInt32(qtyTxtbox.Text);
+                discount_amount = Convert.ToDouble("0" + discountAmountTxtbox.Text);
+                discounted_amount = (price * qty) - discount_amount;
+
+                total_qty += qty;
+                totalQtyTxtbox.Text = total_qty.ToString();
+                total_amount += discounted_amount;
+                totalBillsTxtbox.Text = total_amount.ToString("n");
+                discountedAmountTxtbox.Text = discounted_amount.ToString("n");
+
+                cashGivenTxtbox.Clear();
+                cashGivenTxtbox.Focus();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Invalid quantity. Please enter a valid number.", "Error");
+                qtyTxtbox.Clear();
+                qtyTxtbox.Focus();
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -308,7 +320,6 @@ namespace ACOTIN_POS_APPLICATION
         {
             try
             {
-                // Validate cash given input FIRST
                 if (string.IsNullOrWhiteSpace(cashGivenTxtbox.Text))
                 {
                     MessageBox.Show("Please enter cash given amount.", "Error");
@@ -316,19 +327,11 @@ namespace ACOTIN_POS_APPLICATION
                     return;
                 }
 
-                double price, discounted_amount, discount_amount;
-                int qty;
                 double cash_given, change;
+                double total_bills = double.Parse(totalBillsTxtbox.Text.Replace(",", ""));
 
-                price = Convert.ToDouble("0" + priceTxtBox.Text);
-                qty = Convert.ToInt32("0" + qtyTxtbox.Text);
-                discount_amount = Convert.ToDouble("0" + discountAmountTxtbox.Text);
-                discounted_amount = (price * qty) - discount_amount;
                 cash_given = Convert.ToDouble(cashGivenTxtbox.Text);
-
-                // Calculate what the total would be if we add this transaction
-                double projected_total = total_amount + discounted_amount;
-                change = cash_given - projected_total;
+                change = cash_given - total_bills;
 
                 if (change < 0)
                 {
@@ -337,18 +340,12 @@ namespace ACOTIN_POS_APPLICATION
                     return;
                 }
 
-                // Only add to totals after validation passes
-                total_qty += qty;
-                totalQtyTxtbox.Text = total_qty.ToString();
-                total_amount += discounted_amount;
-                totalBillsTxtbox.Text = total_amount.ToString("n");
-                discountedAmountTxtbox.Text = discounted_amount.ToString("n");
                 changeTxtbox.Text = change.ToString("n");
 
                 displayListbox.Items.Add("Total Bills:           " + totalBillsTxtbox.Text);
-                displayListbox.Items.Add("Cash Given:            " + cashGivenTxtbox.Text);
-                displayListbox.Items.Add("Change:                " + changeTxtbox.Text);
                 displayListbox.Items.Add("Total no. of Items:    " + totalQtyTxtbox.Text);
+                displayListbox.Items.Add("Cash Given:            " + cash_given.ToString("n"));
+                displayListbox.Items.Add("Change:                " + changeTxtbox.Text);
             }
             catch (Exception ex)
             {
@@ -439,308 +436,182 @@ namespace ACOTIN_POS_APPLICATION
 
         private void checkBox19_CheckedChanged(object sender, EventArgs e)
         {
-            try
-            {
-                double price;
-                priceTxtBox.Text = "140.00";
-                price = Convert.ToDouble(priceTxtBox.Text);
-                displayListbox.Items.Add(checkBox19.Text + " - " + priceTxtBox.Text);
-                qtyTxtbox.Text = "0";
-                qtyTxtbox.Focus();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error selecting item.", "Error");
-            }
+            double price;
+            priceTxtBox.Text = "140.00";
+            price = Convert.ToDouble(priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox19.Text + " - " + priceTxtBox.Text);
+            qtyTxtbox.Text = "0";
+            qtyTxtbox.Focus();
         }
 
         private void checkBox20_CheckedChanged(object sender, EventArgs e)
         {
-            try
-            {
-                double price;
-                priceTxtBox.Text = "73.00";
-                price = Convert.ToDouble(priceTxtBox.Text);
-                displayListbox.Items.Add(checkBox20.Text + " -             " + priceTxtBox.Text);
-                qtyTxtbox.Text = "0";
-                qtyTxtbox.Focus();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error selecting item.", "Error");
-            }
+            double price;
+            priceTxtBox.Text = "73.00";
+            price = Convert.ToDouble(priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox20.Text + " -             " + priceTxtBox.Text);
+            qtyTxtbox.Text = "0";
+            qtyTxtbox.Focus();
         }
 
         private void checkBox18_CheckedChanged(object sender, EventArgs e)
         {
-            try
-            {
-                double price;
-                priceTxtBox.Text = "55.00";
-                price = Convert.ToDouble(priceTxtBox.Text);
-                displayListbox.Items.Add(checkBox18.Text + " -   " + priceTxtBox.Text);
-                qtyTxtbox.Text = "0";
-                qtyTxtbox.Focus();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error selecting item.", "Error");
-            }
+            double price;
+            priceTxtBox.Text = "55.00";
+            price = Convert.ToDouble(priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox18.Text + " -   " + priceTxtBox.Text);
+            qtyTxtbox.Text = "0";
+            qtyTxtbox.Focus();
         }
 
         private void checkBox17_CheckedChanged(object sender, EventArgs e)
         {
-            try
-            {
-                double price;
-                priceTxtBox.Text = "150.00";
-                price = Convert.ToDouble(priceTxtBox.Text);
-                displayListbox.Items.Add(checkBox17.Text + " - " + priceTxtBox.Text);
-                qtyTxtbox.Text = "0";
-                qtyTxtbox.Focus();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error selecting item.", "Error");
-            }
+            double price;
+            priceTxtBox.Text = "150.00";
+            price = Convert.ToDouble(priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox17.Text + " - " + priceTxtBox.Text);
+            qtyTxtbox.Text = "0";
+            qtyTxtbox.Focus();
         }
 
         private void checkBox16_CheckedChanged(object sender, EventArgs e)
         {
-            try
-            {
-                double price;
-                priceTxtBox.Text = "50.00";
-                price = Convert.ToDouble(priceTxtBox.Text);
-                displayListbox.Items.Add(checkBox16.Text + " -   " + priceTxtBox.Text);
-                qtyTxtbox.Text = "0";
-                qtyTxtbox.Focus();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error selecting item.", "Error");
-            }
+            double price;
+            priceTxtBox.Text = "50.00";
+            price = Convert.ToDouble(priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox16.Text + " -   " + priceTxtBox.Text);
+            qtyTxtbox.Text = "0";
+            qtyTxtbox.Focus();
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            try
-            {
-                double price;
-                priceTxtBox.Text = "167.00";
-                price = Convert.ToDouble(priceTxtBox.Text);
-                displayListbox.Items.Add(checkBox1.Text + " -              " + priceTxtBox.Text);
-                qtyTxtbox.Text = "0";
-                qtyTxtbox.Focus();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error selecting item.", "Error");
-            }
+            double price;
+            priceTxtBox.Text = "167.00";
+            price = Convert.ToDouble(priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox1.Text + " -              " + priceTxtBox.Text);
+            qtyTxtbox.Text = "0";
+            qtyTxtbox.Focus();
         }
 
         private void checkBox6_CheckedChanged(object sender, EventArgs e)
         {
-            try
-            {
-                double price;
-                priceTxtBox.Text = "255.00";
-                price = Convert.ToDouble(priceTxtBox.Text);
-                displayListbox.Items.Add(checkBox6.Text + " -      " + priceTxtBox.Text);
-                qtyTxtbox.Text = "0";
-                qtyTxtbox.Focus();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error selecting item.", "Error");
-            }
+            double price;
+            priceTxtBox.Text = "255.00";
+            price = Convert.ToDouble(priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox6.Text + " -      " + priceTxtBox.Text);
+            qtyTxtbox.Text = "0";
+            qtyTxtbox.Focus();
         }
 
         private void checkBox11_CheckedChanged(object sender, EventArgs e)
         {
-            try
-            {
-                double price;
-                priceTxtBox.Text = "47.00";
-                price = Convert.ToDouble(priceTxtBox.Text);
-                displayListbox.Items.Add(checkBox11.Text + " -          " + priceTxtBox.Text);
-                qtyTxtbox.Text = "0";
-                qtyTxtbox.Focus();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error selecting item.", "Error");
-            }
+            double price;
+            priceTxtBox.Text = "47.00";
+            price = Convert.ToDouble(priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox11.Text + " -          " + priceTxtBox.Text);
+            qtyTxtbox.Text = "0";
+            qtyTxtbox.Focus();
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            try
-            {
-                double price;
-                priceTxtBox.Text = "251.00";
-                price = Convert.ToDouble(priceTxtBox.Text);
-                displayListbox.Items.Add(checkBox2.Text + " - " + priceTxtBox.Text);
-                qtyTxtbox.Text = "0";
-                qtyTxtbox.Focus();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error selecting item.", "Error");
-            }
+            double price;
+            priceTxtBox.Text = "251.00";
+            price = Convert.ToDouble(priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox2.Text + " - " + priceTxtBox.Text);
+            qtyTxtbox.Text = "0";
+            qtyTxtbox.Focus();
         }
 
         private void checkBox7_CheckedChanged(object sender, EventArgs e)
         {
-            try
-            {
-                double price;
-                priceTxtBox.Text = "150.00";
-                price = Convert.ToDouble(priceTxtBox.Text);
-                displayListbox.Items.Add(checkBox7.Text + " - " + priceTxtBox.Text);
-                qtyTxtbox.Text = "0";
-                qtyTxtbox.Focus();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error selecting item.", "Error");
-            }
+            double price;
+            priceTxtBox.Text = "150.00";
+            price = Convert.ToDouble(priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox7.Text + " - " + priceTxtBox.Text);
+            qtyTxtbox.Text = "0";
+            qtyTxtbox.Focus();
         }
 
         private void checkBox12_CheckedChanged(object sender, EventArgs e)
         {
-            try
-            {
-                double price;
-                priceTxtBox.Text = "134.00";
-                price = Convert.ToDouble(priceTxtBox.Text);
-                displayListbox.Items.Add(checkBox12.Text + " - " + priceTxtBox.Text);
-                qtyTxtbox.Text = "0";
-                qtyTxtbox.Focus();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error selecting item.", "Error");
-            }
+            double price;
+            priceTxtBox.Text = "134.00";
+            price = Convert.ToDouble(priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox12.Text + " - " + priceTxtBox.Text);
+            qtyTxtbox.Text = "0";
+            qtyTxtbox.Focus();
         }
 
         private void checkBox8_CheckedChanged(object sender, EventArgs e)
         {
-            try
-            {
-                double price;
-                priceTxtBox.Text = "69.00";
-                price = Convert.ToDouble(priceTxtBox.Text);
-                displayListbox.Items.Add(checkBox8.Text + " - " + priceTxtBox.Text);
-                qtyTxtbox.Text = "0";
-                qtyTxtbox.Focus();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error selecting item.", "Error");
-            }
+            double price;
+            priceTxtBox.Text = "69.00";
+            price = Convert.ToDouble(priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox8.Text + " - " + priceTxtBox.Text);
+            qtyTxtbox.Text = "0";
+            qtyTxtbox.Focus();
         }
 
         private void checkBox13_CheckedChanged(object sender, EventArgs e)
         {
-            try
-            {
-                double price;
-                priceTxtBox.Text = "55.00";
-                price = Convert.ToDouble(priceTxtBox.Text);
-                displayListbox.Items.Add(checkBox13.Text + " -     " + priceTxtBox.Text);
-                qtyTxtbox.Text = "0";
-                qtyTxtbox.Focus();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error selecting item.", "Error");
-            }
+            double price;
+            priceTxtBox.Text = "55.00";
+            price = Convert.ToDouble(priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox13.Text + " -     " + priceTxtBox.Text);
+            qtyTxtbox.Text = "0";
+            qtyTxtbox.Focus();
         }
 
         private void checkBox4_CheckedChanged_1(object sender, EventArgs e)
         {
-            try
-            {
-                double price;
-                priceTxtBox.Text = "79.00";
-                price = Convert.ToDouble(priceTxtBox.Text);
-                displayListbox.Items.Add(checkBox4.Text + " -     " + priceTxtBox.Text);
-                qtyTxtbox.Text = "0";
-                qtyTxtbox.Focus();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error selecting item.", "Error");
-            }
+            double price;
+            priceTxtBox.Text = "79.00";
+            price = Convert.ToDouble(priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox4.Text + " -     " + priceTxtBox.Text);
+            qtyTxtbox.Text = "0";
+            qtyTxtbox.Focus();
         }
 
         private void checkBox14_CheckedChanged(object sender, EventArgs e)
         {
-            try
-            {
-                double price;
-                priceTxtBox.Text = "140.00";
-                price = Convert.ToDouble(priceTxtBox.Text);
-                displayListbox.Items.Add(checkBox14.Text + " -    " + priceTxtBox.Text);
-                qtyTxtbox.Text = "0";
-                qtyTxtbox.Focus();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error selecting item.", "Error");
-            }
+            double price;
+            priceTxtBox.Text = "140.00";
+            price = Convert.ToDouble(priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox14.Text + " -    " + priceTxtBox.Text);
+            qtyTxtbox.Text = "0";
+            qtyTxtbox.Focus();
         }
 
         private void checkBox5_CheckedChanged_1(object sender, EventArgs e)
         {
-            try
-            {
-                double price;
-                priceTxtBox.Text = "42.00";
-                price = Convert.ToDouble(priceTxtBox.Text);
-                displayListbox.Items.Add(checkBox5.Text + " -      " + priceTxtBox.Text);
-                qtyTxtbox.Text = "0";
-                qtyTxtbox.Focus();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error selecting item.", "Error");
-            }
+            double price;
+            priceTxtBox.Text = "42.00";
+            price = Convert.ToDouble(priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox5.Text + " -      " + priceTxtBox.Text);
+            qtyTxtbox.Text = "0";
+            qtyTxtbox.Focus();
         }
 
         private void checkBox10_CheckedChanged(object sender, EventArgs e)
         {
-            try
-            {
-                double price;
-                priceTxtBox.Text = "82.00";
-                price = Convert.ToDouble(priceTxtBox.Text);
-                displayListbox.Items.Add(checkBox10.Text + " - " + priceTxtBox.Text);
-                qtyTxtbox.Text = "0";
-                qtyTxtbox.Focus();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error selecting item.", "Error");
-            }
+            double price;
+            priceTxtBox.Text = "82.00";
+            price = Convert.ToDouble(priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox10.Text + " - " + priceTxtBox.Text);
+            qtyTxtbox.Text = "0";
+            qtyTxtbox.Focus();
         }
 
         private void checkBox15_CheckedChanged(object sender, EventArgs e)
         {
-            try
-            {
-                double price;
-                priceTxtBox.Text = "73.00";
-                price = Convert.ToDouble(priceTxtBox.Text);
-                displayListbox.Items.Add(checkBox15.Text + " -         " + priceTxtBox.Text);
-                qtyTxtbox.Text = "0";
-                qtyTxtbox.Focus();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error selecting item.", "Error");
-            }
+            double price;
+            priceTxtBox.Text = "73.00";
+            price = Convert.ToDouble(priceTxtBox.Text);
+            displayListbox.Items.Add(checkBox15.Text + " -         " + priceTxtBox.Text);
+            qtyTxtbox.Text = "0";
+            qtyTxtbox.Focus();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

@@ -10,14 +10,15 @@ using System.Windows.Forms;
 
 namespace ACOTIN_POS_APPLICATION
 {
-    public partial class Activity2 : Form
+    public partial class POS1_Functions : Form
     {
         private double qty_total = 0;
         private double discount_totalgiven = 0;
         private double discounted_total = 0;
-        public Activity2()
+        public POS1_Functions()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
             this.AutoScaleMode = AutoScaleMode.Dpi;
             this.Load += (s, e) =>
             {
@@ -380,7 +381,6 @@ namespace ACOTIN_POS_APPLICATION
         {
             this.Close();
         }
-
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             if (!radioButton1.Checked) return; // Exit if unchecking

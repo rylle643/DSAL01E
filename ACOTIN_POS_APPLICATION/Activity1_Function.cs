@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ACOTIN_POS_APPLICATION
 {
-    public partial class Activity1 : Form
+    public partial class Activity1_Function : Form
     {
         private double cash_given;
         private double amount_paid;
@@ -18,11 +18,21 @@ namespace ACOTIN_POS_APPLICATION
         private double price;
         private double quantity;
 
-        public Activity1()
+        public Activity1_Function()
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
             this.StartPosition = FormStartPosition.CenterScreen;
+        }
+        private void ClearQuantity()
+        {
+            QuantitytextBox.Clear();
+            QuantitytextBox.Focus();
+        }
+        private void displayTxtbox(string itemname, string price)
+        {
+            itemnameTextbox.Text = itemname;
+            priceTxtbox.Text = price;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -37,93 +47,92 @@ namespace ACOTIN_POS_APPLICATION
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            itemnameTextbox.Text = "Big Mac";
-            priceTxtbox.Text = "167.00";
+            displayTxtbox("Big Mac", "167.00");
+            ClearQuantity();
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-            itemnameTextbox.Text = "Quarter Pounder";
-            priceTxtbox.Text = "255.00";
+            displayTxtbox("Quarter Pounder", "255.00");
+            ClearQuantity();
         }
 
         private void pictureBox15_Click(object sender, EventArgs e)
         {
-            
-            itemnameTextbox.Text = "Burger McDo";
-            priceTxtbox.Text = "47.00";
+            displayTxtbox("Burger McDo", "47.00");
+            ClearQuantity();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            itemnameTextbox.Text = "Chicken McDo with McSpaghetti";
-            priceTxtbox.Text = "251.00";
+            displayTxtbox("Chicken McDo with McSpaghetti", "251.00");
+            ClearQuantity();
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)
         {
-            itemnameTextbox.Text = "Chicken McDo with Rice";
-            priceTxtbox.Text = "150.00";
+            displayTxtbox("Chicken McDo with Rice", "150.00");
+            ClearQuantity();
         }
 
         private void pictureBox14_Click(object sender, EventArgs e)
         {
-            itemnameTextbox.Text = "Crispy Chicken Fillet with Rice";
-            priceTxtbox.Text = "134.00";
+            displayTxtbox("Crispy Chicken Fillet with Rice", "134.00");
+            ClearQuantity();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            itemnameTextbox.Text = "Coke McFloat";
-            priceTxtbox.Text = "59.00";
+            displayTxtbox("Coke McFloat", "59.00");
+            ClearQuantity();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            itemnameTextbox.Text = "McFlurry with Oreo Cookies";
-            priceTxtbox.Text = "69.00";
+            displayTxtbox("McFlurry with Oreo Cookies", "69.00");
+            ClearQuantity();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            itemnameTextbox.Text = "Hot Fudge Sundae";
-            priceTxtbox.Text = "55.00";
+            displayTxtbox("Hot Fudge Sundae", "55.00");
+            ClearQuantity();
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            itemnameTextbox.Text = "McCafé Americano";
-            priceTxtbox.Text = "79.00";
+            displayTxtbox("McCafé Americano", "79.00");
+            ClearQuantity();
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-            itemnameTextbox.Text = "McCafé Premium Hot Chocolate";
-            priceTxtbox.Text = "130.00";
+            displayTxtbox("McCafé Premium Hot Chocolate", "130.00");
+            ClearQuantity();
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            itemnameTextbox.Text = "McCafé Iced Mocha";
-            priceTxtbox.Text = "140.00";
+            displayTxtbox("McCafé Iced Mocha", "140.00");
+            ClearQuantity();
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
-            itemnameTextbox.Text = "Cheesy Eggdesal";
-            priceTxtbox.Text = "42.00";
+            displayTxtbox("Cheesy Eggdesal", "42.00");
+            ClearQuantity();
         }
 
         private void pictureBox12_Click(object sender, EventArgs e)
         {
-            itemnameTextbox.Text = "Sausage McMuffin with Egg";
-            priceTxtbox.Text = "82.00";
+            displayTxtbox("Sausage McMuffin with Egg", "82.00");
+            ClearQuantity();
         }
 
         private void pictureBox11_Click(object sender, EventArgs e)
         {
-            itemnameTextbox.Text = "Egg McMuffin";
-            priceTxtbox.Text = "73.00";
+            displayTxtbox("Egg McMuffin", "73.00");
+            ClearQuantity();
         }
 
         private void newBtn_Click(object sender, EventArgs e)
@@ -165,7 +174,6 @@ namespace ACOTIN_POS_APPLICATION
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
             try
             {
                 if (QuantitytextBox.Text == "") return;
@@ -203,9 +211,9 @@ namespace ACOTIN_POS_APPLICATION
                 CashGiventextBox.Focus();
             }
             finally
-            { 
-            
-            }
+            { }
+
+
         }
 
         private void label6_Click(object sender, EventArgs e)
