@@ -89,18 +89,6 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.NetIncomeTxt = new System.Windows.Forms.TextBox();
             this.SSSLoanTxt = new System.Windows.Forms.TextBox();
-            this.BasicRateHourTxt = new System.Windows.Forms.TextBox();
-            this.OtherRateHourTxt = new System.Windows.Forms.TextBox();
-            this.HonorariumRateHourTxt = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.BasicIncomeTxt = new System.Windows.Forms.TextBox();
-            this.OtherIncomeTxt = new System.Windows.Forms.TextBox();
-            this.HonorariumIncomeTxt = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -545,6 +533,7 @@
             this.TotalDeductionTxt.Name = "TotalDeductionTxt";
             this.TotalDeductionTxt.Size = new System.Drawing.Size(162, 21);
             this.TotalDeductionTxt.TabIndex = 86;
+            this.TotalDeductionTxt.TextChanged += new System.EventHandler(this.TotalDeductionTxt_TextChanged);
             // 
             // label27
             // 
@@ -686,119 +675,11 @@
             this.SSSLoanTxt.Size = new System.Drawing.Size(162, 22);
             this.SSSLoanTxt.TabIndex = 114;
             // 
-            // BasicRateHourTxt
-            // 
-            this.BasicRateHourTxt.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BasicRateHourTxt.Location = new System.Drawing.Point(301, 267);
-            this.BasicRateHourTxt.Name = "BasicRateHourTxt";
-            this.BasicRateHourTxt.Size = new System.Drawing.Size(64, 22);
-            this.BasicRateHourTxt.TabIndex = 115;
-            // 
-            // OtherRateHourTxt
-            // 
-            this.OtherRateHourTxt.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OtherRateHourTxt.Location = new System.Drawing.Point(301, 290);
-            this.OtherRateHourTxt.Name = "OtherRateHourTxt";
-            this.OtherRateHourTxt.Size = new System.Drawing.Size(64, 22);
-            this.OtherRateHourTxt.TabIndex = 116;
-            // 
-            // HonorariumRateHourTxt
-            // 
-            this.HonorariumRateHourTxt.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HonorariumRateHourTxt.Location = new System.Drawing.Point(301, 314);
-            this.HonorariumRateHourTxt.Name = "HonorariumRateHourTxt";
-            this.HonorariumRateHourTxt.Size = new System.Drawing.Size(64, 22);
-            this.HonorariumRateHourTxt.TabIndex = 117;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(301, 338);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(64, 22);
-            this.textBox6.TabIndex = 118;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(301, 361);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(64, 22);
-            this.textBox7.TabIndex = 119;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(301, 385);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(64, 22);
-            this.textBox8.TabIndex = 120;
-            // 
-            // BasicIncomeTxt
-            // 
-            this.BasicIncomeTxt.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BasicIncomeTxt.Location = new System.Drawing.Point(223, 267);
-            this.BasicIncomeTxt.Name = "BasicIncomeTxt";
-            this.BasicIncomeTxt.Size = new System.Drawing.Size(72, 22);
-            this.BasicIncomeTxt.TabIndex = 121;
-            // 
-            // OtherIncomeTxt
-            // 
-            this.OtherIncomeTxt.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OtherIncomeTxt.Location = new System.Drawing.Point(223, 290);
-            this.OtherIncomeTxt.Name = "OtherIncomeTxt";
-            this.OtherIncomeTxt.Size = new System.Drawing.Size(72, 22);
-            this.OtherIncomeTxt.TabIndex = 122;
-            // 
-            // HonorariumIncomeTxt
-            // 
-            this.HonorariumIncomeTxt.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HonorariumIncomeTxt.Location = new System.Drawing.Point(223, 314);
-            this.HonorariumIncomeTxt.Name = "HonorariumIncomeTxt";
-            this.HonorariumIncomeTxt.Size = new System.Drawing.Size(72, 22);
-            this.HonorariumIncomeTxt.TabIndex = 123;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(223, 338);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(72, 22);
-            this.textBox9.TabIndex = 124;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(223, 361);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(72, 22);
-            this.textBox10.TabIndex = 125;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(223, 385);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(72, 22);
-            this.textBox11.TabIndex = 126;
-            // 
             // Lesson5ActivityPayslipReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1123, 531);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.HonorariumIncomeTxt);
-            this.Controls.Add(this.OtherIncomeTxt);
-            this.Controls.Add(this.BasicIncomeTxt);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.HonorariumRateHourTxt);
-            this.Controls.Add(this.OtherRateHourTxt);
-            this.Controls.Add(this.BasicRateHourTxt);
             this.Controls.Add(this.SSSLoanTxt);
             this.Controls.Add(this.NetIncomeTxt);
             this.Controls.Add(this.textBox5);
@@ -920,18 +801,6 @@
         public System.Windows.Forms.TextBox textBox5;
         public System.Windows.Forms.TextBox NetIncomeTxt;
         public System.Windows.Forms.TextBox SSSLoanTxt;
-        public System.Windows.Forms.TextBox BasicRateHourTxt;
-        public System.Windows.Forms.TextBox OtherRateHourTxt;
-        public System.Windows.Forms.TextBox HonorariumRateHourTxt;
-        public System.Windows.Forms.TextBox textBox6;
-        public System.Windows.Forms.TextBox textBox7;
-        public System.Windows.Forms.TextBox textBox8;
-        public System.Windows.Forms.TextBox BasicIncomeTxt;
-        public System.Windows.Forms.TextBox OtherIncomeTxt;
-        public System.Windows.Forms.TextBox HonorariumIncomeTxt;
-        public System.Windows.Forms.TextBox textBox9;
-        public System.Windows.Forms.TextBox textBox10;
-        public System.Windows.Forms.TextBox textBox11;
         public System.Windows.Forms.TextBox textBox13;
         public System.Windows.Forms.TextBox textBox12;
     }

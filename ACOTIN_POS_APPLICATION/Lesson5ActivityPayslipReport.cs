@@ -52,32 +52,14 @@ namespace ACOTIN_POS_APPLICATION
             textBox1.Enabled = false;
             PaydateTxt.Enabled = false;
             BasicNoofHoursTxt.Enabled = false;
-            BasicIncomeTxt.Enabled = false;
-            BasicRateHourTxt.Enabled = false;
             OtherNoofHoursTxt.Enabled = false;
-            OtherIncomeTxt.Enabled = false;
-            OtherRateHourTxt.Enabled = false;
             HonorariumNoofHoursTxt.Enabled = false;
-            HonorariumIncomeTxt.Enabled = false;
-            HonorariumRateHourTxt.Enabled = false;
             textBox2.Enabled = false;
             textBox2.Text = "0.00";
-            textBox9.Enabled = false;
-            textBox9.Text = "0.00";
-            textBox6.Enabled = false;
-            textBox6.Text = "0.00";
             textBox3.Enabled = false;
             textBox3.Text = "0.00";
-            textBox10.Enabled = false;
-            textBox10.Text = "0.00";
-            textBox7.Enabled = false;
-            textBox7.Text = "0.00";
             textBox4.Enabled = false;
             textBox4.Text = "0.00";
-            textBox11.Enabled = false;
-            textBox11.Text = "0.00";
-            textBox8.Enabled = false;
-            textBox8.Text = "0.00";
             textBox12.Enabled = false;
             TotalDeductionTxt.Enabled = false;
             IncomeTaxTxt.Enabled = false;
@@ -94,6 +76,11 @@ namespace ACOTIN_POS_APPLICATION
             GrossIncomeTxt.Enabled = false;
             textBox5.Enabled = false;
             NetIncomeTxt.Enabled = false;
+        }
+
+        private void TotalDeductionTxt_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

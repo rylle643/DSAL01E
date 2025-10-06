@@ -325,8 +325,20 @@ namespace ACOTIN_POS_APPLICATION
         {
             try
             {
+                // Convert current total deduction text to double
+                double totalDeduction = 0;
+                double.TryParse(this.TotalDeductionTxt.Text, out totalDeduction);
+
+                // Add ₱750 (SSS Loan)
+                totalDeduction += 750;
+
+                // Update the textbox in this form
+                this.TotalDeductionTxt.Text = totalDeduction.ToString("0.00");
+
+                // Create the print form
                 Lesson5ActivityPayslipReport print = new Lesson5ActivityPayslipReport();
 
+                // Transfer all text values
                 print.EmployeeNumTxt.Text = this.EmployeeNumTxt.Text;
                 print.SurnameTxt.Text = this.SurnameTxt.Text;
                 print.FirstNameTxt.Text = this.FirstNameTxt.Text;
@@ -336,27 +348,23 @@ namespace ACOTIN_POS_APPLICATION
                 print.PaydateTxt.Text = this.PaydateTxt.Text;
 
                 print.BasicNoofHoursTxt.Text = this.BasicNoofHoursTxt.Text;
-                print.BasicRateHourTxt.Text = this.BasicRateHourTxt.Text;
-                print.BasicIncomeTxt.Text = this.BasicIncomeTxt.Text;
                 print.HonorariumNoofHoursTxt.Text = this.HonorariumNoofHoursTxt.Text;
-                print.HonorariumRateHourTxt.Text = this.HonorariumRateHourTxt.Text;
-                print.HonorariumIncomeTxt.Text = this.HonorariumIncomeTxt.Text;
                 print.OtherNoofHoursTxt.Text = this.OtherNoofHoursTxt.Text;
-                print.OtherRateHourTxt.Text = this.OtherRateHourTxt.Text;
-                print.OtherIncomeTxt.Text = this.OtherIncomeTxt.Text;
 
                 print.IncomeTaxTxt.Text = this.IncomeTaxTxt.Text;
                 print.SSSContributionTxt.Text = this.SSSContributionTxt.Text;
                 print.PhilhealthContributionsTxt.Text = this.PhilhealthContributionsTxt.Text;
                 print.PagibigContributionsTxt.Text = this.PagibigContributionsTxt.Text;
 
+                // Updated total deduction (with +750)
                 print.textBox12.Text = this.GrossIncomeTxt.Text;
-                print.TotalDeductionTxt.Text = this.TotalDeductionTxt.Text;
+                print.TotalDeductionTxt.Text = totalDeduction.ToString("0.00");
 
                 print.GrossIncomeTxt.Text = this.GrossIncomeTxt.Text;
-                print.textBox5.Text = this.TotalDeductionTxt.Text;
+                print.textBox5.Text = totalDeduction.ToString("0.00");
                 print.NetIncomeTxt.Text = this.NetIncomeTxt.Text;
 
+                // Show print form
                 print.Show();
             }
             catch (Exception ex)
@@ -366,6 +374,11 @@ namespace ACOTIN_POS_APPLICATION
         }
 
         private void BasicRateHourTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EmployeeNumTxt_TextChanged(object sender, EventArgs e)
         {
 
         }

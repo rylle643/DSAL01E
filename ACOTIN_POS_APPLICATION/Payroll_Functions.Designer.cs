@@ -1,6 +1,6 @@
 ﻿namespace ACOTIN_POS_APPLICATION
 {
-    partial class Lesson5Activity
+    partial class Payroll_Functions
     {
         /// <summary>
         /// Required designer variable.
@@ -847,7 +847,7 @@
             this.FirstNameTxt.Size = new System.Drawing.Size(297, 22);
             this.FirstNameTxt.TabIndex = 78;
             // 
-            // Lesson5Activity
+            // Payroll_Functions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -932,7 +932,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Lesson5Activity";
+            this.Name = "Payroll_Functions";
             this.Text = "Lesson5Activity";
             this.Load += new System.EventHandler(this.Lesson5Activity_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
