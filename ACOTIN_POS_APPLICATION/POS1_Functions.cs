@@ -15,6 +15,10 @@ namespace ACOTIN_POS_APPLICATION
         private double qty_total = 0;
         private double discount_totalgiven = 0;
         private double discounted_total = 0;
+        private int qty;
+        private double price;
+        private double discount_amt;
+        private double discounted_amt;
         public POS1_Functions()
         {
             InitializeComponent();
@@ -25,43 +29,33 @@ namespace ACOTIN_POS_APPLICATION
                 this.Scale(new SizeF(1.3f, 1.25f));
             };
         }
+        private void ClearQuantity()
 
-        private void pictureBox17_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = "McCafé Iced Americano";
-            pricetextbox.Text = "140.00";
+            quantitytextbox.Clear();
+            quantitytextbox.Focus();
         }
 
-        private void pictureBox16_Click(object sender, EventArgs e)
+        private void quantity_price_Convert()
         {
-            itemnametxtbox.Text = "Hotcakes";
-            pricetextbox.Text = "73.00";
+        qty = Convert.ToInt32(quantitytextbox.Text);
+        price = Convert.ToDouble(pricetextbox.Text);
         }
 
-        private void pictureBox18_Click(object sender, EventArgs e)
+        private void computation_formula_and_DisplayData()
         {
-            itemnametxtbox.Text = "Hot Caramel Sundae";
-            pricetextbox.Text = "55.00";
+            discounted_amt = (qty * price) - discount_amt;
+            discounttxtbox.Text = discount_amt.ToString("n");
+            discountedtxtbox.Text = discounted_amt.ToString("n");
         }
 
-        private void pictureBox19_Click(object sender, EventArgs e)
+        private void price_item_TextValue(string itemname, string price)
         {
-            itemnametxtbox.Text = "Chicken McNuggets with Fries";
-            pricetextbox.Text = "150.00";
+            itemnametxtbox.Text = itemname;
+            pricetextbox.Text = price;
         }
 
-        private void pictureBox20_Click(object sender, EventArgs e)
-        {
-            itemnametxtbox.Text = "McChicken Sandwich";
-            pricetextbox.Text = "50.00";
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            itemnametxtbox.Text = "Big Mac";
-            pricetextbox.Text = "167.00";
-        }
-
+        
         private void Activity2_Load(object sender, EventArgs e)
         {
             itemnametxtbox.Enabled = false;
@@ -260,88 +254,124 @@ namespace ACOTIN_POS_APPLICATION
 
         }
 
-        private void pictureBox10_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = "Quarter Pounder";
-            pricetextbox.Text = "255.00";
-        }
-
-        private void pictureBox15_Click(object sender, EventArgs e)
-        {
-            itemnametxtbox.Text = "Burger McDo";
-            pricetextbox.Text = "47.00";
+            price_item_TextValue(label2.Text, "167.00");
+            ClearQuantity();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = "Chicken McDo with McSpaghetti";
-            pricetextbox.Text = "251.00";
-        }
-
-        private void pictureBox9_Click(object sender, EventArgs e)
-        {
-            itemnametxtbox.Text = "Chicken McDo with Rice";
-            pricetextbox.Text = "150.00";
-        }
-
-        private void pictureBox14_Click(object sender, EventArgs e)
-        {
-            itemnametxtbox.Text = "Crispy Chicken Fillet with Rice";
-            pricetextbox.Text = "134.00";
+            price_item_TextValue(label7.Text, "251.00");
+            ClearQuantity();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = "Coke McFloat";
-            pricetextbox.Text = "59.00";
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            itemnametxtbox.Text = "McFlurry with Oreo Cookies";
-            pricetextbox.Text = "69.00";
+            price_item_TextValue(label16.Text, "59.00");
+            ClearQuantity();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = "Hot Fudge Sundae";
-            pricetextbox.Text = "55.00";
+            price_item_TextValue(label19.Text, "55.00");
+            ClearQuantity();
         }
 
-        private void pictureBox8_Click(object sender, EventArgs e)
+        private void pictureBox5_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = "McCafé Americano";
-            pricetextbox.Text = "79.00";
-        }
-
-        private void pictureBox7_Click(object sender, EventArgs e)
-        {
-            itemnametxtbox.Text = "McCafé Premium Hot Chocolate";
-            pricetextbox.Text = "130.00";
+            price_item_TextValue(label17.Text, "69.00");
+            ClearQuantity();
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = "McCafé Iced Mocha";
-            pricetextbox.Text = "140.00";
+            price_item_TextValue(label26.Text, "140.00");
+            ClearQuantity();
         }
 
-        private void pictureBox13_Click(object sender, EventArgs e)
+        private void pictureBox7_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = "Cheesy Eggdesal";
-            pricetextbox.Text = "42.00";
+            price_item_TextValue(label24.Text, "130.00");
+            ClearQuantity();
         }
 
-        private void pictureBox12_Click(object sender, EventArgs e)
+        private void pictureBox8_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = "Sausage McMuffin with Egg";
-            pricetextbox.Text = "82.00";
+            price_item_TextValue(label22.Text, "79.00");
+            ClearQuantity();
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            price_item_TextValue(label9.Text, "150.00");
+            ClearQuantity();
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            price_item_TextValue(label4.Text, "255.00");
+            ClearQuantity();
         }
 
         private void pictureBox11_Click(object sender, EventArgs e)
         {
-            itemnametxtbox.Text = "Egg McMuffin";
-            pricetextbox.Text = "73.00";
+            price_item_TextValue(label32.Text, "73.00");
+            ClearQuantity();
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            price_item_TextValue(label31.Text, "82.00");
+            ClearQuantity();
+        }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+            price_item_TextValue(label30.Text, "42.00");
+            ClearQuantity();
+        }
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+            price_item_TextValue(label12.Text, "134.00");
+            ClearQuantity();
+        }
+
+        private void pictureBox15_Click(object sender, EventArgs e)
+        {
+            price_item_TextValue(label3.Text, "47.00");
+            ClearQuantity();
+        }
+
+        private void pictureBox16_Click(object sender, EventArgs e)
+        {
+            price_item_TextValue(label33.Text, "73.00");
+            ClearQuantity();
+        }
+
+        private void pictureBox17_Click(object sender, EventArgs e)
+        {
+            price_item_TextValue(label28.Text, "140.00");
+            ClearQuantity();
+        }
+
+        private void pictureBox18_Click(object sender, EventArgs e)
+        {
+            price_item_TextValue(label21.Text, "55.00");
+            ClearQuantity();
+        }
+
+        private void pictureBox19_Click(object sender, EventArgs e)
+        {
+            price_item_TextValue(label14.Text, "150.00");
+            ClearQuantity();
+        }
+
+        private void pictureBox20_Click(object sender, EventArgs e)
+        {
+            price_item_TextValue(label5.Text, "50.00");
+            ClearQuantity();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -383,23 +413,14 @@ namespace ACOTIN_POS_APPLICATION
         }
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            if (!radioButton1.Checked) return; // Exit if unchecking
+            if (!radioButton1.Checked) return;
 
             try
             {
-                /// declare variable
-                int qty;
-                double price, discount_amt, discounted_amt;
-                /// string to numeric
-                qty = Convert.ToInt32(quantitytextbox.Text);
-                price = Convert.ToDouble(pricetextbox.Text);
-                /// formula for computation
+                quantity_price_Convert();
                 discount_amt = (qty * price) * 0.30;
-                discounted_amt = (qty * price) - discount_amt;
-                /// convert numeric to string
-                discounttxtbox.Text = discount_amt.ToString("n");
-                discountedtxtbox.Text = discounted_amt.ToString("n");
-                /// uncheck other
+                computation_formula_and_DisplayData();
+
                 regularRbtn.Enabled = false;
                 EmployeeRdbtn.Enabled = false;
                 noTaxRdbtn.Enabled = false;
@@ -416,23 +437,14 @@ namespace ACOTIN_POS_APPLICATION
 
         private void regularRbtn_CheckedChanged(object sender, EventArgs e)
         {
-            if (!regularRbtn.Checked) return; // Exit if unchecking
+            if (!regularRbtn.Checked) return;
 
             try
             {
-                /// declare variable
-                int qty;
-                double price, discount_amt, discounted_amt;
-                /// string to numeric
-                qty = Convert.ToInt32(quantitytextbox.Text);
-                price = Convert.ToDouble(pricetextbox.Text);
-                /// formula for computation
+                quantity_price_Convert();
                 discount_amt = (qty * price) * 0.10;
-                discounted_amt = (qty * price) - discount_amt;
-                /// convert numeric to string
-                discounttxtbox.Text = discount_amt.ToString("n");
-                discountedtxtbox.Text = discounted_amt.ToString("n");
-                /// uncheck other
+                computation_formula_and_DisplayData();
+
                 radioButton1.Enabled = false;
                 EmployeeRdbtn.Enabled = false;
                 noTaxRdbtn.Enabled = false;
@@ -449,23 +461,14 @@ namespace ACOTIN_POS_APPLICATION
 
         private void EmployeeRdbtn_CheckedChanged(object sender, EventArgs e)
         {
-            if (!EmployeeRdbtn.Checked) return; // Exit if unchecking
+            if (!EmployeeRdbtn.Checked) return;
 
             try
             {
-                /// declare variable
-                int qty;
-                double price, discount_amt, discounted_amt;
-                /// string to numeric
-                qty = Convert.ToInt32(quantitytextbox.Text);
-                price = Convert.ToDouble(pricetextbox.Text);
-                /// formula for computation
+                quantity_price_Convert();
                 discount_amt = (qty * price) * 0.15;
-                discounted_amt = (qty * price) - discount_amt;
-                /// convert numeric to string
-                discounttxtbox.Text = discount_amt.ToString("n");
-                discountedtxtbox.Text = discounted_amt.ToString("n");
-                /// uncheck other
+                computation_formula_and_DisplayData();
+
                 radioButton1.Enabled = false;
                 regularRbtn.Enabled = false;
                 noTaxRdbtn.Enabled = false;
@@ -482,23 +485,14 @@ namespace ACOTIN_POS_APPLICATION
 
         private void noTaxRdbtn_CheckedChanged(object sender, EventArgs e)
         {
-            if (!noTaxRdbtn.Checked) return; // Exit if unchecking
+            if (!noTaxRdbtn.Checked) return;
 
             try
             {
-                /// declare variable
-                int qty;
-                double price, discount_amt, discounted_amt;
-                /// string to numeric
-                qty = Convert.ToInt32(quantitytextbox.Text);
-                price = Convert.ToDouble(pricetextbox.Text);
-                /// formula for computation
+                quantity_price_Convert();
                 discount_amt = (qty * price) * 0;
-                discounted_amt = (qty * price) - discount_amt;
-                /// convert numeric to string
-                discounttxtbox.Text = discount_amt.ToString("n");
-                discountedtxtbox.Text = discounted_amt.ToString("n");
-                /// uncheck other
+                computation_formula_and_DisplayData();
+
                 radioButton1.Enabled = false;
                 regularRbtn.Enabled = false;
                 EmployeeRdbtn.Enabled = false;

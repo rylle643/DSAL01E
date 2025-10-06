@@ -1,6 +1,6 @@
 ﻿namespace ACOTIN_POS_APPLICATION
 {
-    partial class Activity4
+    partial class POS2_Functions
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Activity4));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(POS2_Functions));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.foodBRdbtn = new System.Windows.Forms.RadioButton();
@@ -570,6 +570,7 @@
             this.displayListbox.Name = "displayListbox";
             this.displayListbox.Size = new System.Drawing.Size(386, 214);
             this.displayListbox.TabIndex = 9;
+            this.displayListbox.SelectedIndexChanged += new System.EventHandler(this.displayListbox_SelectedIndexChanged);
             // 
             // CALCULATEbutton
             // 
@@ -1181,7 +1182,7 @@
             this.TransferButton.UseVisualStyleBackColor = false;
             this.TransferButton.Click += new System.EventHandler(this.button1_Click_2);
             // 
-            // Activity4
+            // POS2_Functions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1202,7 +1203,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Name = "Activity4";
+            this.Name = "POS2_Functions";
             this.Text = "Example 4";
             this.Load += new System.EventHandler(this.Activity3_Load);
             this.groupBox1.ResumeLayout(false);

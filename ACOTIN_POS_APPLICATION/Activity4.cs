@@ -342,8 +342,8 @@ namespace ACOTIN_POS_APPLICATION
 
                 changeTxtbox.Text = change.ToString("n");
 
-                displayListbox.Items.Add("Total Bills:           " + totalBillsTxtbox.Text);
                 displayListbox.Items.Add("Total no. of Items:    " + totalQtyTxtbox.Text);
+                displayListbox.Items.Add("Total Bills:           " + totalBillsTxtbox.Text);
                 displayListbox.Items.Add("Cash Given:            " + cash_given.ToString("n"));
                 displayListbox.Items.Add("Change:                " + changeTxtbox.Text);
             }
