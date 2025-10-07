@@ -115,5 +115,37 @@ namespace ACOTIN_POS_APPLICATION
             enrollment.WindowState = FormWindowState.Maximized;
             enrollment.Show();
         }
+
+        private void functionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pOS1FunctionFormToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            POS1_Functions pos1 = new POS1_Functions();
+            pos1.MdiParent = this;
+            pos1.StartPosition = FormStartPosition.CenterParent;
+            pos1.WindowState = FormWindowState.Maximized;
+            pos1.Show();
+        }
+
+        private void pOS2FunctionFormToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            POS2_Functions pos2 = new POS2_Functions();
+            pos2.MdiParent = this;
+            pos2.StartPosition = FormStartPosition.CenterParent;
+            pos2.WindowState = FormWindowState.Maximized;
+            pos2.Show();
+        }
+
+        private void payrollFunctionFormToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Payroll_Functions payroll = new Payroll_Functions(); 
+            payroll.MdiParent = this;
+            payroll.StartPosition = FormStartPosition.CenterParent;
+            payroll.WindowState = FormWindowState.Maximized;
+            payroll.Show();
+        }
     }
 }

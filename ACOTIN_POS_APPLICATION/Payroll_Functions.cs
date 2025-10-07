@@ -15,19 +15,26 @@ namespace ACOTIN_POS_APPLICATION
         public Payroll_Functions()
         {
             InitializeComponent();
-            this.AutoScaleMode = AutoScaleMode.Dpi;
-            this.Load += (s, e) =>
-            {
-                this.Scale(new SizeF(1.5f, 1.2f));
-            };
+            this.WindowState = FormWindowState.Maximized;
+
+ 
         }
 
         private decimal ComputeSSS(decimal grossIncome)
         {
-            if (grossIncome < 5250) return 250.00m / 2;
-            if (grossIncome >= 34750) return 1750.00m / 2;
-            int steps = (int)((grossIncome - 5250) / 500);
-            return (250 + (steps * 25)) / 2;
+            decimal sss_contrib;
+
+            if (grossIncome < 5250)
+                sss_contrib = 250.00m / 2;
+            else
+            {
+                int bracket = (int)((grossIncome - 5250) / 500) + 1;
+                decimal contribution = 250.00m + (bracket * 25.00m);
+                sss_contrib = contribution / 2;
+            }
+
+            SSSContributionTxt.Text = sss_contrib.ToString();
+            return sss_contrib;
         }
 
         private decimal ComputePagibig() => 200.00m;
@@ -134,6 +141,7 @@ namespace ACOTIN_POS_APPLICATION
                 decimal taxable = grossIncome - (sss + pagibig + philHealth);
                 decimal tax = ComputeTax(taxable) / 2; // semi-monthly
                 IncomeTaxTxt.Text = tax.ToString("n2");
+                
             }
             catch
             {
@@ -146,11 +154,15 @@ namespace ACOTIN_POS_APPLICATION
         {
             try
             {
+
+
                 // Calculate Total Deductions
                 TotalDeductionTxt.Text = (Convert.ToDecimal(SSSContributionTxt.Text) + Convert.ToDecimal(PhilhealthContributionsTxt.Text) + Convert.ToDecimal(PagibigContributionsTxt.Text) + Convert.ToDecimal(IncomeTaxTxt.Text) + Convert.ToDecimal(SSSLoanTxt.Text) + Convert.ToDecimal(PagibigLoansTxt.Text) + Convert.ToDecimal(FacultySavingsDepositTxt.Text) + Convert.ToDecimal(FacultySavingsLoansTxt.Text) + Convert.ToDecimal(SalaryLoanTxt.Text) + Convert.ToDecimal(OtherLoanTxt.Text)).ToString();
 
                 // Calculate Net Income
                 NetIncomeTxt.Text = (Convert.ToDecimal(GrossIncomeTxt.Text) - Convert.ToDecimal(TotalDeductionTxt.Text)).ToString();
+
+                
             }
             catch (Exception ex)
             {
@@ -237,6 +249,11 @@ namespace ACOTIN_POS_APPLICATION
         }
 
         private void EmployeeNumTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DepartmentTxt_TextChanged(object sender, EventArgs e)
         {
 
         }

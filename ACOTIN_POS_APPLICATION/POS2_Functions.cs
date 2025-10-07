@@ -32,23 +32,25 @@ namespace ACOTIN_POS_APPLICATION
             qtyTxtbox.Focus();
         }
 
+
+
         private void SelectItem(string itemName, string price)
         {
-            try
+            int totalWidth = 40;
+            int spacing = totalWidth - itemName.Length - price.Length;
+            string spacer = new string(' ', Math.Max(spacing, 1));
+
+            if (itemName == "Discount Amount")
+            {
+                displayListbox.Items.Add(itemName + spacer + price);
+            }
+            else
             {
                 priceTxtBox.Text = price;
-
-                int totalWidth = 40;
-                int spacing = totalWidth - itemName.Length - price.Length;
-                string spacer = new string(' ', Math.Max(spacing, 1));
-
                 displayListbox.Items.Add(itemName + spacer + price);
-                ClearAndFocusQty();
             }
-            catch (Exception)
-            {
-                MessageBox.Show("Error selecting item.", "Error");
-            }
+
+            ClearAndFocusQty();
         }
 
         private void ClearMealCheckboxes()
@@ -162,10 +164,14 @@ namespace ACOTIN_POS_APPLICATION
                 B_ChickenSandwichBox.Checked = false;
                 B_QuarterPounderBox.Checked = false;
 
-                priceTxtBox.Text = "720.00";
-                discountAmountTxtbox.Text = "144.00";
-                displayListbox.Items.Add(foodARdbtn.Text + " - " + priceTxtBox.Text + " ");
-                displayListbox.Items.Add("Discount Amount:       " + discountAmountTxtbox.Text);
+                string price = "720.00";
+                string discount = "144.00";
+
+                priceTxtBox.Text = price;
+                discountAmountTxtbox.Text = discount;
+
+                SelectItem(foodARdbtn.Text, price);
+                SelectItem("Discount Amount", discount);
 
                 ClearAndFocusQty();
             }
@@ -197,10 +203,14 @@ namespace ACOTIN_POS_APPLICATION
                 B_ChickenSandwichBox.Checked = true;
                 B_QuarterPounderBox.Checked = true;
 
-                priceTxtBox.Text = "450.00";
-                discountAmountTxtbox.Text = "67.50";
-                displayListbox.Items.Add(foodBRdbtn.Text + " - " + priceTxtBox.Text);
-                displayListbox.Items.Add("Discount Amount:        " + discountAmountTxtbox.Text);
+                string price = "450.00";
+                string discount = "67.50";
+
+                priceTxtBox.Text = price;
+                discountAmountTxtbox.Text = discount;
+
+                SelectItem(foodBRdbtn.Text, price);
+                SelectItem("Discount Amount", discount);
 
                 ClearAndFocusQty();
             }

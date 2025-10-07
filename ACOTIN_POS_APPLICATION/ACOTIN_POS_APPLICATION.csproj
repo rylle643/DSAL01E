@@ -82,6 +82,12 @@
     <Compile Include="Payroll_Functions.Designer.cs">
       <DependentUpon>Payroll_Functions.cs</DependentUpon>
     </Compile>
+    <Compile Include="POS1_classform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POS1_classform.Designer.cs">
+      <DependentUpon>POS1_classform.cs</DependentUpon>
+    </Compile>
     <Compile Include="POS2_Functions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Payroll_Functions.resx">
       <DependentUpon>Payroll_Functions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POS1_classform.resx">
+      <DependentUpon>POS1_classform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="POS2_Functions.resx">
       <DependentUpon>POS2_Functions.cs</DependentUpon>
