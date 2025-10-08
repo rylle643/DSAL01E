@@ -32,25 +32,18 @@ namespace ACOTIN_POS_APPLICATION
             qtyTxtbox.Focus();
         }
 
-
-
-        private void SelectItem(string itemName, string price)
+        private void item_priceValue(string discount, string price)
         {
+            double priceValue = Convert.ToDouble(price);
+            double discountValue = priceValue * 0.05;
+
+            priceTxtBox.Text = price;
+            discountAmountTxtbox.Text = discountValue.ToString("0.00");
+
             int totalWidth = 40;
-            int spacing = totalWidth - itemName.Length - price.Length;
+            int spacing = totalWidth - "Item".Length - price.Length;
             string spacer = new string(' ', Math.Max(spacing, 1));
-
-            if (itemName == "Discount Amount")
-            {
-                displayListbox.Items.Add(itemName + spacer + price);
-            }
-            else
-            {
-                priceTxtBox.Text = price;
-                displayListbox.Items.Add(itemName + spacer + price);
-            }
-
-            ClearAndFocusQty();
+            displayListbox.Items.Add("Item" + spacer + price);
         }
 
         private void ClearMealCheckboxes()
@@ -79,37 +72,37 @@ namespace ACOTIN_POS_APPLICATION
             foreach (CheckBox cb in checkboxes) cb.Checked = false;
         }
 
-        private void ClearAllTextboxes()
-        {
-            priceTxtBox.Clear();
-            qtyTxtbox.Clear();
-            discountAmountTxtbox.Clear();
-            discountedAmountTxtbox.Clear();
-            totalBillsTxtbox.Clear();
-            totalQtyTxtbox.Clear();
-            cashGivenTxtbox.Clear();
-            changeTxtbox.Clear();
-        }
-
         private void ResetForm()
         {
             try
             {
+                displayListbox.Items.Clear();
+
                 foodARdbtn.Checked = false;
                 foodBRdbtn.Checked = false;
-                DisplayPictureBox.Image = Image.FromFile("C:\\Users\\C203-34\\source\\repos\\rylle643\\DSAL01E\\ACOTIN_POS_APPLICATION\\Resources\\no-image-available-icon-vector.jpg");
 
                 ClearMealCheckboxes();
                 ClearAllItemCheckboxes();
-                ClearAllTextboxes();
+
+                priceTxtBox.Text = "";
+                qtyTxtbox.Text = "";
+                discountAmountTxtbox.Text = "";
+                discountedAmountTxtbox.Text = "";
+                totalBillsTxtbox.Text = "";
+                totalQtyTxtbox.Text = "";
+                cashGivenTxtbox.Text = "";
+                changeTxtbox.Text = "";
 
                 total_amount = 0;
                 total_qty = 0;
+
                 displayListbox.Items.Clear();
+
+                DisplayPictureBox.Image = Image.FromFile("C:\\Users\\C203-34\\source\\repos\\rylle643\\DSAL01E\\ACOTIN_POS_APPLICATION\\Resources\\no-image-available-icon-vector.jpg");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Error resetting form.", "Error");
+                MessageBox.Show("Error: " + ex.Message, "Error");
             }
         }
 
@@ -118,7 +111,7 @@ namespace ACOTIN_POS_APPLICATION
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(qtyTxtbox.Text)) return;
+                if (qtyTxtbox.Text == "" || qtyTxtbox.Text == "0") return;
 
                 double price = Convert.ToDouble("0" + priceTxtBox.Text);
                 int qty = Convert.ToInt32(qtyTxtbox.Text);
@@ -148,31 +141,20 @@ namespace ACOTIN_POS_APPLICATION
             {
                 displayListbox.Items.Clear();
                 this.BackColor = Color.Goldenrod;
-
                 foodBRdbtn.Checked = false;
                 DisplayPictureBox.Image = Image.FromFile("C:\\Users\\C203-34\\source\\repos\\rylle643\\DSAL01E\\ACOTIN_POS_APPLICATION\\Resources\\Untitled design (1).png");
-
                 A_ChickenMcDoBox.Checked = true;
                 A_BFFFriesBox.Checked = true;
                 A_DrinksBox.Checked = true;
                 A_RiceBox.Checked = true;
                 A_Gravy.Checked = true;
-
                 B_ApplePieBox.Checked = false;
                 B_BFFFriesBox.Checked = false;
                 B_BurgerMcDoBox.Checked = false;
                 B_ChickenSandwichBox.Checked = false;
                 B_QuarterPounderBox.Checked = false;
 
-                string price = "720.00";
-                string discount = "144.00";
-
-                priceTxtBox.Text = price;
-                discountAmountTxtbox.Text = discount;
-
-                SelectItem(foodARdbtn.Text, price);
-                SelectItem("Discount Amount", discount);
-
+                item_priceValue("144.00", "720.00");
                 ClearAndFocusQty();
             }
             catch (Exception)
@@ -187,31 +169,20 @@ namespace ACOTIN_POS_APPLICATION
             {
                 displayListbox.Items.Clear();
                 this.BackColor = Color.Goldenrod;
-
                 foodARdbtn.Checked = false;
                 DisplayPictureBox.Image = Image.FromFile("C:\\Users\\C203-34\\source\\repos\\rylle643\\DSAL01E\\ACOTIN_POS_APPLICATION\\Resources\\Untitled design (2).png");
-
                 A_ChickenMcDoBox.Checked = false;
                 A_BFFFriesBox.Checked = false;
                 A_DrinksBox.Checked = false;
                 A_RiceBox.Checked = false;
                 A_Gravy.Checked = false;
-
                 B_ApplePieBox.Checked = true;
                 B_BFFFriesBox.Checked = true;
                 B_BurgerMcDoBox.Checked = true;
                 B_ChickenSandwichBox.Checked = true;
                 B_QuarterPounderBox.Checked = true;
 
-                string price = "450.00";
-                string discount = "67.50";
-
-                priceTxtBox.Text = price;
-                discountAmountTxtbox.Text = discount;
-
-                SelectItem(foodBRdbtn.Text, price);
-                SelectItem("Discount Amount", discount);
-
+                item_priceValue("67.50", "450.00");
                 ClearAndFocusQty();
             }
             catch (Exception)
@@ -350,102 +321,122 @@ namespace ACOTIN_POS_APPLICATION
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            SelectItem(checkBox1.Text, "167.00");
+            item_priceValue("0.00", "167.00");
+            ClearAndFocusQty();
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            SelectItem(checkBox2.Text, "251.00");
+            item_priceValue("0.00", "251.00");
+            ClearAndFocusQty();
         }
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
-            SelectItem(checkBox3.Text, "59.00");
+            item_priceValue("0.00", "59.00");
+            ClearAndFocusQty();
         }
 
         private void checkBox4_CheckedChanged_1(object sender, EventArgs e)
         {
-            SelectItem(checkBox4.Text, "79.00");
+            item_priceValue("0.00", "79.00");
+            ClearAndFocusQty();
         }
 
         private void checkBox5_CheckedChanged_1(object sender, EventArgs e)
         {
-            SelectItem(checkBox5.Text, "42.00");
+            item_priceValue("0.00", "42.00");
+            ClearAndFocusQty();
         }
 
         private void checkBox6_CheckedChanged(object sender, EventArgs e)
         {
-            SelectItem(checkBox6.Text, "255.00");
+            item_priceValue("0.00", "255.00");
+            ClearAndFocusQty();
         }
 
         private void checkBox7_CheckedChanged(object sender, EventArgs e)
         {
-            SelectItem(checkBox7.Text, "150.00");
+            item_priceValue("0.00", "150.00");
+            ClearAndFocusQty();
         }
 
         private void checkBox8_CheckedChanged(object sender, EventArgs e)
         {
-            SelectItem(checkBox8.Text, "69.00");
+            item_priceValue("0.00", "69.00");
+            ClearAndFocusQty();
         }
 
         private void checkBox9_CheckedChanged(object sender, EventArgs e)
         {
-            SelectItem(checkBox9.Text, "130.00");
+            item_priceValue("0.00", "130.00");
+            ClearAndFocusQty();
         }
 
         private void checkBox10_CheckedChanged(object sender, EventArgs e)
         {
-            SelectItem(checkBox10.Text, "82.00");
+            item_priceValue("0.00", "82.00");
+            ClearAndFocusQty();
         }
 
         private void checkBox11_CheckedChanged(object sender, EventArgs e)
         {
-            SelectItem(checkBox11.Text, "47.00");
+            item_priceValue("0.00", "47.00");
+            ClearAndFocusQty();
         }
 
         private void checkBox12_CheckedChanged(object sender, EventArgs e)
         {
-            SelectItem(checkBox12.Text, "134.00");
+            item_priceValue("0.00", "134.00");
+            ClearAndFocusQty();
         }
 
         private void checkBox13_CheckedChanged(object sender, EventArgs e)
         {
-            SelectItem(checkBox13.Text, "55.00");
+            item_priceValue("0.00", "55.00");
+            ClearAndFocusQty();
         }
 
         private void checkBox14_CheckedChanged(object sender, EventArgs e)
         {
-            SelectItem(checkBox14.Text, "140.00");
+            item_priceValue("0.00", "140.00");
+            ClearAndFocusQty();
         }
 
         private void checkBox15_CheckedChanged(object sender, EventArgs e)
         {
-            SelectItem(checkBox15.Text, "73.00");
+            item_priceValue("0.00", "73.00");
+            ClearAndFocusQty();
         }
 
         private void checkBox16_CheckedChanged(object sender, EventArgs e)
         {
-            SelectItem(checkBox16.Text, "50.00");
+            item_priceValue("0.00", "50.00");
+            ClearAndFocusQty();
         }
 
         private void checkBox17_CheckedChanged(object sender, EventArgs e)
         {
-            SelectItem(checkBox17.Text, "150.00");
+            item_priceValue("0.00", "150.00");
+            ClearAndFocusQty();
         }
 
         private void checkBox18_CheckedChanged(object sender, EventArgs e)
         {
-            SelectItem(checkBox18.Text, "55.00");
+            item_priceValue("0.00", "55.00");
+            ClearAndFocusQty();
         }
 
         private void checkBox19_CheckedChanged(object sender, EventArgs e)
         {
-            SelectItem(checkBox19.Text, "140.00");
+            item_priceValue("0.00", "140.00");
+            ClearAndFocusQty();
         }
 
         private void checkBox20_CheckedChanged(object sender, EventArgs e)
         {
-            SelectItem(checkBox20.Text, "73.00");
+            item_priceValue("0.00", "73.00");
+            ClearAndFocusQty();
         }
 
 

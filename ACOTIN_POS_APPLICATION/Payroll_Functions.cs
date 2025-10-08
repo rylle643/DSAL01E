@@ -43,10 +43,14 @@ namespace ACOTIN_POS_APPLICATION
 
         private decimal ComputeTax(decimal monthlyTaxable)
         {
-            if (monthlyTaxable <= 20833) return 0;
-            if (monthlyTaxable <= 33333) return (monthlyTaxable - 20833) * 0.15m;
-            if (monthlyTaxable <= 66667) return 1875 + (monthlyTaxable - 33333) * 0.20m;
-            if (monthlyTaxable <= 166667) return 8541.80m + (monthlyTaxable - 66667) * 0.25m;
+            if (monthlyTaxable <= 20833) 
+                return 0;
+            if (monthlyTaxable <= 33333) 
+                return (monthlyTaxable - 20833) * 0.15m;
+            if (monthlyTaxable <= 66667) 
+                return 1875 + (monthlyTaxable - 33333) * 0.20m;
+            if (monthlyTaxable <= 166667) 
+                return 8541.80m + (monthlyTaxable - 66667) * 0.25m;
             if (monthlyTaxable <= 666667) return 33541.80m + (monthlyTaxable - 166667) * 0.30m;
             return 183541.80m + (monthlyTaxable - 666667) * 0.35m;
         }
