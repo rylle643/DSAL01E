@@ -22,13 +22,16 @@ namespace ACOTIN_POS_APPLICATION
 
         private decimal ComputeSSS(decimal grossIncome)
         {
-            decimal sss_contrib;
+            decimal sss_contrib = 0;
 
             if (grossIncome < 5250)
+            {
                 sss_contrib = 250.00m / 2;
+            }
             else
             {
-                int bracket = (int)((grossIncome - 5250) / 500) + 1;
+                decimal extra = grossIncome - 5250;
+                int bracket = (int)(extra / 500) + 1;
                 decimal contribution = 250.00m + (bracket * 25.00m);
                 sss_contrib = contribution / 2;
             }
@@ -43,16 +46,39 @@ namespace ACOTIN_POS_APPLICATION
 
         private decimal ComputeTax(decimal monthlyTaxable)
         {
-            if (monthlyTaxable <= 20833) 
-                return 0;
-            if (monthlyTaxable <= 33333) 
-                return (monthlyTaxable - 20833) * 0.15m;
-            if (monthlyTaxable <= 66667) 
-                return 1875 + (monthlyTaxable - 33333) * 0.20m;
-            if (monthlyTaxable <= 166667) 
-                return 8541.80m + (monthlyTaxable - 66667) * 0.25m;
-            if (monthlyTaxable <= 666667) return 33541.80m + (monthlyTaxable - 166667) * 0.30m;
-            return 183541.80m + (monthlyTaxable - 666667) * 0.35m;
+            decimal tax = 0;
+
+            if (monthlyTaxable <= 20833)
+            {
+                tax = 0;
+            }
+            else if (monthlyTaxable <= 33333)
+            {
+                decimal excess = monthlyTaxable - 20833;
+                tax = excess * 0.15m;
+            }
+            else if (monthlyTaxable <= 66667)
+            {
+                decimal excess = monthlyTaxable - 33333;
+                tax = 1875 + (excess * 0.20m);
+            }
+            else if (monthlyTaxable <= 166667)
+            {
+                decimal excess = monthlyTaxable - 66667;
+                tax = 8541.80m + (excess * 0.25m);
+            }
+            else if (monthlyTaxable <= 666667)
+            {
+                decimal excess = monthlyTaxable - 166667;
+                tax = 33541.80m + (excess * 0.30m);
+            }
+            else
+            {
+                decimal excess = monthlyTaxable - 666667;
+                tax = 183541.80m + (excess * 0.35m);
+            }
+
+            return tax;
         }
 
 
