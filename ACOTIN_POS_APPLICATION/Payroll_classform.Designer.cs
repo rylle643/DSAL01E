@@ -1,6 +1,6 @@
 ﻿namespace ACOTIN_POS_APPLICATION
 {
-    partial class Payroll_classform
+    partial class Payroll_Functions
     {
         /// <summary>
         /// Required designer variable.

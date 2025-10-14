@@ -55,7 +55,45 @@ namespace ACOTIN_POS_APPLICATION
             pricetextbox.Text = price;
         }
 
-        
+        private void ClearAll()
+        {
+            // Clear textboxes
+            itemnametxtbox.Clear();
+            quantitytextbox.Clear();
+            pricetextbox.Clear();
+            discounttxtbox.Clear();
+            discountedtxtbox.Clear();
+            cashre_renderedtxtbox.Clear();
+            changetxtbox.Clear();
+            qty_totaltxtbox.Clear();
+            discount_totaltxtbox.Clear();
+            discounted_totaltxtbox.Clear();
+
+            // Uncheck radio buttons
+            radioButton1.Checked = false;
+            regularRbtn.Checked = false;
+            EmployeeRdbtn.Checked = false;
+            noTaxRdbtn.Checked = false;
+
+            // Enable radio buttons
+            radioButton1.Enabled = true;
+            regularRbtn.Enabled = true;
+            EmployeeRdbtn.Enabled = true;
+            noTaxRdbtn.Enabled = true;
+
+            // Reset variables
+            qty_total = 0;
+            discount_totalgiven = 0;
+            discounted_total = 0;
+            qty = 0;
+            price = 0;
+            discount_amt = 0;
+            discounted_amt = 0;
+
+            quantitytextbox.Focus();
+        }
+
+
         private void Activity2_Load(object sender, EventArgs e)
         {
             itemnametxtbox.Enabled = false;
@@ -373,33 +411,8 @@ namespace ACOTIN_POS_APPLICATION
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
-            quantitytextbox.Text = "0";
-            pricetextbox.Text = "0";
-            discounttxtbox.Text = "0";
-            discountedtxtbox.Text = "0";
-            cashre_renderedtxtbox.Text = "0";
 
-            /// uncheck
-            radioButton1.Checked = false;
-            regularRbtn.Checked = false;
-            EmployeeRdbtn.Checked = false;
-            noTaxRdbtn.Checked = false;
-
-            /// clear
-            itemnametxtbox.Clear();
-            pricetextbox.Clear();
-            discounttxtbox.Clear();
-            quantitytextbox.Clear();
-            cashre_renderedtxtbox.Clear();
-            discountedtxtbox.Clear();
-            changetxtbox.Clear();
-
-            /// enable radio button
-            radioButton1.Enabled = true;
-            regularRbtn.Enabled = true;
-            EmployeeRdbtn.Enabled = true;
-            noTaxRdbtn.Enabled = true;
+            ClearAll();
 
 
         }

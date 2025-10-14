@@ -58,6 +58,10 @@
             this.pOS1FunctionFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pOS2FunctionFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.payrollFunctionFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.classformToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pOS1ClassformToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pOS2ClassformToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.payrollClassformToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,7 +76,8 @@
             this.reportsToolStripMenuItem,
             this.windowToolStripMenuItem,
             this.othersToolStripMenuItem,
-            this.functionsToolStripMenuItem});
+            this.functionsToolStripMenuItem,
+            this.classformToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(922, 24);
@@ -299,6 +304,37 @@
             this.payrollFunctionFormToolStripMenuItem.Text = "Payroll Function Form";
             this.payrollFunctionFormToolStripMenuItem.Click += new System.EventHandler(this.payrollFunctionFormToolStripMenuItem_Click);
             // 
+            // classformToolStripMenuItem
+            // 
+            this.classformToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pOS1ClassformToolStripMenuItem,
+            this.pOS2ClassformToolStripMenuItem,
+            this.payrollClassformToolStripMenuItem});
+            this.classformToolStripMenuItem.Name = "classformToolStripMenuItem";
+            this.classformToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
+            this.classformToolStripMenuItem.Text = "Classform";
+            // 
+            // pOS1ClassformToolStripMenuItem
+            // 
+            this.pOS1ClassformToolStripMenuItem.Name = "pOS1ClassformToolStripMenuItem";
+            this.pOS1ClassformToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pOS1ClassformToolStripMenuItem.Text = "POS1 Classform";
+            this.pOS1ClassformToolStripMenuItem.Click += new System.EventHandler(this.pOS1ClassformToolStripMenuItem_Click);
+            // 
+            // pOS2ClassformToolStripMenuItem
+            // 
+            this.pOS2ClassformToolStripMenuItem.Name = "pOS2ClassformToolStripMenuItem";
+            this.pOS2ClassformToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pOS2ClassformToolStripMenuItem.Text = "POS2 Classform";
+            this.pOS2ClassformToolStripMenuItem.Click += new System.EventHandler(this.pOS2ClassformToolStripMenuItem_Click);
+            // 
+            // payrollClassformToolStripMenuItem
+            // 
+            this.payrollClassformToolStripMenuItem.Name = "payrollClassformToolStripMenuItem";
+            this.payrollClassformToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.payrollClassformToolStripMenuItem.Text = "Payroll Classform";
+            this.payrollClassformToolStripMenuItem.Click += new System.EventHandler(this.payrollClassformToolStripMenuItem_Click);
+            // 
             // MainFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -348,5 +384,9 @@
         private System.Windows.Forms.ToolStripMenuItem pOS1FunctionFormToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pOS2FunctionFormToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem payrollFunctionFormToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem classformToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pOS1ClassformToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pOS2ClassformToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem payrollClassformToolStripMenuItem;
     }
 }

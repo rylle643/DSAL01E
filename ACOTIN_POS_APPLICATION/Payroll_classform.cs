@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ACOTIN_POS_APPLICATION
 {
-    public partial class Payroll_classform : Form
+    public partial class Payroll_Functions : Form
     {
-        public Payroll_classform()
+        public Payroll_Functions()
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
@@ -40,15 +40,9 @@ namespace ACOTIN_POS_APPLICATION
             return sss_contrib;
         }
 
-        public decimal ComputePagibig()
-        {
-            return 200.00m;
-        }
+        private decimal ComputePagibig() => 200.00m;
 
-        public decimal ComputePhilHealth(decimal grossIncome)
-        {
-            return grossIncome * 0.025m;
-        }
+        private decimal ComputePhilHealth(decimal grossIncome) => grossIncome * 0.025m;
 
         private decimal ComputeTax(decimal monthlyTaxable)
         {

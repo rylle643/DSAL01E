@@ -76,6 +76,12 @@
     <Compile Include="Activity1.Designer.cs">
       <DependentUpon>Activity1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Payroll_classform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll_classform.Designer.cs">
+      <DependentUpon>Payroll_classform.cs</DependentUpon>
+    </Compile>
     <Compile Include="Payroll_Functions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,12 @@
     </Compile>
     <Compile Include="POS1_classform.Designer.cs">
       <DependentUpon>POS1_classform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POS2_classform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POS2_classform.Designer.cs">
+      <DependentUpon>POS2_classform.cs</DependentUpon>
     </Compile>
     <Compile Include="POS2_Functions.cs">
       <SubType>Form</SubType>
@@ -166,19 +178,27 @@
     <Compile Include="MainFrm.Designer.cs">
       <DependentUpon>MainFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Price_Item_Value.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Variables.cs" />
     <EmbeddedResource Include="Activity1_Function.resx">
       <DependentUpon>Activity1_Function.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Activity1.resx">
       <DependentUpon>Activity1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Payroll_classform.resx">
+      <DependentUpon>Payroll_classform.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Payroll_Functions.resx">
       <DependentUpon>Payroll_Functions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="POS1_classform.resx">
       <DependentUpon>POS1_classform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POS2_classform.resx">
+      <DependentUpon>POS2_classform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="POS2_Functions.resx">
       <DependentUpon>POS2_Functions.cs</DependentUpon>
