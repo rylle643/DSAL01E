@@ -70,10 +70,10 @@
     <Compile Include="Activity1_Function.Designer.cs">
       <DependentUpon>Activity1_Function.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activity1.cs">
+    <Compile Include="Lesson 2\Activity1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Activity1.Designer.cs">
+    <Compile Include="Lesson 2\Activity1.Designer.cs">
       <DependentUpon>Activity1.cs</DependentUpon>
     </Compile>
     <Compile Include="PayrollComputation.cs" />
@@ -114,58 +114,58 @@
     <Compile Include="POS1_Functions.Designer.cs">
       <DependentUpon>POS1_Functions.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activity2.cs">
+    <Compile Include="Lesson 2\Activity2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Activity2.Designer.cs">
+    <Compile Include="Lesson 2\Activity2.Designer.cs">
       <DependentUpon>Activity2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activity3.cs">
+    <Compile Include="Lesson 2\Activity3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Activity3.Designer.cs">
+    <Compile Include="Lesson 2\Activity3.Designer.cs">
       <DependentUpon>Activity3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activity4.cs">
+    <Compile Include="Lesson 2\Activity4.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Activity4.Designer.cs">
+    <Compile Include="Lesson 2\Activity4.Designer.cs">
       <DependentUpon>Activity4.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activity4_PrintFrm.cs">
+    <Compile Include="Lesson 2\Activity4_PrintFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Activity4_PrintFrm.Designer.cs">
+    <Compile Include="Lesson 2\Activity4_PrintFrm.Designer.cs">
       <DependentUpon>Activity4_PrintFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activity4_Transfer.cs">
+    <Compile Include="Lesson 2\Activity4_Transfer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Activity4_Transfer.Designer.cs">
+    <Compile Include="Lesson 2\Activity4_Transfer.Designer.cs">
       <DependentUpon>Activity4_Transfer.cs</DependentUpon>
     </Compile>
-    <Compile Include="DSAL_EXAM.cs">
+    <Compile Include="Exam - Quiz\DSAL_EXAM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DSAL_EXAM.Designer.cs">
+    <Compile Include="Exam - Quiz\DSAL_EXAM.Designer.cs">
       <DependentUpon>DSAL_EXAM.cs</DependentUpon>
     </Compile>
-    <Compile Include="Enrollment.cs">
+    <Compile Include="Exam - Quiz\Enrollment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Enrollment.Designer.cs">
+    <Compile Include="Exam - Quiz\Enrollment.Designer.cs">
       <DependentUpon>Enrollment.cs</DependentUpon>
     </Compile>
-    <Compile Include="Lesson5Activity.cs">
+    <Compile Include="Lesson 5\Lesson5Activity.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Lesson5Activity.Designer.cs">
+    <Compile Include="Lesson 5\Lesson5Activity.Designer.cs">
       <DependentUpon>Lesson5Activity.cs</DependentUpon>
     </Compile>
-    <Compile Include="Lesson5ActivityPayslipReport.cs">
+    <Compile Include="Lesson 5\Lesson5ActivityPayslipReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Lesson5ActivityPayslipReport.Designer.cs">
+    <Compile Include="Lesson 5\Lesson5ActivityPayslipReport.Designer.cs">
       <DependentUpon>Lesson5ActivityPayslipReport.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginFrm1.cs">
@@ -187,7 +187,7 @@
     <EmbeddedResource Include="Activity1_Function.resx">
       <DependentUpon>Activity1_Function.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Activity1.resx">
+    <EmbeddedResource Include="Lesson 2\Activity1.resx">
       <DependentUpon>Activity1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Payroll_classform.resx">
@@ -208,31 +208,31 @@
     <EmbeddedResource Include="POS1_Functions.resx">
       <DependentUpon>POS1_Functions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Activity2.resx">
+    <EmbeddedResource Include="Lesson 2\Activity2.resx">
       <DependentUpon>Activity2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Activity3.resx">
+    <EmbeddedResource Include="Lesson 2\Activity3.resx">
       <DependentUpon>Activity3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Activity4.resx">
+    <EmbeddedResource Include="Lesson 2\Activity4.resx">
       <DependentUpon>Activity4.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Activity4_PrintFrm.resx">
+    <EmbeddedResource Include="Lesson 2\Activity4_PrintFrm.resx">
       <DependentUpon>Activity4_PrintFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Activity4_Transfer.resx">
+    <EmbeddedResource Include="Lesson 2\Activity4_Transfer.resx">
       <DependentUpon>Activity4_Transfer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DSAL_EXAM.resx">
+    <EmbeddedResource Include="Exam - Quiz\DSAL_EXAM.resx">
       <DependentUpon>DSAL_EXAM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Enrollment.resx">
+    <EmbeddedResource Include="Exam - Quiz\Enrollment.resx">
       <DependentUpon>Enrollment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Lesson5Activity.resx">
+    <EmbeddedResource Include="Lesson 5\Lesson5Activity.resx">
       <DependentUpon>Lesson5Activity.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Lesson5ActivityPayslipReport.resx">
+    <EmbeddedResource Include="Lesson 5\Lesson5ActivityPayslipReport.resx">
       <DependentUpon>Lesson5ActivityPayslipReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginFrm1.resx">

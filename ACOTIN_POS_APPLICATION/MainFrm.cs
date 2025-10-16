@@ -168,7 +168,7 @@ namespace ACOTIN_POS_APPLICATION
 
         private void payrollClassformToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            POS1_classform pos1class = new POS1_classform();
+            Payroll_classform pos1class = new Payroll_classform();
             pos1class.MdiParent = this;
             pos1class.StartPosition = FormStartPosition.CenterParent;
             pos1class.WindowState = FormWindowState.Maximized;
