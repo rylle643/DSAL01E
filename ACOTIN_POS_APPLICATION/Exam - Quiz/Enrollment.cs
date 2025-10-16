@@ -69,7 +69,7 @@ namespace ACOTIN_POS_APPLICATION
                     pictureBox1.Image = new Bitmap(open.FileName);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Error loading image.", "Error");
             }

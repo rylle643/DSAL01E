@@ -37,23 +37,28 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.Savebutton = new System.Windows.Forms.Button();
             this.Editbutton = new System.Windows.Forms.Button();
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Searchbutton = new System.Windows.Forms.Button();
             this.Newbutton = new System.Windows.Forms.Button();
             this.Deletebutton = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Location = new System.Drawing.Point(32, 71);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(836, 836);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // picpathtextBox
             // 
@@ -128,16 +133,6 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Department:";
             // 
-            // listBox1
-            // 
-            this.listBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 21;
-            this.listBox1.Location = new System.Drawing.Point(964, 375);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(881, 466);
-            this.listBox1.TabIndex = 9;
-            // 
             // Savebutton
             // 
             this.Savebutton.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -147,6 +142,7 @@
             this.Savebutton.TabIndex = 10;
             this.Savebutton.Text = "Save";
             this.Savebutton.UseVisualStyleBackColor = true;
+            this.Savebutton.Click += new System.EventHandler(this.Savebutton_Click);
             // 
             // Editbutton
             // 
@@ -157,6 +153,7 @@
             this.Editbutton.TabIndex = 11;
             this.Editbutton.Text = "Edit";
             this.Editbutton.UseVisualStyleBackColor = true;
+            this.Editbutton.Click += new System.EventHandler(this.Editbutton_Click);
             // 
             // Cancelbutton
             // 
@@ -167,6 +164,7 @@
             this.Cancelbutton.TabIndex = 13;
             this.Cancelbutton.Text = "Cancel";
             this.Cancelbutton.UseVisualStyleBackColor = true;
+            this.Cancelbutton.Click += new System.EventHandler(this.Cancelbutton_Click);
             // 
             // Searchbutton
             // 
@@ -177,6 +175,7 @@
             this.Searchbutton.TabIndex = 12;
             this.Searchbutton.Text = "Search";
             this.Searchbutton.UseVisualStyleBackColor = true;
+            this.Searchbutton.Click += new System.EventHandler(this.Searchbutton_Click);
             // 
             // Newbutton
             // 
@@ -187,6 +186,7 @@
             this.Newbutton.TabIndex = 15;
             this.Newbutton.Text = "New";
             this.Newbutton.UseVisualStyleBackColor = true;
+            this.Newbutton.Click += new System.EventHandler(this.Newbutton_Click);
             // 
             // Deletebutton
             // 
@@ -197,19 +197,40 @@
             this.Deletebutton.TabIndex = 14;
             this.Deletebutton.Text = "Delete";
             this.Deletebutton.UseVisualStyleBackColor = true;
+            this.Deletebutton.Click += new System.EventHandler(this.Deletebutton_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(966, 375);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(879, 464);
+            this.dataGridView1.TabIndex = 16;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(981, 161);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(179, 41);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Browse";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // SampleDatabaseDb
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Newbutton);
             this.Controls.Add(this.Deletebutton);
             this.Controls.Add(this.Cancelbutton);
             this.Controls.Add(this.Searchbutton);
             this.Controls.Add(this.Editbutton);
             this.Controls.Add(this.Savebutton);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -223,6 +244,7 @@
             this.Text = "SampleDatabaseDb";
             this.Load += new System.EventHandler(this.SampleDatabaseDb_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,12 +261,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button Savebutton;
         private System.Windows.Forms.Button Editbutton;
         private System.Windows.Forms.Button Cancelbutton;
         private System.Windows.Forms.Button Searchbutton;
         private System.Windows.Forms.Button Newbutton;
         private System.Windows.Forms.Button Deletebutton;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
     }
 }
