@@ -64,10 +64,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Activity1_Function.cs">
+    <Compile Include="Lesson 2\Activity1_Function.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Activity1_Function.Designer.cs">
+    <Compile Include="Lesson 2\Activity1_Function.Designer.cs">
       <DependentUpon>Activity1_Function.cs</DependentUpon>
     </Compile>
     <Compile Include="Lesson 2\Activity1.cs">
@@ -184,7 +184,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Variables.cs" />
-    <EmbeddedResource Include="Activity1_Function.resx">
+    <EmbeddedResource Include="Lesson 2\Activity1_Function.resx">
       <DependentUpon>Activity1_Function.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lesson 2\Activity1.resx">
