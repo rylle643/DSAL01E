@@ -76,6 +76,8 @@
     <Compile Include="Activity1.Designer.cs">
       <DependentUpon>Activity1.cs</DependentUpon>
     </Compile>
+    <Compile Include="PayrollComputation.cs" />
+    <Compile Include="PayrollVariables.cs" />
     <Compile Include="Payroll_classform.cs">
       <SubType>Form</SubType>
     </Compile>

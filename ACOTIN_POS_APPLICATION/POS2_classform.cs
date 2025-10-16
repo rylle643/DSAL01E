@@ -35,8 +35,11 @@ namespace ACOTIN_POS_APPLICATION
 
         private void item_priceValue(string discount, string price)
         {
+            // Calculate discount
             double priceValue = Convert.ToDouble(price);
             double discountValue = priceValue * 0.05;
+
+            price_item_value.SetPriceDiscountAmountValue(discountValue.ToString("0.00"), price);
 
             priceTxtBox.Text = price;
             discountAmountTxtbox.Text = discountValue.ToString("0.00");
@@ -97,6 +100,15 @@ namespace ACOTIN_POS_APPLICATION
                 total_amount = 0;
                 total_qty = 0;
 
+                // Reset Variables class
+                variables.quantity = 0;
+                variables.price = 0;
+                variables.discount_amt = 0;
+                variables.discounted_amt = 0;
+                variables.cash_given = 0;
+                variables.change = 0;
+                variables.amount_paid = 0;
+
                 displayListbox.Items.Clear();
 
                 DisplayPictureBox.Image = Image.FromFile("C:\\Users\\C203-34\\source\\repos\\rylle643\\DSAL01E\\ACOTIN_POS_APPLICATION\\Resources\\no-image-available-icon-vector.jpg");
@@ -114,16 +126,16 @@ namespace ACOTIN_POS_APPLICATION
             {
                 if (qtyTxtbox.Text == "" || qtyTxtbox.Text == "0") return;
 
-                double price = Convert.ToDouble("0" + priceTxtBox.Text);
-                int qty = Convert.ToInt32(qtyTxtbox.Text);
-                double discount_amount = Convert.ToDouble("0" + discountAmountTxtbox.Text);
-                double discounted_amount = (price * qty) - discount_amount;
+                variables.price = Convert.ToDouble("0" + priceTxtBox.Text);
+                variables.quantity = Convert.ToInt32(qtyTxtbox.Text);
+                variables.discount_amt = Convert.ToDouble("0" + discountAmountTxtbox.Text);
+                variables.discounted_amt = (variables.price * variables.quantity) - variables.discount_amt;
 
-                total_qty += qty;
+                total_qty += variables.quantity;
                 totalQtyTxtbox.Text = total_qty.ToString();
-                total_amount += discounted_amount;
+                total_amount += variables.discounted_amt;
                 totalBillsTxtbox.Text = total_amount.ToString("n");
-                discountedAmountTxtbox.Text = discounted_amount.ToString("n");
+                discountedAmountTxtbox.Text = variables.discounted_amt.ToString("n");
 
                 cashGivenTxtbox.Clear();
                 cashGivenTxtbox.Focus();
@@ -222,29 +234,28 @@ namespace ACOTIN_POS_APPLICATION
                     return;
                 }
 
-                double cash_given = Convert.ToDouble(cashGivenTxtbox.Text);
-                double total_bills = double.Parse(totalBillsTxtbox.Text.Replace(",", ""));
-                double change = cash_given - total_bills;
+                variables.cash_given = Convert.ToDouble(cashGivenTxtbox.Text);
+                variables.amount_paid = double.Parse(totalBillsTxtbox.Text.Replace(",", ""));
+                variables.change = variables.cash_given - variables.amount_paid;
 
-                if (change < 0)
+                if (variables.change < 0)
                 {
                     MessageBox.Show("Insufficient cash given.", "Error");
                     cashGivenTxtbox.Focus();
                     return;
                 }
 
-                changeTxtbox.Text = change.ToString("n");
+                changeTxtbox.Text = variables.change.ToString("n");
                 int totalWidth = 40;
                 string totalItemsLine = ("Total no. of Items:").PadRight(totalWidth - totalQtyTxtbox.Text.Length) + totalQtyTxtbox.Text;
                 string totalBillsLine = ("Total Bills:").PadRight(totalWidth - totalBillsTxtbox.Text.Length) + totalBillsTxtbox.Text;
-                string cashGivenLine = ("Cash Given:").PadRight(totalWidth - cash_given.ToString("n").Length) + cash_given.ToString("n");
+                string cashGivenLine = ("Cash Given:").PadRight(totalWidth - variables.cash_given.ToString("n").Length) + variables.cash_given.ToString("n");
                 string changeLine = ("Change:").PadRight(totalWidth - changeTxtbox.Text.Length) + changeTxtbox.Text;
 
                 displayListbox.Items.Add(totalBillsLine);
                 displayListbox.Items.Add(totalItemsLine);
                 displayListbox.Items.Add(cashGivenLine);
                 displayListbox.Items.Add(changeLine);
-
             }
             catch (Exception)
             {
