@@ -71,7 +71,7 @@ namespace ACOTIN_POS_APPLICATION
 
             dataGridView1.DataSource = dset.Tables[0];
 
-            pictureBox1.Image = Resources.no_image_available_icon_vector;
+            pictureBox1.Image = Resources.
             student_idtextBox.Clear();
             Student_nametextBox.Clear();
             DepartmenttextBox.Clear();
