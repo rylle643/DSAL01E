@@ -184,6 +184,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classforms\Variables.cs" />
+    <Compile Include="SampleDatabaseDb_Try_and_Catch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SampleDatabaseDb_Try_and_Catch.Designer.cs">
+      <DependentUpon>SampleDatabaseDb_Try_and_Catch.cs</DependentUpon>
+    </Compile>
     <Compile Include="SampleDatabaseDb.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,6 +263,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SampleDatabaseDb_Try_and_Catch.resx">
+      <DependentUpon>SampleDatabaseDb_Try_and_Catch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SampleDatabaseDb.resx">
       <DependentUpon>SampleDatabaseDb.cs</DependentUpon>
     </EmbeddedResource>
@@ -314,6 +323,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Saved.png" />
+    <None Include="Resources\Saved1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

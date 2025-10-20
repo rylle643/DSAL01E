@@ -36,7 +36,7 @@ namespace ACOTIN_POS_APPLICATION
 
         private void SampleDatabaseDb_Load(object sender, EventArgs e)
         {
-
+            dataGridView1.Enabled = false;
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
@@ -71,7 +71,7 @@ namespace ACOTIN_POS_APPLICATION
 
             dataGridView1.DataSource = dset.Tables[0];
 
-            pictureBox1.Image = Resources.
+            pictureBox1.Image = Resources.Saved;
             student_idtextBox.Clear();
             Student_nametextBox.Clear();
             DepartmenttextBox.Clear();
