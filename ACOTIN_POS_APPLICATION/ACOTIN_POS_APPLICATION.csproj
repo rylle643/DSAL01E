@@ -181,6 +181,13 @@
       <DependentUpon>MainFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Classforms\Price_Item_Value.cs" />
+    <Compile Include="POS_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POS_Admin.Designer.cs">
+      <DependentUpon>POS_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pos_dbconnection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classforms\Variables.cs" />
@@ -252,6 +259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainFrm.resx">
       <DependentUpon>MainFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POS_Admin.resx">
+      <DependentUpon>POS_Admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
