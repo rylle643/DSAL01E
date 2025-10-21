@@ -25,7 +25,7 @@ namespace ACOTIN_POS_APPLICATION
 
         public SampleDatabaseDb()
         {
-            connectionString = "Data Source=localhost;Initial Catalog=SampleDatabaseDb;Integrated Security=True;";
+            connectionString = "Data Source=C203-34;Initial Catalog=SampleDatabaseDb; user id=  SA; password=B1Admin123@";
             connection = new SqlConnection(connectionString);
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;

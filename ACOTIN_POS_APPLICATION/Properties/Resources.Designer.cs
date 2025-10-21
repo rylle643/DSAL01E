@@ -103,6 +103,16 @@ namespace ACOTIN_POS_APPLICATION.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fcaasc {
+            get {
+                object obj = ResourceManager.GetObject("fcaasc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap no_image_available_icon_vector {
             get {
                 object obj = ResourceManager.GetObject("no-image-available-icon-vector", resourceCulture);
