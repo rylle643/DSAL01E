@@ -184,7 +184,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 199);
+            this.label1.Location = new System.Drawing.Point(70, 231);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 15);
             this.label1.TabIndex = 20;
@@ -194,7 +194,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(15, 223);
+            this.label2.Location = new System.Drawing.Point(70, 255);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 15);
             this.label2.TabIndex = 21;
@@ -204,7 +204,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(289, 223);
+            this.label3.Location = new System.Drawing.Point(344, 255);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(36, 15);
             this.label3.TabIndex = 23;
@@ -214,7 +214,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(289, 199);
+            this.label4.Location = new System.Drawing.Point(344, 231);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 15);
             this.label4.TabIndex = 22;
@@ -224,7 +224,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(564, 223);
+            this.label5.Location = new System.Drawing.Point(619, 255);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 15);
             this.label5.TabIndex = 25;
@@ -234,7 +234,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(564, 199);
+            this.label6.Location = new System.Drawing.Point(619, 231);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(42, 15);
             this.label6.TabIndex = 24;
@@ -244,7 +244,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(841, 223);
+            this.label7.Location = new System.Drawing.Point(896, 255);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(36, 15);
             this.label7.TabIndex = 27;
@@ -254,7 +254,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(841, 199);
+            this.label8.Location = new System.Drawing.Point(896, 231);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(42, 15);
             this.label8.TabIndex = 26;
@@ -264,7 +264,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(1117, 223);
+            this.label9.Location = new System.Drawing.Point(1172, 255);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(36, 15);
             this.label9.TabIndex = 29;
@@ -274,7 +274,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(1117, 199);
+            this.label10.Location = new System.Drawing.Point(1172, 231);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(42, 15);
             this.label10.TabIndex = 28;
@@ -283,7 +283,7 @@
             // nameTxtbox1
             // 
             this.nameTxtbox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTxtbox1.Location = new System.Drawing.Point(63, 196);
+            this.nameTxtbox1.Location = new System.Drawing.Point(118, 228);
             this.nameTxtbox1.Name = "nameTxtbox1";
             this.nameTxtbox1.Size = new System.Drawing.Size(188, 23);
             this.nameTxtbox1.TabIndex = 30;
@@ -291,7 +291,7 @@
             // priceTxtbox1
             // 
             this.priceTxtbox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTxtbox1.Location = new System.Drawing.Point(63, 220);
+            this.priceTxtbox1.Location = new System.Drawing.Point(118, 252);
             this.priceTxtbox1.Name = "priceTxtbox1";
             this.priceTxtbox1.Size = new System.Drawing.Size(114, 23);
             this.priceTxtbox1.TabIndex = 31;
@@ -299,7 +299,7 @@
             // priceTxtbox2
             // 
             this.priceTxtbox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTxtbox2.Location = new System.Drawing.Point(341, 220);
+            this.priceTxtbox2.Location = new System.Drawing.Point(396, 252);
             this.priceTxtbox2.Name = "priceTxtbox2";
             this.priceTxtbox2.Size = new System.Drawing.Size(114, 23);
             this.priceTxtbox2.TabIndex = 33;
@@ -307,7 +307,7 @@
             // nameTxtbox2
             // 
             this.nameTxtbox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTxtbox2.Location = new System.Drawing.Point(341, 196);
+            this.nameTxtbox2.Location = new System.Drawing.Point(396, 228);
             this.nameTxtbox2.Name = "nameTxtbox2";
             this.nameTxtbox2.Size = new System.Drawing.Size(188, 23);
             this.nameTxtbox2.TabIndex = 32;
@@ -315,7 +315,7 @@
             // priceTxtbox3
             // 
             this.priceTxtbox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTxtbox3.Location = new System.Drawing.Point(617, 220);
+            this.priceTxtbox3.Location = new System.Drawing.Point(672, 252);
             this.priceTxtbox3.Name = "priceTxtbox3";
             this.priceTxtbox3.Size = new System.Drawing.Size(114, 23);
             this.priceTxtbox3.TabIndex = 35;
@@ -323,7 +323,7 @@
             // nameTxtbox3
             // 
             this.nameTxtbox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTxtbox3.Location = new System.Drawing.Point(617, 196);
+            this.nameTxtbox3.Location = new System.Drawing.Point(672, 228);
             this.nameTxtbox3.Name = "nameTxtbox3";
             this.nameTxtbox3.Size = new System.Drawing.Size(188, 23);
             this.nameTxtbox3.TabIndex = 34;
@@ -331,7 +331,7 @@
             // priceTxtbox4
             // 
             this.priceTxtbox4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTxtbox4.Location = new System.Drawing.Point(892, 220);
+            this.priceTxtbox4.Location = new System.Drawing.Point(947, 252);
             this.priceTxtbox4.Name = "priceTxtbox4";
             this.priceTxtbox4.Size = new System.Drawing.Size(114, 23);
             this.priceTxtbox4.TabIndex = 37;
@@ -339,7 +339,7 @@
             // nameTxtbox4
             // 
             this.nameTxtbox4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTxtbox4.Location = new System.Drawing.Point(892, 196);
+            this.nameTxtbox4.Location = new System.Drawing.Point(947, 228);
             this.nameTxtbox4.Name = "nameTxtbox4";
             this.nameTxtbox4.Size = new System.Drawing.Size(188, 23);
             this.nameTxtbox4.TabIndex = 36;
@@ -347,7 +347,7 @@
             // priceTxtbox5
             // 
             this.priceTxtbox5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTxtbox5.Location = new System.Drawing.Point(1169, 220);
+            this.priceTxtbox5.Location = new System.Drawing.Point(1224, 252);
             this.priceTxtbox5.Name = "priceTxtbox5";
             this.priceTxtbox5.Size = new System.Drawing.Size(114, 23);
             this.priceTxtbox5.TabIndex = 39;
@@ -355,117 +355,127 @@
             // nameTxtbox5
             // 
             this.nameTxtbox5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTxtbox5.Location = new System.Drawing.Point(1169, 196);
+            this.nameTxtbox5.Location = new System.Drawing.Point(1224, 228);
             this.nameTxtbox5.Name = "nameTxtbox5";
             this.nameTxtbox5.Size = new System.Drawing.Size(188, 23);
             this.nameTxtbox5.TabIndex = 38;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 11);
+            this.pictureBox1.Location = new System.Drawing.Point(71, 43);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(240, 180);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 80;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox5
             // 
+            this.pictureBox5.BackColor = System.Drawing.Color.White;
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox5.Location = new System.Drawing.Point(1117, 11);
+            this.pictureBox5.Location = new System.Drawing.Point(1172, 43);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(240, 180);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 84;
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox4
             // 
+            this.pictureBox4.BackColor = System.Drawing.Color.White;
             this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox4.Location = new System.Drawing.Point(841, 11);
+            this.pictureBox4.Location = new System.Drawing.Point(896, 43);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(240, 180);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 83;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackColor = System.Drawing.Color.White;
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox3.Location = new System.Drawing.Point(564, 11);
+            this.pictureBox3.Location = new System.Drawing.Point(619, 43);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(240, 180);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 82;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox2.Location = new System.Drawing.Point(289, 11);
+            this.pictureBox2.Location = new System.Drawing.Point(344, 43);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(240, 180);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 81;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox10
             // 
+            this.pictureBox10.BackColor = System.Drawing.Color.White;
             this.pictureBox10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox10.Location = new System.Drawing.Point(1117, 254);
+            this.pictureBox10.Location = new System.Drawing.Point(1172, 286);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(240, 180);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 109;
             this.pictureBox10.TabStop = false;
             this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
             // 
             // pictureBox9
             // 
+            this.pictureBox9.BackColor = System.Drawing.Color.White;
             this.pictureBox9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox9.Location = new System.Drawing.Point(841, 254);
+            this.pictureBox9.Location = new System.Drawing.Point(896, 286);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(240, 180);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 108;
             this.pictureBox9.TabStop = false;
             this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
             // 
             // pictureBox8
             // 
+            this.pictureBox8.BackColor = System.Drawing.Color.White;
             this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox8.Location = new System.Drawing.Point(564, 254);
+            this.pictureBox8.Location = new System.Drawing.Point(619, 286);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(240, 180);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 107;
             this.pictureBox8.TabStop = false;
             this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // pictureBox7
             // 
+            this.pictureBox7.BackColor = System.Drawing.Color.White;
             this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox7.Location = new System.Drawing.Point(289, 254);
+            this.pictureBox7.Location = new System.Drawing.Point(344, 286);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(240, 180);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 106;
             this.pictureBox7.TabStop = false;
             this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // pictureBox6
             // 
+            this.pictureBox6.BackColor = System.Drawing.Color.White;
             this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox6.Location = new System.Drawing.Point(15, 254);
+            this.pictureBox6.Location = new System.Drawing.Point(70, 286);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(240, 180);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 105;
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
@@ -473,7 +483,7 @@
             // priceTxtbox10
             // 
             this.priceTxtbox10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTxtbox10.Location = new System.Drawing.Point(1169, 463);
+            this.priceTxtbox10.Location = new System.Drawing.Point(1224, 495);
             this.priceTxtbox10.Name = "priceTxtbox10";
             this.priceTxtbox10.Size = new System.Drawing.Size(114, 23);
             this.priceTxtbox10.TabIndex = 104;
@@ -481,7 +491,7 @@
             // nameTxtbox10
             // 
             this.nameTxtbox10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTxtbox10.Location = new System.Drawing.Point(1169, 439);
+            this.nameTxtbox10.Location = new System.Drawing.Point(1224, 471);
             this.nameTxtbox10.Name = "nameTxtbox10";
             this.nameTxtbox10.Size = new System.Drawing.Size(188, 23);
             this.nameTxtbox10.TabIndex = 103;
@@ -489,7 +499,7 @@
             // priceTxtbox9
             // 
             this.priceTxtbox9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTxtbox9.Location = new System.Drawing.Point(892, 463);
+            this.priceTxtbox9.Location = new System.Drawing.Point(947, 495);
             this.priceTxtbox9.Name = "priceTxtbox9";
             this.priceTxtbox9.Size = new System.Drawing.Size(114, 23);
             this.priceTxtbox9.TabIndex = 102;
@@ -497,7 +507,7 @@
             // nameTxtbox9
             // 
             this.nameTxtbox9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTxtbox9.Location = new System.Drawing.Point(892, 439);
+            this.nameTxtbox9.Location = new System.Drawing.Point(947, 471);
             this.nameTxtbox9.Name = "nameTxtbox9";
             this.nameTxtbox9.Size = new System.Drawing.Size(188, 23);
             this.nameTxtbox9.TabIndex = 101;
@@ -505,7 +515,7 @@
             // priceTxtbox8
             // 
             this.priceTxtbox8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTxtbox8.Location = new System.Drawing.Point(617, 463);
+            this.priceTxtbox8.Location = new System.Drawing.Point(672, 495);
             this.priceTxtbox8.Name = "priceTxtbox8";
             this.priceTxtbox8.Size = new System.Drawing.Size(114, 23);
             this.priceTxtbox8.TabIndex = 100;
@@ -513,7 +523,7 @@
             // nameTxtbox8
             // 
             this.nameTxtbox8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTxtbox8.Location = new System.Drawing.Point(617, 439);
+            this.nameTxtbox8.Location = new System.Drawing.Point(672, 471);
             this.nameTxtbox8.Name = "nameTxtbox8";
             this.nameTxtbox8.Size = new System.Drawing.Size(188, 23);
             this.nameTxtbox8.TabIndex = 99;
@@ -521,7 +531,7 @@
             // priceTxtbox7
             // 
             this.priceTxtbox7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTxtbox7.Location = new System.Drawing.Point(341, 463);
+            this.priceTxtbox7.Location = new System.Drawing.Point(396, 495);
             this.priceTxtbox7.Name = "priceTxtbox7";
             this.priceTxtbox7.Size = new System.Drawing.Size(114, 23);
             this.priceTxtbox7.TabIndex = 98;
@@ -529,7 +539,7 @@
             // nameTxtbox7
             // 
             this.nameTxtbox7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTxtbox7.Location = new System.Drawing.Point(341, 439);
+            this.nameTxtbox7.Location = new System.Drawing.Point(396, 471);
             this.nameTxtbox7.Name = "nameTxtbox7";
             this.nameTxtbox7.Size = new System.Drawing.Size(188, 23);
             this.nameTxtbox7.TabIndex = 97;
@@ -537,7 +547,7 @@
             // priceTxtbox6
             // 
             this.priceTxtbox6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTxtbox6.Location = new System.Drawing.Point(63, 463);
+            this.priceTxtbox6.Location = new System.Drawing.Point(118, 495);
             this.priceTxtbox6.Name = "priceTxtbox6";
             this.priceTxtbox6.Size = new System.Drawing.Size(114, 23);
             this.priceTxtbox6.TabIndex = 96;
@@ -545,7 +555,7 @@
             // nameTxtbox6
             // 
             this.nameTxtbox6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTxtbox6.Location = new System.Drawing.Point(63, 439);
+            this.nameTxtbox6.Location = new System.Drawing.Point(118, 471);
             this.nameTxtbox6.Name = "nameTxtbox6";
             this.nameTxtbox6.Size = new System.Drawing.Size(188, 23);
             this.nameTxtbox6.TabIndex = 95;
@@ -554,7 +564,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(1117, 466);
+            this.label11.Location = new System.Drawing.Point(1172, 498);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(36, 15);
             this.label11.TabIndex = 94;
@@ -564,7 +574,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(1117, 442);
+            this.label12.Location = new System.Drawing.Point(1172, 474);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(42, 15);
             this.label12.TabIndex = 93;
@@ -574,7 +584,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(841, 466);
+            this.label13.Location = new System.Drawing.Point(896, 498);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(36, 15);
             this.label13.TabIndex = 92;
@@ -584,7 +594,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(841, 442);
+            this.label14.Location = new System.Drawing.Point(896, 474);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(42, 15);
             this.label14.TabIndex = 91;
@@ -594,7 +604,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(564, 466);
+            this.label15.Location = new System.Drawing.Point(619, 498);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(36, 15);
             this.label15.TabIndex = 90;
@@ -604,7 +614,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(564, 442);
+            this.label16.Location = new System.Drawing.Point(619, 474);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(42, 15);
             this.label16.TabIndex = 89;
@@ -614,7 +624,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(289, 466);
+            this.label17.Location = new System.Drawing.Point(344, 498);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(36, 15);
             this.label17.TabIndex = 88;
@@ -624,7 +634,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(289, 442);
+            this.label18.Location = new System.Drawing.Point(344, 474);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(42, 15);
             this.label18.TabIndex = 87;
@@ -634,7 +644,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(15, 466);
+            this.label19.Location = new System.Drawing.Point(70, 498);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(36, 15);
             this.label19.TabIndex = 86;
@@ -644,7 +654,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(15, 442);
+            this.label20.Location = new System.Drawing.Point(70, 474);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(42, 15);
             this.label20.TabIndex = 85;
@@ -652,55 +662,60 @@
             // 
             // pictureBox15
             // 
+            this.pictureBox15.BackColor = System.Drawing.Color.White;
             this.pictureBox15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox15.Location = new System.Drawing.Point(1117, 498);
+            this.pictureBox15.Location = new System.Drawing.Point(1172, 530);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(240, 180);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 134;
             this.pictureBox15.TabStop = false;
             this.pictureBox15.Click += new System.EventHandler(this.pictureBox15_Click);
             // 
             // pictureBox14
             // 
+            this.pictureBox14.BackColor = System.Drawing.Color.White;
             this.pictureBox14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox14.Location = new System.Drawing.Point(841, 498);
+            this.pictureBox14.Location = new System.Drawing.Point(896, 530);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(240, 180);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox14.TabIndex = 133;
             this.pictureBox14.TabStop = false;
             this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click);
             // 
             // pictureBox13
             // 
+            this.pictureBox13.BackColor = System.Drawing.Color.White;
             this.pictureBox13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox13.Location = new System.Drawing.Point(564, 498);
+            this.pictureBox13.Location = new System.Drawing.Point(619, 530);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(240, 180);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox13.TabIndex = 132;
             this.pictureBox13.TabStop = false;
             this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click);
             // 
             // pictureBox12
             // 
+            this.pictureBox12.BackColor = System.Drawing.Color.White;
             this.pictureBox12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox12.Location = new System.Drawing.Point(289, 498);
+            this.pictureBox12.Location = new System.Drawing.Point(344, 530);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(240, 180);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox12.TabIndex = 131;
             this.pictureBox12.TabStop = false;
             this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
             // 
             // pictureBox11
             // 
+            this.pictureBox11.BackColor = System.Drawing.Color.White;
             this.pictureBox11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox11.Location = new System.Drawing.Point(15, 498);
+            this.pictureBox11.Location = new System.Drawing.Point(70, 530);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(240, 180);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox11.TabIndex = 130;
             this.pictureBox11.TabStop = false;
             this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
@@ -708,7 +723,7 @@
             // priceTxtbox15
             // 
             this.priceTxtbox15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTxtbox15.Location = new System.Drawing.Point(1169, 708);
+            this.priceTxtbox15.Location = new System.Drawing.Point(1224, 740);
             this.priceTxtbox15.Name = "priceTxtbox15";
             this.priceTxtbox15.Size = new System.Drawing.Size(114, 23);
             this.priceTxtbox15.TabIndex = 129;
@@ -716,7 +731,7 @@
             // nameTxtbox15
             // 
             this.nameTxtbox15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTxtbox15.Location = new System.Drawing.Point(1169, 684);
+            this.nameTxtbox15.Location = new System.Drawing.Point(1224, 716);
             this.nameTxtbox15.Name = "nameTxtbox15";
             this.nameTxtbox15.Size = new System.Drawing.Size(188, 23);
             this.nameTxtbox15.TabIndex = 128;
@@ -724,7 +739,7 @@
             // priceTxtbox14
             // 
             this.priceTxtbox14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTxtbox14.Location = new System.Drawing.Point(892, 708);
+            this.priceTxtbox14.Location = new System.Drawing.Point(947, 740);
             this.priceTxtbox14.Name = "priceTxtbox14";
             this.priceTxtbox14.Size = new System.Drawing.Size(114, 23);
             this.priceTxtbox14.TabIndex = 127;
@@ -732,7 +747,7 @@
             // nameTxtbox14
             // 
             this.nameTxtbox14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTxtbox14.Location = new System.Drawing.Point(892, 684);
+            this.nameTxtbox14.Location = new System.Drawing.Point(947, 716);
             this.nameTxtbox14.Name = "nameTxtbox14";
             this.nameTxtbox14.Size = new System.Drawing.Size(188, 23);
             this.nameTxtbox14.TabIndex = 126;
@@ -740,7 +755,7 @@
             // priceTxtbox13
             // 
             this.priceTxtbox13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTxtbox13.Location = new System.Drawing.Point(617, 708);
+            this.priceTxtbox13.Location = new System.Drawing.Point(672, 740);
             this.priceTxtbox13.Name = "priceTxtbox13";
             this.priceTxtbox13.Size = new System.Drawing.Size(114, 23);
             this.priceTxtbox13.TabIndex = 125;
@@ -748,7 +763,7 @@
             // nameTxtbox13
             // 
             this.nameTxtbox13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTxtbox13.Location = new System.Drawing.Point(617, 684);
+            this.nameTxtbox13.Location = new System.Drawing.Point(672, 716);
             this.nameTxtbox13.Name = "nameTxtbox13";
             this.nameTxtbox13.Size = new System.Drawing.Size(188, 23);
             this.nameTxtbox13.TabIndex = 124;
@@ -756,7 +771,7 @@
             // priceTxtbox12
             // 
             this.priceTxtbox12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTxtbox12.Location = new System.Drawing.Point(341, 708);
+            this.priceTxtbox12.Location = new System.Drawing.Point(396, 740);
             this.priceTxtbox12.Name = "priceTxtbox12";
             this.priceTxtbox12.Size = new System.Drawing.Size(114, 23);
             this.priceTxtbox12.TabIndex = 123;
@@ -764,7 +779,7 @@
             // nameTxtbox12
             // 
             this.nameTxtbox12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTxtbox12.Location = new System.Drawing.Point(341, 684);
+            this.nameTxtbox12.Location = new System.Drawing.Point(396, 716);
             this.nameTxtbox12.Name = "nameTxtbox12";
             this.nameTxtbox12.Size = new System.Drawing.Size(188, 23);
             this.nameTxtbox12.TabIndex = 122;
@@ -772,7 +787,7 @@
             // priceTxtbox11
             // 
             this.priceTxtbox11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTxtbox11.Location = new System.Drawing.Point(63, 708);
+            this.priceTxtbox11.Location = new System.Drawing.Point(118, 740);
             this.priceTxtbox11.Name = "priceTxtbox11";
             this.priceTxtbox11.Size = new System.Drawing.Size(114, 23);
             this.priceTxtbox11.TabIndex = 121;
@@ -780,7 +795,7 @@
             // nameTxtbox11
             // 
             this.nameTxtbox11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTxtbox11.Location = new System.Drawing.Point(63, 684);
+            this.nameTxtbox11.Location = new System.Drawing.Point(118, 716);
             this.nameTxtbox11.Name = "nameTxtbox11";
             this.nameTxtbox11.Size = new System.Drawing.Size(188, 23);
             this.nameTxtbox11.TabIndex = 120;
@@ -789,7 +804,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(1117, 711);
+            this.label21.Location = new System.Drawing.Point(1172, 743);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(36, 15);
             this.label21.TabIndex = 119;
@@ -799,7 +814,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(1117, 687);
+            this.label22.Location = new System.Drawing.Point(1172, 719);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(42, 15);
             this.label22.TabIndex = 118;
@@ -809,7 +824,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(841, 711);
+            this.label23.Location = new System.Drawing.Point(896, 743);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(36, 15);
             this.label23.TabIndex = 117;
@@ -819,7 +834,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(841, 687);
+            this.label24.Location = new System.Drawing.Point(896, 719);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(42, 15);
             this.label24.TabIndex = 116;
@@ -829,7 +844,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(564, 711);
+            this.label25.Location = new System.Drawing.Point(619, 743);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(36, 15);
             this.label25.TabIndex = 115;
@@ -839,7 +854,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(564, 687);
+            this.label26.Location = new System.Drawing.Point(619, 719);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(42, 15);
             this.label26.TabIndex = 114;
@@ -849,7 +864,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(289, 711);
+            this.label27.Location = new System.Drawing.Point(344, 743);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(36, 15);
             this.label27.TabIndex = 113;
@@ -859,7 +874,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(289, 687);
+            this.label28.Location = new System.Drawing.Point(344, 719);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(42, 15);
             this.label28.TabIndex = 112;
@@ -869,7 +884,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(15, 711);
+            this.label29.Location = new System.Drawing.Point(70, 743);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(36, 15);
             this.label29.TabIndex = 111;
@@ -879,7 +894,7 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(15, 687);
+            this.label30.Location = new System.Drawing.Point(70, 719);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(42, 15);
             this.label30.TabIndex = 110;
@@ -887,55 +902,60 @@
             // 
             // pictureBox20
             // 
+            this.pictureBox20.BackColor = System.Drawing.Color.White;
             this.pictureBox20.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox20.Location = new System.Drawing.Point(1117, 746);
+            this.pictureBox20.Location = new System.Drawing.Point(1172, 778);
             this.pictureBox20.Name = "pictureBox20";
             this.pictureBox20.Size = new System.Drawing.Size(240, 180);
-            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox20.TabIndex = 159;
             this.pictureBox20.TabStop = false;
             this.pictureBox20.Click += new System.EventHandler(this.pictureBox20_Click);
             // 
             // pictureBox19
             // 
+            this.pictureBox19.BackColor = System.Drawing.Color.White;
             this.pictureBox19.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox19.Location = new System.Drawing.Point(841, 746);
+            this.pictureBox19.Location = new System.Drawing.Point(896, 778);
             this.pictureBox19.Name = "pictureBox19";
             this.pictureBox19.Size = new System.Drawing.Size(240, 180);
-            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox19.TabIndex = 158;
             this.pictureBox19.TabStop = false;
             this.pictureBox19.Click += new System.EventHandler(this.pictureBox19_Click);
             // 
             // pictureBox18
             // 
+            this.pictureBox18.BackColor = System.Drawing.Color.White;
             this.pictureBox18.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox18.Location = new System.Drawing.Point(564, 746);
+            this.pictureBox18.Location = new System.Drawing.Point(619, 778);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(240, 180);
-            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox18.TabIndex = 157;
             this.pictureBox18.TabStop = false;
             this.pictureBox18.Click += new System.EventHandler(this.pictureBox18_Click);
             // 
             // pictureBox17
             // 
+            this.pictureBox17.BackColor = System.Drawing.Color.White;
             this.pictureBox17.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox17.Location = new System.Drawing.Point(289, 746);
+            this.pictureBox17.Location = new System.Drawing.Point(344, 778);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(240, 180);
-            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox17.TabIndex = 156;
             this.pictureBox17.TabStop = false;
             this.pictureBox17.Click += new System.EventHandler(this.pictureBox17_Click);
             // 
             // pictureBox16
             // 
+            this.pictureBox16.BackColor = System.Drawing.Color.White;
             this.pictureBox16.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox16.Location = new System.Drawing.Point(15, 746);
+            this.pictureBox16.Location = new System.Drawing.Point(70, 778);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(240, 180);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox16.TabIndex = 155;
             this.pictureBox16.TabStop = false;
             this.pictureBox16.Click += new System.EventHandler(this.pictureBox16_Click);
@@ -943,7 +963,7 @@
             // priceTxtbox20
             // 
             this.priceTxtbox20.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTxtbox20.Location = new System.Drawing.Point(1169, 956);
+            this.priceTxtbox20.Location = new System.Drawing.Point(1224, 988);
             this.priceTxtbox20.Name = "priceTxtbox20";
             this.priceTxtbox20.Size = new System.Drawing.Size(114, 23);
             this.priceTxtbox20.TabIndex = 154;
@@ -951,7 +971,7 @@
             // nameTxtbox20
             // 
             this.nameTxtbox20.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTxtbox20.Location = new System.Drawing.Point(1169, 932);
+            this.nameTxtbox20.Location = new System.Drawing.Point(1224, 964);
             this.nameTxtbox20.Name = "nameTxtbox20";
             this.nameTxtbox20.Size = new System.Drawing.Size(188, 23);
             this.nameTxtbox20.TabIndex = 153;
@@ -959,7 +979,7 @@
             // priceTxtbox19
             // 
             this.priceTxtbox19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTxtbox19.Location = new System.Drawing.Point(892, 956);
+            this.priceTxtbox19.Location = new System.Drawing.Point(947, 988);
             this.priceTxtbox19.Name = "priceTxtbox19";
             this.priceTxtbox19.Size = new System.Drawing.Size(114, 23);
             this.priceTxtbox19.TabIndex = 152;
@@ -967,7 +987,7 @@
             // nameTxtbox19
             // 
             this.nameTxtbox19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTxtbox19.Location = new System.Drawing.Point(892, 932);
+            this.nameTxtbox19.Location = new System.Drawing.Point(947, 964);
             this.nameTxtbox19.Name = "nameTxtbox19";
             this.nameTxtbox19.Size = new System.Drawing.Size(188, 23);
             this.nameTxtbox19.TabIndex = 151;
@@ -975,7 +995,7 @@
             // priceTxtbox18
             // 
             this.priceTxtbox18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTxtbox18.Location = new System.Drawing.Point(617, 956);
+            this.priceTxtbox18.Location = new System.Drawing.Point(672, 988);
             this.priceTxtbox18.Name = "priceTxtbox18";
             this.priceTxtbox18.Size = new System.Drawing.Size(114, 23);
             this.priceTxtbox18.TabIndex = 150;
@@ -983,7 +1003,7 @@
             // nameTxtbox18
             // 
             this.nameTxtbox18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTxtbox18.Location = new System.Drawing.Point(617, 932);
+            this.nameTxtbox18.Location = new System.Drawing.Point(672, 964);
             this.nameTxtbox18.Name = "nameTxtbox18";
             this.nameTxtbox18.Size = new System.Drawing.Size(188, 23);
             this.nameTxtbox18.TabIndex = 149;
@@ -991,7 +1011,7 @@
             // priceTxtbox17
             // 
             this.priceTxtbox17.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTxtbox17.Location = new System.Drawing.Point(341, 956);
+            this.priceTxtbox17.Location = new System.Drawing.Point(396, 988);
             this.priceTxtbox17.Name = "priceTxtbox17";
             this.priceTxtbox17.Size = new System.Drawing.Size(114, 23);
             this.priceTxtbox17.TabIndex = 148;
@@ -999,7 +1019,7 @@
             // nameTxtbox17
             // 
             this.nameTxtbox17.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTxtbox17.Location = new System.Drawing.Point(341, 932);
+            this.nameTxtbox17.Location = new System.Drawing.Point(396, 964);
             this.nameTxtbox17.Name = "nameTxtbox17";
             this.nameTxtbox17.Size = new System.Drawing.Size(188, 23);
             this.nameTxtbox17.TabIndex = 147;
@@ -1007,7 +1027,7 @@
             // priceTxtbox16
             // 
             this.priceTxtbox16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTxtbox16.Location = new System.Drawing.Point(63, 956);
+            this.priceTxtbox16.Location = new System.Drawing.Point(118, 988);
             this.priceTxtbox16.Name = "priceTxtbox16";
             this.priceTxtbox16.Size = new System.Drawing.Size(114, 23);
             this.priceTxtbox16.TabIndex = 146;
@@ -1015,7 +1035,7 @@
             // nameTxtbox16
             // 
             this.nameTxtbox16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTxtbox16.Location = new System.Drawing.Point(63, 932);
+            this.nameTxtbox16.Location = new System.Drawing.Point(118, 964);
             this.nameTxtbox16.Name = "nameTxtbox16";
             this.nameTxtbox16.Size = new System.Drawing.Size(188, 23);
             this.nameTxtbox16.TabIndex = 145;
@@ -1024,7 +1044,7 @@
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(1117, 959);
+            this.label31.Location = new System.Drawing.Point(1172, 991);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(36, 15);
             this.label31.TabIndex = 144;
@@ -1034,7 +1054,7 @@
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(1117, 935);
+            this.label32.Location = new System.Drawing.Point(1172, 967);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(42, 15);
             this.label32.TabIndex = 143;
@@ -1044,7 +1064,7 @@
             // 
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(841, 959);
+            this.label33.Location = new System.Drawing.Point(896, 991);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(36, 15);
             this.label33.TabIndex = 142;
@@ -1054,7 +1074,7 @@
             // 
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(841, 935);
+            this.label34.Location = new System.Drawing.Point(896, 967);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(42, 15);
             this.label34.TabIndex = 141;
@@ -1064,7 +1084,7 @@
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(564, 959);
+            this.label35.Location = new System.Drawing.Point(619, 991);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(36, 15);
             this.label35.TabIndex = 140;
@@ -1074,7 +1094,7 @@
             // 
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(564, 935);
+            this.label36.Location = new System.Drawing.Point(619, 967);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(42, 15);
             this.label36.TabIndex = 139;
@@ -1084,7 +1104,7 @@
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(289, 959);
+            this.label37.Location = new System.Drawing.Point(344, 991);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(36, 15);
             this.label37.TabIndex = 138;
@@ -1094,7 +1114,7 @@
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(289, 935);
+            this.label38.Location = new System.Drawing.Point(344, 967);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(42, 15);
             this.label38.TabIndex = 137;
@@ -1104,7 +1124,7 @@
             // 
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(15, 959);
+            this.label39.Location = new System.Drawing.Point(70, 991);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(36, 15);
             this.label39.TabIndex = 136;
@@ -1114,7 +1134,7 @@
             // 
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(15, 935);
+            this.label40.Location = new System.Drawing.Point(70, 967);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(42, 15);
             this.label40.TabIndex = 135;
@@ -1222,7 +1242,7 @@
             // picpathTxtbox1
             // 
             this.picpathTxtbox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox1.Location = new System.Drawing.Point(43, 158);
+            this.picpathTxtbox1.Location = new System.Drawing.Point(98, 190);
             this.picpathTxtbox1.Name = "picpathTxtbox1";
             this.picpathTxtbox1.Size = new System.Drawing.Size(188, 23);
             this.picpathTxtbox1.TabIndex = 199;
@@ -1230,7 +1250,7 @@
             // picpathTxtbox2
             // 
             this.picpathTxtbox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox2.Location = new System.Drawing.Point(315, 158);
+            this.picpathTxtbox2.Location = new System.Drawing.Point(370, 190);
             this.picpathTxtbox2.Name = "picpathTxtbox2";
             this.picpathTxtbox2.Size = new System.Drawing.Size(188, 23);
             this.picpathTxtbox2.TabIndex = 200;
@@ -1238,7 +1258,7 @@
             // picpathTxtbox4
             // 
             this.picpathTxtbox4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox4.Location = new System.Drawing.Point(864, 158);
+            this.picpathTxtbox4.Location = new System.Drawing.Point(919, 190);
             this.picpathTxtbox4.Name = "picpathTxtbox4";
             this.picpathTxtbox4.Size = new System.Drawing.Size(188, 23);
             this.picpathTxtbox4.TabIndex = 202;
@@ -1246,7 +1266,7 @@
             // picpathTxtbox3
             // 
             this.picpathTxtbox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox3.Location = new System.Drawing.Point(584, 158);
+            this.picpathTxtbox3.Location = new System.Drawing.Point(639, 190);
             this.picpathTxtbox3.Name = "picpathTxtbox3";
             this.picpathTxtbox3.Size = new System.Drawing.Size(188, 23);
             this.picpathTxtbox3.TabIndex = 201;
@@ -1254,7 +1274,7 @@
             // picpathTxtbox5
             // 
             this.picpathTxtbox5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox5.Location = new System.Drawing.Point(1141, 158);
+            this.picpathTxtbox5.Location = new System.Drawing.Point(1196, 190);
             this.picpathTxtbox5.Name = "picpathTxtbox5";
             this.picpathTxtbox5.Size = new System.Drawing.Size(188, 23);
             this.picpathTxtbox5.TabIndex = 203;
@@ -1262,7 +1282,7 @@
             // picpathTxtbox10
             // 
             this.picpathTxtbox10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox10.Location = new System.Drawing.Point(1141, 402);
+            this.picpathTxtbox10.Location = new System.Drawing.Point(1196, 434);
             this.picpathTxtbox10.Name = "picpathTxtbox10";
             this.picpathTxtbox10.Size = new System.Drawing.Size(188, 23);
             this.picpathTxtbox10.TabIndex = 208;
@@ -1270,7 +1290,7 @@
             // picpathTxtbox9
             // 
             this.picpathTxtbox9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox9.Location = new System.Drawing.Point(864, 402);
+            this.picpathTxtbox9.Location = new System.Drawing.Point(919, 434);
             this.picpathTxtbox9.Name = "picpathTxtbox9";
             this.picpathTxtbox9.Size = new System.Drawing.Size(188, 23);
             this.picpathTxtbox9.TabIndex = 207;
@@ -1278,7 +1298,7 @@
             // picpathTxtbox8
             // 
             this.picpathTxtbox8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox8.Location = new System.Drawing.Point(584, 402);
+            this.picpathTxtbox8.Location = new System.Drawing.Point(639, 434);
             this.picpathTxtbox8.Name = "picpathTxtbox8";
             this.picpathTxtbox8.Size = new System.Drawing.Size(188, 23);
             this.picpathTxtbox8.TabIndex = 206;
@@ -1286,7 +1306,7 @@
             // picpathTxtbox7
             // 
             this.picpathTxtbox7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox7.Location = new System.Drawing.Point(315, 402);
+            this.picpathTxtbox7.Location = new System.Drawing.Point(370, 434);
             this.picpathTxtbox7.Name = "picpathTxtbox7";
             this.picpathTxtbox7.Size = new System.Drawing.Size(188, 23);
             this.picpathTxtbox7.TabIndex = 205;
@@ -1294,7 +1314,7 @@
             // picpathTxtbox6
             // 
             this.picpathTxtbox6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox6.Location = new System.Drawing.Point(43, 402);
+            this.picpathTxtbox6.Location = new System.Drawing.Point(98, 434);
             this.picpathTxtbox6.Name = "picpathTxtbox6";
             this.picpathTxtbox6.Size = new System.Drawing.Size(188, 23);
             this.picpathTxtbox6.TabIndex = 204;
@@ -1302,7 +1322,7 @@
             // picpathTxtbox15
             // 
             this.picpathTxtbox15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox15.Location = new System.Drawing.Point(1141, 646);
+            this.picpathTxtbox15.Location = new System.Drawing.Point(1196, 678);
             this.picpathTxtbox15.Name = "picpathTxtbox15";
             this.picpathTxtbox15.Size = new System.Drawing.Size(188, 23);
             this.picpathTxtbox15.TabIndex = 213;
@@ -1310,7 +1330,7 @@
             // picpathTxtbox14
             // 
             this.picpathTxtbox14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox14.Location = new System.Drawing.Point(864, 646);
+            this.picpathTxtbox14.Location = new System.Drawing.Point(919, 678);
             this.picpathTxtbox14.Name = "picpathTxtbox14";
             this.picpathTxtbox14.Size = new System.Drawing.Size(188, 23);
             this.picpathTxtbox14.TabIndex = 212;
@@ -1318,7 +1338,7 @@
             // picpathTxtbox13
             // 
             this.picpathTxtbox13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox13.Location = new System.Drawing.Point(584, 646);
+            this.picpathTxtbox13.Location = new System.Drawing.Point(639, 678);
             this.picpathTxtbox13.Name = "picpathTxtbox13";
             this.picpathTxtbox13.Size = new System.Drawing.Size(188, 23);
             this.picpathTxtbox13.TabIndex = 211;
@@ -1326,7 +1346,7 @@
             // picpathTxtbox12
             // 
             this.picpathTxtbox12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox12.Location = new System.Drawing.Point(315, 646);
+            this.picpathTxtbox12.Location = new System.Drawing.Point(370, 678);
             this.picpathTxtbox12.Name = "picpathTxtbox12";
             this.picpathTxtbox12.Size = new System.Drawing.Size(188, 23);
             this.picpathTxtbox12.TabIndex = 210;
@@ -1334,7 +1354,7 @@
             // picpathTxtbox11
             // 
             this.picpathTxtbox11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox11.Location = new System.Drawing.Point(43, 646);
+            this.picpathTxtbox11.Location = new System.Drawing.Point(98, 678);
             this.picpathTxtbox11.Name = "picpathTxtbox11";
             this.picpathTxtbox11.Size = new System.Drawing.Size(188, 23);
             this.picpathTxtbox11.TabIndex = 209;
@@ -1342,7 +1362,7 @@
             // picpathTxtbox20
             // 
             this.picpathTxtbox20.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox20.Location = new System.Drawing.Point(1141, 892);
+            this.picpathTxtbox20.Location = new System.Drawing.Point(1196, 924);
             this.picpathTxtbox20.Name = "picpathTxtbox20";
             this.picpathTxtbox20.Size = new System.Drawing.Size(188, 23);
             this.picpathTxtbox20.TabIndex = 218;
@@ -1350,7 +1370,7 @@
             // picpathTxtbox19
             // 
             this.picpathTxtbox19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox19.Location = new System.Drawing.Point(864, 892);
+            this.picpathTxtbox19.Location = new System.Drawing.Point(919, 924);
             this.picpathTxtbox19.Name = "picpathTxtbox19";
             this.picpathTxtbox19.Size = new System.Drawing.Size(188, 23);
             this.picpathTxtbox19.TabIndex = 217;
@@ -1358,7 +1378,7 @@
             // picpathTxtbox18
             // 
             this.picpathTxtbox18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox18.Location = new System.Drawing.Point(584, 892);
+            this.picpathTxtbox18.Location = new System.Drawing.Point(639, 924);
             this.picpathTxtbox18.Name = "picpathTxtbox18";
             this.picpathTxtbox18.Size = new System.Drawing.Size(188, 23);
             this.picpathTxtbox18.TabIndex = 216;
@@ -1366,7 +1386,7 @@
             // picpathTxtbox17
             // 
             this.picpathTxtbox17.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox17.Location = new System.Drawing.Point(315, 892);
+            this.picpathTxtbox17.Location = new System.Drawing.Point(370, 924);
             this.picpathTxtbox17.Name = "picpathTxtbox17";
             this.picpathTxtbox17.Size = new System.Drawing.Size(188, 23);
             this.picpathTxtbox17.TabIndex = 215;
@@ -1374,7 +1394,7 @@
             // picpathTxtbox16
             // 
             this.picpathTxtbox16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox16.Location = new System.Drawing.Point(43, 892);
+            this.picpathTxtbox16.Location = new System.Drawing.Point(98, 924);
             this.picpathTxtbox16.Name = "picpathTxtbox16";
             this.picpathTxtbox16.Size = new System.Drawing.Size(188, 23);
             this.picpathTxtbox16.TabIndex = 214;

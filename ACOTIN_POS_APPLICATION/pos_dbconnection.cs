@@ -82,23 +82,23 @@ namespace ACOTIN_POS_APPLICATION
 
         public void pos_select_cashier()
         {
-            pos_sql = "SELECT * FROM pos_nameTbl INNER JOIN pos_picTbl ON" +
-                "pos_nameTb.pos_id = pos_picTbl.pos_id INNER JOIN pos_priceTbl ON" +
+            pos_sql = "SELECT * FROM pos_nameTbl INNER JOIN pos_picTbl ON " +
+                "pos_nameTbl.pos_id = pos_picTbl.pos_id INNER JOIN pos_priceTbl ON " +
                 "pos_picTbl.pos_id = pos_priceTbl.pos_id WHERE pos_nameTbl.pos_id = 1";
         }
 
         public void pos_select_cashier1()
         {
-            pos_sql = "SELECT * FROM pos_nameTbl INNER JOIN pos_picTbl ON" +
-                "pos_nameTb.pos_id = pos_picTbl.pos_id INNER JOIN pos_priceTbl ON" +
+            pos_sql = "SELECT * FROM pos_nameTbl INNER JOIN pos_picTbl ON " +
+                "pos_nameTbl.pos_id = pos_picTbl.pos_id INNER JOIN pos_priceTbl ON " +
                 "pos_picTbl.pos_id = pos_priceTbl.pos_id WHERE pos_nameTbl.pos_id = 2";
         }
 
         public void pos_select_cashier_display()
         {
-            pos_sql = "SELECT pos_empRegYbl.emp_id, emp_fname, emp_surname," +
-                "pos_terminal_no, account_type FROM pos_empRegTbl INNER JOIN useraccountTbl" +
-                "ON pos_empRegTbl.emp_id = useraccountTbl.emp_id WHERE account_type" +
+            pos_sql = "SELECT pos_empRegTbl.emp_id, emp_fname, emp_surname, " +
+                "pos_terminal_no, account_type FROM pos_empRegTbl INNER JOIN useraccountTbl " +
+                "ON pos_empRegTbl.emp_id = useraccountTbl.emp_id WHERE account_type " +
                 "= 'Administrator'";
         }
 
