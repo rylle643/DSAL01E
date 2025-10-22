@@ -1,0 +1,104 @@
+-- Create Database
+CREATE DATABASE POS_Database;
+GO
+
+USE POS_Database;
+GO
+
+-- Create pos_nameTbl (Stores product names)
+CREATE TABLE pos_nameTbl (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    pos_id VARCHAR(50) NOT NULL,
+    name1 VARCHAR(100),
+    name2 VARCHAR(100),
+    name3 VARCHAR(100),
+    name4 VARCHAR(100),
+    name5 VARCHAR(100),
+    name6 VARCHAR(100),
+    name7 VARCHAR(100),
+    name8 VARCHAR(100),
+    name9 VARCHAR(100),
+    name10 VARCHAR(100),
+    name11 VARCHAR(100),
+    name12 VARCHAR(100),
+    name13 VARCHAR(100),
+    name14 VARCHAR(100),
+    name15 VARCHAR(100),
+    name16 VARCHAR(100),
+    name17 VARCHAR(100),
+    name18 VARCHAR(100),
+    name19 VARCHAR(100),
+    name20 VARCHAR(100)
+);
+GO
+
+-- Create pos_priceTbl (Stores product prices)
+CREATE TABLE pos_priceTbl (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    pos_id VARCHAR(50) NOT NULL,
+    price1 DECIMAL(10,2),
+    price2 DECIMAL(10,2),
+    price3 DECIMAL(10,2),
+    price4 DECIMAL(10,2),
+    price5 DECIMAL(10,2),
+    price6 DECIMAL(10,2),
+    price7 DECIMAL(10,2),
+    price8 DECIMAL(10,2),
+    price9 DECIMAL(10,2),
+    price10 DECIMAL(10,2),
+    price11 DECIMAL(10,2),
+    price12 DECIMAL(10,2),
+    price13 DECIMAL(10,2),
+    price14 DECIMAL(10,2),
+    price15 DECIMAL(10,2),
+    price16 DECIMAL(10,2),
+    price17 DECIMAL(10,2),
+    price18 DECIMAL(10,2),
+    price19 DECIMAL(10,2),
+    price20 DECIMAL(10,2)
+);
+GO
+
+-- Create pos_picTbl (Stores picture paths)
+CREATE TABLE pos_picTbl (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    pos_id VARCHAR(50) NOT NULL,
+    pic1 VARCHAR(500),
+    pic2 VARCHAR(500),
+    pic3 VARCHAR(500),
+    pic4 VARCHAR(500),
+    pic5 VARCHAR(500),
+    pic6 VARCHAR(500),
+    pic7 VARCHAR(500),
+    pic8 VARCHAR(500),
+    pic9 VARCHAR(500),
+    pic10 VARCHAR(500),
+    pic11 VARCHAR(500),
+    pic12 VARCHAR(500),
+    pic13 VARCHAR(500),
+    pic14 VARCHAR(500),
+    pic15 VARCHAR(500),
+    pic16 VARCHAR(500),
+    pic17 VARCHAR(500),
+    pic18 VARCHAR(500),
+    pic19 VARCHAR(500),
+    pic20 VARCHAR(500)
+);
+GO
+
+-- Add Foreign Key Constraints (optional but recommended)
+ALTER TABLE pos_priceTbl 
+ADD CONSTRAINT FK_Price_Name FOREIGN KEY (pos_id) REFERENCES pos_nameTbl(pos_id);
+GO
+
+ALTER TABLE pos_picTbl 
+ADD CONSTRAINT FK_Pic_Name FOREIGN KEY (pos_id) REFERENCES pos_nameTbl(pos_id);
+GO
+
+-- Create Indexes for better performance
+CREATE INDEX IX_pos_nameTbl_pos_id ON pos_nameTbl(pos_id);
+CREATE INDEX IX_pos_priceTbl_pos_id ON pos_priceTbl(pos_id);
+CREATE INDEX IX_pos_picTbl_pos_id ON pos_picTbl(pos_id);
+GO
+
+
