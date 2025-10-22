@@ -128,7 +128,7 @@
             this.label38 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.pos_id_comboBox = new System.Windows.Forms.ComboBox();
             this.label51 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -369,6 +369,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 80;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox5
             // 
@@ -379,6 +380,7 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 84;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox4
             // 
@@ -389,6 +391,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 83;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox3
             // 
@@ -399,6 +402,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 82;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 
@@ -409,6 +413,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 81;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox10
             // 
@@ -419,6 +424,7 @@
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 109;
             this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
             // 
             // pictureBox9
             // 
@@ -429,6 +435,7 @@
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 108;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
             // 
             // pictureBox8
             // 
@@ -439,6 +446,7 @@
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 107;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // pictureBox7
             // 
@@ -449,6 +457,7 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 106;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // pictureBox6
             // 
@@ -459,6 +468,7 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 105;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // priceTxtbox10
             // 
@@ -649,6 +659,7 @@
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox15.TabIndex = 134;
             this.pictureBox15.TabStop = false;
+            this.pictureBox15.Click += new System.EventHandler(this.pictureBox15_Click);
             // 
             // pictureBox14
             // 
@@ -659,6 +670,7 @@
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox14.TabIndex = 133;
             this.pictureBox14.TabStop = false;
+            this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click);
             // 
             // pictureBox13
             // 
@@ -669,6 +681,7 @@
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox13.TabIndex = 132;
             this.pictureBox13.TabStop = false;
+            this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click);
             // 
             // pictureBox12
             // 
@@ -679,6 +692,7 @@
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 131;
             this.pictureBox12.TabStop = false;
+            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
             // 
             // pictureBox11
             // 
@@ -689,6 +703,7 @@
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 130;
             this.pictureBox11.TabStop = false;
+            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
             // 
             // priceTxtbox15
             // 
@@ -879,6 +894,7 @@
             this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox20.TabIndex = 159;
             this.pictureBox20.TabStop = false;
+            this.pictureBox20.Click += new System.EventHandler(this.pictureBox20_Click);
             // 
             // pictureBox19
             // 
@@ -889,6 +905,7 @@
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox19.TabIndex = 158;
             this.pictureBox19.TabStop = false;
+            this.pictureBox19.Click += new System.EventHandler(this.pictureBox19_Click);
             // 
             // pictureBox18
             // 
@@ -899,6 +916,7 @@
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox18.TabIndex = 157;
             this.pictureBox18.TabStop = false;
+            this.pictureBox18.Click += new System.EventHandler(this.pictureBox18_Click);
             // 
             // pictureBox17
             // 
@@ -909,6 +927,7 @@
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox17.TabIndex = 156;
             this.pictureBox17.TabStop = false;
+            this.pictureBox17.Click += new System.EventHandler(this.pictureBox17_Click);
             // 
             // pictureBox16
             // 
@@ -919,6 +938,7 @@
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox16.TabIndex = 155;
             this.pictureBox16.TabStop = false;
+            this.pictureBox16.Click += new System.EventHandler(this.pictureBox16_Click);
             // 
             // priceTxtbox20
             // 
@@ -1100,14 +1120,14 @@
             this.label40.TabIndex = 135;
             this.label40.Text = "Name:";
             // 
-            // comboBox1
+            // pos_id_comboBox
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(1504, 12);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(295, 33);
-            this.comboBox1.TabIndex = 185;
+            this.pos_id_comboBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pos_id_comboBox.FormattingEnabled = true;
+            this.pos_id_comboBox.Location = new System.Drawing.Point(1504, 12);
+            this.pos_id_comboBox.Name = "pos_id_comboBox";
+            this.pos_id_comboBox.Size = new System.Drawing.Size(295, 33);
+            this.pos_id_comboBox.TabIndex = 185;
             // 
             // label51
             // 
@@ -1129,6 +1149,7 @@
             this.button1.TabIndex = 187;
             this.button1.Text = "SEARCH";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -1148,6 +1169,7 @@
             this.button2.TabIndex = 194;
             this.button2.Text = "SAVE";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -1159,6 +1181,7 @@
             this.button3.TabIndex = 196;
             this.button3.Text = "DELETE";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -1170,6 +1193,7 @@
             this.button4.TabIndex = 195;
             this.button4.Text = "UPDATE";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -1389,7 +1413,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label51);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.pos_id_comboBox);
             this.Controls.Add(this.pictureBox20);
             this.Controls.Add(this.pictureBox19);
             this.Controls.Add(this.pictureBox18);
@@ -1620,7 +1644,7 @@
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox pos_id_comboBox;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;

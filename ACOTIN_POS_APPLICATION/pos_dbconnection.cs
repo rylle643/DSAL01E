@@ -20,7 +20,8 @@ namespace ACOTIN_POS_APPLICATION
         public void pos_connString()
         {
             pos_sql_connection = new SqlConnection();
-            pos_connectionString = "Data Source=C203-34;Initial Catalog=POS_DB; user id=sa; password=B1Admin123@";
+            /// pos_connectionString = "Data Source=C203-34;Initial Catalog=POS_Database; user id=sa; password=B1Admin123@";
+            pos_connectionString = "Data Source=Rylle ;Initial Catalog=POS_Database; user id=sa; password=rylle";
             pos_sql_connection = new SqlConnection(pos_connectionString);
             pos_sql_connection.ConnectionString = pos_connectionString;
             pos_sql_connection.Open();
@@ -74,8 +75,8 @@ namespace ACOTIN_POS_APPLICATION
 
         public void pos_select()
         {
-            pos_sql = "SELECT * FROM pos_nameTbl INNER JOIN pos_picTbl ON" +
-                "pos_nameTb.pos_id = pos_picTbl.pos_id INNER JOIN pos_priceTbl ON" +
+            pos_sql = "SELECT * FROM pos_nameTbl INNER JOIN pos_picTbl ON " +
+                "pos_nameTbl.pos_id = pos_picTbl.pos_id INNER JOIN pos_priceTbl ON " +
                 "pos_picTbl.pos_id = pos_priceTbl.pos_id";
         }
 
