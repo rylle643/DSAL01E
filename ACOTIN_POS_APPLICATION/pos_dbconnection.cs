@@ -84,14 +84,14 @@ namespace ACOTIN_POS_APPLICATION
         {
             pos_sql = "SELECT * FROM pos_nameTbl INNER JOIN pos_picTbl ON " +
                 "pos_nameTbl.pos_id = pos_picTbl.pos_id INNER JOIN pos_priceTbl ON " +
-                "pos_picTbl.pos_id = pos_priceTbl.pos_id WHERE pos_nameTbl.pos_id = 1";
+                "pos_picTbl.pos_id = pos_priceTbl.pos_id WHERE pos_nameTbl.pos_id = '1'";
         }
 
         public void pos_select_cashier1()
         {
             pos_sql = "SELECT * FROM pos_nameTbl INNER JOIN pos_picTbl ON " +
                 "pos_nameTbl.pos_id = pos_picTbl.pos_id INNER JOIN pos_priceTbl ON " +
-                "pos_picTbl.pos_id = pos_priceTbl.pos_id WHERE pos_nameTbl.pos_id = 2";
+                "pos_picTbl.pos_id = pos_priceTbl.pos_id WHERE pos_nameTbl.pos_id = '2'";
         }
 
         public void pos_select_cashier_display()
