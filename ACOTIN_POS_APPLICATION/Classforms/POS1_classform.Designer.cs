@@ -35,21 +35,21 @@
             this.label32 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
+            this.namelabel13 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
+            this.namelabel8 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.namelabel3 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -57,12 +57,12 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.namelabel2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.namelabel1 = new System.Windows.Forms.Label();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
@@ -169,21 +169,21 @@
             this.groupBox1.Controls.Add(this.label32);
             this.groupBox1.Controls.Add(this.label29);
             this.groupBox1.Controls.Add(this.label31);
-            this.groupBox1.Controls.Add(this.label30);
+            this.groupBox1.Controls.Add(this.namelabel13);
             this.groupBox1.Controls.Add(this.label27);
             this.groupBox1.Controls.Add(this.label28);
             this.groupBox1.Controls.Add(this.label25);
             this.groupBox1.Controls.Add(this.label26);
             this.groupBox1.Controls.Add(this.label23);
             this.groupBox1.Controls.Add(this.label24);
-            this.groupBox1.Controls.Add(this.label22);
+            this.groupBox1.Controls.Add(this.namelabel8);
             this.groupBox1.Controls.Add(this.label20);
             this.groupBox1.Controls.Add(this.label21);
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.label19);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Controls.Add(this.label16);
+            this.groupBox1.Controls.Add(this.namelabel3);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label11);
@@ -191,12 +191,12 @@
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.namelabel2);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.namelabel1);
             this.groupBox1.Controls.Add(this.pictureBox16);
             this.groupBox1.Controls.Add(this.pictureBox17);
             this.groupBox1.Controls.Add(this.pictureBox18);
@@ -266,15 +266,15 @@
             this.label31.TabIndex = 83;
             this.label31.Text = "Sausage McMuffin with Egg";
             // 
-            // label30
+            // namelabel13
             // 
-            this.label30.AutoSize = true;
-            this.label30.BackColor = System.Drawing.Color.Transparent;
-            this.label30.Location = new System.Drawing.Point(574, 145);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(117, 15);
-            this.label30.TabIndex = 82;
-            this.label30.Text = "Cheesy Eggdesal";
+            this.namelabel13.AutoSize = true;
+            this.namelabel13.BackColor = System.Drawing.Color.Transparent;
+            this.namelabel13.Location = new System.Drawing.Point(574, 145);
+            this.namelabel13.Name = "namelabel13";
+            this.namelabel13.Size = new System.Drawing.Size(117, 15);
+            this.namelabel13.TabIndex = 82;
+            this.namelabel13.Text = "Cheesy Eggdesal";
             // 
             // label27
             // 
@@ -330,16 +330,16 @@
             this.label24.TabIndex = 76;
             this.label24.Text = "McCafé Premium Hot Chocolate";
             // 
-            // label22
+            // namelabel8
             // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Location = new System.Drawing.Point(436, 145);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(127, 15);
-            this.label22.TabIndex = 75;
-            this.label22.Text = "McCafé Americano";
-            this.label22.Click += new System.EventHandler(this.label22_Click);
+            this.namelabel8.AutoSize = true;
+            this.namelabel8.BackColor = System.Drawing.Color.Transparent;
+            this.namelabel8.Location = new System.Drawing.Point(436, 145);
+            this.namelabel8.Name = "namelabel8";
+            this.namelabel8.Size = new System.Drawing.Size(127, 15);
+            this.namelabel8.TabIndex = 75;
+            this.namelabel8.Text = "McCafé Americano";
+            this.namelabel8.Click += new System.EventHandler(this.label22_Click);
             // 
             // label20
             // 
@@ -397,16 +397,16 @@
             this.label17.TabIndex = 69;
             this.label17.Text = "McFlurry with Oreo Cookies";
             // 
-            // label16
+            // namelabel3
             // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Location = new System.Drawing.Point(302, 145);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(94, 15);
-            this.label16.TabIndex = 68;
-            this.label16.Text = "Coke McFloat";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
+            this.namelabel3.AutoSize = true;
+            this.namelabel3.BackColor = System.Drawing.Color.Transparent;
+            this.namelabel3.Location = new System.Drawing.Point(302, 145);
+            this.namelabel3.Name = "namelabel3";
+            this.namelabel3.Size = new System.Drawing.Size(94, 15);
+            this.namelabel3.TabIndex = 68;
+            this.namelabel3.Text = "Coke McFloat";
+            this.namelabel3.Click += new System.EventHandler(this.label16_Click);
             // 
             // label13
             // 
@@ -474,14 +474,14 @@
             this.label8.TabIndex = 61;
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // label7
+            // namelabel2
             // 
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(164, 145);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(123, 30);
-            this.label7.TabIndex = 60;
-            this.label7.Text = "Chicken McDo with McSpaghetti";
+            this.namelabel2.BackColor = System.Drawing.Color.Transparent;
+            this.namelabel2.Location = new System.Drawing.Point(164, 145);
+            this.namelabel2.Name = "namelabel2";
+            this.namelabel2.Size = new System.Drawing.Size(123, 30);
+            this.namelabel2.TabIndex = 60;
+            this.namelabel2.Text = "Chicken McDo with McSpaghetti";
             // 
             // label6
             // 
@@ -522,16 +522,16 @@
             this.label3.Text = "Burger McDo";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label2
+            // namelabel1
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(26, 145);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 15);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Big Mac";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.namelabel1.AutoSize = true;
+            this.namelabel1.BackColor = System.Drawing.Color.Transparent;
+            this.namelabel1.Location = new System.Drawing.Point(26, 145);
+            this.namelabel1.Name = "namelabel1";
+            this.namelabel1.Size = new System.Drawing.Size(59, 15);
+            this.namelabel1.TabIndex = 4;
+            this.namelabel1.Text = "Big Mac";
+            this.namelabel1.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox16
             // 
@@ -1440,11 +1440,11 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label namelabel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label namelabel2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
@@ -1453,21 +1453,21 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label namelabel3;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label namelabel8;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label namelabel13;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
