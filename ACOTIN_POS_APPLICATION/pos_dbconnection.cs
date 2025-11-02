@@ -21,7 +21,7 @@ namespace ACOTIN_POS_APPLICATION
         {
             pos_sql_connection = new SqlConnection();
             /// pos_connectionString = "Data Source=C203-34;Initial Catalog=POS_Database; user id=sa; password=B1Admin123@";
-            pos_connectionString = "Data Source=Rylle ;Initial Catalog=POS_Database; user id=sa; password=rylle";
+            pos_connectionString = "Data Source=Rylle ;Initial Catalog=POS_Database_V2; user id=sa; password=rylle";
             pos_sql_connection = new SqlConnection(pos_connectionString);
             pos_sql_connection.ConnectionString = pos_connectionString;
             pos_sql_connection.Open();
@@ -96,16 +96,16 @@ namespace ACOTIN_POS_APPLICATION
 
         public void pos_select_cashier_display()
         {
-            pos_sql = "SELECT pos_empRegTbl.emp_id, emp_fname, emp_surname, " +
-                "pos_terminal_no, account_type FROM pos_empRegTbl INNER JOIN useraccountTbl " +
-                "ON pos_empRegTbl.emp_id = useraccountTbl.emp_id WHERE account_type " +
+            pos_sql = "SELECT employeeTbl.emp_id, emp_fname, emp_surname, " +
+                "terminal_no, account_type FROM employeeTbl INNER JOIN useraccountTbl " +
+                "ON employeeTbl.emp_id = useraccountTbl.emp_id WHERE account_type " +
                 "= 'Administrator'";
         }
 
         public void pos_select_cashier_SELECTdisplay()
         {
             pos_sql_dataset = new DataSet();
-            pos_sql_dataadapter.Fill(pos_sql_dataset, "pos_empRegTbl");
+            pos_sql_dataadapter.Fill(pos_sql_dataset, "employeeTbl");
         }
     }
 

@@ -1428,9 +1428,9 @@
             // 
             this.time_dateLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.time_dateLabel.ForeColor = System.Drawing.Color.White;
-            this.time_dateLabel.Location = new System.Drawing.Point(31, 92);
+            this.time_dateLabel.Location = new System.Drawing.Point(3, 92);
             this.time_dateLabel.Name = "time_dateLabel";
-            this.time_dateLabel.Size = new System.Drawing.Size(144, 30);
+            this.time_dateLabel.Size = new System.Drawing.Size(211, 30);
             this.time_dateLabel.TabIndex = 4;
             this.time_dateLabel.Text = "LABEL";
             this.time_dateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1741,7 +1741,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(74, 71);
+            this.label2.Location = new System.Drawing.Point(81, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 21);
             this.label2.TabIndex = 44;
@@ -1763,7 +1763,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(458, 71);
+            this.label4.Location = new System.Drawing.Point(464, 71);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(133, 21);
             this.label4.TabIndex = 46;
@@ -1774,7 +1774,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(678, 71);
+            this.label5.Location = new System.Drawing.Point(682, 71);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(128, 21);
             this.label5.TabIndex = 47;
@@ -1795,7 +1795,7 @@
             // 
             this.emp_fnameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emp_fnameLabel.ForeColor = System.Drawing.Color.White;
-            this.emp_fnameLabel.Location = new System.Drawing.Point(361, 92);
+            this.emp_fnameLabel.Location = new System.Drawing.Point(362, 92);
             this.emp_fnameLabel.Name = "emp_fnameLabel";
             this.emp_fnameLabel.Size = new System.Drawing.Size(151, 30);
             this.emp_fnameLabel.TabIndex = 49;
@@ -1817,7 +1817,7 @@
             // 
             this.emp_surnameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emp_surnameLabel.ForeColor = System.Drawing.Color.White;
-            this.emp_surnameLabel.Location = new System.Drawing.Point(518, 92);
+            this.emp_surnameLabel.Location = new System.Drawing.Point(517, 92);
             this.emp_surnameLabel.Name = "emp_surnameLabel";
             this.emp_surnameLabel.Size = new System.Drawing.Size(142, 30);
             this.emp_surnameLabel.TabIndex = 51;
