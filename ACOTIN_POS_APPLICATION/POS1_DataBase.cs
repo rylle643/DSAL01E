@@ -88,8 +88,8 @@ namespace ACOTIN_POS_APPLICATION
                 picpathTxtbox20.Hide();
 
                 // =============== CHANGE THESE TWO LINES ONLY ===============
-                string itemPosID = "111";      // Change to "111", "333", etc.
-                string employeeID = "123";     // Change to "456", "789", etc.
+                string itemPosID = "111";      // Change to "123" ,"111", "333", etc.
+                string employeeID = "123";     // Change to "123" ,"456", "789", etc.
                                                // ===========================================================
 
                 // Load items based on pos_id

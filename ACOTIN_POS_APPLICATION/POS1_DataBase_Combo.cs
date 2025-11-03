@@ -244,69 +244,38 @@ namespace ACOTIN_POS_APPLICATION
         {
             try
             {
-                // Get all pos_id from database
                 posdb_connect.pos_sql = "SELECT DISTINCT pos_id FROM pos_nameTbl";
                 posdb_connect.pos_cmd();
                 posdb_connect.pos_sqladapterSelect();
                 posdb_connect.pos_sqldatasetSELECT();
 
-                // Clear the combobox
                 pos_id_comboBox.Items.Clear();
+                foreach (DataRow row in posdb_connect.pos_sql_dataset.Tables[0].Rows)
+                    pos_id_comboBox.Items.Add(row["pos_id"].ToString());
 
-                // Add each pos_id to combobox
-                for (int i = 0; i < posdb_connect.pos_sql_dataset.Tables[0].Rows.Count; i++)
-                {
-                    string posId = posdb_connect.pos_sql_dataset.Tables[0].Rows[i]["pos_id"].ToString();
-                    pos_id_comboBox.Items.Add(posId);
-                }
-
-                // Select the first item
                 if (pos_id_comboBox.Items.Count > 0)
-                {
                     pos_id_comboBox.SelectedIndex = 0;
-                }
             }
-            catch (Exception)
-            {
-                MessageBox.Show("Error loading POS IDs!");
-            }
+            catch { MessageBox.Show("Error loading POS IDs!"); }
         }
 
         private void LoadCashierComboBox()
         {
             try
             {
-                // Get all employees from database
                 posdb_connect.pos_sql = "SELECT emp_id, emp_fname, emp_surname FROM employeeTbl";
                 posdb_connect.pos_cmd();
                 posdb_connect.pos_sqladapterSelect();
                 posdb_connect.pos_sqldatasetSELECT();
 
-                // Clear the combobox
                 cashier_comboBox.Items.Clear();
+                foreach (DataRow row in posdb_connect.pos_sql_dataset.Tables[0].Rows)
+                    cashier_comboBox.Items.Add($"{row["emp_id"]} - {row["emp_fname"]} {row["emp_surname"]}");
 
-                // Add each employee to combobox
-                for (int i = 0; i < posdb_connect.pos_sql_dataset.Tables[0].Rows.Count; i++)
-                {
-                    string empId = posdb_connect.pos_sql_dataset.Tables[0].Rows[i]["emp_id"].ToString();
-                    string firstName = posdb_connect.pos_sql_dataset.Tables[0].Rows[i]["emp_fname"].ToString();
-                    string lastName = posdb_connect.pos_sql_dataset.Tables[0].Rows[i]["emp_surname"].ToString();
-
-                    // Show: "123 - John Doe"
-                    string displayText = empId + " - " + firstName + " " + lastName;
-                    cashier_comboBox.Items.Add(displayText);
-                }
-
-                // Select the first item
                 if (cashier_comboBox.Items.Count > 0)
-                {
                     cashier_comboBox.SelectedIndex = 0;
-                }
             }
-            catch (Exception)
-            {
-                MessageBox.Show("Error loading cashiers!");
-            }
+            catch { MessageBox.Show("Error loading cashiers!"); }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -478,130 +447,72 @@ namespace ACOTIN_POS_APPLICATION
             }
         }
 
+        // When user selects a product from dropdown
         private void pos_id_comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
-
+                // Get selected product ID
                 string selectedPosId = pos_id_comboBox.SelectedItem.ToString();
 
-
-                posdb_connect.pos_sql = "SELECT * FROM pos_nameTbl INNER JOIN pos_picTbl ON pos_nameTbl.pos_id = pos_picTbl.pos_id INNER JOIN pos_priceTbl ON pos_picTbl.pos_id = pos_priceTbl.pos_id WHERE pos_nameTbl.pos_id = '" + selectedPosId + "'";
+                // Get product data from database
+                posdb_connect.pos_sql = "SELECT * FROM pos_nameTbl " +
+                                         "INNER JOIN pos_picTbl ON pos_nameTbl.pos_id = pos_picTbl.pos_id " +
+                                         "INNER JOIN pos_priceTbl ON pos_picTbl.pos_id = pos_priceTbl.pos_id " +
+                                         "WHERE pos_nameTbl.pos_id = '" + selectedPosId + "'";
                 posdb_connect.pos_cmd();
                 posdb_connect.pos_sqladapterSelect();
                 posdb_connect.pos_sqldatasetSELECT();
 
+                DataRow data = posdb_connect.pos_sql_dataset.Tables[0].Rows[0];
 
-                namelabel1.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][2].ToString();
-                namelabel2.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][3].ToString();
-                namelabel3.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][4].ToString();
-                namelabel4.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][5].ToString();
-                namelabel5.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][6].ToString();
-                namelabel6.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][7].ToString();
-                namelabel7.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][8].ToString();
-                namelabel8.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][9].ToString();
-                namelabel9.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][10].ToString();
-                namelabel10.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][11].ToString();
-                namelabel11.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][12].ToString();
-                namelabel12.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][13].ToString();
-                namelabel13.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][14].ToString();
-                namelabel14.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][15].ToString();
-                namelabel15.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][16].ToString();
-                namelabel16.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][17].ToString();
-                namelabel17.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][18].ToString();
-                namelabel18.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][19].ToString();
-                namelabel19.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][20].ToString();
-                namelabel20.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][21].ToString();
+                // Update names (column 2-21)
+                Label[] names = { namelabel1, namelabel2, namelabel3, namelabel4, namelabel5, namelabel6, namelabel7, namelabel8, namelabel9, namelabel10, namelabel11, namelabel12, namelabel13, namelabel14, namelabel15, namelabel16, namelabel17, namelabel18, namelabel19, namelabel20 };
+                for (int i = 0; i < 20; i++)
+                    names[i].Text = data[i + 2].ToString();
 
+                // Update pictures (column 24-43)
+                TextBox[] paths = { picpathTxtbox1, picpathTxtbox2, picpathTxtbox3, picpathTxtbox4, picpathTxtbox5, picpathTxtbox6, picpathTxtbox7, picpathTxtbox8, picpathTxtbox9, picpathTxtbox10, picpathTxtbox11, picpathTxtbox12, picpathTxtbox13, picpathTxtbox14, picpathTxtbox15, picpathTxtbox16, picpathTxtbox17, picpathTxtbox18, picpathTxtbox19, picpathTxtbox20 };
+                PictureBox[] pics = { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9, pictureBox10, pictureBox11, pictureBox12, pictureBox13, pictureBox14, pictureBox15, pictureBox16, pictureBox17, pictureBox18, pictureBox19, pictureBox20 };
+                for (int i = 0; i < 20; i++)
+                {
+                    paths[i].Text = data[i + 24].ToString();
+                    try { pics[i].Image = Image.FromFile(paths[i].Text); } catch { }
+                }
 
-                picpathTxtbox1.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][24].ToString();
-                try { pictureBox1.Image = Image.FromFile(picpathTxtbox1.Text); } catch { }
-                picpathTxtbox2.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][25].ToString();
-                try { pictureBox2.Image = Image.FromFile(picpathTxtbox2.Text); } catch { }
-                picpathTxtbox3.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][26].ToString();
-                try { pictureBox3.Image = Image.FromFile(picpathTxtbox3.Text); } catch { }
-                picpathTxtbox4.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][27].ToString();
-                try { pictureBox4.Image = Image.FromFile(picpathTxtbox4.Text); } catch { }
-                picpathTxtbox5.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][28].ToString();
-                try { pictureBox5.Image = Image.FromFile(picpathTxtbox5.Text); } catch { }
-                picpathTxtbox6.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][29].ToString();
-                try { pictureBox6.Image = Image.FromFile(picpathTxtbox6.Text); } catch { }
-                picpathTxtbox7.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][30].ToString();
-                try { pictureBox7.Image = Image.FromFile(picpathTxtbox7.Text); } catch { }
-                picpathTxtbox8.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][31].ToString();
-                try { pictureBox8.Image = Image.FromFile(picpathTxtbox8.Text); } catch { }
-                picpathTxtbox9.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][32].ToString();
-                try { pictureBox9.Image = Image.FromFile(picpathTxtbox9.Text); } catch { }
-                picpathTxtbox10.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][33].ToString();
-                try { pictureBox10.Image = Image.FromFile(picpathTxtbox10.Text); } catch { }
-                picpathTxtbox11.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][34].ToString();
-                try { pictureBox11.Image = Image.FromFile(picpathTxtbox11.Text); } catch { }
-                picpathTxtbox12.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][35].ToString();
-                try { pictureBox12.Image = Image.FromFile(picpathTxtbox12.Text); } catch { }
-                picpathTxtbox13.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][36].ToString();
-                try { pictureBox13.Image = Image.FromFile(picpathTxtbox13.Text); } catch { }
-                picpathTxtbox14.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][37].ToString();
-                try { pictureBox14.Image = Image.FromFile(picpathTxtbox14.Text); } catch { }
-                picpathTxtbox15.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][38].ToString();
-                try { pictureBox15.Image = Image.FromFile(picpathTxtbox15.Text); } catch { }
-                picpathTxtbox16.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][39].ToString();
-                try { pictureBox16.Image = Image.FromFile(picpathTxtbox16.Text); } catch { }
-                picpathTxtbox17.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][40].ToString();
-                try { pictureBox17.Image = Image.FromFile(picpathTxtbox17.Text); } catch { }
-                picpathTxtbox18.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][41].ToString();
-                try { pictureBox18.Image = Image.FromFile(picpathTxtbox18.Text); } catch { }
-                picpathTxtbox19.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][42].ToString();
-                try { pictureBox19.Image = Image.FromFile(picpathTxtbox19.Text); } catch { }
-                picpathTxtbox20.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][43].ToString();
-                try { pictureBox20.Image = Image.FromFile(picpathTxtbox20.Text); } catch { }
-
-
-                pricelbl1.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][46].ToString();
-                pricelbl2.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][47].ToString();
-                pricelbl3.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][48].ToString();
-                pricelbl4.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][49].ToString();
-                pricelbl5.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][50].ToString();
-                pricelbl6.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][51].ToString();
-                pricelbl7.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][52].ToString();
-                pricelbl8.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][53].ToString();
-                pricelbl9.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][54].ToString();
-                pricelbl10.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][55].ToString();
-                pricelbl11.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][56].ToString();
-                pricelbl12.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][57].ToString();
-                pricelbl13.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][58].ToString();
-                pricelbl14.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][59].ToString();
-                pricelbl15.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][60].ToString();
-                pricelbl16.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][61].ToString();
-                pricelbl17.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][62].ToString();
-                pricelbl18.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][63].ToString();
-                pricelbl19.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][64].ToString();
-                pricelbl20.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][65].ToString();
+                // Update prices (column 46-65)
+                Label[] prices = { pricelbl1, pricelbl2, pricelbl3, pricelbl4, pricelbl5, pricelbl6, pricelbl7, pricelbl8, pricelbl9, pricelbl10, pricelbl11, pricelbl12, pricelbl13, pricelbl14, pricelbl15, pricelbl16, pricelbl17, pricelbl18, pricelbl19, pricelbl20 };
+                for (int i = 0; i < 20; i++)
+                    prices[i].Text = data[i + 46].ToString();
             }
-            catch (Exception)
+            catch
             {
                 MessageBox.Show("Error loading products!");
             }
         }
 
+        // When user selects a cashier from dropdown
         private void cashier_comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
-
+                // Get employee ID from selection (example: "123 - John Doe")
                 string selectedText = cashier_comboBox.SelectedItem.ToString();
-                string empId = selectedText.Split('-')[0].Trim(); // Get "123" from "123 - John Doe"
+                string empId = selectedText.Split('-')[0].Trim();
 
-
+                // Get employee data from database
                 posdb_connect.pos_sql = "SELECT emp_id, emp_fname, emp_surname, terminal_no FROM employeeTbl WHERE emp_id = '" + empId + "'";
                 posdb_connect.pos_cmd();
                 posdb_connect.pos_sqladapterSelect();
                 posdb_connect.pos_sqldatasetSELECT();
 
+                DataRow emp = posdb_connect.pos_sql_dataset.Tables[0].Rows[0];
 
-                emp_idLabel.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0]["emp_id"].ToString();
-                emp_fnameLabel.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0]["emp_fname"].ToString();
-                emp_surnameLabel.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0]["emp_surname"].ToString();
-                terminal_nolabel.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0]["terminal_no"].ToString();
+                // Display employee info
+                emp_idLabel.Text = emp["emp_id"].ToString();
+                emp_fnameLabel.Text = emp["emp_fname"].ToString();
+                emp_surnameLabel.Text = emp["emp_surname"].ToString();
+                terminal_nolabel.Text = emp["terminal_no"].ToString();
             }
             catch (Exception)
             {
