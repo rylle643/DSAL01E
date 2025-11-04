@@ -1434,9 +1434,9 @@
             // 
             this.time_dateLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.time_dateLabel.ForeColor = System.Drawing.Color.White;
-            this.time_dateLabel.Location = new System.Drawing.Point(31, 92);
+            this.time_dateLabel.Location = new System.Drawing.Point(2, 92);
             this.time_dateLabel.Name = "time_dateLabel";
-            this.time_dateLabel.Size = new System.Drawing.Size(144, 30);
+            this.time_dateLabel.Size = new System.Drawing.Size(202, 30);
             this.time_dateLabel.TabIndex = 4;
             this.time_dateLabel.Text = "LABEL";
             this.time_dateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1813,6 +1813,7 @@
             this.emp_idLabel.TabIndex = 48;
             this.emp_idLabel.Text = "LABEL";
             this.emp_idLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.emp_idLabel.Click += new System.EventHandler(this.emp_idLabel_Click);
             // 
             // emp_fnameLabel
             // 

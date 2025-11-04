@@ -659,5 +659,10 @@ namespace ACOTIN_POS_APPLICATION
             GetPriceItemValue();
             quantityTxtbox();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

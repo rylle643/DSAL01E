@@ -163,61 +163,42 @@ namespace ACOTIN_POS_APPLICATION
 
                 picpathTxtbox1.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][24].ToString();
                 try { pictureBox1.Image = Image.FromFile(picpathTxtbox1.Text); } catch { }
-
                 picpathTxtbox2.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][25].ToString();
                 try { pictureBox2.Image = Image.FromFile(picpathTxtbox2.Text); } catch { }
-
                 picpathTxtbox3.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][26].ToString();
                 try { pictureBox3.Image = Image.FromFile(picpathTxtbox3.Text); } catch { }
-
                 picpathTxtbox4.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][27].ToString();
                 try { pictureBox4.Image = Image.FromFile(picpathTxtbox4.Text); } catch { }
-
                 picpathTxtbox5.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][28].ToString();
                 try { pictureBox5.Image = Image.FromFile(picpathTxtbox5.Text); } catch { }
-
                 picpathTxtbox6.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][29].ToString();
                 try { pictureBox6.Image = Image.FromFile(picpathTxtbox6.Text); } catch { }
-
                 picpathTxtbox7.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][30].ToString();
                 try { pictureBox7.Image = Image.FromFile(picpathTxtbox7.Text); } catch { }
-
                 picpathTxtbox8.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][31].ToString();
                 try { pictureBox8.Image = Image.FromFile(picpathTxtbox8.Text); } catch { }
-
                 picpathTxtbox9.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][32].ToString();
                 try { pictureBox9.Image = Image.FromFile(picpathTxtbox9.Text); } catch { }
-
                 picpathTxtbox10.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][33].ToString();
                 try { pictureBox10.Image = Image.FromFile(picpathTxtbox10.Text); } catch { }
-
                 picpathTxtbox11.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][34].ToString();
                 try { pictureBox11.Image = Image.FromFile(picpathTxtbox11.Text); } catch { }
-
                 picpathTxtbox12.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][35].ToString();
                 try { pictureBox12.Image = Image.FromFile(picpathTxtbox12.Text); } catch { }
-
                 picpathTxtbox13.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][36].ToString();
                 try { pictureBox13.Image = Image.FromFile(picpathTxtbox13.Text); } catch { }
-
                 picpathTxtbox14.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][37].ToString();
                 try { pictureBox14.Image = Image.FromFile(picpathTxtbox14.Text); } catch { }
-
                 picpathTxtbox15.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][38].ToString();
                 try { pictureBox15.Image = Image.FromFile(picpathTxtbox15.Text); } catch { }
-
                 picpathTxtbox16.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][39].ToString();
                 try { pictureBox16.Image = Image.FromFile(picpathTxtbox16.Text); } catch { }
-
                 picpathTxtbox17.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][40].ToString();
                 try { pictureBox17.Image = Image.FromFile(picpathTxtbox17.Text); } catch { }
-
                 picpathTxtbox18.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][41].ToString();
                 try { pictureBox18.Image = Image.FromFile(picpathTxtbox18.Text); } catch { }
-
                 picpathTxtbox19.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][42].ToString();
                 try { pictureBox19.Image = Image.FromFile(picpathTxtbox19.Text); } catch { }
-
                 picpathTxtbox20.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][43].ToString();
                 try { pictureBox20.Image = Image.FromFile(picpathTxtbox20.Text); } catch { }
 
