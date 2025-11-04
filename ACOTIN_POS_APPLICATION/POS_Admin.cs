@@ -25,6 +25,7 @@ namespace ACOTIN_POS_APPLICATION
         {
             posdb_connect.pos_connString();
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void POS_Admin_Load(object sender, EventArgs e)

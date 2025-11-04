@@ -174,5 +174,10 @@ namespace ACOTIN_POS_APPLICATION
             pos1class.WindowState = FormWindowState.Maximized;
             pos1class.Show();
         }
+
+        private void MainFrm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

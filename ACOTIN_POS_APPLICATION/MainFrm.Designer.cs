@@ -239,21 +239,21 @@
             // tileVerticalToolStripMenuItem
             // 
             this.tileVerticalToolStripMenuItem.Name = "tileVerticalToolStripMenuItem";
-            this.tileVerticalToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.tileVerticalToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.tileVerticalToolStripMenuItem.Text = "Tile Vertical";
             this.tileVerticalToolStripMenuItem.Click += new System.EventHandler(this.tileVerticalToolStripMenuItem_Click);
             // 
             // tileHorizontalToolStripMenuItem
             // 
             this.tileHorizontalToolStripMenuItem.Name = "tileHorizontalToolStripMenuItem";
-            this.tileHorizontalToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.tileHorizontalToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.tileHorizontalToolStripMenuItem.Text = "Tile Horizontal";
             this.tileHorizontalToolStripMenuItem.Click += new System.EventHandler(this.tileHorizontalToolStripMenuItem_Click);
             // 
             // cascadeToolStripMenuItem
             // 
             this.cascadeToolStripMenuItem.Name = "cascadeToolStripMenuItem";
-            this.cascadeToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.cascadeToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.cascadeToolStripMenuItem.Text = "Cascade";
             this.cascadeToolStripMenuItem.Click += new System.EventHandler(this.cascadeToolStripMenuItem_Click);
             // 
@@ -317,21 +317,21 @@
             // pOS1ClassformToolStripMenuItem
             // 
             this.pOS1ClassformToolStripMenuItem.Name = "pOS1ClassformToolStripMenuItem";
-            this.pOS1ClassformToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pOS1ClassformToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.pOS1ClassformToolStripMenuItem.Text = "POS1 Classform";
             this.pOS1ClassformToolStripMenuItem.Click += new System.EventHandler(this.pOS1ClassformToolStripMenuItem_Click);
             // 
             // pOS2ClassformToolStripMenuItem
             // 
             this.pOS2ClassformToolStripMenuItem.Name = "pOS2ClassformToolStripMenuItem";
-            this.pOS2ClassformToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pOS2ClassformToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.pOS2ClassformToolStripMenuItem.Text = "POS2 Classform";
             this.pOS2ClassformToolStripMenuItem.Click += new System.EventHandler(this.pOS2ClassformToolStripMenuItem_Click);
             // 
             // payrollClassformToolStripMenuItem
             // 
             this.payrollClassformToolStripMenuItem.Name = "payrollClassformToolStripMenuItem";
-            this.payrollClassformToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.payrollClassformToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.payrollClassformToolStripMenuItem.Text = "Payroll Classform";
             this.payrollClassformToolStripMenuItem.Click += new System.EventHandler(this.payrollClassformToolStripMenuItem_Click);
             // 
@@ -345,6 +345,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainFrm";
             this.Text = "MainFrm";
+            this.Load += new System.EventHandler(this.MainFrm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
