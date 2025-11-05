@@ -18,7 +18,7 @@ namespace ACOTIN_POS_APPLICATION
             Application.SetCompatibleTextRenderingDefault(false);
             /// Application.Run(new Activity1());
             //Application.Run(new POS_Admin());
-            Application.Run(new POS1_DataBase());
+            Application.Run(new POS2_DataBase());
         }
     }
 }

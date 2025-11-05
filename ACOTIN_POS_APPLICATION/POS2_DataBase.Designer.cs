@@ -71,28 +71,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.checkBox16 = new System.Windows.Forms.CheckBox();
-            this.DisplayPictureBox = new System.Windows.Forms.PictureBox();
-            this.TransferButton = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
-            this.checkBox14 = new System.Windows.Forms.CheckBox();
-            this.checkBox15 = new System.Windows.Forms.CheckBox();
-            this.checkBox17 = new System.Windows.Forms.CheckBox();
-            this.checkBox18 = new System.Windows.Forms.CheckBox();
-            this.checkBox19 = new System.Windows.Forms.CheckBox();
-            this.checkBox20 = new System.Windows.Forms.CheckBox();
             this.picpathTxtbox20 = new System.Windows.Forms.TextBox();
             this.picpathTxtbox19 = new System.Windows.Forms.TextBox();
             this.picpathTxtbox18 = new System.Windows.Forms.TextBox();
@@ -133,12 +111,33 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox10 = new System.Windows.Forms.CheckBox();
+            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox15 = new System.Windows.Forms.CheckBox();
+            this.checkBox14 = new System.Windows.Forms.CheckBox();
+            this.checkBox13 = new System.Windows.Forms.CheckBox();
+            this.checkBox12 = new System.Windows.Forms.CheckBox();
+            this.checkBox11 = new System.Windows.Forms.CheckBox();
+            this.checkBox20 = new System.Windows.Forms.CheckBox();
+            this.checkBox19 = new System.Windows.Forms.CheckBox();
+            this.checkBox18 = new System.Windows.Forms.CheckBox();
+            this.checkBox17 = new System.Windows.Forms.CheckBox();
+            this.checkBox16 = new System.Windows.Forms.CheckBox();
+            this.DisplayPictureBox = new System.Windows.Forms.PictureBox();
+            this.TransferButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DisplayPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
@@ -159,6 +158,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DisplayPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -171,7 +171,6 @@
             this.label1.Size = new System.Drawing.Size(719, 47);
             this.label1.TabIndex = 3;
             this.label1.Text = "RYLLE\'S CORP. ORDERING APPLICATION";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // groupBox1
             // 
@@ -225,7 +224,6 @@
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "McShare Bundle for 3";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // A_Gravy
             // 
@@ -237,7 +235,6 @@
             this.A_Gravy.TabIndex = 6;
             this.A_Gravy.Text = "3 pcs. Gravy";
             this.A_Gravy.UseVisualStyleBackColor = true;
-            this.A_Gravy.CheckedChanged += new System.EventHandler(this.checkBox21_CheckedChanged);
             // 
             // A_RiceBox
             // 
@@ -249,7 +246,6 @@
             this.A_RiceBox.TabIndex = 5;
             this.A_RiceBox.Text = "3 pcs. Rice";
             this.A_RiceBox.UseVisualStyleBackColor = true;
-            this.A_RiceBox.CheckedChanged += new System.EventHandler(this.A_RiceBox_CheckedChanged);
             // 
             // A_DrinksBox
             // 
@@ -261,7 +257,6 @@
             this.A_DrinksBox.TabIndex = 4;
             this.A_DrinksBox.Text = "3 Medium Size Drinks";
             this.A_DrinksBox.UseVisualStyleBackColor = true;
-            this.A_DrinksBox.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
             // 
             // A_BFFFriesBox
             // 
@@ -273,7 +268,6 @@
             this.A_BFFFriesBox.TabIndex = 3;
             this.A_BFFFriesBox.Text = "1 McDo BFF Fries";
             this.A_BFFFriesBox.UseVisualStyleBackColor = true;
-            this.A_BFFFriesBox.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
             // A_ChickenMcDoBox
             // 
@@ -384,7 +378,6 @@
             this.label43.Size = new System.Drawing.Size(113, 20);
             this.label43.TabIndex = 10;
             this.label43.Text = "Total Quantity:";
-            this.label43.Click += new System.EventHandler(this.label43_Click);
             // 
             // label42
             // 
@@ -396,7 +389,6 @@
             this.label42.Size = new System.Drawing.Size(90, 20);
             this.label42.TabIndex = 9;
             this.label42.Text = "Cash Given:";
-            this.label42.Click += new System.EventHandler(this.label42_Click);
             // 
             // label41
             // 
@@ -408,7 +400,6 @@
             this.label41.Size = new System.Drawing.Size(65, 20);
             this.label41.TabIndex = 8;
             this.label41.Text = "Change:";
-            this.label41.Click += new System.EventHandler(this.label41_Click);
             // 
             // label39
             // 
@@ -420,7 +411,6 @@
             this.label39.Size = new System.Drawing.Size(71, 20);
             this.label39.TabIndex = 7;
             this.label39.Text = "Amount:";
-            this.label39.Click += new System.EventHandler(this.label39_Click);
             // 
             // label40
             // 
@@ -443,7 +433,6 @@
             this.label38.Size = new System.Drawing.Size(71, 20);
             this.label38.TabIndex = 5;
             this.label38.Text = "Amount:";
-            this.label38.Click += new System.EventHandler(this.label38_Click);
             // 
             // label37
             // 
@@ -455,7 +444,6 @@
             this.label37.Size = new System.Drawing.Size(71, 20);
             this.label37.TabIndex = 4;
             this.label37.Text = "Discount";
-            this.label37.Click += new System.EventHandler(this.label37_Click);
             // 
             // label3
             // 
@@ -467,7 +455,6 @@
             this.label3.Size = new System.Drawing.Size(74, 20);
             this.label3.TabIndex = 3;
             this.label3.Text = "Quantity:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -506,7 +493,6 @@
             this.label4.Size = new System.Drawing.Size(89, 17);
             this.label4.TabIndex = 4;
             this.label4.Text = "Order Image:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // groupBox4
             // 
@@ -534,7 +520,6 @@
             this.B_BurgerMcDoBox.TabIndex = 10;
             this.B_BurgerMcDoBox.Text = "1 pc. Burger McDo";
             this.B_BurgerMcDoBox.UseVisualStyleBackColor = true;
-            this.B_BurgerMcDoBox.CheckedChanged += new System.EventHandler(this.B_BurgerMcDoBox_CheckedChanged);
             // 
             // B_QuarterPounderBox
             // 
@@ -693,25 +678,25 @@
             this.groupBox5.Controls.Add(this.pictureBox3);
             this.groupBox5.Controls.Add(this.pictureBox2);
             this.groupBox5.Controls.Add(this.pictureBox1);
-            this.groupBox5.Controls.Add(this.checkBox15);
-            this.groupBox5.Controls.Add(this.checkBox17);
-            this.groupBox5.Controls.Add(this.checkBox18);
-            this.groupBox5.Controls.Add(this.checkBox19);
-            this.groupBox5.Controls.Add(this.checkBox20);
-            this.groupBox5.Controls.Add(this.checkBox10);
-            this.groupBox5.Controls.Add(this.checkBox11);
-            this.groupBox5.Controls.Add(this.checkBox12);
-            this.groupBox5.Controls.Add(this.checkBox13);
-            this.groupBox5.Controls.Add(this.checkBox14);
             this.groupBox5.Controls.Add(this.checkBox5);
-            this.groupBox5.Controls.Add(this.checkBox6);
-            this.groupBox5.Controls.Add(this.checkBox7);
-            this.groupBox5.Controls.Add(this.checkBox8);
-            this.groupBox5.Controls.Add(this.checkBox9);
             this.groupBox5.Controls.Add(this.checkBox4);
             this.groupBox5.Controls.Add(this.checkBox3);
             this.groupBox5.Controls.Add(this.checkBox2);
             this.groupBox5.Controls.Add(this.checkBox1);
+            this.groupBox5.Controls.Add(this.checkBox10);
+            this.groupBox5.Controls.Add(this.checkBox9);
+            this.groupBox5.Controls.Add(this.checkBox8);
+            this.groupBox5.Controls.Add(this.checkBox7);
+            this.groupBox5.Controls.Add(this.checkBox6);
+            this.groupBox5.Controls.Add(this.checkBox15);
+            this.groupBox5.Controls.Add(this.checkBox14);
+            this.groupBox5.Controls.Add(this.checkBox13);
+            this.groupBox5.Controls.Add(this.checkBox12);
+            this.groupBox5.Controls.Add(this.checkBox11);
+            this.groupBox5.Controls.Add(this.checkBox20);
+            this.groupBox5.Controls.Add(this.checkBox19);
+            this.groupBox5.Controls.Add(this.checkBox18);
+            this.groupBox5.Controls.Add(this.checkBox17);
             this.groupBox5.Controls.Add(this.checkBox16);
             this.groupBox5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -722,7 +707,650 @@
             this.groupBox5.TabIndex = 8;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Items Display";
-            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
+            // 
+            // picpathTxtbox20
+            // 
+            this.picpathTxtbox20.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.picpathTxtbox20.Location = new System.Drawing.Point(963, 828);
+            this.picpathTxtbox20.Name = "picpathTxtbox20";
+            this.picpathTxtbox20.Size = new System.Drawing.Size(112, 23);
+            this.picpathTxtbox20.TabIndex = 278;
+            // 
+            // picpathTxtbox19
+            // 
+            this.picpathTxtbox19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.picpathTxtbox19.Location = new System.Drawing.Point(742, 828);
+            this.picpathTxtbox19.Name = "picpathTxtbox19";
+            this.picpathTxtbox19.Size = new System.Drawing.Size(112, 23);
+            this.picpathTxtbox19.TabIndex = 277;
+            // 
+            // picpathTxtbox18
+            // 
+            this.picpathTxtbox18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.picpathTxtbox18.Location = new System.Drawing.Point(519, 828);
+            this.picpathTxtbox18.Name = "picpathTxtbox18";
+            this.picpathTxtbox18.Size = new System.Drawing.Size(112, 23);
+            this.picpathTxtbox18.TabIndex = 276;
+            // 
+            // picpathTxtbox17
+            // 
+            this.picpathTxtbox17.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.picpathTxtbox17.Location = new System.Drawing.Point(298, 828);
+            this.picpathTxtbox17.Name = "picpathTxtbox17";
+            this.picpathTxtbox17.Size = new System.Drawing.Size(112, 23);
+            this.picpathTxtbox17.TabIndex = 275;
+            // 
+            // picpathTxtbox16
+            // 
+            this.picpathTxtbox16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.picpathTxtbox16.Location = new System.Drawing.Point(80, 826);
+            this.picpathTxtbox16.Name = "picpathTxtbox16";
+            this.picpathTxtbox16.Size = new System.Drawing.Size(112, 23);
+            this.picpathTxtbox16.TabIndex = 274;
+            // 
+            // picpathTxtbox15
+            // 
+            this.picpathTxtbox15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.picpathTxtbox15.Location = new System.Drawing.Point(963, 587);
+            this.picpathTxtbox15.Name = "picpathTxtbox15";
+            this.picpathTxtbox15.Size = new System.Drawing.Size(112, 23);
+            this.picpathTxtbox15.TabIndex = 273;
+            // 
+            // picpathTxtbox14
+            // 
+            this.picpathTxtbox14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.picpathTxtbox14.Location = new System.Drawing.Point(742, 587);
+            this.picpathTxtbox14.Name = "picpathTxtbox14";
+            this.picpathTxtbox14.Size = new System.Drawing.Size(112, 23);
+            this.picpathTxtbox14.TabIndex = 272;
+            // 
+            // picpathTxtbox13
+            // 
+            this.picpathTxtbox13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.picpathTxtbox13.Location = new System.Drawing.Point(519, 587);
+            this.picpathTxtbox13.Name = "picpathTxtbox13";
+            this.picpathTxtbox13.Size = new System.Drawing.Size(112, 23);
+            this.picpathTxtbox13.TabIndex = 271;
+            // 
+            // picpathTxtbox12
+            // 
+            this.picpathTxtbox12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.picpathTxtbox12.Location = new System.Drawing.Point(298, 587);
+            this.picpathTxtbox12.Name = "picpathTxtbox12";
+            this.picpathTxtbox12.Size = new System.Drawing.Size(112, 23);
+            this.picpathTxtbox12.TabIndex = 270;
+            // 
+            // picpathTxtbox11
+            // 
+            this.picpathTxtbox11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.picpathTxtbox11.Location = new System.Drawing.Point(80, 585);
+            this.picpathTxtbox11.Name = "picpathTxtbox11";
+            this.picpathTxtbox11.Size = new System.Drawing.Size(112, 23);
+            this.picpathTxtbox11.TabIndex = 269;
+            // 
+            // picpathTxtbox10
+            // 
+            this.picpathTxtbox10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.picpathTxtbox10.Location = new System.Drawing.Point(963, 349);
+            this.picpathTxtbox10.Name = "picpathTxtbox10";
+            this.picpathTxtbox10.Size = new System.Drawing.Size(112, 23);
+            this.picpathTxtbox10.TabIndex = 268;
+            // 
+            // picpathTxtbox9
+            // 
+            this.picpathTxtbox9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.picpathTxtbox9.Location = new System.Drawing.Point(742, 349);
+            this.picpathTxtbox9.Name = "picpathTxtbox9";
+            this.picpathTxtbox9.Size = new System.Drawing.Size(112, 23);
+            this.picpathTxtbox9.TabIndex = 267;
+            // 
+            // picpathTxtbox8
+            // 
+            this.picpathTxtbox8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.picpathTxtbox8.Location = new System.Drawing.Point(519, 349);
+            this.picpathTxtbox8.Name = "picpathTxtbox8";
+            this.picpathTxtbox8.Size = new System.Drawing.Size(112, 23);
+            this.picpathTxtbox8.TabIndex = 266;
+            // 
+            // picpathTxtbox7
+            // 
+            this.picpathTxtbox7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.picpathTxtbox7.Location = new System.Drawing.Point(298, 349);
+            this.picpathTxtbox7.Name = "picpathTxtbox7";
+            this.picpathTxtbox7.Size = new System.Drawing.Size(112, 23);
+            this.picpathTxtbox7.TabIndex = 265;
+            // 
+            // picpathTxtbox6
+            // 
+            this.picpathTxtbox6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.picpathTxtbox6.Location = new System.Drawing.Point(80, 347);
+            this.picpathTxtbox6.Name = "picpathTxtbox6";
+            this.picpathTxtbox6.Size = new System.Drawing.Size(112, 23);
+            this.picpathTxtbox6.TabIndex = 264;
+            // 
+            // picpathTxtbox5
+            // 
+            this.picpathTxtbox5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.picpathTxtbox5.Location = new System.Drawing.Point(963, 109);
+            this.picpathTxtbox5.Name = "picpathTxtbox5";
+            this.picpathTxtbox5.Size = new System.Drawing.Size(112, 23);
+            this.picpathTxtbox5.TabIndex = 263;
+            // 
+            // picpathTxtbox4
+            // 
+            this.picpathTxtbox4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.picpathTxtbox4.Location = new System.Drawing.Point(742, 109);
+            this.picpathTxtbox4.Name = "picpathTxtbox4";
+            this.picpathTxtbox4.Size = new System.Drawing.Size(112, 23);
+            this.picpathTxtbox4.TabIndex = 262;
+            // 
+            // picpathTxtbox3
+            // 
+            this.picpathTxtbox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.picpathTxtbox3.Location = new System.Drawing.Point(519, 109);
+            this.picpathTxtbox3.Name = "picpathTxtbox3";
+            this.picpathTxtbox3.Size = new System.Drawing.Size(112, 23);
+            this.picpathTxtbox3.TabIndex = 261;
+            // 
+            // picpathTxtbox2
+            // 
+            this.picpathTxtbox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.picpathTxtbox2.Location = new System.Drawing.Point(298, 109);
+            this.picpathTxtbox2.Name = "picpathTxtbox2";
+            this.picpathTxtbox2.Size = new System.Drawing.Size(112, 23);
+            this.picpathTxtbox2.TabIndex = 260;
+            // 
+            // picpathTxtbox1
+            // 
+            this.picpathTxtbox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.picpathTxtbox1.Location = new System.Drawing.Point(80, 107);
+            this.picpathTxtbox1.Name = "picpathTxtbox1";
+            this.picpathTxtbox1.Size = new System.Drawing.Size(112, 23);
+            this.picpathTxtbox1.TabIndex = 259;
+            // 
+            // pictureBox20
+            // 
+            this.pictureBox20.BackColor = System.Drawing.Color.White;
+            this.pictureBox20.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox20.Location = new System.Drawing.Point(934, 733);
+            this.pictureBox20.Name = "pictureBox20";
+            this.pictureBox20.Size = new System.Drawing.Size(160, 160);
+            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox20.TabIndex = 258;
+            this.pictureBox20.TabStop = false;
+            // 
+            // pictureBox19
+            // 
+            this.pictureBox19.BackColor = System.Drawing.Color.White;
+            this.pictureBox19.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox19.Location = new System.Drawing.Point(712, 733);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(160, 160);
+            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox19.TabIndex = 257;
+            this.pictureBox19.TabStop = false;
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.BackColor = System.Drawing.Color.White;
+            this.pictureBox18.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox18.Location = new System.Drawing.Point(494, 733);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(160, 160);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox18.TabIndex = 256;
+            this.pictureBox18.TabStop = false;
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.BackColor = System.Drawing.Color.White;
+            this.pictureBox17.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox17.Location = new System.Drawing.Point(275, 733);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(160, 160);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox17.TabIndex = 255;
+            this.pictureBox17.TabStop = false;
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.BackColor = System.Drawing.Color.White;
+            this.pictureBox16.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox16.Location = new System.Drawing.Point(57, 731);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(160, 160);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox16.TabIndex = 254;
+            this.pictureBox16.TabStop = false;
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.BackColor = System.Drawing.Color.White;
+            this.pictureBox15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox15.Location = new System.Drawing.Point(934, 494);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(160, 160);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox15.TabIndex = 253;
+            this.pictureBox15.TabStop = false;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.BackColor = System.Drawing.Color.White;
+            this.pictureBox14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox14.Location = new System.Drawing.Point(712, 494);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(160, 160);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox14.TabIndex = 252;
+            this.pictureBox14.TabStop = false;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.BackColor = System.Drawing.Color.White;
+            this.pictureBox13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox13.Location = new System.Drawing.Point(494, 494);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(160, 160);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox13.TabIndex = 251;
+            this.pictureBox13.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackColor = System.Drawing.Color.White;
+            this.pictureBox12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox12.Location = new System.Drawing.Point(275, 494);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(160, 160);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox12.TabIndex = 250;
+            this.pictureBox12.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.White;
+            this.pictureBox11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox11.Location = new System.Drawing.Point(57, 492);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(160, 160);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox11.TabIndex = 249;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.White;
+            this.pictureBox10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox10.Location = new System.Drawing.Point(934, 256);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(160, 160);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 248;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.White;
+            this.pictureBox9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox9.Location = new System.Drawing.Point(712, 256);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(160, 160);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 247;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.White;
+            this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox8.Location = new System.Drawing.Point(494, 256);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(160, 160);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 246;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.White;
+            this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox7.Location = new System.Drawing.Point(275, 256);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(160, 160);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 245;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.White;
+            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox6.Location = new System.Drawing.Point(57, 254);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(160, 160);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 244;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.White;
+            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox5.Location = new System.Drawing.Point(934, 18);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(160, 160);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 243;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.White;
+            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox4.Location = new System.Drawing.Point(712, 18);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(160, 160);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 242;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.White;
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox3.Location = new System.Drawing.Point(494, 18);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(160, 160);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 241;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox2.Location = new System.Drawing.Point(275, 18);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(160, 160);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 240;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Location = new System.Drawing.Point(57, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(160, 160);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 239;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.checkBox1_CheckedChanged_1);
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.checkBox5.ForeColor = System.Drawing.Color.White;
+            this.checkBox5.Location = new System.Drawing.Point(912, 184);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(198, 67);
+            this.checkBox5.TabIndex = 130;
+            this.checkBox5.Text = "McChicken Sandwich";
+            this.checkBox5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox15_CheckedChanged_1);
+            this.checkBox5.Click += new System.EventHandler(this.checkBox5_CheckedChanged_2);
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.checkBox4.ForeColor = System.Drawing.Color.White;
+            this.checkBox4.Location = new System.Drawing.Point(693, 184);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(198, 67);
+            this.checkBox4.TabIndex = 129;
+            this.checkBox4.Text = "McChicken Sandwich";
+            this.checkBox4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox17_CheckedChanged_1);
+            this.checkBox4.Click += new System.EventHandler(this.checkBox4_CheckedChanged_2);
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.checkBox3.ForeColor = System.Drawing.Color.White;
+            this.checkBox3.Location = new System.Drawing.Point(474, 184);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(198, 67);
+            this.checkBox3.TabIndex = 128;
+            this.checkBox3.Text = "McChicken Sandwich";
+            this.checkBox3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox18_CheckedChanged_1);
+            this.checkBox3.Click += new System.EventHandler(this.checkBox3_CheckedChanged_1);
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.checkBox2.ForeColor = System.Drawing.Color.White;
+            this.checkBox2.Location = new System.Drawing.Point(255, 184);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(198, 67);
+            this.checkBox2.TabIndex = 127;
+            this.checkBox2.Text = "McChicken Sandwich";
+            this.checkBox2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.Click += new System.EventHandler(this.checkBox2_CheckedChanged_1);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.checkBox1.ForeColor = System.Drawing.Color.White;
+            this.checkBox1.Location = new System.Drawing.Point(36, 182);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(198, 67);
+            this.checkBox1.TabIndex = 126;
+            this.checkBox1.Text = "McChicken Sandwich";
+            this.checkBox1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.Click += new System.EventHandler(this.checkBox1_CheckedChanged_1);
+            // 
+            // checkBox10
+            // 
+            this.checkBox10.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.checkBox10.ForeColor = System.Drawing.Color.White;
+            this.checkBox10.Location = new System.Drawing.Point(912, 422);
+            this.checkBox10.Name = "checkBox10";
+            this.checkBox10.Size = new System.Drawing.Size(198, 67);
+            this.checkBox10.TabIndex = 125;
+            this.checkBox10.Text = "McChicken Sandwich";
+            this.checkBox10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.checkBox10.UseVisualStyleBackColor = true;
+            this.checkBox10.Click += new System.EventHandler(this.checkBox10_CheckedChanged_1);
+            // 
+            // checkBox9
+            // 
+            this.checkBox9.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.checkBox9.ForeColor = System.Drawing.Color.White;
+            this.checkBox9.Location = new System.Drawing.Point(693, 422);
+            this.checkBox9.Name = "checkBox9";
+            this.checkBox9.Size = new System.Drawing.Size(198, 67);
+            this.checkBox9.TabIndex = 124;
+            this.checkBox9.Text = "McChicken Sandwich";
+            this.checkBox9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.checkBox9.UseVisualStyleBackColor = true;
+            this.checkBox9.CheckedChanged += new System.EventHandler(this.checkBox11_CheckedChanged_1);
+            this.checkBox9.Click += new System.EventHandler(this.checkBox9_CheckedChanged_1);
+            // 
+            // checkBox8
+            // 
+            this.checkBox8.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.checkBox8.ForeColor = System.Drawing.Color.White;
+            this.checkBox8.Location = new System.Drawing.Point(474, 422);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(198, 67);
+            this.checkBox8.TabIndex = 123;
+            this.checkBox8.Text = "McChicken Sandwich";
+            this.checkBox8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.checkBox8.UseVisualStyleBackColor = true;
+            this.checkBox8.CheckedChanged += new System.EventHandler(this.checkBox12_CheckedChanged_1);
+            this.checkBox8.Click += new System.EventHandler(this.checkBox8_CheckedChanged_1);
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.checkBox7.ForeColor = System.Drawing.Color.White;
+            this.checkBox7.Location = new System.Drawing.Point(255, 422);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(198, 67);
+            this.checkBox7.TabIndex = 122;
+            this.checkBox7.Text = "McChicken Sandwich";
+            this.checkBox7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.checkBox7.UseVisualStyleBackColor = true;
+            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox13_CheckedChanged_1);
+            this.checkBox7.Click += new System.EventHandler(this.checkBox7_CheckedChanged_1);
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.checkBox6.ForeColor = System.Drawing.Color.White;
+            this.checkBox6.Location = new System.Drawing.Point(36, 420);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(198, 67);
+            this.checkBox6.TabIndex = 121;
+            this.checkBox6.Text = "McChicken Sandwich";
+            this.checkBox6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox14_CheckedChanged_1);
+            this.checkBox6.Click += new System.EventHandler(this.checkBox6_CheckedChanged_1);
+            // 
+            // checkBox15
+            // 
+            this.checkBox15.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.checkBox15.ForeColor = System.Drawing.Color.White;
+            this.checkBox15.Location = new System.Drawing.Point(912, 660);
+            this.checkBox15.Name = "checkBox15";
+            this.checkBox15.Size = new System.Drawing.Size(198, 67);
+            this.checkBox15.TabIndex = 120;
+            this.checkBox15.Text = "McChicken Sandwich";
+            this.checkBox15.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.checkBox15.UseVisualStyleBackColor = true;
+            this.checkBox15.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged_2);
+            this.checkBox15.Click += new System.EventHandler(this.checkBox15_CheckedChanged_1);
+            // 
+            // checkBox14
+            // 
+            this.checkBox14.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.checkBox14.ForeColor = System.Drawing.Color.White;
+            this.checkBox14.Location = new System.Drawing.Point(693, 660);
+            this.checkBox14.Name = "checkBox14";
+            this.checkBox14.Size = new System.Drawing.Size(198, 67);
+            this.checkBox14.TabIndex = 119;
+            this.checkBox14.Text = "McChicken Sandwich";
+            this.checkBox14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.checkBox14.UseVisualStyleBackColor = true;
+            this.checkBox14.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged_1);
+            this.checkBox14.Click += new System.EventHandler(this.checkBox14_CheckedChanged_1);
+            // 
+            // checkBox13
+            // 
+            this.checkBox13.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.checkBox13.ForeColor = System.Drawing.Color.White;
+            this.checkBox13.Location = new System.Drawing.Point(474, 660);
+            this.checkBox13.Name = "checkBox13";
+            this.checkBox13.Size = new System.Drawing.Size(198, 67);
+            this.checkBox13.TabIndex = 118;
+            this.checkBox13.Text = "McChicken Sandwich";
+            this.checkBox13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.checkBox13.UseVisualStyleBackColor = true;
+            this.checkBox13.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged_1);
+            this.checkBox13.Click += new System.EventHandler(this.checkBox13_CheckedChanged_1);
+            // 
+            // checkBox12
+            // 
+            this.checkBox12.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.checkBox12.ForeColor = System.Drawing.Color.White;
+            this.checkBox12.Location = new System.Drawing.Point(255, 660);
+            this.checkBox12.Name = "checkBox12";
+            this.checkBox12.Size = new System.Drawing.Size(198, 67);
+            this.checkBox12.TabIndex = 117;
+            this.checkBox12.Text = "McChicken Sandwich";
+            this.checkBox12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.checkBox12.UseVisualStyleBackColor = true;
+            this.checkBox12.CheckedChanged += new System.EventHandler(this.checkBox8_CheckedChanged_1);
+            this.checkBox12.Click += new System.EventHandler(this.checkBox12_CheckedChanged_1);
+            // 
+            // checkBox11
+            // 
+            this.checkBox11.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.checkBox11.ForeColor = System.Drawing.Color.White;
+            this.checkBox11.Location = new System.Drawing.Point(36, 658);
+            this.checkBox11.Name = "checkBox11";
+            this.checkBox11.Size = new System.Drawing.Size(198, 67);
+            this.checkBox11.TabIndex = 116;
+            this.checkBox11.Text = "McChicken Sandwich";
+            this.checkBox11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.checkBox11.UseVisualStyleBackColor = true;
+            this.checkBox11.CheckedChanged += new System.EventHandler(this.checkBox9_CheckedChanged_1);
+            this.checkBox11.Click += new System.EventHandler(this.checkBox11_CheckedChanged_1);
+            // 
+            // checkBox20
+            // 
+            this.checkBox20.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.checkBox20.ForeColor = System.Drawing.Color.White;
+            this.checkBox20.Location = new System.Drawing.Point(912, 899);
+            this.checkBox20.Name = "checkBox20";
+            this.checkBox20.Size = new System.Drawing.Size(198, 67);
+            this.checkBox20.TabIndex = 115;
+            this.checkBox20.Text = "McChicken Sandwich";
+            this.checkBox20.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.checkBox20.UseVisualStyleBackColor = true;
+            this.checkBox20.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged_2);
+            this.checkBox20.Click += new System.EventHandler(this.checkBox20_CheckedChanged_1);
+            // 
+            // checkBox19
+            // 
+            this.checkBox19.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.checkBox19.ForeColor = System.Drawing.Color.White;
+            this.checkBox19.Location = new System.Drawing.Point(693, 899);
+            this.checkBox19.Name = "checkBox19";
+            this.checkBox19.Size = new System.Drawing.Size(198, 67);
+            this.checkBox19.TabIndex = 114;
+            this.checkBox19.Text = "McChicken Sandwich";
+            this.checkBox19.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.checkBox19.UseVisualStyleBackColor = true;
+            this.checkBox19.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged_1);
+            this.checkBox19.Click += new System.EventHandler(this.checkBox19_CheckedChanged_1);
+            // 
+            // checkBox18
+            // 
+            this.checkBox18.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.checkBox18.ForeColor = System.Drawing.Color.White;
+            this.checkBox18.Location = new System.Drawing.Point(474, 899);
+            this.checkBox18.Name = "checkBox18";
+            this.checkBox18.Size = new System.Drawing.Size(198, 67);
+            this.checkBox18.TabIndex = 113;
+            this.checkBox18.Text = "McChicken Sandwich";
+            this.checkBox18.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.checkBox18.UseVisualStyleBackColor = true;
+            this.checkBox18.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged_1);
+            this.checkBox18.Click += new System.EventHandler(this.checkBox18_CheckedChanged_1);
+            // 
+            // checkBox17
+            // 
+            this.checkBox17.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.checkBox17.ForeColor = System.Drawing.Color.White;
+            this.checkBox17.Location = new System.Drawing.Point(255, 899);
+            this.checkBox17.Name = "checkBox17";
+            this.checkBox17.Size = new System.Drawing.Size(198, 67);
+            this.checkBox17.TabIndex = 112;
+            this.checkBox17.Text = "McChicken Sandwich";
+            this.checkBox17.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.checkBox17.UseVisualStyleBackColor = true;
+            this.checkBox17.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
+            this.checkBox17.Click += new System.EventHandler(this.checkBox17_CheckedChanged_1);
             // 
             // checkBox16
             // 
@@ -736,6 +1364,7 @@
             this.checkBox16.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.checkBox16.UseVisualStyleBackColor = true;
             this.checkBox16.CheckedChanged += new System.EventHandler(this.checkBox16_CheckedChanged);
+            this.checkBox16.Click += new System.EventHandler(this.checkBox16_CheckedChanged);
             // 
             // DisplayPictureBox
             // 
@@ -747,7 +1376,7 @@
             this.DisplayPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.DisplayPictureBox.TabIndex = 5;
             this.DisplayPictureBox.TabStop = false;
-            this.DisplayPictureBox.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.DisplayPictureBox.Click += new System.EventHandler(this.DisplayPictureBox_Click);
             // 
             // TransferButton
             // 
@@ -759,674 +1388,6 @@
             this.TransferButton.TabIndex = 15;
             this.TransferButton.Text = "TRANSFER";
             this.TransferButton.UseVisualStyleBackColor = false;
-            this.TransferButton.Click += new System.EventHandler(this.button1_Click_2);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.checkBox1.ForeColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(255, 899);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(198, 67);
-            this.checkBox1.TabIndex = 112;
-            this.checkBox1.Text = "McChicken Sandwich";
-            this.checkBox1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.checkBox2.ForeColor = System.Drawing.Color.White;
-            this.checkBox2.Location = new System.Drawing.Point(474, 899);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(198, 67);
-            this.checkBox2.TabIndex = 113;
-            this.checkBox2.Text = "McChicken Sandwich";
-            this.checkBox2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged_1);
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.checkBox3.ForeColor = System.Drawing.Color.White;
-            this.checkBox3.Location = new System.Drawing.Point(693, 899);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(198, 67);
-            this.checkBox3.TabIndex = 114;
-            this.checkBox3.Text = "McChicken Sandwich";
-            this.checkBox3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.checkBox3.UseVisualStyleBackColor = true;
-            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged_1);
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.checkBox4.ForeColor = System.Drawing.Color.White;
-            this.checkBox4.Location = new System.Drawing.Point(912, 899);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(198, 67);
-            this.checkBox4.TabIndex = 115;
-            this.checkBox4.Text = "McChicken Sandwich";
-            this.checkBox4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.checkBox4.UseVisualStyleBackColor = true;
-            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged_2);
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.checkBox5.ForeColor = System.Drawing.Color.White;
-            this.checkBox5.Location = new System.Drawing.Point(912, 660);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(198, 67);
-            this.checkBox5.TabIndex = 120;
-            this.checkBox5.Text = "McChicken Sandwich";
-            this.checkBox5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.checkBox5.UseVisualStyleBackColor = true;
-            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged_2);
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.checkBox6.ForeColor = System.Drawing.Color.White;
-            this.checkBox6.Location = new System.Drawing.Point(693, 660);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(198, 67);
-            this.checkBox6.TabIndex = 119;
-            this.checkBox6.Text = "McChicken Sandwich";
-            this.checkBox6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.checkBox6.UseVisualStyleBackColor = true;
-            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged_1);
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.checkBox7.ForeColor = System.Drawing.Color.White;
-            this.checkBox7.Location = new System.Drawing.Point(474, 660);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(198, 67);
-            this.checkBox7.TabIndex = 118;
-            this.checkBox7.Text = "McChicken Sandwich";
-            this.checkBox7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.checkBox7.UseVisualStyleBackColor = true;
-            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged_1);
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.checkBox8.ForeColor = System.Drawing.Color.White;
-            this.checkBox8.Location = new System.Drawing.Point(255, 660);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(198, 67);
-            this.checkBox8.TabIndex = 117;
-            this.checkBox8.Text = "McChicken Sandwich";
-            this.checkBox8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.checkBox8.UseVisualStyleBackColor = true;
-            this.checkBox8.CheckedChanged += new System.EventHandler(this.checkBox8_CheckedChanged_1);
-            // 
-            // checkBox9
-            // 
-            this.checkBox9.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.checkBox9.ForeColor = System.Drawing.Color.White;
-            this.checkBox9.Location = new System.Drawing.Point(36, 658);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(198, 67);
-            this.checkBox9.TabIndex = 116;
-            this.checkBox9.Text = "McChicken Sandwich";
-            this.checkBox9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.checkBox9.UseVisualStyleBackColor = true;
-            this.checkBox9.CheckedChanged += new System.EventHandler(this.checkBox9_CheckedChanged_1);
-            // 
-            // checkBox10
-            // 
-            this.checkBox10.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.checkBox10.ForeColor = System.Drawing.Color.White;
-            this.checkBox10.Location = new System.Drawing.Point(912, 422);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(198, 67);
-            this.checkBox10.TabIndex = 125;
-            this.checkBox10.Text = "McChicken Sandwich";
-            this.checkBox10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.checkBox10.UseVisualStyleBackColor = true;
-            this.checkBox10.CheckedChanged += new System.EventHandler(this.checkBox10_CheckedChanged_1);
-            // 
-            // checkBox11
-            // 
-            this.checkBox11.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.checkBox11.ForeColor = System.Drawing.Color.White;
-            this.checkBox11.Location = new System.Drawing.Point(693, 422);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(198, 67);
-            this.checkBox11.TabIndex = 124;
-            this.checkBox11.Text = "McChicken Sandwich";
-            this.checkBox11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.checkBox11.UseVisualStyleBackColor = true;
-            this.checkBox11.CheckedChanged += new System.EventHandler(this.checkBox11_CheckedChanged_1);
-            // 
-            // checkBox12
-            // 
-            this.checkBox12.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.checkBox12.ForeColor = System.Drawing.Color.White;
-            this.checkBox12.Location = new System.Drawing.Point(474, 422);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(198, 67);
-            this.checkBox12.TabIndex = 123;
-            this.checkBox12.Text = "McChicken Sandwich";
-            this.checkBox12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.checkBox12.UseVisualStyleBackColor = true;
-            this.checkBox12.CheckedChanged += new System.EventHandler(this.checkBox12_CheckedChanged_1);
-            // 
-            // checkBox13
-            // 
-            this.checkBox13.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.checkBox13.ForeColor = System.Drawing.Color.White;
-            this.checkBox13.Location = new System.Drawing.Point(255, 422);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(198, 67);
-            this.checkBox13.TabIndex = 122;
-            this.checkBox13.Text = "McChicken Sandwich";
-            this.checkBox13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.checkBox13.UseVisualStyleBackColor = true;
-            this.checkBox13.CheckedChanged += new System.EventHandler(this.checkBox13_CheckedChanged_1);
-            // 
-            // checkBox14
-            // 
-            this.checkBox14.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.checkBox14.ForeColor = System.Drawing.Color.White;
-            this.checkBox14.Location = new System.Drawing.Point(36, 420);
-            this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(198, 67);
-            this.checkBox14.TabIndex = 121;
-            this.checkBox14.Text = "McChicken Sandwich";
-            this.checkBox14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.checkBox14.UseVisualStyleBackColor = true;
-            this.checkBox14.CheckedChanged += new System.EventHandler(this.checkBox14_CheckedChanged_1);
-            // 
-            // checkBox15
-            // 
-            this.checkBox15.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.checkBox15.ForeColor = System.Drawing.Color.White;
-            this.checkBox15.Location = new System.Drawing.Point(912, 184);
-            this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(198, 67);
-            this.checkBox15.TabIndex = 130;
-            this.checkBox15.Text = "McChicken Sandwich";
-            this.checkBox15.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.checkBox15.UseVisualStyleBackColor = true;
-            this.checkBox15.CheckedChanged += new System.EventHandler(this.checkBox15_CheckedChanged_1);
-            // 
-            // checkBox17
-            // 
-            this.checkBox17.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.checkBox17.ForeColor = System.Drawing.Color.White;
-            this.checkBox17.Location = new System.Drawing.Point(693, 184);
-            this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(198, 67);
-            this.checkBox17.TabIndex = 129;
-            this.checkBox17.Text = "McChicken Sandwich";
-            this.checkBox17.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.checkBox17.UseVisualStyleBackColor = true;
-            this.checkBox17.CheckedChanged += new System.EventHandler(this.checkBox17_CheckedChanged_1);
-            // 
-            // checkBox18
-            // 
-            this.checkBox18.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.checkBox18.ForeColor = System.Drawing.Color.White;
-            this.checkBox18.Location = new System.Drawing.Point(474, 184);
-            this.checkBox18.Name = "checkBox18";
-            this.checkBox18.Size = new System.Drawing.Size(198, 67);
-            this.checkBox18.TabIndex = 128;
-            this.checkBox18.Text = "McChicken Sandwich";
-            this.checkBox18.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.checkBox18.UseVisualStyleBackColor = true;
-            this.checkBox18.CheckedChanged += new System.EventHandler(this.checkBox18_CheckedChanged_1);
-            // 
-            // checkBox19
-            // 
-            this.checkBox19.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.checkBox19.ForeColor = System.Drawing.Color.White;
-            this.checkBox19.Location = new System.Drawing.Point(255, 184);
-            this.checkBox19.Name = "checkBox19";
-            this.checkBox19.Size = new System.Drawing.Size(198, 67);
-            this.checkBox19.TabIndex = 127;
-            this.checkBox19.Text = "McChicken Sandwich";
-            this.checkBox19.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.checkBox19.UseVisualStyleBackColor = true;
-            this.checkBox19.CheckedChanged += new System.EventHandler(this.checkBox19_CheckedChanged_1);
-            // 
-            // checkBox20
-            // 
-            this.checkBox20.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.checkBox20.ForeColor = System.Drawing.Color.White;
-            this.checkBox20.Location = new System.Drawing.Point(36, 182);
-            this.checkBox20.Name = "checkBox20";
-            this.checkBox20.Size = new System.Drawing.Size(198, 67);
-            this.checkBox20.TabIndex = 126;
-            this.checkBox20.Text = "McChicken Sandwich";
-            this.checkBox20.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.checkBox20.UseVisualStyleBackColor = true;
-            this.checkBox20.CheckedChanged += new System.EventHandler(this.checkBox20_CheckedChanged_1);
-            // 
-            // picpathTxtbox20
-            // 
-            this.picpathTxtbox20.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox20.Location = new System.Drawing.Point(963, 828);
-            this.picpathTxtbox20.Name = "picpathTxtbox20";
-            this.picpathTxtbox20.Size = new System.Drawing.Size(112, 23);
-            this.picpathTxtbox20.TabIndex = 278;
-            this.picpathTxtbox20.TextChanged += new System.EventHandler(this.picpathTxtbox20_TextChanged);
-            // 
-            // picpathTxtbox19
-            // 
-            this.picpathTxtbox19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox19.Location = new System.Drawing.Point(742, 828);
-            this.picpathTxtbox19.Name = "picpathTxtbox19";
-            this.picpathTxtbox19.Size = new System.Drawing.Size(112, 23);
-            this.picpathTxtbox19.TabIndex = 277;
-            this.picpathTxtbox19.TextChanged += new System.EventHandler(this.picpathTxtbox19_TextChanged);
-            // 
-            // picpathTxtbox18
-            // 
-            this.picpathTxtbox18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox18.Location = new System.Drawing.Point(519, 828);
-            this.picpathTxtbox18.Name = "picpathTxtbox18";
-            this.picpathTxtbox18.Size = new System.Drawing.Size(112, 23);
-            this.picpathTxtbox18.TabIndex = 276;
-            this.picpathTxtbox18.TextChanged += new System.EventHandler(this.picpathTxtbox18_TextChanged);
-            // 
-            // picpathTxtbox17
-            // 
-            this.picpathTxtbox17.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox17.Location = new System.Drawing.Point(298, 828);
-            this.picpathTxtbox17.Name = "picpathTxtbox17";
-            this.picpathTxtbox17.Size = new System.Drawing.Size(112, 23);
-            this.picpathTxtbox17.TabIndex = 275;
-            this.picpathTxtbox17.TextChanged += new System.EventHandler(this.picpathTxtbox17_TextChanged);
-            // 
-            // picpathTxtbox16
-            // 
-            this.picpathTxtbox16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox16.Location = new System.Drawing.Point(80, 826);
-            this.picpathTxtbox16.Name = "picpathTxtbox16";
-            this.picpathTxtbox16.Size = new System.Drawing.Size(112, 23);
-            this.picpathTxtbox16.TabIndex = 274;
-            this.picpathTxtbox16.TextChanged += new System.EventHandler(this.picpathTxtbox16_TextChanged);
-            // 
-            // picpathTxtbox15
-            // 
-            this.picpathTxtbox15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox15.Location = new System.Drawing.Point(963, 587);
-            this.picpathTxtbox15.Name = "picpathTxtbox15";
-            this.picpathTxtbox15.Size = new System.Drawing.Size(112, 23);
-            this.picpathTxtbox15.TabIndex = 273;
-            this.picpathTxtbox15.TextChanged += new System.EventHandler(this.picpathTxtbox15_TextChanged);
-            // 
-            // picpathTxtbox14
-            // 
-            this.picpathTxtbox14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox14.Location = new System.Drawing.Point(742, 587);
-            this.picpathTxtbox14.Name = "picpathTxtbox14";
-            this.picpathTxtbox14.Size = new System.Drawing.Size(112, 23);
-            this.picpathTxtbox14.TabIndex = 272;
-            this.picpathTxtbox14.TextChanged += new System.EventHandler(this.picpathTxtbox14_TextChanged);
-            // 
-            // picpathTxtbox13
-            // 
-            this.picpathTxtbox13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox13.Location = new System.Drawing.Point(519, 587);
-            this.picpathTxtbox13.Name = "picpathTxtbox13";
-            this.picpathTxtbox13.Size = new System.Drawing.Size(112, 23);
-            this.picpathTxtbox13.TabIndex = 271;
-            this.picpathTxtbox13.TextChanged += new System.EventHandler(this.picpathTxtbox13_TextChanged);
-            // 
-            // picpathTxtbox12
-            // 
-            this.picpathTxtbox12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox12.Location = new System.Drawing.Point(298, 587);
-            this.picpathTxtbox12.Name = "picpathTxtbox12";
-            this.picpathTxtbox12.Size = new System.Drawing.Size(112, 23);
-            this.picpathTxtbox12.TabIndex = 270;
-            this.picpathTxtbox12.TextChanged += new System.EventHandler(this.picpathTxtbox12_TextChanged);
-            // 
-            // picpathTxtbox11
-            // 
-            this.picpathTxtbox11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox11.Location = new System.Drawing.Point(80, 585);
-            this.picpathTxtbox11.Name = "picpathTxtbox11";
-            this.picpathTxtbox11.Size = new System.Drawing.Size(112, 23);
-            this.picpathTxtbox11.TabIndex = 269;
-            this.picpathTxtbox11.TextChanged += new System.EventHandler(this.picpathTxtbox11_TextChanged);
-            // 
-            // picpathTxtbox10
-            // 
-            this.picpathTxtbox10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox10.Location = new System.Drawing.Point(963, 349);
-            this.picpathTxtbox10.Name = "picpathTxtbox10";
-            this.picpathTxtbox10.Size = new System.Drawing.Size(112, 23);
-            this.picpathTxtbox10.TabIndex = 268;
-            this.picpathTxtbox10.TextChanged += new System.EventHandler(this.picpathTxtbox10_TextChanged);
-            // 
-            // picpathTxtbox9
-            // 
-            this.picpathTxtbox9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox9.Location = new System.Drawing.Point(742, 349);
-            this.picpathTxtbox9.Name = "picpathTxtbox9";
-            this.picpathTxtbox9.Size = new System.Drawing.Size(112, 23);
-            this.picpathTxtbox9.TabIndex = 267;
-            this.picpathTxtbox9.TextChanged += new System.EventHandler(this.picpathTxtbox9_TextChanged);
-            // 
-            // picpathTxtbox8
-            // 
-            this.picpathTxtbox8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox8.Location = new System.Drawing.Point(519, 349);
-            this.picpathTxtbox8.Name = "picpathTxtbox8";
-            this.picpathTxtbox8.Size = new System.Drawing.Size(112, 23);
-            this.picpathTxtbox8.TabIndex = 266;
-            this.picpathTxtbox8.TextChanged += new System.EventHandler(this.picpathTxtbox8_TextChanged);
-            // 
-            // picpathTxtbox7
-            // 
-            this.picpathTxtbox7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox7.Location = new System.Drawing.Point(298, 349);
-            this.picpathTxtbox7.Name = "picpathTxtbox7";
-            this.picpathTxtbox7.Size = new System.Drawing.Size(112, 23);
-            this.picpathTxtbox7.TabIndex = 265;
-            this.picpathTxtbox7.TextChanged += new System.EventHandler(this.picpathTxtbox7_TextChanged);
-            // 
-            // picpathTxtbox6
-            // 
-            this.picpathTxtbox6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox6.Location = new System.Drawing.Point(80, 347);
-            this.picpathTxtbox6.Name = "picpathTxtbox6";
-            this.picpathTxtbox6.Size = new System.Drawing.Size(112, 23);
-            this.picpathTxtbox6.TabIndex = 264;
-            this.picpathTxtbox6.TextChanged += new System.EventHandler(this.picpathTxtbox6_TextChanged);
-            // 
-            // picpathTxtbox5
-            // 
-            this.picpathTxtbox5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox5.Location = new System.Drawing.Point(963, 109);
-            this.picpathTxtbox5.Name = "picpathTxtbox5";
-            this.picpathTxtbox5.Size = new System.Drawing.Size(112, 23);
-            this.picpathTxtbox5.TabIndex = 263;
-            this.picpathTxtbox5.TextChanged += new System.EventHandler(this.picpathTxtbox5_TextChanged);
-            // 
-            // picpathTxtbox4
-            // 
-            this.picpathTxtbox4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox4.Location = new System.Drawing.Point(742, 109);
-            this.picpathTxtbox4.Name = "picpathTxtbox4";
-            this.picpathTxtbox4.Size = new System.Drawing.Size(112, 23);
-            this.picpathTxtbox4.TabIndex = 262;
-            this.picpathTxtbox4.TextChanged += new System.EventHandler(this.picpathTxtbox4_TextChanged);
-            // 
-            // picpathTxtbox3
-            // 
-            this.picpathTxtbox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox3.Location = new System.Drawing.Point(519, 109);
-            this.picpathTxtbox3.Name = "picpathTxtbox3";
-            this.picpathTxtbox3.Size = new System.Drawing.Size(112, 23);
-            this.picpathTxtbox3.TabIndex = 261;
-            this.picpathTxtbox3.TextChanged += new System.EventHandler(this.picpathTxtbox3_TextChanged);
-            // 
-            // picpathTxtbox2
-            // 
-            this.picpathTxtbox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox2.Location = new System.Drawing.Point(298, 109);
-            this.picpathTxtbox2.Name = "picpathTxtbox2";
-            this.picpathTxtbox2.Size = new System.Drawing.Size(112, 23);
-            this.picpathTxtbox2.TabIndex = 260;
-            this.picpathTxtbox2.TextChanged += new System.EventHandler(this.picpathTxtbox2_TextChanged);
-            // 
-            // picpathTxtbox1
-            // 
-            this.picpathTxtbox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.picpathTxtbox1.Location = new System.Drawing.Point(80, 107);
-            this.picpathTxtbox1.Name = "picpathTxtbox1";
-            this.picpathTxtbox1.Size = new System.Drawing.Size(112, 23);
-            this.picpathTxtbox1.TabIndex = 259;
-            this.picpathTxtbox1.TextChanged += new System.EventHandler(this.picpathTxtbox1_TextChanged);
-            // 
-            // pictureBox20
-            // 
-            this.pictureBox20.BackColor = System.Drawing.Color.White;
-            this.pictureBox20.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox20.Location = new System.Drawing.Point(934, 733);
-            this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(160, 160);
-            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox20.TabIndex = 258;
-            this.pictureBox20.TabStop = false;
-            this.pictureBox20.Click += new System.EventHandler(this.pictureBox20_Click);
-            // 
-            // pictureBox19
-            // 
-            this.pictureBox19.BackColor = System.Drawing.Color.White;
-            this.pictureBox19.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox19.Location = new System.Drawing.Point(712, 733);
-            this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(160, 160);
-            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox19.TabIndex = 257;
-            this.pictureBox19.TabStop = false;
-            this.pictureBox19.Click += new System.EventHandler(this.pictureBox19_Click);
-            // 
-            // pictureBox18
-            // 
-            this.pictureBox18.BackColor = System.Drawing.Color.White;
-            this.pictureBox18.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox18.Location = new System.Drawing.Point(494, 733);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(160, 160);
-            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox18.TabIndex = 256;
-            this.pictureBox18.TabStop = false;
-            this.pictureBox18.Click += new System.EventHandler(this.pictureBox18_Click);
-            // 
-            // pictureBox17
-            // 
-            this.pictureBox17.BackColor = System.Drawing.Color.White;
-            this.pictureBox17.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox17.Location = new System.Drawing.Point(275, 733);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(160, 160);
-            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox17.TabIndex = 255;
-            this.pictureBox17.TabStop = false;
-            this.pictureBox17.Click += new System.EventHandler(this.pictureBox17_Click);
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.BackColor = System.Drawing.Color.White;
-            this.pictureBox16.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox16.Location = new System.Drawing.Point(57, 731);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(160, 160);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox16.TabIndex = 254;
-            this.pictureBox16.TabStop = false;
-            this.pictureBox16.Click += new System.EventHandler(this.pictureBox16_Click);
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.BackColor = System.Drawing.Color.White;
-            this.pictureBox15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox15.Location = new System.Drawing.Point(934, 494);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(160, 160);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox15.TabIndex = 253;
-            this.pictureBox15.TabStop = false;
-            this.pictureBox15.Click += new System.EventHandler(this.pictureBox15_Click);
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.BackColor = System.Drawing.Color.White;
-            this.pictureBox14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox14.Location = new System.Drawing.Point(712, 494);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(160, 160);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox14.TabIndex = 252;
-            this.pictureBox14.TabStop = false;
-            this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click);
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.BackColor = System.Drawing.Color.White;
-            this.pictureBox13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox13.Location = new System.Drawing.Point(494, 494);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(160, 160);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox13.TabIndex = 251;
-            this.pictureBox13.TabStop = false;
-            this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click);
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.BackColor = System.Drawing.Color.White;
-            this.pictureBox12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox12.Location = new System.Drawing.Point(275, 494);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(160, 160);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox12.TabIndex = 250;
-            this.pictureBox12.TabStop = false;
-            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackColor = System.Drawing.Color.White;
-            this.pictureBox11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox11.Location = new System.Drawing.Point(57, 492);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(160, 160);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 249;
-            this.pictureBox11.TabStop = false;
-            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackColor = System.Drawing.Color.White;
-            this.pictureBox10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox10.Location = new System.Drawing.Point(934, 256);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(160, 160);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 248;
-            this.pictureBox10.TabStop = false;
-            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.Color.White;
-            this.pictureBox9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox9.Location = new System.Drawing.Point(712, 256);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(160, 160);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 247;
-            this.pictureBox9.TabStop = false;
-            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.Color.White;
-            this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox8.Location = new System.Drawing.Point(494, 256);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(160, 160);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 246;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.White;
-            this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox7.Location = new System.Drawing.Point(275, 256);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(160, 160);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 245;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.White;
-            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox6.Location = new System.Drawing.Point(57, 254);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(160, 160);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 244;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.White;
-            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox5.Location = new System.Drawing.Point(934, 18);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(160, 160);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 243;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.White;
-            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox4.Location = new System.Drawing.Point(712, 18);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(160, 160);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 242;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click_1);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.White;
-            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox3.Location = new System.Drawing.Point(494, 18);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(160, 160);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 241;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox2.Location = new System.Drawing.Point(275, 18);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(160, 160);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 240;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(57, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(160, 160);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 239;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // POS2_DataBase
             // 
@@ -1462,7 +1423,6 @@
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DisplayPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
@@ -1483,6 +1443,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DisplayPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1536,25 +1497,25 @@
         private System.Windows.Forms.CheckBox checkBox16;
         private System.Windows.Forms.CheckBox A_Gravy;
         private System.Windows.Forms.Button TransferButton;
+        private System.Windows.Forms.CheckBox checkBox20;
+        private System.Windows.Forms.CheckBox checkBox19;
+        private System.Windows.Forms.CheckBox checkBox18;
+        private System.Windows.Forms.CheckBox checkBox17;
+        private System.Windows.Forms.CheckBox checkBox5;
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox15;
-        private System.Windows.Forms.CheckBox checkBox17;
-        private System.Windows.Forms.CheckBox checkBox18;
-        private System.Windows.Forms.CheckBox checkBox19;
-        private System.Windows.Forms.CheckBox checkBox20;
         private System.Windows.Forms.CheckBox checkBox10;
-        private System.Windows.Forms.CheckBox checkBox11;
-        private System.Windows.Forms.CheckBox checkBox12;
-        private System.Windows.Forms.CheckBox checkBox13;
-        private System.Windows.Forms.CheckBox checkBox14;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox8;
         private System.Windows.Forms.CheckBox checkBox9;
+        private System.Windows.Forms.CheckBox checkBox8;
+        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox checkBox15;
+        private System.Windows.Forms.CheckBox checkBox14;
+        private System.Windows.Forms.CheckBox checkBox13;
+        private System.Windows.Forms.CheckBox checkBox12;
+        private System.Windows.Forms.CheckBox checkBox11;
         private System.Windows.Forms.TextBox picpathTxtbox20;
         private System.Windows.Forms.TextBox picpathTxtbox19;
         private System.Windows.Forms.TextBox picpathTxtbox18;
