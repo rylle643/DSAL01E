@@ -1388,6 +1388,7 @@
             this.TransferButton.TabIndex = 15;
             this.TransferButton.Text = "TRANSFER";
             this.TransferButton.UseVisualStyleBackColor = false;
+            this.TransferButton.Click += new System.EventHandler(this.TransferButton_Click);
             // 
             // POS2_DataBase
             // 

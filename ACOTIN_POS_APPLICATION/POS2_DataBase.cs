@@ -44,6 +44,7 @@ namespace ACOTIN_POS_APPLICATION
 
                 // Clear display listbox
                 displayListbox.Items.Clear();
+                displayListbox.Font = new Font("Courier New", 8);
 
                 // Hide picture path textboxes
                 picpathTxtbox1.Hide(); picpathTxtbox2.Hide(); picpathTxtbox3.Hide();
@@ -220,10 +221,8 @@ namespace ACOTIN_POS_APPLICATION
             return "0";
         }
 
-        // NEW: Helper method to get discount percentage for each item (2% to 5%)
         private double GetDiscountPercent(int itemNumber)
         {
-            // Different discount for each item between 2% and 5%
             double[] discounts = { 2.0, 3.5, 2.5, 4.0, 3.0, 2.0, 4.5, 3.0, 5.0, 2.5,
                                    3.5, 4.0, 2.0, 3.0, 5.0, 2.5, 4.0, 3.5, 2.0, 4.5 };
 
@@ -234,451 +233,153 @@ namespace ACOTIN_POS_APPLICATION
             return 0;
         }
 
-        // CheckBox event handlers
-        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
+
+        private string FormatReceiptLine(string itemName, string price, bool includeDiscount = false, double discountPercent = 0)
         {
-            if (!checkBox1.Checked) return;
+            int maxWidth = 50;
+            if (itemName.Length > 35)
+            {
+                itemName = itemName.Substring(0, 32) + "...";
+            }
+
+            if (includeDiscount)
+            {
+                itemName = itemName + " (" + discountPercent + "%)";
+            }
+
+            string priceText =  price;
+
+            int spacesNeeded = maxWidth - itemName.Length - priceText.Length;
+            if (spacesNeeded < 1) spacesNeeded = 1;
+
+            string spaces = new string(' ', spacesNeeded);
+            return itemName + spaces + priceText;
+        }
+
+
+        private void HandleCheckboxSelection(CheckBox checkbox, int itemNumber, int pictureIndex)
+        {
+            if (!checkbox.Checked) return;
             UncheckAllCheckboxes();
-            checkBox1.Checked = true;
+            checkbox.Checked = true;
 
-            priceTxtBox.Text = GetPriceFromDatabase(1);
-
-            // Calculate discount (2% for item 1)
+            priceTxtBox.Text = GetPriceFromDatabase(itemNumber);
             double price = Convert.ToDouble(priceTxtBox.Text);
-            double discountPercent = GetDiscountPercent(1);
+            double discountPercent = GetDiscountPercent(itemNumber);
             double discountAmount = price * (discountPercent / 100);
             discountAmountTxtbox.Text = discountAmount.ToString("0.00");
 
-            displayListbox.Items.Add(checkBox1.Text + " - " + priceTxtBox.Text + " (Discount: " + discountPercent + "%)");
+            string itemLine = FormatReceiptLine(checkbox.Text, priceTxtBox.Text, true, discountPercent);
+            displayListbox.Items.Add(itemLine);
 
-            // FIXED: Show picture in DisplayPictureBox
-            try { DisplayPictureBox.Image = Image.FromFile(picturePaths[0]); }
+            try { DisplayPictureBox.Image = Image.FromFile(picturePaths[pictureIndex]); }
             catch { }
 
             qtyTxtbox.Clear();
             qtyTxtbox.Focus();
+        }
+
+
+
+
+        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
+        {
+            HandleCheckboxSelection(checkBox1, 1, 0);
         }
 
         private void checkBox2_CheckedChanged_1(object sender, EventArgs e)
         {
-            if (!checkBox2.Checked) return;
-            UncheckAllCheckboxes();
-            checkBox2.Checked = true;
-
-            priceTxtBox.Text = GetPriceFromDatabase(2);
-
-            // Calculate discount (3.5% for item 2)
-            double price = Convert.ToDouble(priceTxtBox.Text);
-            double discountPercent = GetDiscountPercent(2);
-            double discountAmount = price * (discountPercent / 100);
-            discountAmountTxtbox.Text = discountAmount.ToString("0.00");
-
-            displayListbox.Items.Add(checkBox2.Text + " - " + priceTxtBox.Text + " (Discount: " + discountPercent + "%)");
-
-            // FIXED: Show picture in DisplayPictureBox
-            try { DisplayPictureBox.Image = Image.FromFile(picturePaths[1]); }
-            catch { }
-
-            qtyTxtbox.Clear();
-            qtyTxtbox.Focus();
+            HandleCheckboxSelection(checkBox2, 2, 1);
         }
 
         private void checkBox3_CheckedChanged_1(object sender, EventArgs e)
         {
-            if (!checkBox3.Checked) return;
-            UncheckAllCheckboxes();
-            checkBox3.Checked = true;
-
-            priceTxtBox.Text = GetPriceFromDatabase(3);
-
-            // Calculate discount (2.5% for item 3)
-            double price = Convert.ToDouble(priceTxtBox.Text);
-            double discountPercent = GetDiscountPercent(3);
-            double discountAmount = price * (discountPercent / 100);
-            discountAmountTxtbox.Text = discountAmount.ToString("0.00");
-
-            displayListbox.Items.Add(checkBox3.Text + " - " + priceTxtBox.Text + " (Discount: " + discountPercent + "%)");
-
-            // FIXED: Show picture in DisplayPictureBox
-            try { DisplayPictureBox.Image = Image.FromFile(picturePaths[2]); }
-            catch { }
-
-            qtyTxtbox.Clear();
-            qtyTxtbox.Focus();
+            HandleCheckboxSelection(checkBox3, 3, 2);
         }
 
         private void checkBox4_CheckedChanged_2(object sender, EventArgs e)
         {
-            if (!checkBox4.Checked) return;
-            UncheckAllCheckboxes();
-            checkBox4.Checked = true;
-
-            priceTxtBox.Text = GetPriceFromDatabase(4);
-
-            double price = Convert.ToDouble(priceTxtBox.Text);
-            double discountPercent = GetDiscountPercent(4);
-            double discountAmount = price * (discountPercent / 100);
-            discountAmountTxtbox.Text = discountAmount.ToString("0.00");
-
-            displayListbox.Items.Add(checkBox4.Text + " - " + priceTxtBox.Text + " (Discount: " + discountPercent + "%)");
-
-            try { DisplayPictureBox.Image = Image.FromFile(picturePaths[3]); }
-            catch { }
-
-            qtyTxtbox.Clear();
-            qtyTxtbox.Focus();
+            HandleCheckboxSelection(checkBox4, 4, 3);
         }
 
         private void checkBox5_CheckedChanged_2(object sender, EventArgs e)
         {
-            if (!checkBox5.Checked) return;
-            UncheckAllCheckboxes();
-            checkBox5.Checked = true;
-
-            priceTxtBox.Text = GetPriceFromDatabase(5);
-
-            double price = Convert.ToDouble(priceTxtBox.Text);
-            double discountPercent = GetDiscountPercent(5);
-            double discountAmount = price * (discountPercent / 100);
-            discountAmountTxtbox.Text = discountAmount.ToString("0.00");
-
-            displayListbox.Items.Add(checkBox5.Text + " - " + priceTxtBox.Text + " (Discount: " + discountPercent + "%)");
-
-            try { DisplayPictureBox.Image = Image.FromFile(picturePaths[4]); }
-            catch { }
-
-            qtyTxtbox.Clear();
-            qtyTxtbox.Focus();
+            HandleCheckboxSelection(checkBox5, 5, 4);
         }
 
         private void checkBox6_CheckedChanged_1(object sender, EventArgs e)
         {
-            if (!checkBox6.Checked) return;
-            UncheckAllCheckboxes();
-            checkBox6.Checked = true;
-
-            priceTxtBox.Text = GetPriceFromDatabase(6);
-
-            double price = Convert.ToDouble(priceTxtBox.Text);
-            double discountPercent = GetDiscountPercent(6);
-            double discountAmount = price * (discountPercent / 100);
-            discountAmountTxtbox.Text = discountAmount.ToString("0.00");
-
-            displayListbox.Items.Add(checkBox6.Text + " - " + priceTxtBox.Text + " (Discount: " + discountPercent + "%)");
-
-            try { DisplayPictureBox.Image = Image.FromFile(picturePaths[5]); }
-            catch { }
-
-            qtyTxtbox.Clear();
-            qtyTxtbox.Focus();
+            HandleCheckboxSelection(checkBox6, 6, 5);
         }
 
         private void checkBox7_CheckedChanged_1(object sender, EventArgs e)
         {
-            if (!checkBox7.Checked) return;
-            UncheckAllCheckboxes();
-            checkBox7.Checked = true;
-
-            priceTxtBox.Text = GetPriceFromDatabase(7);
-
-            double price = Convert.ToDouble(priceTxtBox.Text);
-            double discountPercent = GetDiscountPercent(7);
-            double discountAmount = price * (discountPercent / 100);
-            discountAmountTxtbox.Text = discountAmount.ToString("0.00");
-
-            displayListbox.Items.Add(checkBox7.Text + " - " + priceTxtBox.Text + " (Discount: " + discountPercent + "%)");
-
-            try { DisplayPictureBox.Image = Image.FromFile(picturePaths[6]); }
-            catch { }
-
-            qtyTxtbox.Clear();
-            qtyTxtbox.Focus();
+            HandleCheckboxSelection(checkBox7, 7, 6);
         }
 
         private void checkBox8_CheckedChanged_1(object sender, EventArgs e)
         {
-            if (!checkBox8.Checked) return;
-            UncheckAllCheckboxes();
-            checkBox8.Checked = true;
-
-            priceTxtBox.Text = GetPriceFromDatabase(8);
-
-            double price = Convert.ToDouble(priceTxtBox.Text);
-            double discountPercent = GetDiscountPercent(8);
-            double discountAmount = price * (discountPercent / 100);
-            discountAmountTxtbox.Text = discountAmount.ToString("0.00");
-
-            displayListbox.Items.Add(checkBox8.Text + " - " + priceTxtBox.Text + " (Discount: " + discountPercent + "%)");
-
-            try { DisplayPictureBox.Image = Image.FromFile(picturePaths[7]); }
-            catch { }
-
-            qtyTxtbox.Clear();
-            qtyTxtbox.Focus();
+            HandleCheckboxSelection(checkBox8, 8, 7);
         }
 
         private void checkBox9_CheckedChanged_1(object sender, EventArgs e)
         {
-            if (!checkBox9.Checked) return;
-            UncheckAllCheckboxes();
-            checkBox9.Checked = true;
-
-            priceTxtBox.Text = GetPriceFromDatabase(9);
-
-            double price = Convert.ToDouble(priceTxtBox.Text);
-            double discountPercent = GetDiscountPercent(9);
-            double discountAmount = price * (discountPercent / 100);
-            discountAmountTxtbox.Text = discountAmount.ToString("0.00");
-
-            displayListbox.Items.Add(checkBox9.Text + " - " + priceTxtBox.Text + " (Discount: " + discountPercent + "%)");
-
-            try { DisplayPictureBox.Image = Image.FromFile(picturePaths[8]); }
-            catch { }
-
-            qtyTxtbox.Clear();
-            qtyTxtbox.Focus();
+            HandleCheckboxSelection(checkBox9, 9, 8);
         }
 
         private void checkBox10_CheckedChanged_1(object sender, EventArgs e)
         {
-            if (!checkBox10.Checked) return;
-            UncheckAllCheckboxes();
-            checkBox10.Checked = true;
-
-            priceTxtBox.Text = GetPriceFromDatabase(10);
-
-            double price = Convert.ToDouble(priceTxtBox.Text);
-            double discountPercent = GetDiscountPercent(10);
-            double discountAmount = price * (discountPercent / 100);
-            discountAmountTxtbox.Text = discountAmount.ToString("0.00");
-
-            displayListbox.Items.Add(checkBox10.Text + " - " + priceTxtBox.Text + " (Discount: " + discountPercent + "%)");
-
-            try { DisplayPictureBox.Image = Image.FromFile(picturePaths[9]); }
-            catch { }
-
-            qtyTxtbox.Clear();
-            qtyTxtbox.Focus();
+            HandleCheckboxSelection(checkBox10, 10, 9);
         }
 
         private void checkBox11_CheckedChanged_1(object sender, EventArgs e)
         {
-            if (!checkBox11.Checked) return;
-            UncheckAllCheckboxes();
-            checkBox11.Checked = true;
-
-            priceTxtBox.Text = GetPriceFromDatabase(11);
-
-            double price = Convert.ToDouble(priceTxtBox.Text);
-            double discountPercent = GetDiscountPercent(11);
-            double discountAmount = price * (discountPercent / 100);
-            discountAmountTxtbox.Text = discountAmount.ToString("0.00");
-
-            displayListbox.Items.Add(checkBox11.Text + " - " + priceTxtBox.Text + " (Discount: " + discountPercent + "%)");
-
-            try { DisplayPictureBox.Image = Image.FromFile(picturePaths[10]); }
-            catch { }
-
-            qtyTxtbox.Clear();
-            qtyTxtbox.Focus();
+            HandleCheckboxSelection(checkBox11, 11, 10);
         }
 
         private void checkBox12_CheckedChanged_1(object sender, EventArgs e)
         {
-            if (!checkBox12.Checked) return;
-            UncheckAllCheckboxes();
-            checkBox12.Checked = true;
-
-            priceTxtBox.Text = GetPriceFromDatabase(12);
-
-            double price = Convert.ToDouble(priceTxtBox.Text);
-            double discountPercent = GetDiscountPercent(12);
-            double discountAmount = price * (discountPercent / 100);
-            discountAmountTxtbox.Text = discountAmount.ToString("0.00");
-
-            displayListbox.Items.Add(checkBox12.Text + " - " + priceTxtBox.Text + " (Discount: " + discountPercent + "%)");
-
-            try { DisplayPictureBox.Image = Image.FromFile(picturePaths[11]); }
-            catch { }
-
-            qtyTxtbox.Clear();
-            qtyTxtbox.Focus();
+            HandleCheckboxSelection(checkBox12, 12, 11);
         }
 
         private void checkBox13_CheckedChanged_1(object sender, EventArgs e)
         {
-            if (!checkBox13.Checked) return;
-            UncheckAllCheckboxes();
-            checkBox13.Checked = true;
-
-            priceTxtBox.Text = GetPriceFromDatabase(13);
-
-            double price = Convert.ToDouble(priceTxtBox.Text);
-            double discountPercent = GetDiscountPercent(13);
-            double discountAmount = price * (discountPercent / 100);
-            discountAmountTxtbox.Text = discountAmount.ToString("0.00");
-
-            displayListbox.Items.Add(checkBox13.Text + " - " + priceTxtBox.Text + " (Discount: " + discountPercent + "%)");
-
-            try { DisplayPictureBox.Image = Image.FromFile(picturePaths[12]); }
-            catch { }
-
-            qtyTxtbox.Clear();
-            qtyTxtbox.Focus();
+            HandleCheckboxSelection(checkBox13, 13, 12);
         }
 
         private void checkBox14_CheckedChanged_1(object sender, EventArgs e)
         {
-            if (!checkBox14.Checked) return;
-            UncheckAllCheckboxes();
-            checkBox14.Checked = true;
-
-            priceTxtBox.Text = GetPriceFromDatabase(14);
-
-            double price = Convert.ToDouble(priceTxtBox.Text);
-            double discountPercent = GetDiscountPercent(14);
-            double discountAmount = price * (discountPercent / 100);
-            discountAmountTxtbox.Text = discountAmount.ToString("0.00");
-
-            displayListbox.Items.Add(checkBox14.Text + " - " + priceTxtBox.Text + " (Discount: " + discountPercent + "%)");
-
-            try { DisplayPictureBox.Image = Image.FromFile(picturePaths[13]); }
-            catch { }
-
-            qtyTxtbox.Clear();
-            qtyTxtbox.Focus();
+            HandleCheckboxSelection(checkBox14, 14, 13);
         }
 
         private void checkBox15_CheckedChanged_1(object sender, EventArgs e)
         {
-            if (!checkBox15.Checked) return;
-            UncheckAllCheckboxes();
-            checkBox15.Checked = true;
-
-            priceTxtBox.Text = GetPriceFromDatabase(15);
-
-            double price = Convert.ToDouble(priceTxtBox.Text);
-            double discountPercent = GetDiscountPercent(15);
-            double discountAmount = price * (discountPercent / 100);
-            discountAmountTxtbox.Text = discountAmount.ToString("0.00");
-
-            displayListbox.Items.Add(checkBox15.Text + " - " + priceTxtBox.Text + " (Discount: " + discountPercent + "%)");
-
-            try { DisplayPictureBox.Image = Image.FromFile(picturePaths[14]); }
-            catch { }
-
-            qtyTxtbox.Clear();
-            qtyTxtbox.Focus();
+            HandleCheckboxSelection(checkBox15, 15, 14);
         }
 
         private void checkBox16_CheckedChanged(object sender, EventArgs e)
         {
-            if (!checkBox16.Checked) return;
-            UncheckAllCheckboxes();
-            checkBox16.Checked = true;
-
-            priceTxtBox.Text = GetPriceFromDatabase(16);
-
-            double price = Convert.ToDouble(priceTxtBox.Text);
-            double discountPercent = GetDiscountPercent(16);
-            double discountAmount = price * (discountPercent / 100);
-            discountAmountTxtbox.Text = discountAmount.ToString("0.00");
-
-            displayListbox.Items.Add(checkBox16.Text + " - " + priceTxtBox.Text + " (Discount: " + discountPercent + "%)");
-
-            try { DisplayPictureBox.Image = Image.FromFile(picturePaths[15]); }
-            catch { }
-
-            qtyTxtbox.Clear();
-            qtyTxtbox.Focus();
+            HandleCheckboxSelection(checkBox16, 16, 15);
         }
 
         private void checkBox17_CheckedChanged_1(object sender, EventArgs e)
         {
-            if (!checkBox17.Checked) return;
-            UncheckAllCheckboxes();
-            checkBox17.Checked = true;
-
-            priceTxtBox.Text = GetPriceFromDatabase(17);
-
-            double price = Convert.ToDouble(priceTxtBox.Text);
-            double discountPercent = GetDiscountPercent(17);
-            double discountAmount = price * (discountPercent / 100);
-            discountAmountTxtbox.Text = discountAmount.ToString("0.00");
-
-            displayListbox.Items.Add(checkBox17.Text + " - " + priceTxtBox.Text + " (Discount: " + discountPercent + "%)");
-
-            try { DisplayPictureBox.Image = Image.FromFile(picturePaths[16]); }
-            catch { }
-
-            qtyTxtbox.Clear();
-            qtyTxtbox.Focus();
+            HandleCheckboxSelection(checkBox17, 17, 16);
         }
 
         private void checkBox18_CheckedChanged_1(object sender, EventArgs e)
         {
-            if (!checkBox18.Checked) return;
-            UncheckAllCheckboxes();
-            checkBox18.Checked = true;
-
-            priceTxtBox.Text = GetPriceFromDatabase(18);
-
-            double price = Convert.ToDouble(priceTxtBox.Text);
-            double discountPercent = GetDiscountPercent(18);
-            double discountAmount = price * (discountPercent / 100);
-            discountAmountTxtbox.Text = discountAmount.ToString("0.00");
-
-            displayListbox.Items.Add(checkBox18.Text + " - " + priceTxtBox.Text + " (Discount: " + discountPercent + "%)");
-
-            try { DisplayPictureBox.Image = Image.FromFile(picturePaths[17]); }
-            catch { }
-
-            qtyTxtbox.Clear();
-            qtyTxtbox.Focus();
+            HandleCheckboxSelection(checkBox18, 18, 17);
         }
 
         private void checkBox19_CheckedChanged_1(object sender, EventArgs e)
         {
-            if (!checkBox19.Checked) return;
-            UncheckAllCheckboxes();
-            checkBox19.Checked = true;
-
-            priceTxtBox.Text = GetPriceFromDatabase(19);
-
-            double price = Convert.ToDouble(priceTxtBox.Text);
-            double discountPercent = GetDiscountPercent(19);
-            double discountAmount = price * (discountPercent / 100);
-            discountAmountTxtbox.Text = discountAmount.ToString("0.00");
-
-            displayListbox.Items.Add(checkBox19.Text + " - " + priceTxtBox.Text + " (Discount: " + discountPercent + "%)");
-
-            try { DisplayPictureBox.Image = Image.FromFile(picturePaths[18]); }
-            catch { }
-
-            qtyTxtbox.Clear();
-            qtyTxtbox.Focus();
+            HandleCheckboxSelection(checkBox19, 19, 18);
         }
 
         private void checkBox20_CheckedChanged_1(object sender, EventArgs e)
         {
-            if (!checkBox20.Checked) return;
-            UncheckAllCheckboxes();
-            checkBox20.Checked = true;
-
-            priceTxtBox.Text = GetPriceFromDatabase(20);
-
-            double price = Convert.ToDouble(priceTxtBox.Text);
-            double discountPercent = GetDiscountPercent(20);
-            double discountAmount = price * (discountPercent / 100);
-            discountAmountTxtbox.Text = discountAmount.ToString("0.00");
-
-            displayListbox.Items.Add(checkBox20.Text + " - " + priceTxtBox.Text + " (Discount: " + discountPercent + "%)");
-
-            try { DisplayPictureBox.Image = Image.FromFile(picturePaths[19]); }
-            catch { }
-
-            qtyTxtbox.Clear();
-            qtyTxtbox.Focus();
+            HandleCheckboxSelection(checkBox20, 20, 19);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -717,9 +418,7 @@ namespace ACOTIN_POS_APPLICATION
             try
             {
                 displayListbox.Items.Clear();
-
                 this.BackColor = Color.DarkOliveGreen;
-
                 foodBRdbtn.Checked = false;
 
                 try
@@ -745,15 +444,17 @@ namespace ACOTIN_POS_APPLICATION
 
                 priceTxtBox.Text = "720.00";
                 discountAmountTxtbox.Text = "144.00";
-                displayListbox.Items.Add(foodARdbtn.Text + " - " + priceTxtBox.Text + " ");
-                displayListbox.Items.Add("Discount Amount:       " + discountAmountTxtbox.Text);
+
+                // Use helper function for formatting
+                displayListbox.Items.Add(FormatReceiptLine(foodARdbtn.Text, priceTxtBox.Text));
+                displayListbox.Items.Add(FormatReceiptLine("Discount Amount:", discountAmountTxtbox.Text));
 
                 qtyTxtbox.Text = "0";
                 qtyTxtbox.Focus();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Error loading Food A: " + ex.Message, "Error");
+                MessageBox.Show("Error loading Food A");
             }
         }
 
@@ -762,9 +463,7 @@ namespace ACOTIN_POS_APPLICATION
             try
             {
                 displayListbox.Items.Clear();
-
                 this.BackColor = Color.DarkOliveGreen;
-
                 foodARdbtn.Checked = false;
 
                 try
@@ -791,15 +490,16 @@ namespace ACOTIN_POS_APPLICATION
                 priceTxtBox.Text = "450.00";
                 discountAmountTxtbox.Text = "67.50";
 
-                displayListbox.Items.Add(foodBRdbtn.Text + " - " + priceTxtBox.Text);
-                displayListbox.Items.Add("Discount Amount:        " + discountAmountTxtbox.Text);
+                // Use helper function for formatting
+                displayListbox.Items.Add(FormatReceiptLine(foodBRdbtn.Text, priceTxtBox.Text));
+                displayListbox.Items.Add(FormatReceiptLine("Discount Amount:", discountAmountTxtbox.Text));
 
                 qtyTxtbox.Text = "0";
                 qtyTxtbox.Focus();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Error loading Food B: " + ex.Message, "Error");
+                MessageBox.Show("Error loading Food B");
             }
         }
 
@@ -829,14 +529,16 @@ namespace ACOTIN_POS_APPLICATION
 
                 changeTxtbox.Text = change.ToString("n");
 
-                displayListbox.Items.Add("Total no. of Items:    " + totalQtyTxtbox.Text);
-                displayListbox.Items.Add("Total Bills:           " + totalBillsTxtbox.Text);
-                displayListbox.Items.Add("Cash Given:            " + cash_given.ToString("n"));
-                displayListbox.Items.Add("Change:                " + changeTxtbox.Text);
+                // RECEIPT-STYLE FORMAT - aligned like a real receipt
+                displayListbox.Items.Add("-----------------------------------------------------");
+                displayListbox.Items.Add("Total no. of Items:".PadRight(42) + totalQtyTxtbox.Text);
+                displayListbox.Items.Add("Total Bills:".PadRight(42) + totalBillsTxtbox.Text);
+                displayListbox.Items.Add("Cash Given:".PadRight(42) +  cash_given.ToString("n"));
+                displayListbox.Items.Add("Change:".PadRight(42) +  changeTxtbox.Text);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Invalid input. Please check your entries.", "Error");
+                MessageBox.Show("Invalid input. Please check your entries.");
             }
         }
 
@@ -916,13 +618,32 @@ namespace ACOTIN_POS_APPLICATION
 
                 print.Show();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Error opening transfer form.", "Error");
+                MessageBox.Show("Error opening transfer form.");
             }
         }
 
         private void button2_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                ACOTIN_POS_APPLICATION.Activity4_PrintFrm print = new ACOTIN_POS_APPLICATION.Activity4_PrintFrm();
+                print.printDisplayListbox.Items.AddRange(this.displayListbox.Items);
+                print.Show();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error opening print form.");
+            }
+        }
+
+        private void DisplayPictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TransferButton_Click(object sender, EventArgs e)
         {
             try
             {
@@ -937,17 +658,27 @@ namespace ACOTIN_POS_APPLICATION
                 print.cashGivenTxtbox.Text = this.cashGivenTxtbox.Text;
                 print.changeTxtbox.Text = this.changeTxtbox.Text;
 
+                print.foodARdbtn.Checked = this.foodARdbtn.Checked;
+                print.foodBRdbtn.Checked = this.foodBRdbtn.Checked;
+
+                print.A_ChickenMcDoBox.Checked = this.A_ChickenMcDoBox.Checked;
+                print.A_BFFFriesBox.Checked = this.A_BFFFriesBox.Checked;
+                print.A_DrinksBox.Checked = this.A_DrinksBox.Checked;
+                print.A_RiceBox.Checked = this.A_RiceBox.Checked;
+                print.A_Gravy.Checked = this.A_Gravy.Checked;
+
+                print.B_ApplePieBox.Checked = this.B_ApplePieBox.Checked;
+                print.B_BFFFriesBox.Checked = this.B_BFFFriesBox.Checked;
+                print.B_BurgerMcDoBox.Checked = this.B_BurgerMcDoBox.Checked;
+                print.B_ChickenSandwichBox.Checked = this.B_ChickenSandwichBox.Checked;
+                print.B_QuarterPounderBox.Checked = this.B_QuarterPounderBox.Checked;
+
                 print.Show();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Error opening transfer form.", "Error");
+                MessageBox.Show("Error opening transfer form.");
             }
-        }
-
-        private void DisplayPictureBox_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

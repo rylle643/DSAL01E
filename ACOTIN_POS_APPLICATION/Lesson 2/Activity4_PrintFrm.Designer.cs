@@ -32,12 +32,12 @@
             // 
             // printDisplayListbox
             // 
-            this.printDisplayListbox.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printDisplayListbox.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.printDisplayListbox.FormattingEnabled = true;
-            this.printDisplayListbox.ItemHeight = 17;
-            this.printDisplayListbox.Location = new System.Drawing.Point(2, 86);
+            this.printDisplayListbox.ItemHeight = 15;
+            this.printDisplayListbox.Location = new System.Drawing.Point(12, 88);
             this.printDisplayListbox.Name = "printDisplayListbox";
-            this.printDisplayListbox.Size = new System.Drawing.Size(407, 497);
+            this.printDisplayListbox.Size = new System.Drawing.Size(366, 589);
             this.printDisplayListbox.TabIndex = 10;
             this.printDisplayListbox.SelectedIndexChanged += new System.EventHandler(this.printDisplayListbox_SelectedIndexChanged);
             // 
@@ -46,7 +46,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(107, 9);
+            this.label1.Location = new System.Drawing.Point(84, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(208, 37);
             this.label1.TabIndex = 11;
@@ -58,7 +58,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(150, 46);
+            this.label2.Location = new System.Drawing.Point(127, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 37);
             this.label2.TabIndex = 12;
@@ -68,7 +68,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(410, 587);
+            this.ClientSize = new System.Drawing.Size(389, 689);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.printDisplayListbox);
