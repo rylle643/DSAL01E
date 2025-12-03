@@ -64,22 +64,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="POS2_DataBase.cs">
+    <Compile Include="Finals\employee_dbconnection.cs" />
+    <Compile Include="Finals\employee_registration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="POS2_DataBase.Designer.cs">
+    <Compile Include="Finals\employee_registration.Designer.cs">
+      <DependentUpon>employee_registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finals\POS2_DataBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finals\POS2_DataBase.Designer.cs">
       <DependentUpon>POS2_DataBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Finals\loginDb_dbconnections.cs" />
+    <Compile Include="Finals\payrol_dbconnection.cs" />
+    <Compile Include="Finals\payrol_variables.cs" />
     <Compile Include="POS1_DataBase_Combo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="POS1_DataBase_Combo.Designer.cs">
       <DependentUpon>POS1_DataBase_Combo.cs</DependentUpon>
     </Compile>
-    <Compile Include="POS1_DataBase.cs">
+    <Compile Include="Finals\POS1_DataBase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="POS1_DataBase.Designer.cs">
+    <Compile Include="Finals\POS1_DataBase.Designer.cs">
       <DependentUpon>POS1_DataBase.cs</DependentUpon>
     </Compile>
     <Compile Include="Lesson 2\Activity1_Function.cs">
@@ -199,13 +209,13 @@
       <DependentUpon>MainFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Classforms\Price_Item_Value.cs" />
-    <Compile Include="POS_Admin.cs">
+    <Compile Include="Finals\POS_Admin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="POS_Admin.Designer.cs">
+    <Compile Include="Finals\POS_Admin.Designer.cs">
       <DependentUpon>POS_Admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="pos_dbconnection.cs" />
+    <Compile Include="Finals\pos_dbconnection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classforms\Variables.cs" />
@@ -221,13 +231,17 @@
     <Compile Include="SampleDatabaseDb.Designer.cs">
       <DependentUpon>SampleDatabaseDb.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="POS2_DataBase.resx">
+    <Compile Include="Finals\useraccount_db_connection.cs" />
+    <EmbeddedResource Include="Finals\employee_registration.resx">
+      <DependentUpon>employee_registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finals\POS2_DataBase.resx">
       <DependentUpon>POS2_DataBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="POS1_DataBase_Combo.resx">
       <DependentUpon>POS1_DataBase_Combo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="POS1_DataBase.resx">
+    <EmbeddedResource Include="Finals\POS1_DataBase.resx">
       <DependentUpon>POS1_DataBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lesson 2\Activity1_Function.resx">
@@ -287,7 +301,7 @@
     <EmbeddedResource Include="MainFrm.resx">
       <DependentUpon>MainFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="POS_Admin.resx">
+    <EmbeddedResource Include="Finals\POS_Admin.resx">
       <DependentUpon>POS_Admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
