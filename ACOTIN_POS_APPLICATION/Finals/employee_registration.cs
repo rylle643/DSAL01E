@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ACOTIN_POS_APPLICATION
 {
@@ -62,7 +63,18 @@ namespace ACOTIN_POS_APPLICATION
             employeeStatusTxtBox.Clear();
             departmentTxtBox.Clear();
             emp_num_dependentsTxtBox.Clear();
-            picturepathTxtBox.Clear(); 
+            picturepathTxtBox.Clear();
+
+            comboBox1.SelectedIndex = 0; 
+            comboBox2.SelectedIndex = 2; 
+            comboBox3.SelectedIndex = 0;
+
+            dateTimePicker6.Value = DateTime.Now;
+            dateTimePicker5.Value = DateTime.Now;
+            dateTimePicker4.Value = DateTime.Now;
+            dateTimePicker1.Value = DateTime.Now;
+            dateTimePicker2.Value = DateTime.Now;
+
             string defaultImagePath = Path.Combine(Application.StartupPath, "Resources", "no-image-available-icon-vector.jpg");
             if (File.Exists(defaultImagePath))
             {
@@ -70,15 +82,43 @@ namespace ACOTIN_POS_APPLICATION
             }
             else
             {
-                picbox.Image = null; // or use a placeholder
+                picbox.Image = null;
             }
 
             emp_idTxtBox.Focus();
         }
+
+        private void PopulateAllComboBoxes()
+        {
+            comboBox1.Items.Clear();
+            for (int age = 18; age <= 65; age++)
+            {
+                comboBox1.Items.Add(age.ToString());
+            }
+            comboBox1.SelectedIndex = 0;
+
+            comboBox2.Items.Clear();
+            comboBox2.Items.Add("Male");
+            comboBox2.Items.Add("Female");
+            comboBox2.Items.Add("Other");
+            comboBox2.SelectedIndex = 0; 
+
+            comboBox3.Items.Clear();
+            comboBox3.Items.Add("Single");
+            comboBox3.Items.Add("Married");
+            comboBox3.Items.Add("Divorced");
+            comboBox3.Items.Add("Widowed");
+            comboBox3.SelectedIndex = 0;
+        }
+
         private void employee_registration_Load(object sender, EventArgs e)
         {
             try
             {
+
+
+                PopulateAllComboBoxes();
+
                 picturepathTxtBox.Hide();
                 string defaultImagePath = Path.Combine(Application.StartupPath, "Resources", "no-image-available-icon-vector.jpg");
                 if (File.Exists(defaultImagePath))
@@ -93,9 +133,9 @@ namespace ACOTIN_POS_APPLICATION
                 emp_db_connect.employee_sqldatasetSELECT();
                 dataGridView1.DataSource = emp_db_connect.employee_sql_dataset.Tables[0];
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Error: " + ex.Message); // Better error message
+                MessageBox.Show("Error occurs in this area. Please contact your administrator!"); 
             }
         }
 
@@ -103,15 +143,13 @@ namespace ACOTIN_POS_APPLICATION
         {
             try
             {
-                //open_file_image();
                 OpenFileDialog openFileDialog1 = new OpenFileDialog();
                 openFileDialog1.Filter = "Image File | *.gif; *.jpg; *.png; *.bmp";
-                //filtering of image display using specific file extension
-                openFileDialog1.ShowDialog(); //displaying the file dialogbox where the possible image located
+                openFileDialog1.ShowDialog(); 
 
-                picbox.Image = Image.FromFile(openFileDialog1.FileName); //inserting of selected image to the picturebox shown in the GUI interface
-                picpath = openFileDialog1.FileName; //storing the file location of the selected image inserted in picturebox to a variable
-                picturepathTxtBox.Text = picpath; //displaying the file location of the image stored in a variable to the textbox
+                picbox.Image = Image.FromFile(openFileDialog1.FileName);
+                picpath = openFileDialog1.FileName;
+                picturepathTxtBox.Text = picpath;
             }
             catch (Exception)
             {
@@ -138,22 +176,19 @@ namespace ACOTIN_POS_APPLICATION
 
                 dataGridView1.DataSource = emp_db_connect.employee_sql_dataset.Tables[0];
 
-                // Column indices are 0-based, so subtract 1 from the database column number
-                // Basic Information (columns 2-14 in DB = indices 1-13 in code)
                 fnameTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][2].ToString();
                 mnameTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][3].ToString();
                 surnameTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][4].ToString();
-                comboBox6.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][5].ToString();  // emp_age
-                comboBox5.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][6].ToString();  // emp_gender
+                comboBox1.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][5].ToString();  
+                comboBox2.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][6].ToString();  
                 sssTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][7].ToString();
                 tinTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][8].ToString();
                 philhealthTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][9].ToString();
                 pagibigTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][10].ToString();
-                comboBox4.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][11].ToString();  // emp_status
+                comboBox3.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][11].ToString();
                 heightTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][12].ToString();
                 weightTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][13].ToString();
 
-                // Address Information (columns 15-25 in DB = indices 14-24 in code)
                 current_yrsTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][14].ToString();
                 current_ho_noTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][15].ToString();
                 currentSub_noTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][16].ToString();
@@ -166,7 +201,6 @@ namespace ACOTIN_POS_APPLICATION
                 current_countryTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][23].ToString();
                 current_ZipTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][24].ToString();
 
-                // Elementary Education (columns 26-29 in DB = indices 25-28 in code)
                 elem_nameTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][25].ToString();
                 elem_addressTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][26].ToString();
 
@@ -178,7 +212,6 @@ namespace ACOTIN_POS_APPLICATION
 
                 elem_awardTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][28].ToString();
 
-                // Junior High Education (columns 30-33 in DB = indices 29-32 in code)
                 junior_nameTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][29].ToString();
                 junior_addressTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][30].ToString();
 
@@ -190,7 +223,6 @@ namespace ACOTIN_POS_APPLICATION
 
                 junior_awardTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][32].ToString();
 
-                // Senior High Education (columns 34-38 in DB = indices 33-37 in code)
                 senior_nameTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][33].ToString();
                 senior_addressTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][34].ToString();
 
@@ -201,9 +233,8 @@ namespace ACOTIN_POS_APPLICATION
                 }
 
                 senior_awardTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][36].ToString();
-                senior_courseTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][37].ToString();  // track
+                senior_courseTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][37].ToString();
 
-                // College Education (columns 39-43 in DB = indices 38-42 in code)
                 college_school_nameTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][38].ToString();
                 college_addressTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][39].ToString();
 
@@ -214,9 +245,8 @@ namespace ACOTIN_POS_APPLICATION
                 }
 
                 college_awardTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][41].ToString();
-                college_degreeTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][42].ToString();  // college_course
+                college_degreeTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][42].ToString();
 
-                // Employment Information (columns 44-49 in DB = indices 43-48 in code)
                 othersTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][43].ToString();
                 positionTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][44].ToString();
                 employeeStatusTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][45].ToString();
@@ -230,7 +260,6 @@ namespace ACOTIN_POS_APPLICATION
                 departmentTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][47].ToString();
                 emp_num_dependentsTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][48].ToString();
 
-                // Picture (column 50 in DB = index 49 in code)
                 picturepathTxtBox.Text = emp_db_connect.employee_sql_dataset.Tables[0].Rows[0][49].ToString();
 
                 if (File.Exists(picturepathTxtBox.Text))
@@ -262,13 +291,13 @@ namespace ACOTIN_POS_APPLICATION
                     fnameTxtBox.Text + "', '" +
                     mnameTxtBox.Text + "', '" +
                     surnameTxtBox.Text + "', '" +
-                    comboBox6.Text + "', '" +
-                    comboBox5.Text + "', '" +
+                    comboBox1.Text + "', '" +
+                    comboBox2.Text + "', '" +
                     sssTxtBox.Text + "', '" +
                     tinTxtBox.Text + "', '" +
                     philhealthTxtBox.Text + "', '" +
                     pagibigTxtBox.Text + "', '" +
-                    comboBox4.Text + "', '" +
+                    comboBox3.Text + "', '" +
                     heightTxtBox.Text + "', '" +
                     weightTxtBox.Text + "', '" +
                     current_yrsTxtBox.Text + "', '" +
@@ -332,13 +361,13 @@ namespace ACOTIN_POS_APPLICATION
                 emp_db_connect.employee_sql = "UPDATE pos_empRegTbl SET emp_fname = '" + fnameTxtBox.Text + "', " +
                     "emp_mname = '" + mnameTxtBox.Text + "', " +
                     "emp_surname = '" + surnameTxtBox.Text + "', " +
-                    "emp_age = '" + comboBox6.Text + "', " +
-                    "emp_gender = '" + comboBox5.Text + "', " +
+                    "emp_age = '" + comboBox1.Text + "', " +
+                    "emp_gender = '" + comboBox2.Text + "', " +
                     "emp_sss_no = '" + sssTxtBox.Text + "', " +
                     "emp_tin_no = '" + tinTxtBox.Text + "', " +
                     "emp_philhealth_no = '" + philhealthTxtBox.Text + "', " +
                     "emp_pagibig_no = '" + pagibigTxtBox.Text + "', " +
-                    "emp_status = '" + comboBox4.Text + "', " +
+                    "emp_status = '" + comboBox3.Text + "', " +
                     "emp_height = '" + heightTxtBox.Text + "', " +
                     "emp_weight = '" + weightTxtBox.Text + "', " +
                     "add_yrs_stay = '" + current_yrsTxtBox.Text + "', " +

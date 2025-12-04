@@ -34,7 +34,7 @@
             this.surnameTxtBox = new System.Windows.Forms.TextBox();
             this.heightTxtBox = new System.Windows.Forms.TextBox();
             this.picbox = new System.Windows.Forms.PictureBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.textBox43 = new System.Windows.Forms.TextBox();
             this.sssTxtBox = new System.Windows.Forms.TextBox();
             this.BrowseButton = new System.Windows.Forms.Button();
@@ -44,9 +44,9 @@
             this.label51 = new System.Windows.Forms.Label();
             this.pagibigTxtBox = new System.Windows.Forms.TextBox();
             this.label50 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label49 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label48 = new System.Windows.Forms.Label();
             this.mnameTxtBox = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
@@ -154,7 +154,7 @@
             this.groupBox1.Controls.Add(this.surnameTxtBox);
             this.groupBox1.Controls.Add(this.heightTxtBox);
             this.groupBox1.Controls.Add(this.picbox);
-            this.groupBox1.Controls.Add(this.comboBox4);
+            this.groupBox1.Controls.Add(this.comboBox3);
             this.groupBox1.Controls.Add(this.textBox43);
             this.groupBox1.Controls.Add(this.sssTxtBox);
             this.groupBox1.Controls.Add(this.BrowseButton);
@@ -164,9 +164,9 @@
             this.groupBox1.Controls.Add(this.label51);
             this.groupBox1.Controls.Add(this.pagibigTxtBox);
             this.groupBox1.Controls.Add(this.label50);
-            this.groupBox1.Controls.Add(this.comboBox5);
+            this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.label49);
-            this.groupBox1.Controls.Add(this.comboBox6);
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label48);
             this.groupBox1.Controls.Add(this.mnameTxtBox);
             this.groupBox1.Controls.Add(this.label47);
@@ -231,14 +231,15 @@
             this.picbox.TabIndex = 82;
             this.picbox.TabStop = false;
             // 
-            // comboBox4
+            // comboBox3
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(182, 779);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(207, 25);
-            this.comboBox4.TabIndex = 109;
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(182, 779);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(207, 25);
+            this.comboBox3.TabIndex = 109;
             // 
             // textBox43
             // 
@@ -321,14 +322,15 @@
             this.label50.TabIndex = 87;
             this.label50.Text = "Middle Name:";
             // 
-            // comboBox5
+            // comboBox2
             // 
-            this.comboBox5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(182, 556);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(207, 25);
-            this.comboBox5.TabIndex = 104;
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(182, 556);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(207, 25);
+            this.comboBox2.TabIndex = 104;
             // 
             // label49
             // 
@@ -340,14 +342,15 @@
             this.label49.TabIndex = 88;
             this.label49.Text = "Surname:";
             // 
-            // comboBox6
+            // comboBox1
             // 
-            this.comboBox6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(182, 511);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(207, 25);
-            this.comboBox6.TabIndex = 103;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(182, 511);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(207, 25);
+            this.comboBox1.TabIndex = 103;
             // 
             // label48
             // 
@@ -1296,7 +1299,7 @@
         private System.Windows.Forms.TextBox surnameTxtBox;
         private System.Windows.Forms.TextBox heightTxtBox;
         private System.Windows.Forms.PictureBox picbox;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.TextBox textBox43;
         private System.Windows.Forms.TextBox sssTxtBox;
         private System.Windows.Forms.Button BrowseButton;
@@ -1306,9 +1309,9 @@
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.TextBox pagibigTxtBox;
         private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.TextBox mnameTxtBox;
         private System.Windows.Forms.Label label47;
