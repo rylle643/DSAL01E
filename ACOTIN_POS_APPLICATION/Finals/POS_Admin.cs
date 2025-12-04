@@ -61,7 +61,7 @@ namespace ACOTIN_POS_APPLICATION
         {
             try
             {
-                pic = Resources.no_image_available_icon_vector;
+                pic = Resources.no_image;
                 picpathTxtbox1.Clear(); picpathTxtbox2.Clear(); picpathTxtbox3.Clear(); picpathTxtbox4.Clear(); picpathTxtbox5.Clear();
                 picpathTxtbox6.Clear(); picpathTxtbox7.Clear(); picpathTxtbox8.Clear(); picpathTxtbox9.Clear(); picpathTxtbox10.Clear();
                 picpathTxtbox11.Clear(); picpathTxtbox12.Clear(); picpathTxtbox13.Clear(); picpathTxtbox14.Clear(); picpathTxtbox15.Clear();

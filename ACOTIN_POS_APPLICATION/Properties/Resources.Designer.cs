@@ -113,9 +113,9 @@ namespace ACOTIN_POS_APPLICATION.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap no_image_available_icon_vector {
+        internal static System.Drawing.Bitmap no_image {
             get {
-                object obj = ResourceManager.GetObject("no-image-available-icon-vector", resourceCulture);
+                object obj = ResourceManager.GetObject("no_image", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +126,16 @@ namespace ACOTIN_POS_APPLICATION.Properties {
         internal static System.Drawing.Bitmap Saved {
             get {
                 object obj = ResourceManager.GetObject("Saved", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_icon_png_8 {
+            get {
+                object obj = ResourceManager.GetObject("search-icon-png-8", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

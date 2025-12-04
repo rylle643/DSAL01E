@@ -70,7 +70,7 @@ namespace ACOTIN_POS_APPLICATION
             SSSLoanTxt.Text = "750.00";
             SSSLoanTxt.Enabled = false;
 
-            textBox13.Text = "Lyceum of the Philippines University - Cavite";
+            textBox13.Text = "Company Name";
             textBox13.Enabled = false;
 
             GrossIncomeTxt.Enabled = false;

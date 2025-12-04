@@ -80,6 +80,12 @@
     <Compile Include="Finals\loginDb_dbconnections.cs" />
     <Compile Include="Finals\payrol_dbconnection.cs" />
     <Compile Include="Finals\payrol_variables.cs" />
+    <Compile Include="Finals\Payrol_Database.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finals\Payrol_Database.Designer.cs">
+      <DependentUpon>Payrol_Database.cs</DependentUpon>
+    </Compile>
     <Compile Include="POS1_DataBase_Combo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Finals\POS2_DataBase.resx">
       <DependentUpon>POS2_DataBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finals\Payrol_Database.resx">
+      <DependentUpon>Payrol_Database.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="POS1_DataBase_Combo.resx">
       <DependentUpon>POS1_DataBase_Combo.cs</DependentUpon>

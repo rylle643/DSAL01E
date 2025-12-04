@@ -148,7 +148,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.groupBox1.BackColor = System.Drawing.Color.LavenderBlush;
             this.groupBox1.Controls.Add(this.picturepathTxtBox);
             this.groupBox1.Controls.Add(this.weightTxtBox);
             this.groupBox1.Controls.Add(this.surnameTxtBox);
@@ -480,7 +480,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.groupBox2.BackColor = System.Drawing.Color.LavenderBlush;
             this.groupBox2.Controls.Add(this.current_ho_noTxtBox);
             this.groupBox2.Controls.Add(this.current_yrsTxtBox);
             this.groupBox2.Controls.Add(this.senior_courseTxtBox);
@@ -956,7 +956,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.groupBox3.BackColor = System.Drawing.Color.LavenderBlush;
             this.groupBox3.Controls.Add(this.emp_num_dependentsTxtBox);
             this.groupBox3.Controls.Add(this.departmentTxtBox);
             this.groupBox3.Controls.Add(this.dateTimePicker2);
@@ -1273,7 +1273,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackColor = System.Drawing.Color.PaleVioletRed;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);

@@ -52,7 +52,7 @@ namespace ACOTIN_POS_APPLICATION
                 TotalNoofUnittextBox.Text = totalUnits.ToString();
                 TotalNoofUnitsTxt.Text = totalUnits.ToString();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Invalid input. Please check lecture and lab units.", "Error");
             }
@@ -141,7 +141,7 @@ namespace ACOTIN_POS_APPLICATION
                 TotalTuitionFee.Text = totalTuitionFee.ToString("n");
                 TotalOtherSchoolFees.Text = MiscFee.ToString("n");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Invalid input. Please check fee entries.", "Error");
             }
