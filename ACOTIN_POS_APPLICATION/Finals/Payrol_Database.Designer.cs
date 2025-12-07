@@ -58,9 +58,11 @@
             this.picturepathTxtBox = new System.Windows.Forms.TextBox();
             this.paydateDatePicker = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
+            this.Search_EditButton = new System.Windows.Forms.Button();
             this.label52 = new System.Windows.Forms.Label();
             this.SearchButton = new System.Windows.Forms.Button();
             this.empNumberTxtBox = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.numDependentsTxtBox = new System.Windows.Forms.TextBox();
             this.departmentTxtBox = new System.Windows.Forms.TextBox();
             this.emp_statusTxtbox = new System.Windows.Forms.TextBox();
@@ -112,13 +114,11 @@
             this.label32 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.payslip_viewListBox = new System.Windows.Forms.ListView();
+            this.payslip_viewListBox = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.Search_EditButton = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // NetIncomeTxt
@@ -497,7 +497,6 @@
             this.groupBox1.Size = new System.Drawing.Size(1279, 1017);
             this.groupBox1.TabIndex = 84;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // picturepathTxtBox
             // 
@@ -530,6 +529,20 @@
             this.label3.Size = new System.Drawing.Size(57, 17);
             this.label3.TabIndex = 160;
             this.label3.Text = "Paydate:";
+            // 
+            // Search_EditButton
+            // 
+            this.Search_EditButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Search_EditButton.BackgroundImage = global::ACOTIN_POS_APPLICATION.Properties.Resources.search_icon_png_8;
+            this.Search_EditButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Search_EditButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Search_EditButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Search_EditButton.Location = new System.Drawing.Point(452, 102);
+            this.Search_EditButton.Name = "Search_EditButton";
+            this.Search_EditButton.Size = new System.Drawing.Size(105, 65);
+            this.Search_EditButton.TabIndex = 159;
+            this.Search_EditButton.UseVisualStyleBackColor = false;
+            this.Search_EditButton.Click += new System.EventHandler(this.Search_EditButton_Click);
             // 
             // label52
             // 
@@ -564,6 +577,18 @@
             this.empNumberTxtBox.Name = "empNumberTxtBox";
             this.empNumberTxtBox.Size = new System.Drawing.Size(193, 25);
             this.empNumberTxtBox.TabIndex = 157;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBox1.Location = new System.Drawing.Point(967, 32);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(290, 290);
+            this.pictureBox1.TabIndex = 155;
+            this.pictureBox1.TabStop = false;
             // 
             // numDependentsTxtBox
             // 
@@ -633,7 +658,7 @@
             this.DELETEbutton.BackColor = System.Drawing.Color.Ivory;
             this.DELETEbutton.Cursor = System.Windows.Forms.Cursors.Default;
             this.DELETEbutton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DELETEbutton.Location = new System.Drawing.Point(1108, 946);
+            this.DELETEbutton.Location = new System.Drawing.Point(979, 946);
             this.DELETEbutton.Name = "DELETEbutton";
             this.DELETEbutton.Size = new System.Drawing.Size(123, 43);
             this.DELETEbutton.TabIndex = 127;
@@ -646,7 +671,7 @@
             this.EDITbutton.BackColor = System.Drawing.Color.Ivory;
             this.EDITbutton.Cursor = System.Windows.Forms.Cursors.Default;
             this.EDITbutton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EDITbutton.Location = new System.Drawing.Point(979, 946);
+            this.EDITbutton.Location = new System.Drawing.Point(850, 946);
             this.EDITbutton.Name = "EDITbutton";
             this.EDITbutton.Size = new System.Drawing.Size(123, 43);
             this.EDITbutton.TabIndex = 126;
@@ -659,7 +684,7 @@
             this.Savebutton.BackColor = System.Drawing.Color.Ivory;
             this.Savebutton.Cursor = System.Windows.Forms.Cursors.Default;
             this.Savebutton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Savebutton.Location = new System.Drawing.Point(850, 946);
+            this.Savebutton.Location = new System.Drawing.Point(721, 946);
             this.Savebutton.Name = "Savebutton";
             this.Savebutton.Size = new System.Drawing.Size(123, 43);
             this.Savebutton.TabIndex = 125;
@@ -672,7 +697,7 @@
             this.EXITbutton.BackColor = System.Drawing.Color.Ivory;
             this.EXITbutton.Cursor = System.Windows.Forms.Cursors.Default;
             this.EXITbutton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EXITbutton.Location = new System.Drawing.Point(721, 946);
+            this.EXITbutton.Location = new System.Drawing.Point(1108, 946);
             this.EXITbutton.Name = "EXITbutton";
             this.EXITbutton.Size = new System.Drawing.Size(123, 43);
             this.EXITbutton.TabIndex = 124;
@@ -704,6 +729,7 @@
             this.PREVIEWbutton.TabIndex = 122;
             this.PREVIEWbutton.Text = "PREVIEW PAYSLIP DETAILS";
             this.PREVIEWbutton.UseVisualStyleBackColor = false;
+            this.PREVIEWbutton.Click += new System.EventHandler(this.PREVIEWbutton_Click);
             // 
             // PRINTbutton
             // 
@@ -839,6 +865,7 @@
             // others_loanCombo
             // 
             this.others_loanCombo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.others_loanCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.others_loanCombo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.others_loanCombo.FormattingEnabled = true;
             this.others_loanCombo.Location = new System.Drawing.Point(863, 750);
@@ -1132,13 +1159,13 @@
             // 
             // payslip_viewListBox
             // 
-            this.payslip_viewListBox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.payslip_viewListBox.HideSelection = false;
-            this.payslip_viewListBox.Location = new System.Drawing.Point(21, 52);
+            this.payslip_viewListBox.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.payslip_viewListBox.FormattingEnabled = true;
+            this.payslip_viewListBox.ItemHeight = 18;
+            this.payslip_viewListBox.Location = new System.Drawing.Point(20, 44);
             this.payslip_viewListBox.Name = "payslip_viewListBox";
-            this.payslip_viewListBox.Size = new System.Drawing.Size(555, 937);
-            this.payslip_viewListBox.TabIndex = 165;
-            this.payslip_viewListBox.UseCompatibleStateImageBehavior = false;
+            this.payslip_viewListBox.Size = new System.Drawing.Size(558, 940);
+            this.payslip_viewListBox.TabIndex = 164;
             // 
             // label4
             // 
@@ -1151,32 +1178,6 @@
             this.label4.Size = new System.Drawing.Size(218, 25);
             this.label4.TabIndex = 163;
             this.label4.Text = "PAYSLIP VIEW DETAILS";
-            // 
-            // Search_EditButton
-            // 
-            this.Search_EditButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Search_EditButton.BackgroundImage = global::ACOTIN_POS_APPLICATION.Properties.Resources.search_icon_png_8;
-            this.Search_EditButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Search_EditButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Search_EditButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Search_EditButton.Location = new System.Drawing.Point(452, 102);
-            this.Search_EditButton.Name = "Search_EditButton";
-            this.Search_EditButton.Size = new System.Drawing.Size(105, 65);
-            this.Search_EditButton.TabIndex = 159;
-            this.Search_EditButton.UseVisualStyleBackColor = false;
-            this.Search_EditButton.Click += new System.EventHandler(this.Search_EditButton_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox1.Location = new System.Drawing.Point(967, 32);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(290, 290);
-            this.pictureBox1.TabIndex = 155;
-            this.pictureBox1.TabStop = false;
             // 
             // Payrol_Database
             // 
@@ -1191,9 +1192,9 @@
             this.Load += new System.EventHandler(this.Payrol_Database_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1286,7 +1287,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox picturepathTxtBox;
         private System.Windows.Forms.DateTimePicker paydateDatePicker;
-        private System.Windows.Forms.ListView payslip_viewListBox;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ListBox payslip_viewListBox;
     }
 }
