@@ -91,6 +91,7 @@ namespace ACOTIN_POS_APPLICATION
         private void PopulateAllComboBoxes()
         {
             comboBox1.Items.Clear();
+            comboBox1.Items.Add("Select...");
             for (int age = 18; age <= 65; age++)
             {
                 comboBox1.Items.Add(age.ToString());
@@ -98,12 +99,14 @@ namespace ACOTIN_POS_APPLICATION
             comboBox1.SelectedIndex = 0;
 
             comboBox2.Items.Clear();
+            comboBox2.Items.Add("Select...");
             comboBox2.Items.Add("Male");
             comboBox2.Items.Add("Female");
             comboBox2.Items.Add("Other");
             comboBox2.SelectedIndex = 0; 
 
             comboBox3.Items.Clear();
+            comboBox3.Items.Add("Select...");
             comboBox3.Items.Add("Single");
             comboBox3.Items.Add("Married");
             comboBox3.Items.Add("Divorced");
@@ -347,9 +350,9 @@ namespace ACOTIN_POS_APPLICATION
                 dataGridView1.DataSource = emp_db_connect.employee_sql_dataset.Tables[0];
                 cleartextboxes();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Error occurs in this area. Please contact your administrator!");
+                MessageBox.Show("Error: " + ex.Message + "\n\nPlease contact your administrator!");
             }
         }
 

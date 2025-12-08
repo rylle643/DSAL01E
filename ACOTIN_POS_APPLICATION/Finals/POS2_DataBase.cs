@@ -680,5 +680,10 @@ namespace ACOTIN_POS_APPLICATION
                 MessageBox.Show("Error opening transfer form.");
             }
         }
+
+        private void priceTxtBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

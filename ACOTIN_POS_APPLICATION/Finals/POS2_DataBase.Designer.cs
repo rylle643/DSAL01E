@@ -475,6 +475,7 @@
             this.priceTxtBox.Name = "priceTxtBox";
             this.priceTxtBox.Size = new System.Drawing.Size(212, 27);
             this.priceTxtBox.TabIndex = 1;
+            this.priceTxtBox.TextChanged += new System.EventHandler(this.priceTxtBox_TextChanged);
             // 
             // qtyTxtbox
             // 
