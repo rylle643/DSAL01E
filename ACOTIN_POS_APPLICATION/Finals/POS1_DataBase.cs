@@ -197,7 +197,8 @@ namespace ACOTIN_POS_APPLICATION
                 }
 
                 DateTime dateTime = DateTime.Now;
-                time_dateLabel.Text = dateTime.ToString("MMMM dd, yyyy");
+                time_dateLabel.Text = dateTime.ToString("M/d/yyyy");
+
             }
             catch (Exception)
             {
@@ -442,8 +443,11 @@ namespace ACOTIN_POS_APPLICATION
 
         private void button5_Click(object sender, EventArgs e)
         {
+
             try
             {
+                string dateToSave = DateTime.Now.ToString("M/d/yyyy");
+
                 if (radioButton1.Checked == true)
                 {
                     posdb_connect.pos_sql = "INSERT INTO salesTbl (product_name, product_quantity_per_transaction, product_price, discount_option, discount_amount_per_transaction, discounted_amount_per_transaction, summary_total_quantity, summary_total_disc_given, summary_total_discounted_amount, terminal_no, time_date, emp_id) VALUES ('" + itemnametxtbox.Text + "', '" + quantitytextbox.Text + "', '" + pricetextbox.Text + "', '" + radioButton1.Text + "', '" + discounttxtbox.Text + "', '" + discountedtxtbox.Text + "', '" + qty_totaltxtbox.Text + "', '" + discount_totaltxtbox.Text + "', '" + discounted_totaltxtbox.Text + "', '" + terminal_nolabel.Text + "', '" + time_dateLabel.Text + "', '" + emp_idLabel.Text + "')";

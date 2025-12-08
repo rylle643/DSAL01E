@@ -21,15 +21,24 @@ namespace ACOTIN_POS_APPLICATION
         public void payrol_connString()
         {
             //codes to establish connection from C# forms to the SQL Server database
-            payrol_sql_connection = new SqlConnection();
-            payrol_connectionString = "Data Source=Rylle ;Initial Catalog=POS_Database_V3; user id=sa; password=rylle";
+            payrol_connectionString = "Data Source=Rylle ;Initial Catalog=POS_Database; user id=sa; password=rylle";
             payrol_sql_connection = new SqlConnection(payrol_connectionString);
-            payrol_sql_connection.ConnectionString = payrol_connectionString;
-            payrol_sql_connection.Open();
+
+            // Open connection if closed
+            if (payrol_sql_connection.State == ConnectionState.Closed)
+            {
+                payrol_sql_connection.Open();
+            }
         }
 
         public void payrol_cmd()//public function codes that support the mssql query
         {
+            // IMPORTANT FIX: Check and open connection if it's closed
+            if (payrol_sql_connection.State == ConnectionState.Closed)
+            {
+                payrol_sql_connection.Open();
+            }
+
             payrol_sql_command = new SqlCommand(payrol_sql, payrol_sql_connection);
             payrol_sql_command.CommandType = CommandType.Text;
         }

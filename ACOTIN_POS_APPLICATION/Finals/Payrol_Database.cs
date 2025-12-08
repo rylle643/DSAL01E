@@ -101,7 +101,7 @@ namespace ACOTIN_POS_APPLICATION
                     otherLoanValue = others_loanCombo.Text + ": " + OtherLoanTxt.Text;
                 }
 
-                db.payrol_sql = "UPDATE payrolTbl SET basic_rate_hr = '" + BasicRateHourTxt.Text + "', basic_no_of_hrs_cutOff = '" + BasicNoofHoursTxt.Text + "', basic_income_per_cutoff = '" + BasicIncomeTxt.Text + "', honorarium_rate_hr = '" + HonorariumRateHourTxt.Text + "', honorarium_no_of_hrs_cut0ff = '" + HonorariumNoofHoursTxt.Text + "', honorarium_income_per_cutoff = '" + HonorariumIncomeTxt.Text + "', other_rate_hr = '" + OtherRateHourTxt.Text + "', other_no_of_hrs_cutOff = '" + OtherNoofHoursTxt.Text + "', other_income_per_cutoff = '" + OtherIncomeTxt.Text + "', sss_contrib = '" + SSSContributionTxt.Text + "', philhealth_contrib = '" + PhilhealthContributionsTxt.Text + "', pagibig_contrib = '" + PagibigContributionsTxt.Text + "', tax_contrib = '" + IncomeTaxTxt.Text + "', sss_loan = '" + SSSLoanTxt.Text + "', pagibig_loan = '" + PagibigLoansTxt.Text + "', fac_savings_deposit = '" + FacultySavingsDepositTxt.Text + "', fac_savings_loan = '" + FacultySavingsLoansTxt.Text + "', salary_loan = '" + SalaryLoanTxt.Text + "', other_loans = '" + otherLoanValue + "', total_deductions = '" + TotalDeductionTxt.Text + "', gross_income = '" + GrossIncomeTxt.Text + "', net_income = '" + NetIncomeTxt.Text + "', pay_date = '" + paydateDatePicker.Text + "' WHERE payrolTbl.emp_id = '" + empNumberTxtBox.Text + "' AND pay_date = '" + paydateDatePicker.Text + "'";
+                db.payrol_sql = "UPDATE payrolTbl SET basic_rate_hr = '" + BasicRateHourTxt.Text + "', basic_no_of_hrs_cutoff = '" + BasicNoofHoursTxt.Text + "', basic_income_per_cutoff = '" + BasicIncomeTxt.Text + "', honorarium_rate_hr = '" + HonorariumRateHourTxt.Text + "', honorarium_no_of_hrs_cut0ff = '" + HonorariumNoofHoursTxt.Text + "', honorarium_income_per_cutoff = '" + HonorariumIncomeTxt.Text + "', other_rate_hr = '" + OtherRateHourTxt.Text + "', other_no_of_hrs_cutOff = '" + OtherNoofHoursTxt.Text + "', other_income_per_cutoff = '" + OtherIncomeTxt.Text + "', sss_contrib = '" + SSSContributionTxt.Text + "', philhealth_contrib = '" + PhilhealthContributionsTxt.Text + "', pagibig_contrib = '" + PagibigContributionsTxt.Text + "', tax_contrib = '" + IncomeTaxTxt.Text + "', sss_loan = '" + SSSLoanTxt.Text + "', pagibig_loan = '" + PagibigLoansTxt.Text + "', fac_savings_deposit = '" + FacultySavingsDepositTxt.Text + "', fac_savings_loan = '" + FacultySavingsLoansTxt.Text + "', salary_loan = '" + SalaryLoanTxt.Text + "', other_loans = '" + otherLoanValue + "', total_deductions = '" + TotalDeductionTxt.Text + "', gross_income = '" + GrossIncomeTxt.Text + "', net_income = '" + NetIncomeTxt.Text + "', pay_date = '" + paydateDatePicker.Text + "' WHERE payrolTbl.emp_id = '" + empNumberTxtBox.Text + "' AND pay_date = '" + paydateDatePicker.Text + "'";
 
                 db.payrol_cmd();
                 db.payrol_sqladapterUpdate();
@@ -137,11 +137,24 @@ namespace ACOTIN_POS_APPLICATION
         {
             try
             {
+                if (string.IsNullOrEmpty(empNumberTxtBox.Text))
+                {
+                    MessageBox.Show("Please enter an employee number!");
+                    return;
+                }
+
                 db.payrol_sql = "SELECT emp_id, emp_fname, emp_mname, emp_surname, emp_status, position, emp_no_of_dependents, emp_work_status, emp_department, picpath FROM pos_empRegTbl WHERE emp_id = '" + empNumberTxtBox.Text + "'";
                 db.payrol_cmd();
                 db.payrol_sqladapterSelect();
                 db.payrol_sqldatasetSELECT();
 
+                // Check if any records were found
+                if (db.payrol_sql_dataset.Tables[0].Rows.Count == 0)
+                {
+                    MessageBox.Show("No employee found with ID: " + empNumberTxtBox.Text);
+                    db.payrol_sql_connection.Close();
+                    return;
+                }
 
                 DataRow row = db.payrol_sql_dataset.Tables[0].Rows[0];
                 firstnameTxtbox.Text = row[1].ToString();
@@ -154,8 +167,15 @@ namespace ACOTIN_POS_APPLICATION
                 departmentTxtBox.Text = row[8].ToString();
 
                 string picpath = row[9].ToString();
-                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-                pictureBox1.Image = System.Drawing.Image.FromFile(picpath);
+                if (!string.IsNullOrEmpty(picpath) && File.Exists(picpath))
+                {
+                    pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                    pictureBox1.Image = System.Drawing.Image.FromFile(picpath);
+                }
+                else
+                {
+                    pictureBox1.Image = Properties.Resources.no_image;
+                }
 
                 cleartexeboxes2();
 
@@ -179,6 +199,7 @@ namespace ACOTIN_POS_APPLICATION
                 if (db.payrol_sql_dataset.Tables[0].Rows.Count == 0)
                 {
                     MessageBox.Show("No payroll record found for this employee and date!");
+                    db.payrol_sql_connection.Close();
                     return;
                 }
 
@@ -222,9 +243,28 @@ namespace ACOTIN_POS_APPLICATION
                 FacultySavingsDepositTxt.Text = db.payrol_sql_dataset.Tables[0].Rows[0][25].ToString();
                 FacultySavingsLoansTxt.Text = db.payrol_sql_dataset.Tables[0].Rows[0][26].ToString();
                 SalaryLoanTxt.Text = db.payrol_sql_dataset.Tables[0].Rows[0][27].ToString();
-                OtherLoanTxt.Text = db.payrol_sql_dataset.Tables[0].Rows[0][28].ToString();
 
-                others_loanCombo.Text = db.payrol_sql_dataset.Tables[0].Rows[0][28].ToString();
+                // Parse the other_loans field which is stored as "Loan Type: Amount"
+                string otherLoanData = db.payrol_sql_dataset.Tables[0].Rows[0][28].ToString();
+                if (!string.IsNullOrEmpty(otherLoanData) && otherLoanData.Contains(":"))
+                {
+                    string[] parts = otherLoanData.Split(new[] { ": " }, StringSplitOptions.None);
+                    if (parts.Length == 2)
+                    {
+                        others_loanCombo.Text = parts[0]; // Loan type
+                        OtherLoanTxt.Text = parts[1];     // Amount
+                    }
+                    else
+                    {
+                        others_loanCombo.SelectedIndex = 0;
+                        OtherLoanTxt.Text = otherLoanData;
+                    }
+                }
+                else
+                {
+                    others_loanCombo.SelectedIndex = 0;
+                    OtherLoanTxt.Text = otherLoanData;
+                }
 
                 TotalDeductionTxt.Text = db.payrol_sql_dataset.Tables[0].Rows[0][29].ToString();
                 GrossIncomeTxt.Text = db.payrol_sql_dataset.Tables[0].Rows[0][30].ToString();
@@ -453,7 +493,7 @@ namespace ACOTIN_POS_APPLICATION
                     otherLoanValue = others_loanCombo.Text + ": " + OtherLoanTxt.Text;
                 }
 
-                db.payrol_sql = "INSERT INTO payrolTbl (basic_rate_hr, basic_no_of_hrs_cutOff, basic_income_per_cutoff, honorarium_rate_hr, honorarium_no_of_hrs_cutoff, honorarium_income_per_cutoff, other_rate_hr, other_no_of_hrs_cutoff, other_income_per_cutoff, sss_contrib, philhealth_contrib, pagibig_contrib, tax_contrib, sss_loan, pagibig_loan, fac_savings_deposit, fac_savings_loan, salary_loan, other_loans, total_deductions, gross_income, net_income, emp_id, pay_date) VALUES ('" + BasicRateHourTxt.Text + "', '" + BasicNoofHoursTxt.Text + "', '" + BasicIncomeTxt.Text + "', '" + HonorariumRateHourTxt.Text + "', '" + HonorariumNoofHoursTxt.Text + "', '" + HonorariumIncomeTxt.Text + "', '" + OtherRateHourTxt.Text + "', '" + OtherNoofHoursTxt.Text + "', '" + OtherIncomeTxt.Text + "', '" + SSSContributionTxt.Text + "', '" + PhilhealthContributionsTxt.Text + "', '" + PagibigContributionsTxt.Text + "', '" + IncomeTaxTxt.Text + "', '" + SSSLoanTxt.Text + "', '" + PagibigLoansTxt.Text + "', '" + FacultySavingsDepositTxt.Text + "', '" + FacultySavingsLoansTxt.Text + "', '" + SalaryLoanTxt.Text + "', '" + otherLoanValue + "', '" + TotalDeductionTxt.Text + "', '" + GrossIncomeTxt.Text + "', '" + NetIncomeTxt.Text + "', '" + empNumberTxtBox.Text + "', '" + paydateDatePicker.Text + "')";
+                db.payrol_sql = "INSERT INTO payrolTbl (basic_rate_hr, basic_no_of_hrs_cutoff, basic_income_per_cutoff, honorarium_rate_hr, honorarium_no_of_hrs_cutoff, honorarium_income_per_cutoff, other_rate_hr, other_no_of_hrs_cutoff, other_income_per_cutoff, sss_contrib, philhealth_contrib, pagibig_contrib, tax_contrib, sss_loan, pagibig_loan, fac_savings_deposit, fac_savings_loan, salary_loan, other_loans, total_deductions, gross_income, net_income, emp_id, pay_date) VALUES ('" + BasicRateHourTxt.Text + "', '" + BasicNoofHoursTxt.Text + "', '" + BasicIncomeTxt.Text + "', '" + HonorariumRateHourTxt.Text + "', '" + HonorariumNoofHoursTxt.Text + "', '" + HonorariumIncomeTxt.Text + "', '" + OtherRateHourTxt.Text + "', '" + OtherNoofHoursTxt.Text + "', '" + OtherIncomeTxt.Text + "', '" + SSSContributionTxt.Text + "', '" + PhilhealthContributionsTxt.Text + "', '" + PagibigContributionsTxt.Text + "', '" + IncomeTaxTxt.Text + "', '" + SSSLoanTxt.Text + "', '" + PagibigLoansTxt.Text + "', '" + FacultySavingsDepositTxt.Text + "', '" + FacultySavingsLoansTxt.Text + "', '" + SalaryLoanTxt.Text + "', '" + otherLoanValue + "', '" + TotalDeductionTxt.Text + "', '" + GrossIncomeTxt.Text + "', '" + NetIncomeTxt.Text + "', '" + empNumberTxtBox.Text + "', '" + paydateDatePicker.Text + "')";
 
                 db.payrol_cmd();
                 db.payrol_sqladapterInsert();

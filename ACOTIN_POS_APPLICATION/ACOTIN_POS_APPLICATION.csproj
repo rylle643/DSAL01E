@@ -256,6 +256,12 @@
       <DependentUpon>SampleDatabaseDb.cs</DependentUpon>
     </Compile>
     <Compile Include="Finals\useraccount_db_connection.cs" />
+    <Compile Include="user_accounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user_accounts.Designer.cs">
+      <DependentUpon>user_accounts.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Finals\sales_reports.resx">
       <DependentUpon>sales_reports.cs</DependentUpon>
     </EmbeddedResource>
@@ -355,6 +361,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SampleDatabaseDb.resx">
       <DependentUpon>SampleDatabaseDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user_accounts.resx">
+      <DependentUpon>user_accounts.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

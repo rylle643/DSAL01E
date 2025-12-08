@@ -20,7 +20,7 @@ namespace ACOTIN_POS_APPLICATION
         public void employee_connString()
         {
             employee_sql_connection = new SqlConnection();
-            employee_connectionString = "Data Source=Rylle ;Initial Catalog=POS_Database_V3; user id=sa; password=rylle";
+            employee_connectionString = "Data Source=Rylle ;Initial Catalog=POS_Database; user id=sa; password=rylle";
             employee_sql_connection = new SqlConnection(employee_connectionString);
             employee_sql_connection.ConnectionString = employee_connectionString;
             employee_sql_connection.Open();
