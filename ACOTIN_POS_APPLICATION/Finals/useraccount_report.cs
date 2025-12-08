@@ -43,20 +43,20 @@ namespace ACOTIN_POS_APPLICATION
         private void sales_reports_Load(object sender, EventArgs e)
         {
             optionCombo.Items.Add("Select search option");
-            optionCombo.Items.Add("transaction_id");
-            optionCombo.Items.Add("terminal_number");
-            optionCombo.Items.Add("date and time");
-            optionCombo.Items.Add("product name");
+            optionCombo.Items.Add("user_id");
             optionCombo.Items.Add("employee_number");
-            optionCombo.Items.Add("pay_date");
+            optionCombo.Items.Add("surname");
+            optionCombo.Items.Add("firstname");
+            optionCombo.Items.Add("active");
+            optionCombo.Items.Add("deactivate");
 
             optionCombo.SelectedIndex = 0;
             optionCombo.Focus();
 
             try
             {
-                posdb_connect.pos_sql = "SELECT * FROM salesTbl";
-                posdb_connect.pos_cmd(); posdb_connect.pos_sqladapterSelect(); posdb_connect.pos_sqldatasetSELECTSALES(); dataGridView1.DataSource = posdb_connect.pos_sql_dataset.Tables[0];
+                useraccount_db_connect.useraccount_sql = "SELECT pos_empRegTbl.emp_id, emp_fname, emp_mname, emp_surname, emp_age, emp_gender, emp_department, position, user_id, username, password, user_status, account_type FROM pos_empRegTbl INNER JOIN useraccountTbl ON pos_empRegTbl.emp_id = useraccountTbl.emp_id";
+                useraccount_select();
             }
             catch (Exception)
             {
@@ -68,34 +68,40 @@ namespace ACOTIN_POS_APPLICATION
         {
             try
             {
-                if (optionCombo.Text == "transaction_id")
+                if (optionCombo.Text == "user_id")
                 {
-                    posdb_connect.pos_sql = "SELECT * FROM salesTbl WHERE transaction_id = '" + optionInputTxtbox.Text + "'";
-                    pos_select();
-                    cleartextboxes1();
-                }
-                else if (optionCombo.Text == "terminal_number")
-                {
-                    posdb_connect.pos_sql = "SELECT * FROM salesTbl WHERE terminal_no = '" + optionInputTxtbox.Text + "'";
-                    pos_select();
-                    cleartextboxes1();
-                }
-                else if (optionCombo.Text == "date and time")
-                {
-                    posdb_connect.pos_sql = "SELECT * FROM salesTbl WHERE time_date = '" + optionInputTxtbox.Text + "'";
-                    pos_select();
-                    cleartextboxes1();
-                }
-                else if (optionCombo.Text == "product name")
-                {
-                    posdb_connect.pos_sql = "SELECT * FROM salesTbl WHERE product_name = '" + optionInputTxtbox.Text + "'";
-                    pos_select();
+                    useraccount_db_connect.useraccount_sql = "SELECT pos_empRegTbl.emp_id, emp_fname, emp_mname, emp_surname, emp_age, emp_gender, emp_department, position, user_id, username, password, user_status, account_type FROM pos_empRegTbl INNER JOIN useraccountTbl ON pos_empRegTbl.emp_id = useraccountTbl.emp_id WHERE user_id = '" + optionInputTxtbox.Text + "'";
+                    useraccount_select();
                     cleartextboxes1();
                 }
                 else if (optionCombo.Text == "employee_number")
                 {
-                    posdb_connect.pos_sql = "SELECT * FROM salesTbl WHERE emp_id = '" + optionInputTxtbox.Text + "'";
-                    pos_select();
+                    useraccount_db_connect.useraccount_sql = "SELECT pos_empRegTbl.emp_id, emp_fname, emp_mname, emp_surname, emp_age, emp_gender, emp_department, position, user_id, username, password, user_status, account_type FROM pos_empRegTbl INNER JOIN useraccountTbl ON pos_empRegTbl.emp_id = useraccountTbl.emp_id WHERE pos_empRegTbl.emp_id = '" + optionInputTxtbox.Text + "'";
+                    useraccount_select();
+                    cleartextboxes1();
+                }
+                else if (optionCombo.Text == "surname")
+                {
+                    useraccount_db_connect.useraccount_sql = "SELECT pos_empRegTbl.emp_id, emp_fname, emp_mname, emp_surname, emp_age, emp_gender, emp_department, position, user_id, username, password, user_status, account_type FROM pos_empRegTbl INNER JOIN useraccountTbl ON pos_empRegTbl.emp_id = useraccountTbl.emp_id WHERE emp_surname = '" + optionInputTxtbox.Text + "'";
+                    useraccount_select();
+                    cleartextboxes1();
+                }
+                else if (optionCombo.Text == "firstname")
+                {
+                    useraccount_db_connect.useraccount_sql = "SELECT pos_empRegTbl.emp_id, emp_fname, emp_mname, emp_surname, emp_age, emp_gender, emp_department, position, user_id, username, password, user_status, account_type FROM pos_empRegTbl INNER JOIN useraccountTbl ON pos_empRegTbl.emp_id = useraccountTbl.emp_id WHERE emp_fname = '" + optionInputTxtbox.Text + "'";
+                    useraccount_select();
+                    cleartextboxes1();
+                }
+                else if (optionCombo.Text == "active")
+                {
+                    useraccount_db_connect.useraccount_sql = "SELECT pos_empRegTbl.emp_id, emp_fname, emp_mname, emp_surname, emp_age, emp_gender, emp_department, position, user_id, username, password, user_status, account_type FROM pos_empRegTbl INNER JOIN useraccountTbl ON pos_empRegTbl.emp_id = useraccountTbl.emp_id WHERE user_status = '" + optionInputTxtbox.Text + "'";
+                    useraccount_select();
+                    cleartextboxes1();
+                }
+                else if (optionCombo.Text == "deactivate")
+                {
+                    useraccount_db_connect.useraccount_sql = "SELECT pos_empRegTbl.emp_id, emp_fname, emp_mname, emp_surname, emp_age, emp_gender, emp_department, position, user_id, username, password, user_status, account_type FROM pos_empRegTbl INNER JOIN useraccountTbl ON pos_empRegTbl.emp_id = useraccountTbl.emp_id WHERE user_status = '" + optionInputTxtbox.Text + "'";
+                    useraccount_select();
                     cleartextboxes1();
                 }
                 else
@@ -113,8 +119,8 @@ namespace ACOTIN_POS_APPLICATION
         {
             try
             {
-                posdb_connect.pos_sql = "SELECT * FROM salesTbl";
-                pos_select();
+                useraccount_db_connect.useraccount_sql = "SELECT pos_empRegTbl.emp_id, emp_fname, emp_mname, emp_surname, emp_age, emp_gender, emp_department, position, user_id, username, password, user_status, account_type FROM pos_empRegTbl INNER JOIN useraccountTbl ON pos_empRegTbl.emp_id = useraccountTbl.emp_id";
+                useraccount_select();
             }
             catch (Exception)
             {

@@ -110,7 +110,7 @@
             this.Controls.Add(this.optionCombo);
             this.Controls.Add(this.label1);
             this.Name = "useraccount_report";
-            this.Text = "sales_reports";
+            this.Text = "useraccount_reports";
             this.Load += new System.EventHandler(this.sales_reports_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
