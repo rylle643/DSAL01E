@@ -64,6 +64,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Finals\sales_reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finals\sales_reports.Designer.cs">
+      <DependentUpon>sales_reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finals\payrol_reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finals\payrol_reports.Designer.cs">
+      <DependentUpon>payrol_reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finals\employee_reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finals\employee_reports.Designer.cs">
+      <DependentUpon>employee_reports.cs</DependentUpon>
+    </Compile>
     <Compile Include="Finals\employee_dbconnection.cs" />
     <Compile Include="Finals\employee_registration.cs">
       <SubType>Form</SubType>
@@ -238,6 +256,15 @@
       <DependentUpon>SampleDatabaseDb.cs</DependentUpon>
     </Compile>
     <Compile Include="Finals\useraccount_db_connection.cs" />
+    <EmbeddedResource Include="Finals\sales_reports.resx">
+      <DependentUpon>sales_reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finals\payrol_reports.resx">
+      <DependentUpon>payrol_reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finals\employee_reports.resx">
+      <DependentUpon>employee_reports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Finals\employee_registration.resx">
       <DependentUpon>employee_registration.cs</DependentUpon>
     </EmbeddedResource>

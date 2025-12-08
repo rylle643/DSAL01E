@@ -15,9 +15,10 @@ namespace ACOTIN_POS_APPLICATION
 {
     public partial class Payrol_Database : Form
     {
+        payrol_dbconnection db = new payrol_dbconnection();
         public Payrol_Database()
         {
-            payrol_dbconnection db = new payrol_dbconnection();
+
             db.payrol_connString();
             InitializeComponent();
             
@@ -94,12 +95,17 @@ namespace ACOTIN_POS_APPLICATION
         {
             try
             {
-                payrol_dbconnection payrol_db_connect = new payrol_dbconnection();
-                payrol_db_connect.payrol_connString();
-                payrol_db_connect.payrol_sql = "UPDATE payrolTbl SET basic_rate_hr = '" + BasicRateHourTxt.Text + "', basic_no_of_hrs_cutOff = '" + BasicNoofHoursTxt.Text + "', basic_income_per_cutoff = '" + BasicIncomeTxt.Text + "', honorarium_rate_hr = '" + HonorariumRateHourTxt.Text + "', honorarium_no_of_hrs_cut0ff = '" + HonorariumNoofHoursTxt.Text + "', honorarium_income_per_cutoff = '" + HonorariumIncomeTxt.Text + "', other_rate_hr = '" + OtherRateHourTxt.Text + "', other_no_of_hrs_cutOff = '" + OtherNoofHoursTxt.Text + "', other_income_per_cutoff = '" + OtherIncomeTxt.Text + "', sss_contrib = '" + SSSContributionTxt.Text + "', philhealth_contrib = '" + PhilhealthContributionsTxt.Text + "', pagibig_contrib = '" + PagibigContributionsTxt.Text + "', tax_contrib = '" + IncomeTaxTxt.Text + "', sss_loan = '" + SSSLoanTxt.Text + "', pagibig_loan = '" + PagibigLoansTxt.Text + "', fac_savings_deposit = '" + FacultySavingsDepositTxt.Text + "', fac_savings_loan = '" + FacultySavingsLoansTxt.Text + "', salary_loan = '" + SalaryLoanTxt.Text + "', other_loans = '" + OtherLoanTxt.Text + "', total_deductions = '" + TotalDeductionTxt.Text + "', gross_income = '" + GrossIncomeTxt.Text + "', net_income = '" + NetIncomeTxt.Text + "', pay_date = '" + paydateDatePicker.Text + "' WHERE payrolTbl.emp_id = '" + empNumberTxtBox.Text + "' AND pay_date = '" + paydateDatePicker.Text + "'";
-                payrol_db_connect.payrol_cmd();
-                payrol_db_connect.payrol_sqladapterUpdate();
-                payrol_db_connect.payrol_sql_connection.Close();
+                string otherLoanValue = OtherLoanTxt.Text;
+                if (!string.IsNullOrEmpty(others_loanCombo.Text) && others_loanCombo.Text != "Select other loan")
+                {
+                    otherLoanValue = others_loanCombo.Text + ": " + OtherLoanTxt.Text;
+                }
+
+                db.payrol_sql = "UPDATE payrolTbl SET basic_rate_hr = '" + BasicRateHourTxt.Text + "', basic_no_of_hrs_cutOff = '" + BasicNoofHoursTxt.Text + "', basic_income_per_cutoff = '" + BasicIncomeTxt.Text + "', honorarium_rate_hr = '" + HonorariumRateHourTxt.Text + "', honorarium_no_of_hrs_cut0ff = '" + HonorariumNoofHoursTxt.Text + "', honorarium_income_per_cutoff = '" + HonorariumIncomeTxt.Text + "', other_rate_hr = '" + OtherRateHourTxt.Text + "', other_no_of_hrs_cutOff = '" + OtherNoofHoursTxt.Text + "', other_income_per_cutoff = '" + OtherIncomeTxt.Text + "', sss_contrib = '" + SSSContributionTxt.Text + "', philhealth_contrib = '" + PhilhealthContributionsTxt.Text + "', pagibig_contrib = '" + PagibigContributionsTxt.Text + "', tax_contrib = '" + IncomeTaxTxt.Text + "', sss_loan = '" + SSSLoanTxt.Text + "', pagibig_loan = '" + PagibigLoansTxt.Text + "', fac_savings_deposit = '" + FacultySavingsDepositTxt.Text + "', fac_savings_loan = '" + FacultySavingsLoansTxt.Text + "', salary_loan = '" + SalaryLoanTxt.Text + "', other_loans = '" + otherLoanValue + "', total_deductions = '" + TotalDeductionTxt.Text + "', gross_income = '" + GrossIncomeTxt.Text + "', net_income = '" + NetIncomeTxt.Text + "', pay_date = '" + paydateDatePicker.Text + "' WHERE payrolTbl.emp_id = '" + empNumberTxtBox.Text + "' AND pay_date = '" + paydateDatePicker.Text + "'";
+
+                db.payrol_cmd();
+                db.payrol_sqladapterUpdate();
+                db.payrol_sql_connection.Close();
 
                 MessageBox.Show("Record updated successfully!");
                 cleartexeboxes();
@@ -114,12 +120,10 @@ namespace ACOTIN_POS_APPLICATION
         {
             try
             {
-                payrol_dbconnection payrol_db_connect = new payrol_dbconnection();
-                payrol_db_connect.payrol_connString();
-                payrol_db_connect.payrol_sql = "DELETE FROM payrolTbl WHERE payrolTbl.emp_id = '" + empNumberTxtBox.Text + "'";
-                payrol_db_connect.payrol_cmd();
-                payrol_db_connect.payrol_sqladapterDelete();
-                payrol_db_connect.payrol_sql_connection.Close();
+                db.payrol_sql = "DELETE FROM payrolTbl WHERE payrolTbl.emp_id = '" + empNumberTxtBox.Text + "'";
+                db.payrol_cmd();
+                db.payrol_sqladapterDelete();
+                db.payrol_sql_connection.Close();
 
                 cleartexeboxes();
             }
@@ -133,15 +137,13 @@ namespace ACOTIN_POS_APPLICATION
         {
             try
             {
-                payrol_dbconnection payrol_db_connect = new payrol_dbconnection();
-                payrol_db_connect.payrol_connString();
-                payrol_db_connect.payrol_sql = "SELECT emp_id, emp_fname, emp_mname, emp_surname, emp_status, position, emp_no_of_dependents, emp_work_status, emp_department, picpath FROM pos_empRegTbl WHERE emp_id = '" + empNumberTxtBox.Text + "'";
-                payrol_db_connect.payrol_cmd();
-                payrol_db_connect.payrol_sqladapterSelect();
-                payrol_db_connect.payrol_sqldatasetSELECT();
+                db.payrol_sql = "SELECT emp_id, emp_fname, emp_mname, emp_surname, emp_status, position, emp_no_of_dependents, emp_work_status, emp_department, picpath FROM pos_empRegTbl WHERE emp_id = '" + empNumberTxtBox.Text + "'";
+                db.payrol_cmd();
+                db.payrol_sqladapterSelect();
+                db.payrol_sqldatasetSELECT();
 
 
-                DataRow row = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0];
+                DataRow row = db.payrol_sql_dataset.Tables[0].Rows[0];
                 firstnameTxtbox.Text = row[1].ToString();
                 MNameTxtbox.Text = row[2].ToString();
                 surnameTxtBox.Text = row[3].ToString();
@@ -157,7 +159,7 @@ namespace ACOTIN_POS_APPLICATION
 
                 cleartexeboxes2();
 
-                payrol_db_connect.payrol_sql_connection.Close();
+                db.payrol_sql_connection.Close();
             }
             catch (Exception)
             {
@@ -169,29 +171,27 @@ namespace ACOTIN_POS_APPLICATION
         {
             try
             {
-                payrol_dbconnection payrol_db_connect = new payrol_dbconnection();
-                payrol_db_connect.payrol_connString();
-                payrol_db_connect.payrol_sql = "SELECT pos_empRegTbl.emp_id, emp_fname, emp_mname, emp_surname, emp_status, position, emp_no_of_dependents, emp_work_status, emp_department, picpath, basic_rate_hr, basic_no_of_hrs_cutoff, basic_income_per_cutoff, honorarium_rate_hr, honorarium_no_of_hrs_cutoff, honorarium_income_per_cutoff, other_rate_hr, other_no_of_hrs_cutoff, other_income_per_cutoff, sss_contrib, philhealth_contrib, pagibig_contrib, tax_contrib, sss_loan, pagibig_loan, fac_savings_deposit, fac_savings_loan, salary_loan, other_loans, total_deductions, gross_income, net_income, payrolTbl.emp_id, pay_date FROM pos_empRegTbl INNER JOIN payrolTbl ON pos_empRegTbl.emp_id = payrolTbl.emp_id WHERE (payrolTbl.emp_id = '" + empNumberTxtBox.Text + "' AND payrolTbl.pay_date = '" + paydateDatePicker.Text + "')";
-                payrol_db_connect.payrol_cmd();
-                payrol_db_connect.payrol_sqladapterSelect();
-                payrol_db_connect.payrol_sqldatasetSELECT();
+                db.payrol_sql = "SELECT pos_empRegTbl.emp_id, emp_fname, emp_mname, emp_surname, emp_status, position, emp_no_of_dependents, emp_work_status, emp_department, picpath, basic_rate_hr, basic_no_of_hrs_cutoff, basic_income_per_cutoff, honorarium_rate_hr, honorarium_no_of_hrs_cutoff, honorarium_income_per_cutoff, other_rate_hr, other_no_of_hrs_cutoff, other_income_per_cutoff, sss_contrib, philhealth_contrib, pagibig_contrib, tax_contrib, sss_loan, pagibig_loan, fac_savings_deposit, fac_savings_loan, salary_loan, other_loans, total_deductions, gross_income, net_income, payrolTbl.emp_id, pay_date FROM pos_empRegTbl INNER JOIN payrolTbl ON pos_empRegTbl.emp_id = payrolTbl.emp_id WHERE (payrolTbl.emp_id = '" + empNumberTxtBox.Text + "' AND payrolTbl.pay_date = '" + paydateDatePicker.Text + "')";
+                db.payrol_cmd();
+                db.payrol_sqladapterSelect();
+                db.payrol_sqldatasetSELECT();
 
-                if (payrol_db_connect.payrol_sql_dataset.Tables[0].Rows.Count == 0)
+                if (db.payrol_sql_dataset.Tables[0].Rows.Count == 0)
                 {
                     MessageBox.Show("No payroll record found for this employee and date!");
                     return;
                 }
 
-                firstnameTxtbox.Text = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0][1].ToString();
-                MNameTxtbox.Text = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0][2].ToString();
-                surnameTxtBox.Text = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0][3].ToString();
-                civilStatusTxtBox.Text = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0][4].ToString();
-                designationTxtBox.Text = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0][5].ToString();
-                numDependentsTxtBox.Text = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0][6].ToString();
-                emp_statusTxtbox.Text = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0][7].ToString();
-                departmentTxtBox.Text = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0][8].ToString();
+                firstnameTxtbox.Text = db.payrol_sql_dataset.Tables[0].Rows[0][1].ToString();
+                MNameTxtbox.Text = db.payrol_sql_dataset.Tables[0].Rows[0][2].ToString();
+                surnameTxtBox.Text = db.payrol_sql_dataset.Tables[0].Rows[0][3].ToString();
+                civilStatusTxtBox.Text = db.payrol_sql_dataset.Tables[0].Rows[0][4].ToString();
+                designationTxtBox.Text = db.payrol_sql_dataset.Tables[0].Rows[0][5].ToString();
+                numDependentsTxtBox.Text = db.payrol_sql_dataset.Tables[0].Rows[0][6].ToString();
+                emp_statusTxtbox.Text = db.payrol_sql_dataset.Tables[0].Rows[0][7].ToString();
+                departmentTxtBox.Text = db.payrol_sql_dataset.Tables[0].Rows[0][8].ToString();
 
-                string picpath = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0][9].ToString();
+                string picpath = db.payrol_sql_dataset.Tables[0].Rows[0][9].ToString();
                 if (!string.IsNullOrEmpty(picpath) && File.Exists(picpath))
                 {
                     pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -202,35 +202,35 @@ namespace ACOTIN_POS_APPLICATION
                     pictureBox1.Image = Properties.Resources.no_image;
                 }
 
-                BasicRateHourTxt.Text = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0][10].ToString();
-                BasicNoofHoursTxt.Text = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0][11].ToString();
-                BasicIncomeTxt.Text = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0][12].ToString();
-                HonorariumRateHourTxt.Text = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0][13].ToString();
-                HonorariumNoofHoursTxt.Text = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0][14].ToString();
-                HonorariumIncomeTxt.Text = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0][15].ToString();
-                OtherRateHourTxt.Text = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0][16].ToString();
-                OtherNoofHoursTxt.Text = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0][17].ToString();
-                OtherIncomeTxt.Text = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0][18].ToString();
+                BasicRateHourTxt.Text = db.payrol_sql_dataset.Tables[0].Rows[0][10].ToString();
+                BasicNoofHoursTxt.Text = db.payrol_sql_dataset.Tables[0].Rows[0][11].ToString();
+                BasicIncomeTxt.Text = db.payrol_sql_dataset.Tables[0].Rows[0][12].ToString();
+                HonorariumRateHourTxt.Text = db.payrol_sql_dataset.Tables[0].Rows[0][13].ToString();
+                HonorariumNoofHoursTxt.Text = db.payrol_sql_dataset.Tables[0].Rows[0][14].ToString();
+                HonorariumIncomeTxt.Text = db.payrol_sql_dataset.Tables[0].Rows[0][15].ToString();
+                OtherRateHourTxt.Text = db.payrol_sql_dataset.Tables[0].Rows[0][16].ToString();
+                OtherNoofHoursTxt.Text = db.payrol_sql_dataset.Tables[0].Rows[0][17].ToString();
+                OtherIncomeTxt.Text = db.payrol_sql_dataset.Tables[0].Rows[0][18].ToString();
 
-                SSSContributionTxt.Text = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0][19].ToString();
-                PhilhealthContributionsTxt.Text = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0][20].ToString();
-                PagibigContributionsTxt.Text = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0][21].ToString();
-                IncomeTaxTxt.Text = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0][22].ToString();
+                SSSContributionTxt.Text = db.payrol_sql_dataset.Tables[0].Rows[0][19].ToString();
+                PhilhealthContributionsTxt.Text = db.payrol_sql_dataset.Tables[0].Rows[0][20].ToString();
+                PagibigContributionsTxt.Text = db.payrol_sql_dataset.Tables[0].Rows[0][21].ToString();
+                IncomeTaxTxt.Text = db.payrol_sql_dataset.Tables[0].Rows[0][22].ToString();
 
-                SSSLoanTxt.Text = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0][23].ToString();
-                PagibigLoansTxt.Text = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0][24].ToString();
-                FacultySavingsDepositTxt.Text = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0][25].ToString();
-                FacultySavingsLoansTxt.Text = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0][26].ToString();
-                SalaryLoanTxt.Text = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0][27].ToString();
-                OtherLoanTxt.Text = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0][28].ToString();
+                SSSLoanTxt.Text = db.payrol_sql_dataset.Tables[0].Rows[0][23].ToString();
+                PagibigLoansTxt.Text = db.payrol_sql_dataset.Tables[0].Rows[0][24].ToString();
+                FacultySavingsDepositTxt.Text = db.payrol_sql_dataset.Tables[0].Rows[0][25].ToString();
+                FacultySavingsLoansTxt.Text = db.payrol_sql_dataset.Tables[0].Rows[0][26].ToString();
+                SalaryLoanTxt.Text = db.payrol_sql_dataset.Tables[0].Rows[0][27].ToString();
+                OtherLoanTxt.Text = db.payrol_sql_dataset.Tables[0].Rows[0][28].ToString();
 
-                others_loanCombo.Text = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0][28].ToString();
+                others_loanCombo.Text = db.payrol_sql_dataset.Tables[0].Rows[0][28].ToString();
 
-                TotalDeductionTxt.Text = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0][29].ToString();
-                GrossIncomeTxt.Text = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0][30].ToString();
-                NetIncomeTxt.Text = payrol_db_connect.payrol_sql_dataset.Tables[0].Rows[0][31].ToString();
+                TotalDeductionTxt.Text = db.payrol_sql_dataset.Tables[0].Rows[0][29].ToString();
+                GrossIncomeTxt.Text = db.payrol_sql_dataset.Tables[0].Rows[0][30].ToString();
+                NetIncomeTxt.Text = db.payrol_sql_dataset.Tables[0].Rows[0][31].ToString();
 
-                payrol_db_connect.payrol_sql_connection.Close();
+                db.payrol_sql_connection.Close();
 
                 MessageBox.Show("Payroll data loaded successfully!");
             }
@@ -387,7 +387,7 @@ namespace ACOTIN_POS_APPLICATION
             payslip_viewListBox.Items.Clear();
 
             payslip_viewListBox.Items.Add("====================================================================");
-            payslip_viewListBox.Items.Add("                        PAY SLIP DETAILS                            ");
+            payslip_viewListBox.Items.Add("                         PAYSLIP DETAILS                            ");
             payslip_viewListBox.Items.Add("====================================================================");
             payslip_viewListBox.Items.Add("");
 
@@ -446,8 +446,6 @@ namespace ACOTIN_POS_APPLICATION
         {
             try
             {
-                payrol_dbconnection db = new payrol_dbconnection();
-                db.payrol_connString();
 
                 string otherLoanValue = OtherLoanTxt.Text;
                 if (!string.IsNullOrEmpty(others_loanCombo.Text) && others_loanCombo.Text != "Select other loan")
