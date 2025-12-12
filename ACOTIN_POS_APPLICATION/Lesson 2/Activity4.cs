@@ -123,7 +123,7 @@ namespace ACOTIN_POS_APPLICATION
                 qtyTxtbox.Text = "0";
                 qtyTxtbox.Focus();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Error loading Food A. Please check the image path.", "Error");
             }
@@ -161,7 +161,7 @@ namespace ACOTIN_POS_APPLICATION
                 qtyTxtbox.Text = "0";
                 qtyTxtbox.Focus();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Error loading Food B. Please check the image path.", "Error");
             }
@@ -190,7 +190,7 @@ namespace ACOTIN_POS_APPLICATION
                 priceTxtBox.Clear();
                 qtyTxtbox.Clear();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Error clearing form.", "Error");
             }
@@ -289,7 +289,7 @@ namespace ACOTIN_POS_APPLICATION
                 qtyTxtbox.Text = "0";
                 qtyTxtbox.Focus();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Error selecting item.", "Error");
             }
@@ -306,7 +306,7 @@ namespace ACOTIN_POS_APPLICATION
                 qtyTxtbox.Text = "0";
                 qtyTxtbox.Focus();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Error selecting item.", "Error");
             }
@@ -348,7 +348,7 @@ namespace ACOTIN_POS_APPLICATION
                 displayListbox.Items.Add("Cash Given:            " + cash_given.ToString("n"));
                 displayListbox.Items.Add("Change:                " + changeTxtbox.Text);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Invalid input. Please check your entries.", "Error");
             }
@@ -362,7 +362,7 @@ namespace ACOTIN_POS_APPLICATION
                 print.printDisplayListbox.Items.AddRange(this.displayListbox.Items);
                 print.Show();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Error opening print form.", "Error");
             }
@@ -697,7 +697,7 @@ namespace ACOTIN_POS_APPLICATION
 
                 print.Show();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Error opening transfer form.", "Error");
             }

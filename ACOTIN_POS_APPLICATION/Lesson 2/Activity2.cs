@@ -183,7 +183,7 @@ namespace ACOTIN_POS_APPLICATION
                 changetxtbox.Text = change.ToString("n");
                 cashre_renderedtxtbox.Text = cash_rendered.ToString("n");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Invalid input. Please check your entries.", "Error");
             }
@@ -404,7 +404,7 @@ namespace ACOTIN_POS_APPLICATION
                 EmployeeRdbtn.Enabled = false;
                 noTaxRdbtn.Enabled = false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Invalid input. Please enter quantity.", "Error");
                 radioButton1.Checked = false;
@@ -437,7 +437,7 @@ namespace ACOTIN_POS_APPLICATION
                 EmployeeRdbtn.Enabled = false;
                 noTaxRdbtn.Enabled = false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Invalid input. Please enter quantity.", "Error");
                 radioButton1.Checked = false;
@@ -470,7 +470,7 @@ namespace ACOTIN_POS_APPLICATION
                 regularRbtn.Enabled = false;
                 noTaxRdbtn.Enabled = false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Invalid input. Please enter quantity.", "Error");
                 radioButton1.Checked = false;
@@ -503,7 +503,7 @@ namespace ACOTIN_POS_APPLICATION
                 regularRbtn.Enabled = false;
                 EmployeeRdbtn.Enabled = false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Invalid input. Please enter quantity.", "Error");
                 radioButton1.Checked = false;

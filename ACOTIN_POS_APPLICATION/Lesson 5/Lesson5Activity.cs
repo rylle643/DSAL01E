@@ -258,7 +258,7 @@ namespace ACOTIN_POS_APPLICATION
 
                 IncomeTaxTxt.Text = tax_contrib.ToString();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Invalid input. Please check rate and hours entries.", "Error");
             }
@@ -274,7 +274,7 @@ namespace ACOTIN_POS_APPLICATION
                 // Calculate Net Income
                 NetIncomeTxt.Text = (Convert.ToDecimal(GrossIncomeTxt.Text) - Convert.ToDecimal(TotalDeductionTxt.Text)).ToString();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Invalid input. Please compute income first and check loan entries.", "Error");
             }
@@ -367,7 +367,7 @@ namespace ACOTIN_POS_APPLICATION
                 // Show print form
                 print.Show();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Error opening payslip report.", "Error");
             }

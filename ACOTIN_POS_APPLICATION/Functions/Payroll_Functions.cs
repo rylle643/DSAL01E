@@ -200,7 +200,7 @@ namespace ACOTIN_POS_APPLICATION
 
                 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Invalid input. Please compute income first and check loan entries.", "Error");
             }
@@ -272,7 +272,7 @@ namespace ACOTIN_POS_APPLICATION
                 // Show print form
                 print.Show();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Error opening payslip report.", "Error");
             }
