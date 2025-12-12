@@ -14,6 +14,9 @@ namespace ACOTIN_POS_APPLICATION
     public partial class user_accounts : Form
     {
         useraccount_db_connection useraccount_db_connect = new useraccount_db_connection();
+        public Button SearchforUpdate;
+        public Button UpdateBTN;
+        public Button Delete;
         public user_accounts()
         {
             useraccount_db_connect.useraccount_connString();
@@ -50,9 +53,11 @@ namespace ACOTIN_POS_APPLICATION
                 
                 accountTypeComboBox.Items.Add("Select...");
                 accountTypeComboBox.Items.Add("Administrator");
-                accountTypeComboBox.Items.Add("Cashier");
-                accountTypeComboBox.Items.Add("Manager");
-                accountTypeComboBox.Items.Add("Supervisor");
+                accountTypeComboBox.Items.Add("Cashier1");
+                accountTypeComboBox.Items.Add("Cashier2");
+                accountTypeComboBox.Items.Add("HR Staff");
+                accountTypeComboBox.Items.Add("Accounting Staff");
+                accountTypeComboBox.Items.Add("IT Staff");
                 accountTypeComboBox.SelectedIndex = 0;
 
                 firstnameTxtbox.Enabled = false;

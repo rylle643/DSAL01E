@@ -423,7 +423,7 @@ namespace ACOTIN_POS_APPLICATION
 
                 try
                 {
-                    DisplayPictureBox.Image = Image.FromFile("C:\\Users\\C203-34\\source\\repos\\rylle643\\DSAL01E\\ACOTIN_POS_APPLICATION\\Resources\\Untitled design (1).png");
+                    DisplayPictureBox.Image = Properties.Resources.Untitleddesign1;
                 }
                 catch
                 {
@@ -468,7 +468,7 @@ namespace ACOTIN_POS_APPLICATION
 
                 try
                 {
-                    DisplayPictureBox.Image = Image.FromFile("C:\\Users\\C203-34\\source\\repos\\rylle643\\DSAL01E\\ACOTIN_POS_APPLICATION\\Resources\\Untitled design (2).png");
+                    DisplayPictureBox.Image = Properties.Resources.Untitleddesign2;
                 }
                 catch
                 {

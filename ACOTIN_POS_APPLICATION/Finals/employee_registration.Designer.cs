@@ -33,7 +33,6 @@
             this.weightTxtBox = new System.Windows.Forms.TextBox();
             this.surnameTxtBox = new System.Windows.Forms.TextBox();
             this.heightTxtBox = new System.Windows.Forms.TextBox();
-            this.picbox = new System.Windows.Forms.PictureBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.textBox43 = new System.Windows.Forms.TextBox();
             this.sssTxtBox = new System.Windows.Forms.TextBox();
@@ -139,11 +138,12 @@
             this.EditButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.picbox = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picbox)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -219,17 +219,6 @@
             this.heightTxtBox.Name = "heightTxtBox";
             this.heightTxtBox.Size = new System.Drawing.Size(207, 25);
             this.heightTxtBox.TabIndex = 110;
-            // 
-            // picbox
-            // 
-            this.picbox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picbox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.picbox.Location = new System.Drawing.Point(63, 27);
-            this.picbox.Name = "picbox";
-            this.picbox.Size = new System.Drawing.Size(225, 225);
-            this.picbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picbox.TabIndex = 82;
-            this.picbox.TabStop = false;
             // 
             // comboBox3
             // 
@@ -1269,6 +1258,17 @@
             this.dataGridView1.Size = new System.Drawing.Size(810, 627);
             this.dataGridView1.TabIndex = 0;
             // 
+            // picbox
+            // 
+            this.picbox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picbox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.picbox.Location = new System.Drawing.Point(63, 27);
+            this.picbox.Name = "picbox";
+            this.picbox.Size = new System.Drawing.Size(225, 225);
+            this.picbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picbox.TabIndex = 82;
+            this.picbox.TabStop = false;
+            // 
             // employee_registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1283,12 +1283,12 @@
             this.Load += new System.EventHandler(this.employee_registration_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picbox)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1378,7 +1378,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button NewButton;
-        private System.Windows.Forms.Button DeleteButton;
         private System.Windows.Forms.Button EditButton;
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.TextBox othersTxtBox;
@@ -1405,5 +1404,6 @@
         private System.Windows.Forms.TextBox positionTxtBox;
         private System.Windows.Forms.TextBox picturepathTxtBox;
         private System.Windows.Forms.Button ExitButton;
+        public System.Windows.Forms.Button DeleteButton;
     }
 }

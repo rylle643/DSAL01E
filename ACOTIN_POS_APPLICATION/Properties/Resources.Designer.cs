@@ -163,16 +163,6 @@ namespace ACOTIN_POS_APPLICATION.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Untitled_design__1_ {
-            get {
-                object obj = ResourceManager.GetObject("Untitled design (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Untitled_design__1_1 {
             get {
                 object obj = ResourceManager.GetObject("Untitled design (1)1", resourceCulture);
@@ -193,9 +183,19 @@ namespace ACOTIN_POS_APPLICATION.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Untitled_design__2_1 {
+        internal static System.Drawing.Bitmap Untitleddesign1 {
             get {
-                object obj = ResourceManager.GetObject("Untitled design (2)1", resourceCulture);
+                object obj = ResourceManager.GetObject("Untitleddesign1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitleddesign2 {
+            get {
+                object obj = ResourceManager.GetObject("Untitleddesign2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

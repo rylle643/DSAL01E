@@ -672,7 +672,7 @@
             this.EDITbutton.BackColor = System.Drawing.Color.Ivory;
             this.EDITbutton.Cursor = System.Windows.Forms.Cursors.Default;
             this.EDITbutton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EDITbutton.Location = new System.Drawing.Point(850, 946);
+            this.EDITbutton.Location = new System.Drawing.Point(1108, 946);
             this.EDITbutton.Name = "EDITbutton";
             this.EDITbutton.Size = new System.Drawing.Size(123, 43);
             this.EDITbutton.TabIndex = 126;
@@ -698,7 +698,7 @@
             this.EXITbutton.BackColor = System.Drawing.Color.Ivory;
             this.EXITbutton.Cursor = System.Windows.Forms.Cursors.Default;
             this.EXITbutton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EXITbutton.Location = new System.Drawing.Point(1108, 946);
+            this.EXITbutton.Location = new System.Drawing.Point(850, 946);
             this.EXITbutton.Name = "EXITbutton";
             this.EXITbutton.Size = new System.Drawing.Size(123, 43);
             this.EXITbutton.TabIndex = 124;
@@ -1266,8 +1266,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Button DELETEbutton;
-        private System.Windows.Forms.Button EDITbutton;
         private System.Windows.Forms.Button Savebutton;
         private System.Windows.Forms.Button EXITbutton;
         private System.Windows.Forms.Button NEWbutton;
@@ -1282,13 +1280,15 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.Button SearchButton;
         private System.Windows.Forms.TextBox empNumberTxtBox;
-        private System.Windows.Forms.Button Search_EditButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox picturepathTxtBox;
         private System.Windows.Forms.DateTimePicker paydateDatePicker;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ListBox payslip_viewListBox;
+        public System.Windows.Forms.Button DELETEbutton;
+        public System.Windows.Forms.Button SearchButton;
+        public System.Windows.Forms.Button Search_EditButton;
+        public System.Windows.Forms.Button EDITbutton;
     }
 }

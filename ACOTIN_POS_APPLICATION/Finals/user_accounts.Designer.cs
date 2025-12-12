@@ -278,7 +278,7 @@
             this.Update.Name = "Update";
             this.Update.Size = new System.Drawing.Size(173, 35);
             this.Update.TabIndex = 22;
-            this.Update.Text = "Update";
+            this.Update.Text = "UpdateBTN";
             this.Update.UseVisualStyleBackColor = false;
             this.Update.Click += new System.EventHandler(this.Update_Click);
             // 
@@ -428,9 +428,7 @@
         private System.Windows.Forms.TextBox usernameTxtbox;
         private System.Windows.Forms.ComboBox accountTypeComboBox;
         private System.Windows.Forms.Button Search;
-        private System.Windows.Forms.Button SearchforUpdate;
         private System.Windows.Forms.Button Update;
-        private System.Windows.Forms.Button Delete;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button Submit;
