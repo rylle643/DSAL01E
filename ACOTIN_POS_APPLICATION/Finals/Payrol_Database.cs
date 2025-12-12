@@ -505,5 +505,10 @@ namespace ACOTIN_POS_APPLICATION
                 MessageBox.Show("Error occurs in this area. Please contact your administrator!");
             }
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

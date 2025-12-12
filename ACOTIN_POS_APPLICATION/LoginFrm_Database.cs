@@ -20,7 +20,7 @@ namespace ACOTIN_POS_APPLICATION
 
         private void LoginFrm1_Load(object sender, EventArgs e)
         {
-
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -82,6 +82,16 @@ namespace ACOTIN_POS_APPLICATION
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2dqf_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UsernameTxt_TextChanged(object sender, EventArgs e)
         {
 
         }
