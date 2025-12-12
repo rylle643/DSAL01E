@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ACOTIN_POS_APPLICATION.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -68,7 +69,7 @@ namespace ACOTIN_POS_APPLICATION
         {
             this.BackColor = Color.Goldenrod;
             foodBRdbtn.Checked = false;
-            DisplayPictureBox.Image = Image.FromFile ("C:\\Users\\C203-34\\source\\repos\\rylle643\\DSAL01E\\ACOTIN_POS_APPLICATION\\Resources\\Untitled design (1).png");
+            DisplayPictureBox.Image = Resources.Untitleddesign1;
 
             A_ChickenMcDoBox.Checked = true;
             A_BFFFriesBox.Checked = true;
@@ -88,8 +89,8 @@ namespace ACOTIN_POS_APPLICATION
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             this.BackColor = Color.Goldenrod;
-            foodARdbtn.Checked = false; 
-            DisplayPictureBox.Image = Image.FromFile ("C:\\Users\\C203-34\\source\\repos\\rylle643\\DSAL01E\\ACOTIN_POS_APPLICATION\\Resources\\Untitled design (2).png");
+            foodARdbtn.Checked = false;
+            DisplayPictureBox.Image = Resources.Untitleddesign2;
 
             A_ChickenMcDoBox.Checked = false;
             A_BFFFriesBox.Checked = false;

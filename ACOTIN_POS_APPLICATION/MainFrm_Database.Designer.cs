@@ -251,6 +251,7 @@
             this.lesson5ToolStripMenuItem.Name = "lesson5ToolStripMenuItem";
             this.lesson5ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.lesson5ToolStripMenuItem.Text = "Lesson 5";
+            this.lesson5ToolStripMenuItem.Click += new System.EventHandler(this.lesson5ToolStripMenuItem_Click);
             // 
             // functionsToolStripMenuItem
             // 
@@ -267,66 +268,77 @@
             this.enrollementToolStripMenuItem.Name = "enrollementToolStripMenuItem";
             this.enrollementToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.enrollementToolStripMenuItem.Text = "Enrollement";
+            this.enrollementToolStripMenuItem.Click += new System.EventHandler(this.enrollementToolStripMenuItem_Click);
             // 
             // payrollClassformToolStripMenuItem
             // 
             this.payrollClassformToolStripMenuItem.Name = "payrollClassformToolStripMenuItem";
             this.payrollClassformToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.payrollClassformToolStripMenuItem.Text = "Payroll Classform";
+            this.payrollClassformToolStripMenuItem.Click += new System.EventHandler(this.payrollClassformToolStripMenuItem_Click);
             // 
             // pOS1ClassformToolStripMenuItem
             // 
             this.pOS1ClassformToolStripMenuItem.Name = "pOS1ClassformToolStripMenuItem";
             this.pOS1ClassformToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pOS1ClassformToolStripMenuItem.Text = "POS1 Classform";
+            this.pOS1ClassformToolStripMenuItem.Click += new System.EventHandler(this.pOS1ClassformToolStripMenuItem_Click);
             // 
             // pOS2ClassformToolStripMenuItem
             // 
             this.pOS2ClassformToolStripMenuItem.Name = "pOS2ClassformToolStripMenuItem";
             this.pOS2ClassformToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pOS2ClassformToolStripMenuItem.Text = "POS2 Classform";
+            this.pOS2ClassformToolStripMenuItem.Click += new System.EventHandler(this.pOS2ClassformToolStripMenuItem_Click);
             // 
             // activity1ToolStripMenuItem
             // 
             this.activity1ToolStripMenuItem.Name = "activity1ToolStripMenuItem";
             this.activity1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.activity1ToolStripMenuItem.Text = "Activity 1";
+            this.activity1ToolStripMenuItem.Click += new System.EventHandler(this.activity1ToolStripMenuItem_Click);
             // 
             // activity2ToolStripMenuItem
             // 
             this.activity2ToolStripMenuItem.Name = "activity2ToolStripMenuItem";
             this.activity2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.activity2ToolStripMenuItem.Text = "Activity 2";
+            this.activity2ToolStripMenuItem.Click += new System.EventHandler(this.activity2ToolStripMenuItem_Click);
             // 
             // activity3ToolStripMenuItem
             // 
             this.activity3ToolStripMenuItem.Name = "activity3ToolStripMenuItem";
             this.activity3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.activity3ToolStripMenuItem.Text = "Activity 3";
+            this.activity3ToolStripMenuItem.Click += new System.EventHandler(this.activity3ToolStripMenuItem_Click);
             // 
             // activity4ToolStripMenuItem
             // 
             this.activity4ToolStripMenuItem.Name = "activity4ToolStripMenuItem";
             this.activity4ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.activity4ToolStripMenuItem.Text = "Activity 4";
+            this.activity4ToolStripMenuItem.Click += new System.EventHandler(this.activity4ToolStripMenuItem_Click);
             // 
             // payrollFunctionsToolStripMenuItem
             // 
             this.payrollFunctionsToolStripMenuItem.Name = "payrollFunctionsToolStripMenuItem";
             this.payrollFunctionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.payrollFunctionsToolStripMenuItem.Text = "Payroll Functions";
+            this.payrollFunctionsToolStripMenuItem.Click += new System.EventHandler(this.payrollFunctionsToolStripMenuItem_Click);
             // 
             // pOS1FunctionsToolStripMenuItem
             // 
             this.pOS1FunctionsToolStripMenuItem.Name = "pOS1FunctionsToolStripMenuItem";
             this.pOS1FunctionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pOS1FunctionsToolStripMenuItem.Text = "POS1 Functions";
+            this.pOS1FunctionsToolStripMenuItem.Click += new System.EventHandler(this.pOS1FunctionsToolStripMenuItem_Click);
             // 
             // pOS2FunctionsToolStripMenuItem
             // 
             this.pOS2FunctionsToolStripMenuItem.Name = "pOS2FunctionsToolStripMenuItem";
             this.pOS2FunctionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pOS2FunctionsToolStripMenuItem.Text = "POS2 Functions";
+            this.pOS2FunctionsToolStripMenuItem.Click += new System.EventHandler(this.pOS2FunctionsToolStripMenuItem_Click);
             // 
             // MainFrm_Database
             // 

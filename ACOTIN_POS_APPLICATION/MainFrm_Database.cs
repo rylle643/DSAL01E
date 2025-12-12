@@ -48,7 +48,7 @@ namespace ACOTIN_POS_APPLICATION
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
-            LoginFrm1 login = new LoginFrm1();
+            LoginFrm_Database login = new LoginFrm_Database();
             login.Show();
         }
 
@@ -142,6 +142,114 @@ namespace ACOTIN_POS_APPLICATION
             useraccount_Report.StartPosition = FormStartPosition.CenterParent;
             useraccount_Report.WindowState = FormWindowState.Maximized;
             useraccount_Report.Show();
+        }
+
+        private void payrollClassformToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Payroll_classform payroll_Classform = new Payroll_classform();
+            payroll_Classform.MdiParent = this;
+            payroll_Classform.StartPosition = FormStartPosition.CenterParent;
+            payroll_Classform.WindowState = FormWindowState.Maximized;
+            payroll_Classform.Show();
+        }
+
+        private void pOS1ClassformToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            POS1_classform pOS1_Classform = new POS1_classform();
+            pOS1_Classform.MdiParent = this;
+            pOS1_Classform.StartPosition = FormStartPosition.CenterParent;
+            pOS1_Classform.WindowState = FormWindowState.Maximized;
+            pOS1_Classform.Show();
+        }
+
+        private void pOS2ClassformToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            POS2_classform pOS2_Classform = new POS2_classform();
+            pOS2_Classform.MdiParent = this;
+            pOS2_Classform.StartPosition = FormStartPosition.CenterParent;
+            pOS2_Classform.WindowState = FormWindowState.Maximized;
+            pOS2_Classform.Show();
+        }
+
+        private void activity1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Activity1 activity1 = new Activity1();
+            activity1.MdiParent = this;
+            activity1.StartPosition = FormStartPosition.CenterParent;
+            activity1.WindowState = FormWindowState.Maximized;
+            activity1.Show();
+        }
+
+        private void activity2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Activity2 activity2 = new Activity2();
+            activity2.MdiParent = this;
+            activity2.StartPosition = FormStartPosition.CenterParent;
+            activity2.WindowState = FormWindowState.Maximized;
+            activity2.Show();
+        }
+
+        private void activity3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Activity3 activity3 = new Activity3();
+            activity3.MdiParent = this;
+            activity3.StartPosition = FormStartPosition.CenterParent;
+            activity3.WindowState = FormWindowState.Maximized;
+            activity3.Show();
+        }
+
+        private void activity4ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Activity4 activity4 = new Activity4();
+            activity4.MdiParent = this;
+            activity4.StartPosition = FormStartPosition.CenterParent;
+            activity4.WindowState = FormWindowState.Maximized;
+            activity4.Show();
+        }
+
+        private void lesson5ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Lesson5Activity lesson5Activity = new Lesson5Activity();
+            lesson5Activity.MdiParent = this;
+            lesson5Activity.StartPosition = FormStartPosition.CenterParent;
+            lesson5Activity.WindowState = FormWindowState.Maximized;
+            lesson5Activity.Show();
+        }
+
+        private void payrollFunctionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Payroll_Functions payroll_Functions = new Payroll_Functions();
+            payroll_Functions.MdiParent = this;
+            payroll_Functions.StartPosition = FormStartPosition.CenterParent;
+            payroll_Functions.WindowState = FormWindowState.Maximized;
+            payroll_Functions.Show();
+        }
+
+        private void pOS1FunctionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            POS1_Functions pOS1_Functions = new POS1_Functions();
+            pOS1_Functions.MdiParent = this;
+            pOS1_Functions.StartPosition = FormStartPosition.CenterParent;
+            pOS1_Functions.WindowState = FormWindowState.Maximized;
+            pOS1_Functions.Show();
+        }
+
+        private void pOS2FunctionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+             POS2_Functions pOS2_Functions = new POS2_Functions();
+            pOS2_Functions.MdiParent = this;
+            pOS2_Functions.StartPosition = FormStartPosition.CenterParent;
+            pOS2_Functions.WindowState = FormWindowState.Maximized;
+            pOS2_Functions.Show();
+        }
+
+        private void enrollementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Enrollment enrollment = new Enrollment();
+            enrollment.MdiParent = this;
+            enrollment.StartPosition = FormStartPosition.CenterParent;
+            enrollment.WindowState = FormWindowState.Maximized;
+            enrollment.Show();
         }
     }
 }
