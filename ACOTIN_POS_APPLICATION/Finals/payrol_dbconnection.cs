@@ -21,6 +21,7 @@ namespace ACOTIN_POS_APPLICATION
         public void payrol_connString()
         {
             //codes to establish connection from C# forms to the SQL Server database
+            /// payrol_connectionString = @"Server=C203-34;Database=POS_Database;Trusted_Connection=True;";
             payrol_connectionString = "Data Source=Rylle ;Initial Catalog=POS_Database; user id=sa; password=rylle";
             payrol_sql_connection = new SqlConnection(payrol_connectionString);
 

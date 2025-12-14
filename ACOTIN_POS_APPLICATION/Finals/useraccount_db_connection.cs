@@ -22,6 +22,7 @@ namespace ACOTIN_POS_APPLICATION
         {
             //codes to establish connection from C# forms to the SQL Server database
             useraccount_sql_connection = new SqlConnection();
+            /// useraccount_connectionString = @"Server=C203-34;Database=POS_Database;Trusted_Connection=True;";
             useraccount_connectionString = "Data Source=Rylle ;Initial Catalog=POS_Database; user id=sa; password=rylle";
             useraccount_sql_connection.ConnectionString = useraccount_connectionString;
             useraccount_sql_connection = new SqlConnection(useraccount_connectionString);

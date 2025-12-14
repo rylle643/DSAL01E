@@ -20,7 +20,9 @@ namespace ACOTIN_POS_APPLICATION
         public void pos_connString()
         {
             pos_sql_connection = new SqlConnection();
+            /// pos_connectionString = @"Server=C203-34;Database=POS_Database;Trusted_Connection=True;";
             /// pos_connectionString = "Data Source=C203-34;Initial Catalog=POS_Database; user id=sa; password=B1Admin123@";
+
             pos_connectionString = "Data Source=Rylle ;Initial Catalog=POS_Database; user id=sa; password=rylle";
             pos_sql_connection = new SqlConnection(pos_connectionString);
             pos_sql_connection.ConnectionString = pos_connectionString;
