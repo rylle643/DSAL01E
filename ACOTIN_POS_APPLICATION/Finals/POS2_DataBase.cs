@@ -16,8 +16,21 @@ namespace ACOTIN_POS_APPLICATION
         private double total_amount = 0;
         private int total_qty = 0;
 
-        // Store picture paths - FIXED: Now properly stores the paths
+        // Store picture paths
         private string[] picturePaths = new string[20];
+
+        // Track selected items with their details
+        private Dictionary<int, SelectedItem> selectedItems = new Dictionary<int, SelectedItem>();
+
+        // Helper class to store item details
+        private class SelectedItem
+        {
+            public string Name { get; set; }
+            public double Price { get; set; }
+            public double DiscountPercent { get; set; }
+            public int Quantity { get; set; }
+            public string ListBoxLine { get; set; }
+        }
 
         public POS2_DataBase()
         {
@@ -88,7 +101,7 @@ namespace ACOTIN_POS_APPLICATION
                     checkBox19.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][20].ToString();
                     checkBox20.Text = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][21].ToString();
 
-                    // FIXED: Store picture paths in the array so they can be used later
+                    // Store picture paths
                     picturePaths[0] = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][46].ToString();
                     picturePaths[1] = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][47].ToString();
                     picturePaths[2] = posdb_connect.pos_sql_dataset.Tables[0].Rows[0][48].ToString();
@@ -176,7 +189,6 @@ namespace ACOTIN_POS_APPLICATION
             }
         }
 
-        // Helper method to uncheck all checkboxes
         private void UncheckAllCheckboxes()
         {
             checkBox1.Checked = false;
@@ -201,7 +213,6 @@ namespace ACOTIN_POS_APPLICATION
             checkBox20.Checked = false;
         }
 
-        // Helper method to get price from database
         private string GetPriceFromDatabase(int itemNumber)
         {
             try
@@ -233,7 +244,6 @@ namespace ACOTIN_POS_APPLICATION
             return 0;
         }
 
-
         private string FormatReceiptLine(string itemName, string price, bool includeDiscount = false, double discountPercent = 0)
         {
             int maxWidth = 50;
@@ -247,7 +257,7 @@ namespace ACOTIN_POS_APPLICATION
                 itemName = itemName + " (" + discountPercent + "%)";
             }
 
-            string priceText =  price;
+            string priceText = price;
 
             int spacesNeeded = maxWidth - itemName.Length - priceText.Length;
             if (spacesNeeded < 1) spacesNeeded = 1;
@@ -256,32 +266,105 @@ namespace ACOTIN_POS_APPLICATION
             return itemName + spaces + priceText;
         }
 
-
+        // NEW METHOD: Handle checkbox selection/deselection
         private void HandleCheckboxSelection(CheckBox checkbox, int itemNumber, int pictureIndex)
         {
-            if (!checkbox.Checked) return;
-            UncheckAllCheckboxes();
-            checkbox.Checked = true;
+            if (checkbox.Checked)
+            {
+                // Item is being SELECTED
+                string price = GetPriceFromDatabase(itemNumber);
+                double priceValue = Convert.ToDouble(price);
+                double discountPercent = GetDiscountPercent(itemNumber);
+                double discountAmount = priceValue * (discountPercent / 100);
 
-            priceTxtBox.Text = GetPriceFromDatabase(itemNumber);
-            double price = Convert.ToDouble(priceTxtBox.Text);
-            double discountPercent = GetDiscountPercent(itemNumber);
-            double discountAmount = price * (discountPercent / 100);
-            discountAmountTxtbox.Text = discountAmount.ToString("0.00");
+                // Store item details
+                selectedItems[itemNumber] = new SelectedItem
+                {
+                    Name = checkbox.Text,
+                    Price = priceValue,
+                    DiscountPercent = discountPercent,
+                    Quantity = 1
+                };
 
-            string itemLine = FormatReceiptLine(checkbox.Text, priceTxtBox.Text, true, discountPercent);
-            displayListbox.Items.Add(itemLine);
+                // Add to listbox
+                string itemLine = FormatReceiptLine(checkbox.Text, price, true, discountPercent);
+                displayListbox.Items.Add(itemLine);
 
-            try { DisplayPictureBox.Image = Image.FromFile(picturePaths[pictureIndex]); }
-            catch { }
+                // Update discount display
+                priceTxtBox.Text = priceValue.ToString("0.00");
+                discountAmountTxtbox.Text = discountAmount.ToString("0.00");
 
-            qtyTxtbox.Clear();
-            qtyTxtbox.Focus();
+                // Show picture
+                try
+                {
+                    DisplayPictureBox.Image = Image.FromFile(picturePaths[pictureIndex]);
+                }
+                catch { }
+
+                qtyTxtbox.Clear();
+                qtyTxtbox.Focus();
+            }
+            else
+            {
+                // Item is being DESELECTED
+                if (selectedItems.ContainsKey(itemNumber))
+                {
+                    // Remove from listbox
+                    string itemLine = FormatReceiptLine(
+                        selectedItems[itemNumber].Name,
+                        selectedItems[itemNumber].Price.ToString("0.00"),
+                        true,
+                        selectedItems[itemNumber].DiscountPercent
+                    );
+
+                    displayListbox.Items.Remove(itemLine);
+
+                    // Remove from tracking
+                    selectedItems.Remove(itemNumber);
+
+                    // Clear price and discount if no items selected
+                    if (selectedItems.Count == 0)
+                    {
+                        priceTxtBox.Clear();
+                        discountAmountTxtbox.Clear();
+                    }
+                }
+            }
+
+            // Update totals and discounted amount
+            RecalculateTotals();
         }
 
+        // NEW METHOD: Recalculate all totals
+        private void RecalculateTotals()
+        {
+            total_amount = 0;
+            total_qty = 0;
+            double total_discount = 0;
 
+            foreach (var item in selectedItems.Values)
+            {
+                double itemPrice = item.Price * item.Quantity;
+                double discountAmount = (item.Price * item.DiscountPercent / 100) * item.Quantity;
+                double discountedPrice = itemPrice - discountAmount;
 
+                total_amount += discountedPrice;
+                total_qty += item.Quantity;
+                total_discount += discountAmount;
+            }
 
+            totalBillsTxtbox.Text = total_amount.ToString("n");
+            totalQtyTxtbox.Text = total_qty.ToString();
+            discountedAmountTxtbox.Text = total_amount.ToString("n");
+
+            // Show total discount amount if there are items
+            if (selectedItems.Count > 0)
+            {
+                discountAmountTxtbox.Text = total_discount.ToString("0.00");
+            }
+        }
+
+        // All checkbox event handlers
         private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
         {
             HandleCheckboxSelection(checkBox1, 1, 0);
@@ -384,23 +467,20 @@ namespace ACOTIN_POS_APPLICATION
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            // Quantity textbox changed - update quantities for selected items
             try
             {
                 if (string.IsNullOrWhiteSpace(qtyTxtbox.Text)) return;
 
-                double price, discounted_amount, discount_amount;
-                int qty;
+                int qty = Convert.ToInt32(qtyTxtbox.Text);
 
-                price = Convert.ToDouble("0" + priceTxtBox.Text);
-                qty = Convert.ToInt32(qtyTxtbox.Text);
-                discount_amount = Convert.ToDouble("0" + discountAmountTxtbox.Text);
-                discounted_amount = (price * qty) - (discount_amount * qty);
+                // Update quantities for all selected items
+                foreach (var itemNum in selectedItems.Keys.ToList())
+                {
+                    selectedItems[itemNum].Quantity = qty;
+                }
 
-                total_qty += qty;
-                totalQtyTxtbox.Text = total_qty.ToString();
-                total_amount += discounted_amount;
-                totalBillsTxtbox.Text = total_amount.ToString("n");
-                discountedAmountTxtbox.Text = discounted_amount.ToString("n");
+                RecalculateTotals();
 
                 cashGivenTxtbox.Clear();
                 cashGivenTxtbox.Focus();
@@ -445,7 +525,6 @@ namespace ACOTIN_POS_APPLICATION
                 priceTxtBox.Text = "720.00";
                 discountAmountTxtbox.Text = "144.00";
 
-                // Use helper function for formatting
                 displayListbox.Items.Add(FormatReceiptLine(foodARdbtn.Text, priceTxtBox.Text));
                 displayListbox.Items.Add(FormatReceiptLine("Discount Amount:", discountAmountTxtbox.Text));
 
@@ -490,7 +569,6 @@ namespace ACOTIN_POS_APPLICATION
                 priceTxtBox.Text = "450.00";
                 discountAmountTxtbox.Text = "67.50";
 
-                // Use helper function for formatting
                 displayListbox.Items.Add(FormatReceiptLine(foodBRdbtn.Text, priceTxtBox.Text));
                 displayListbox.Items.Add(FormatReceiptLine("Discount Amount:", discountAmountTxtbox.Text));
 
@@ -529,12 +607,11 @@ namespace ACOTIN_POS_APPLICATION
 
                 changeTxtbox.Text = change.ToString("n");
 
-                // RECEIPT-STYLE FORMAT - aligned like a real receipt
                 displayListbox.Items.Add("-----------------------------------------------------");
                 displayListbox.Items.Add("Total no. of Items:".PadRight(42) + totalQtyTxtbox.Text);
                 displayListbox.Items.Add("Total Bills:".PadRight(42) + totalBillsTxtbox.Text);
-                displayListbox.Items.Add("Cash Given:".PadRight(42) +  cash_given.ToString("n"));
-                displayListbox.Items.Add("Change:".PadRight(42) +  changeTxtbox.Text);
+                displayListbox.Items.Add("Cash Given:".PadRight(42) + cash_given.ToString("n"));
+                displayListbox.Items.Add("Change:".PadRight(42) + changeTxtbox.Text);
             }
             catch (Exception)
             {
@@ -577,6 +654,7 @@ namespace ACOTIN_POS_APPLICATION
 
             total_amount = 0;
             total_qty = 0;
+            selectedItems.Clear();
 
             displayListbox.Items.Clear();
         }

@@ -369,6 +369,16 @@ namespace ACOTIN_POS_APPLICATION
             others_loanCombo.Items.Add("Business Loans");
             others_loanCombo.Items.Add("Cash Loans");
             others_loanCombo.Items.Add("Buy Now, Pay Later (BNPL)");
+
+            firstnameTxtbox.Enabled = false;
+            MNameTxtbox.Enabled = false;
+            surnameTxtBox.Enabled = false;
+            civilStatusTxtBox.Enabled = false;
+            designationTxtBox.Enabled = false;
+            numDependentsTxtBox.Enabled = false;
+            emp_statusTxtbox.Enabled = false;
+            departmentTxtBox.Enabled = false;
+
         }
 
         private void PRINTbutton_Click(object sender, EventArgs e)
